@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArtDedal – Sanat İyileştirir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --cream:#f5f0e8;--ink:#1a1612;--warm:#c8a97e;--muted:#9e9385;
+      --line:rgba(26,22,18,.12);--dark:#111009;
+    }
+    html{scroll-behavior:smooth;}
+    body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',serif;overflow-x:hidden;}
+
+    /* CURSOR */
+    .cursor{width:8px;height:8px;background:var(--ink);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s;}
+    .cursor-ring{width:32px;height:32px;border:1px solid var(--ink);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.5;transition:width .15s,height .15s;}
+    body{cursor:none;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:24px 60px;transition:background .4s,padding .4s;}
+    nav.scrolled{background:rgba(245,240,232,.97);backdrop-filter:blur(8px);padding:16px 60px;border-bottom:1px solid var(--line);}
+    .nav-logo img{height:40px;width:auto;}
+    .nav-links{display:flex;gap:0;list-style:none;position:relative;}
+    .nav-links > li{position:relative;}
+    .nav-links > li > a{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.6;transition:opacity .3s;padding:8px 20px;display:block;}
+    .nav-links > li > a:hover,.nav-links > li > a.active{opacity:1;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;}
+    .nav-hamburger span{width:24px;height:1px;background:var(--ink);display:block;transition:all .3s;}
+
+    /* DROPDOWN */
+    .dropdown{position:absolute;top:100%;left:0;background:var(--cream);border:1px solid var(--line);min-width:220px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .3s;z-index:300;}
+    .dropdown li{list-style:none;}
+    .dropdown li a{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:14px 24px;display:block;opacity:.6;transition:all .3s;border-bottom:1px solid var(--line);}
+    .dropdown li:last-child a{border-bottom:none;}
+    .dropdown li a:hover{opacity:1;padding-left:32px;}
+    .has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+
+    /* SUB DROPDOWN */
+    .sub-dropdown{position:absolute;top:0;left:100%;background:var(--cream);border:1px solid var(--line);min-width:200px;opacity:0;visibility:hidden;transform:translateX(-8px);transition:all .3s;z-index:301;}
+    .sub-dropdown li a{font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:12px 20px;display:block;opacity:.6;transition:all .3s;border-bottom:1px solid var(--line);}
+    .sub-dropdown li:last-child a{border-bottom:none;}
+    .sub-dropdown li a:hover{opacity:1;padding-left:28px;}
+    .has-sub:hover .sub-dropdown{opacity:1;visibility:visible;transform:translateX(0);}
+    .has-sub > a::after{content:' →';opacity:.4;font-size:.6rem;}
+
+    /* HERO */
+    #hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
+    .hero-slides{position:absolute;inset:0;}
+    .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;}
+    .hero-slide.active{opacity:1;}
+    .hero-slide img{width:100%;height:100%;object-fit:cover;}
+    .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,22,18,.1) 0%,transparent 40%,rgba(26,22,18,.72) 100%);}
+    .hero-content{position:relative;z-index:2;padding:0 60px 80px;color:var(--cream);}
+    .hero-tag{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);margin-bottom:20px;opacity:0;animation:fadeUp 1s .3s forwards;}
+    .hero-title{font-size:clamp(48px,7vw,88px);font-weight:300;line-height:1.0;opacity:0;animation:fadeUp 1s .5s forwards;}
+    .hero-title em{font-style:italic;color:rgba(245,240,232,.6);}
+    .hero-sub{margin-top:20px;font-size:1.1rem;font-weight:300;color:rgba(245,240,232,.75);max-width:440px;line-height:1.8;opacity:0;animation:fadeUp 1s .7s forwards;}
+    .hero-cta{margin-top:40px;display:inline-block;font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(245,240,232,.5);padding-bottom:4px;opacity:0;animation:fadeUp 1s .9s forwards;transition:color .3s,border-color .3s;}
+    .hero-cta:hover{color:var(--warm);border-color:var(--warm);}
+    .hero-dots{position:absolute;bottom:40px;right:60px;z-index:3;display:flex;gap:8px;}
+    .hero-dot{width:24px;height:1px;background:rgba(245,240,232,.4);cursor:none;transition:background .3s,width .3s;}
+    .hero-dot.active{background:var(--cream);width:40px;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+    /* SECTIONS */
+    .section-label{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+    .section-label::before{content:'';width:32px;height:1px;background:var(--warm);}
+    .section-title{font-size:clamp(28px,3.5vw,48px);font-weight:300;line-height:1.15;}
+    .section-title em{font-style:italic;color:var(--muted);}
+
+    /* ABOUT */
+    #hakkimizda{padding:120px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .about-text{font-size:1.05rem;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:16px;}
+    .about-sign{margin-top:32px;font-size:1.3rem;font-style:italic;color:var(--ink);opacity:.7;}
+    .about-image{position:relative;}
+    .about-image img{width:100%;display:block;border:1px solid var(--line);}
+    .about-image::before{content:'';position:absolute;top:-16px;right:-16px;width:55%;height:55%;border:1px solid var(--warm);opacity:.25;pointer-events:none;}
+
+    /* GALLERY SECTION */
+    #calismalarbg{background:var(--dark);padding:120px 60px;}
+    .gallery-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;}
+    .gallery-header .section-title{color:var(--cream);}
+    .gallery-header .section-title em{color:rgba(245,240,232,.35);}
+    .gallery-header .section-label{color:var(--warm);}
+    .gallery-header .section-label::before{background:var(--warm);}
+
+    /* CATEGORY TABS */
+    .cat-tabs{display:flex;gap:0;flex-wrap:wrap;margin-bottom:48px;border-bottom:1px solid rgba(245,240,232,.08);}
+    .cat-tab{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.4);background:none;border:none;cursor:none;padding:12px 24px;border-bottom:2px solid transparent;transition:all .3s;margin-bottom:-1px;}
+    .cat-tab.active,.cat-tab:hover{color:var(--cream);border-bottom-color:var(--warm);}
+
+    /* SUBCATEGORY TABS */
+    .subcat-tabs{display:flex;gap:0;flex-wrap:wrap;margin-bottom:40px;}
+    .subcat-tab{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.35);background:none;border:1px solid rgba(245,240,232,.1);cursor:none;padding:8px 18px;margin-right:8px;margin-bottom:8px;transition:all .3s;}
+    .subcat-tab.active,.subcat-tab:hover{color:var(--cream);border-color:rgba(245,240,232,.4);}
+    .subcat-tabs{display:none;}
+    .subcat-tabs.visible{display:flex;}
+
+    /* MOSAIC GRID */
+    .mosaic{columns:3;column-gap:4px;transition:opacity .4s;}
+    .mosaic-item{break-inside:avoid;margin-bottom:4px;position:relative;overflow:hidden;cursor:none;}
+    .mosaic-item img{width:100%;display:block;transition:transform .6s cubic-bezier(.25,.46,.45,.94);}
+    .mosaic-item:hover img{transform:scale(1.04);}
+    .mosaic-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,16,9,.85) 0%,transparent 50%);opacity:0;transition:opacity .4s;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;}
+    .mosaic-item:hover .mosaic-overlay{opacity:1;}
+    .mosaic-title{font-size:1rem;font-weight:300;color:var(--cream);margin-bottom:4px;}
+    .mosaic-cat{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);}
+
+    /* LOADING */
+    .gallery-loading{text-align:center;padding:60px;color:rgba(245,240,232,.3);font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;}
+    .gallery-empty{text-align:center;padding:60px;color:rgba(245,240,232,.2);font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;}
+
+    /* LIGHTBOX */
+    .lightbox{position:fixed;inset:0;background:rgba(17,16,9,.96);z-index:1000;display:none;align-items:center;justify-content:center;}
+    .lightbox.open{display:flex;}
+    .lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;}
+    .lightbox-close{position:absolute;top:24px;right:32px;color:rgba(245,240,232,.5);font-size:2rem;cursor:none;transition:color .3s;font-weight:300;line-height:1;}
+    .lightbox-close:hover{color:var(--cream);}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);color:rgba(245,240,232,.4);font-size:2rem;cursor:none;transition:color .3s;font-weight:300;padding:20px;}
+    .lightbox-nav:hover{color:var(--cream);}
+    .lightbox-prev{left:16px;}
+    .lightbox-next{right:16px;}
+
+    /* CONTACT */
+    #iletisim{position:relative;min-height:500px;display:flex;align-items:center;overflow:hidden;}
+    .contact-bg{position:absolute;inset:0;}
+    .contact-bg img{width:100%;height:100%;object-fit:cover;}
+    .contact-bg::after{content:'';position:absolute;inset:0;background:rgba(17,16,9,.78);}
+    .contact-content{position:relative;z-index:2;padding:120px 60px;max-width:600px;}
+    .contact-content .section-label{color:var(--warm);}
+    .contact-content .section-label::before{background:var(--warm);}
+    .contact-content .section-title{color:var(--cream);}
+    .contact-content .section-title em{color:rgba(245,240,232,.4);}
+    .contact-text{font-size:1.1rem;font-weight:300;line-height:1.9;color:rgba(245,240,232,.7);margin-top:24px;margin-bottom:40px;}
+    .contact-links{display:flex;flex-direction:column;gap:16px;}
+    .contact-link{display:flex;align-items:center;gap:20px;color:var(--cream);text-decoration:none;transition:color .3s;}
+    .contact-link:hover{color:var(--warm);}
+    .contact-link-type{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;opacity:.4;width:80px;}
+    .contact-link-value{font-size:1rem;font-weight:300;}
+
+    /* FOOTER */
+    footer{padding:48px 60px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--cream);}
+    .footer-logo img{height:32px;opacity:.6;}
+    .footer-copy{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;color:var(--muted);}
+    .footer-social{display:flex;gap:24px;}
+    .footer-social a{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s;}
+    .footer-social a:hover{color:var(--ink);}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.25,.46,.45,.94),transform .8s cubic-bezier(.25,.46,.45,.94);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      nav{padding:20px 24px;}
+      nav.scrolled{padding:14px 24px;}
+      .nav-links{display:none;}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--cream);justify-content:center;align-items:center;gap:0;z-index:300;}
+      .nav-links.open > li > a{font-size:1.2rem;padding:16px 40px;text-align:center;}
+      .nav-hamburger{display:flex;}
+      .dropdown,.sub-dropdown{position:static;opacity:1;visibility:visible;transform:none;border:none;text-align:center;}
+      #hero .hero-content{padding:0 24px 60px;}
+      .hero-dots{right:24px;bottom:24px;}
+      #hakkimizda{grid-template-columns:1fr;padding:80px 24px;}
+      .about-image{order:-1;}
+      #calismalarbg{padding:80px 24px;}
+      .gallery-header{flex-direction:column;gap:24px;align-items:flex-start;}
+      .mosaic{columns:2;}
+      .contact-content{padding:80px 24px;}
+      footer{flex-direction:column;gap:20px;text-align:center;padding:40px 24px;}
+    }
+    @media(max-width:500px){.mosaic{columns:1;}}
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lbClose">×</span>
+  <span class="lightbox-nav lightbox-prev" id="lbPrev">‹</span>
+  <img id="lbImg" src="" alt=""/>
+  <span class="lightbox-nav lightbox-next" id="lbNext">›</span>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo">
+    <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/>
+  </a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Anasayfa</a></li>
+    <li><a href="#hakkimizda">Hakkımızda</a></li>
+    <li class="has-dropdown">
+      <a href="#calismalarbg">Çalışmalar</a>
+      <ul class="dropdown" id="navDropdown">
+        <li class="has-sub">
+          <a href="#calismalarbg" data-cat="sanatsal">Sanatsal Çalışmalar</a>
+          <ul class="sub-dropdown">
+            <li><a href="#calismalarbg" data-cat="resimler">Resimler</a></li>
+            <li><a href="#calismalarbg" data-cat="heykeller">Heykeller</a></li>
+            <li><a href="#calismalarbg" data-cat="dijital">Dijital Tasarımlar</a></li>
+          </ul>
+        </li>
+        <li><a href="#calismalarbg" data-cat="dekorasyon">Dekorasyon</a></li>
+        <li><a href="#calismalarbg" data-cat="peyzaj">Peyzaj</a></li>
+        <li><a href="#calismalarbg" data-cat="pipolar">Pipolar</a></li>
+      </ul>
+    </li>
+    <li><a href="#iletisim">İletişim</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active">
+      <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775130993/Dream_Bird_mpxyks.jpg" alt="Dream Bird"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775107723/HYPNOS-2048x2015_zz2vej.jpg" alt="Hypnos"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775086294/Phoenix-29-105x150-1-1280x500_k6nfog.jpg" alt="Phoenix"/>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">Sanat İyileştirir</div>
+    <h1 class="hero-title">Her düşüş<br/><em>yeni bir</em><br/>başlangıçtır</h1>
+    <p class="hero-sub">Heykel, resim ve özgün tasarımlarla duygulara dokunan, yaşam alanlarınıza anlam katan eserler.</p>
+    <a href="#calismalarbg" class="hero-cta">Eserleri Keşfet</a>
+  </div>
+  <div class="hero-dots">
+    <div class="hero-dot active" data-index="0"></div>
+    <div class="hero-dot" data-index="1"></div>
+    <div class="hero-dot" data-index="2"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="hakkimizda">
+  <div class="reveal">
+    <div class="section-label">Hakkımızda</div>
+    <h2 class="section-title">Murat &amp; Elif —<br/><em>birlikte yaratmanın</em><br/>büyüsüne inananlar</h2>
+    <p class="about-text" style="margin-top:28px;">
+      Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.
+    </p>
+    <p class="about-text">
+      Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.
+    </p>
+    <p class="about-text">
+      Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir.
+    </p>
+    <div class="about-sign">Sevgi, sanat ve yaratma aşkıyla…</div>
+  </div>
+  <div class="about-image reveal">
+    <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775130534/IMG_2160_ygxy7r.png" alt="Murat ve Elif"/>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="calismalarbg">
+  <div class="gallery-header reveal">
+    <div>
+      <div class="section-label">Çalışmalar</div>
+      <h2 class="section-title">Sanatsal<br/><em>Eserler</em></h2>
+    </div>
+  </div>
+
+  <!-- Ana kategori tabları -->
+  <div class="cat-tabs reveal" id="catTabs">
+    <button class="cat-tab active" data-main="sanatsal">Sanatsal Çalışmalar</button>
+    <button class="cat-tab" data-main="dekorasyon">Dekorasyon</button>
+    <button class="cat-tab" data-main="peyzaj">Peyzaj</button>
+    <button class="cat-tab" data-main="pipolar">Pipolar</button>
+  </div>
+
+  <!-- Alt kategori tabları (sadece Sanatsal için) -->
+  <div class="subcat-tabs visible reveal" id="subcatTabs">
+    <button class="subcat-tab active" data-sub="resimler">Resimler</button>
+    <button class="subcat-tab" data-sub="heykeller">Heykeller</button>
+    <button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button>
+  </div>
+
+  <div class="mosaic reveal" id="mosaicGrid">
+    <div class="gallery-loading">Yükleniyor…</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="iletisim">
+  <div class="contact-bg">
+    <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775130993/Dream_Bird_mpxyks.jpg" alt="İletişim"/>
+  </div>
+  <div class="contact-content reveal">
+    <div class="section-label">İletişim</div>
+    <h2 class="section-title">Birlikte<br/><em>çalışalım</em></h2>
+    <p class="contact-text">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz.</p>
+    <div class="contact-links">
+      <a href="mailto:artdedalinfo@gmail.com" class="contact-link">
+        <span class="contact-link-type">E-posta</span>
+        <span class="contact-link-value">artdedalinfo@gmail.com</span>
+      </a>
+      <a href="https://www.instagram.com/art_dedal/" target="_blank" class="contact-link">
+        <span class="contact-link-type">Instagram</span>
+        <span class="contact-link-value">@art_dedal</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <div class="footer-logo">
+    <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/>
+  </div>
+  <div class="footer-copy">© 2026 ArtDedal. Bütün hakları saklıdır.</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
+    <a href="mailto:artdedalinfo@gmail.com">E-posta</a>
+  </div>
+</footer>
+
+<script>
+const CLOUD = 'dhvrm1dcf';
+
+// ---- Cloudinary'den klasör içeriğini çek ----
+async function fetchFolder(folder) {
+  // Cloudinary search API (unsigned, public read)
+  const url = `https://res.cloudinary.com/${CLOUD}/image/list/${folder}.json`;
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('not found');
+    const data = await r.json();
+    return data.resources || [];
+  } catch(e) {
+    return [];
+  }
+}
+
+// ---- Görsel URL oluştur ----
+function imgUrl(publicId, w=600) {
+  return `https://res.cloudinary.com/${CLOUD}/image/upload/w_${w},c_fill,q_auto,f_auto/${publicId}.jpg`;
+}
+
+// ---- Mosaic render ----
+let currentImages = [];
+let lbIndex = 0;
+
+function renderMosaic(images) {
+  currentImages = images;
+  const grid = document.getElementById('mosaicGrid');
+  if (!images.length) {
+    grid.innerHTML = '<div class="gallery-empty">Bu kategoride henüz eser yok.</div>';
+    return;
+  }
+  grid.innerHTML = images.map((img, i) => {
+    const name = img.public_id.split('/').pop().replace(/_[a-z0-9]+$/, '').replace(/-/g,' ').replace(/_/g,' ');
+    return `<div class="mosaic-item" data-index="${i}">
+      <img src="${imgUrl(img.public_id)}" alt="${name}" loading="lazy"/>
+      <div class="mosaic-overlay">
+        <div class="mosaic-title">${name}</div>
+      </div>
+    </div>`;
+  }).join('');
+  grid.querySelectorAll('.mosaic-item').forEach(item => {
+    item.addEventListener('click', () => openLightbox(+item.dataset.index));
+  });
+}
+
+// ---- Lightbox ----
+function openLightbox(index) {
+  lbIndex = index;
+  document.getElementById('lbImg').src = imgUrl(currentImages[index].public_id, 1400);
+  document.getElementById('lightbox').classList.add('open');
+}
+document.getElementById('lbClose').addEventListener('click', () => document.getElementById('lightbox').classList.remove('open'));
+document.getElementById('lbPrev').addEventListener('click', () => { lbIndex = (lbIndex - 1 + currentImages.length) % currentImages.length; document.getElementById('lbImg').src = imgUrl(currentImages[lbIndex].public_id, 1400); });
+document.getElementById('lbNext').addEventListener('click', () => { lbIndex = (lbIndex + 1) % currentImages.length; document.getElementById('lbImg').src = imgUrl(currentImages[lbIndex].public_id, 1400); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open'); if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click(); if (e.key === 'ArrowRight') document.getElementById('lbNext').click(); });
+
+// ---- Kategori mantığı ----
+const mainCats = {
+  sanatsal: ['resimler','heykeller','dijital'],
+  dekorasyon: ['dekorasyon'],
+  peyzaj: ['peyzaj'],
+  pipolar: ['pipolar']
+};
+let currentMain = 'sanatsal';
+let currentSub = 'resimler';
+
+async function loadCategory(folder) {
+  const grid = document.getElementById('mosaicGrid');
+  grid.innerHTML = '<div class="gallery-loading">Yükleniyor…</div>';
+  const images = await fetchFolder(folder);
+  renderMosaic(images);
+}
+
+// Ana kategori tıklama
+document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMain = btn.dataset.main;
+    const subcatEl = document.getElementById('subcatTabs');
+    if (currentMain === 'sanatsal') {
+      subcatEl.classList.add('visible');
+      currentSub = 'resimler';
+      document.querySelectorAll('.subcat-tab').forEach(b => b.classList.toggle('active', b.dataset.sub === 'resimler'));
+      await loadCategory('resimler');
+    } else {
+      subcatEl.classList.remove('visible');
+      await loadCategory(currentMain);
+    }
+  });
+});
+
+// Alt kategori tıklama
+document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    document.querySelectorAll('.subcat-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSub = btn.dataset.sub;
+    await loadCategory(currentSub);
+  });
+});
+
+// Menü dropdown linkleri
+document.querySelectorAll('[data-cat]').forEach(link => {
+  link.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const cat = link.dataset.cat;
+    document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'});
+    setTimeout(async () => {
+      const subcatEl = document.getElementById('subcatTabs');
+      if (['resimler','heykeller','dijital'].includes(cat)) {
+        document.querySelectorAll('.cat-tab').forEach(b => b.classList.toggle('active', b.dataset.main === 'sanatsal'));
+        subcatEl.classList.add('visible');
+        currentSub = cat;
+        document.querySelectorAll('.subcat-tab').forEach(b => b.classList.toggle('active', b.dataset.sub === cat));
+        await loadCategory(cat);
+      } else if (cat === 'sanatsal') {
+        document.querySelectorAll('.cat-tab').forEach(b => b.classList.toggle('active', b.dataset.main === 'sanatsal'));
+        subcatEl.classList.add('visible');
+        currentSub = 'resimler';
+        document.querySelectorAll('.subcat-tab').forEach(b => b.classList.toggle('active', b.dataset.sub === 'resimler'));
+        await loadCategory('resimler');
+      } else {
+        document.querySelectorAll('.cat-tab').forEach(b => b.classList.toggle('active', b.dataset.main === cat));
+        subcatEl.classList.remove('visible');
+        await loadCategory(cat);
+      }
+    }, 600);
+  });
+});
+
+// İlk yükleme
+loadCategory('resimler');
+
+// ---- Cursor ----
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+(function tick(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(tick); })();
+document.querySelectorAll('a,button,.mosaic-item,.hero-dot,.lightbox-nav,.lightbox-close').forEach(el => {
+  el.addEventListener('mouseenter',()=>{ cursor.style.width='16px'; cursor.style.height='16px'; cursor.style.background='var(--warm)'; ring.style.width='48px'; ring.style.height='48px'; });
+  el.addEventListener('mouseleave',()=>{ cursor.style.width='8px'; cursor.style.height='8px'; cursor.style.background='var(--ink)'; ring.style.width='32px'; ring.style.height='32px'; });
+});
+
+// ---- Hero slider ----
+const slides=document.querySelectorAll('.hero-slide');
+const dots=document.querySelectorAll('.hero-dot');
+let cur=0,timer;
+function goTo(i){ slides[cur].classList.remove('active'); dots[cur].classList.remove('active'); cur=i; slides[cur].classList.add('active'); dots[cur].classList.add('active'); }
+function nextSlide(){ goTo((cur+1)%slides.length); }
+timer=setInterval(nextSlide,5000);
+dots.forEach(d=>d.addEventListener('click',()=>{ clearInterval(timer); goTo(+d.dataset.index); timer=setInterval(nextSlide,5000); }));
+
+// ---- Nav scroll ----
+const mainNav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => mainNav.classList.toggle('scrolled', window.scrollY > 60));
+
+// ---- Hamburger ----
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
+
+// ---- Smooth scroll ----
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t && !a.dataset.cat) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+
+// ---- Scroll reveal ----
+const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:.08});
+document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>
