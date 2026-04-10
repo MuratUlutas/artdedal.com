@@ -11,7 +11,7 @@
     :root{--cream:#f5f0e8;--ink:#1a1612;--warm:#c8a97e;--muted:#9e9385;--line:rgba(26,22,18,.12);--dark:#111009;}
     html{scroll-behavior:smooth;}
     body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',serif;overflow-x:hidden;}
-
+ 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:24px 60px;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent;background:linear-gradient(to bottom,rgba(26,22,18,.4) 0%,transparent 100%);}
     nav.scrolled{background:rgba(245,240,232,.97);backdrop-filter:blur(8px);padding:14px 60px;border-bottom-color:var(--line);}
@@ -34,7 +34,7 @@
     .sub-dropdown li:last-child a{border-bottom:none;}
     .sub-dropdown li a:hover{opacity:1;padding-left:28px;background:rgba(200,169,126,.06);}
     .has-sub:hover .sub-dropdown{opacity:1;visibility:visible;transform:translateX(0);}
-
+ 
     /* HERO */
     #hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
     .hero-slides{position:absolute;inset:0;}
@@ -53,7 +53,7 @@
     .hero-dot{width:24px;height:1px;background:rgba(245,240,232,.4);cursor:pointer;transition:background .3s,width .3s;}
     .hero-dot.active{background:var(--cream);width:40px;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-
+ 
     /* ABOUT */
     #hakkimizda{padding:120px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
     .section-label{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
@@ -65,7 +65,7 @@
     .about-image{position:relative;}
     .about-image img{width:100%;display:block;border:1px solid var(--line);}
     .about-image::before{content:'';position:absolute;top:-16px;right:-16px;width:55%;height:55%;border:1px solid var(--warm);opacity:.25;pointer-events:none;}
-
+ 
     /* GALLERY */
     #calismalarbg{background:var(--dark);padding:120px 60px;}
     .gallery-header{margin-bottom:48px;}
@@ -81,7 +81,7 @@
     .subcat-tab{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.35);background:none;border:1px solid rgba(245,240,232,.1);cursor:pointer;padding:8px 18px;transition:all .3s;}
     .subcat-tab.active,.subcat-tab:hover{color:var(--cream);border-color:rgba(245,240,232,.4);}
     .gallery-tabs-wrap{margin-bottom:40px;}
-
+ 
     /* MOSAIC */
     .mosaic{columns:3;column-gap:4px;}
     .mosaic-item{break-inside:avoid;margin-bottom:4px;position:relative;overflow:hidden;cursor:pointer;}
@@ -92,7 +92,7 @@
     .mosaic-title{font-size:.95rem;font-weight:300;color:var(--cream);}
     .mosaic-count{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.1em;color:var(--warm);margin-top:3px;}
     .gallery-loading{text-align:center;padding:60px 0;color:rgba(245,240,232,.25);font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;}
-
+ 
     /* ===== DETAY SAYFASI ===== */
     #detayPage{display:none;min-height:100vh;background:var(--cream);}
     #detayPage.open{display:block;}
@@ -100,10 +100,10 @@
     .detay-back{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.6;transition:opacity .3s;display:flex;align-items:center;gap:8px;cursor:pointer;border:none;background:none;}
     .detay-back:hover{opacity:1;}
     .detay-back::before{content:'←';}
-
+ 
     .detay-body{padding:100px 60px 80px;}
     .detay-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1200px;margin:0 auto;}
-
+ 
     /* Görsel galerisi */
     .detay-gallery{position:sticky;top:100px;}
     .detay-main-img{width:100%;height:auto;display:block;margin-bottom:12px;border:1px solid var(--line);}
@@ -111,7 +111,7 @@
     .detay-thumb{width:72px;height:72px;object-fit:cover;cursor:pointer;border:2px solid transparent;transition:border-color .3s;opacity:.6;transition:opacity .3s,border-color .3s;}
     .detay-thumb.active,.detay-thumb:hover{border-color:var(--warm);opacity:1;}
     .detay-img-count{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;color:var(--muted);margin-top:8px;}
-
+ 
     /* Detay bilgileri */
     .detay-info{padding-top:8px;}
     .detay-cat{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--warm);margin-bottom:16px;}
@@ -122,7 +122,7 @@
     .detay-prop:last-child{border-bottom:none;}
     .detay-prop-key{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);width:120px;flex-shrink:0;padding-top:2px;}
     .detay-prop-val{font-size:1rem;font-weight:300;color:var(--ink);}
-
+ 
     /* İlgili eserler */
     .detay-related{max-width:1200px;margin:60px auto 0;padding-top:48px;border-top:1px solid var(--line);}
     .detay-related-title{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
@@ -133,7 +133,7 @@
     .related-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,16,9,.8) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:12px;}
     .related-item:hover .related-overlay{opacity:1;}
     .related-name{font-size:.85rem;font-weight:300;color:var(--cream);}
-
+ 
     /* CONTACT */
     #iletisim{position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden;}
     .contact-bg{position:absolute;inset:0;}
@@ -150,17 +150,17 @@
     .contact-link:hover .clv{color:var(--warm);}
     .clt{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.35);width:80px;flex-shrink:0;}
     .clv{font-size:1rem;font-weight:300;color:var(--cream);transition:color .3s;}
-
+ 
     footer{padding:44px 60px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
     .footer-logo img{height:32px;opacity:.6;}
     .footer-copy{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;color:var(--muted);}
     .footer-social{display:flex;gap:24px;}
     .footer-social a{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s;}
     .footer-social a:hover{color:var(--ink);}
-
+ 
     .reveal{opacity:1;transform:none;}
     .reveal.visible{opacity:1;transform:none;}
-
+ 
     @media(max-width:900px){
       nav,#calismalarbg,#hakkimizda,.contact-inner,footer{padding-left:24px;padding-right:24px;}
       nav{padding-top:20px;padding-bottom:20px;}
@@ -184,7 +184,7 @@
   </style>
 </head>
 <body>
-
+ 
 <!-- ANA SAYFA -->
 <div id="mainPage">
   <nav id="mainNav">
@@ -212,7 +212,7 @@
       <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
     </ul>
   </nav>
-
+ 
   <section id="hero">
     <div class="hero-slides">
       <div class="hero-slide active"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/Dream_Bird_mpxyks.jpg" alt="Dream Bird"/></div>
@@ -231,7 +231,7 @@
       <div class="hero-dot" data-index="2"></div>
     </div>
   </section>
-
+ 
   <section id="hakkimizda">
     <div class="reveal">
       <div class="section-label">Hakkımızda</div>
@@ -245,7 +245,7 @@
       <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_800,q_auto,f_auto/IMG_2160_ygxy7r.png" alt="Murat ve Elif"/>
     </div>
   </section>
-
+ 
   <section id="calismalarbg">
     <div class="gallery-header reveal">
       <div class="section-label">Çalışmalar</div>
@@ -266,7 +266,7 @@
     </div>
     <div class="mosaic reveal" id="mosaicGrid"><div class="gallery-loading">Yükleniyor…</div></div>
   </section>
-
+ 
   <section id="iletisim">
     <div class="contact-bg"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/Phoenix-29-105x150_gukx3b.jpg" alt=""/></div>
     <div class="contact-inner reveal">
@@ -279,7 +279,7 @@
       </div>
     </div>
   </section>
-
+ 
   <footer class="reveal">
     <div class="footer-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></div>
     <div class="footer-copy">© 2026 ArtDedal. Bütün hakları saklıdır.</div>
@@ -289,7 +289,7 @@
     </div>
   </footer>
 </div>
-
+ 
 <!-- DETAY SAYFASI -->
 <div id="detayPage">
   <nav class="detay-nav">
@@ -317,11 +317,11 @@
     </div>
   </div>
 </div>
-
+ 
 <script>
 const C = 'dhvrm1dcf';
 const BASE = `https://res.cloudinary.com/${C}/image/upload`;
-
+ 
 // ---- Görsel veritabanı (ham liste) ----
 const RAW = {
   resimler: ['Spinning_Ball-10-50x70_gcnorj','Spinning_Ball-9-50x70_ofmvwp','Spinning_Ball-8_s0xcp9','Spinning_Ball-7_cimtxe','Spinning_Ball-6_k86rrs','Spinning_Ball-5_oe7okt','Spinning_Ball-4_pheddf','Spinning_Ball-3_awqhp6','Spinning_Ball-2_qgyeuo','Spinning_Ball-1-50x70_solpdm','Rebirth_lv8ufw','Purification-40x45_vepgac','Portrait-Sappho-40x50_hrkwnf','Portrait-Rimbaud-40x50_odgsco','Portrait-Nefertiti-40x50_dpecde','Portrait-Michelangelo-40x50_zipjnd','Portrait-Kafka-40x50_narqu9','Portrait-Hegel-40x50_g51an2','Portrait-Goethe-40x50_hrfl7n','Portrait-Galileo-40x50_npzyki','Portrait-Dante-40x50_djhg9c','Portrait-Beethoven-40x50_vhq0aj','Phoenix-30-110x130_d82myp','Phoenix-29-105x150_gukx3b','Phoenix-28-40x30_hz3ncb','Phoenix-27-40x30_qmihse','Phoenix-26-40x30_mz5jio','Phoenix-25-40x30_tollht','Phoenix-24-35x50_awhhss','Phoenix-23-30x40_mkoosw','Phoenix-22-30x40_oi9rn8','Phoenix-21-60x120_zzchcg','Phoenix-20-50x65_sxt3sb','Phoenix-19-50x70_zjolfh','Phoenix-18-50x70_juyta4','Phoenix-17-55x70_z4nzlg','Phoenix-16-60x60_jzkww6','Phoenix-15-60x120_qwivq2','Phoenix-14-50x100_b3dsjb','Phoenix-13-70x100_dspuqq','Phoenix-12-60x60_vo7mdo','Phoenix-11-50x80_dd1y6o','Phoenix-10-70x100_h94kfr','Phoenix-9-110x120_rwhdcf','Phoenix-8-100x120_stfobq','Phoenix-7-60x90_uwmubk','Phoenix-6-70x100_hkubrj','Phoenix-5-60x60_yxadjy','Phoenix-4-60x120_lowl0u','Phoenix-3-70x100_ghvsr7','Phoenix-2-50x70_nv6kfy','Phoenix-1-65x80_mr8e0n','Mrs_Catherine_Swindell-80x100_ofvutr','Magnolia-50x70_iiukde','Bird_of_Fortune-50x50_mqgqwy'],
@@ -331,7 +331,7 @@ const RAW = {
   peyzaj: ['Apollo_Tapınağı-4_z13avz','Apollo_Tapınağı-3_tgpbva','Apollo_Tapınağı-2_rxjx34','Apollo_Tapınağı-1_rulxrg','Aslan-3_zsiuqe','Aslan-2_mwa4bu','Aslan-1_gpgcqc'],
   pipolar: ['R1001-7_r9vrsg','R1001-6_lescfd','R1001-5_vgivlu','R1001-4_o1hlrf','R1001-3_eijyio','R1001-2_j2zvlh','R1001-1_db0pse','Pipolar-2_jyyyva','Pipolar-1_n40mx0','P1008-4_bf9zoz','P1008-3_imi1co','P1008-2_u3ztn7','P1008-1_xvn9fs','P1007-4_ovut8d','P1007-3_hrkc6i','P1007-2_yactsj','P1007-1_iae865','P1006-4_vmjldh','P1006-3_fynhks','P1006-2_pglo3i','P1006-1_yzix4m','P1005-4_shvno4','P1005-3_g39tu6','P1005-2_m55876','P1005-1_k8eesx','P1004-4_fhitxg','P1004-3_lp7lpo','P1004-2_y2bru7','P1004-1_m7okps','P1003-4_fqkevz','P1003-3_axnznx','P1003-2_egbje1','P1003-1_bxm38m','P1002-7_eln7n6','P1002-6_upkefe','P1002-5_bd8noq','P1002-4_es5ezm','P1002-3_yqor4x','P1002-2_cdh8wm','P1002-1_x9gxxg','P1001-6_ifpssz','P1001-5_api8ue','P1001-4_r7ezqd','P1001-3_xtlitq','P1001-2_fzm1cy','P1001-1_zbiq7y']
 };
-
+ 
 // Örnek açıklama ve özellikler (ileride gerçek içerikle değiştirilecek)
 const SAMPLE_DESC = 'Bu eser, sanatçının özgün yorumuyla hayat bulmuş, duygu ve estetiğin bir araya geldiği özel bir çalışmadır. Her detayda titizlikle işlenmiş bu eser, izleyiciyle derin bir bağ kurmayı amaçlamaktadır.';
 const SAMPLE_PROPS = {
@@ -339,11 +339,11 @@ const SAMPLE_PROPS = {
   'Teknik': 'Özgün teknik',
   'Durum': 'Orijinal eser'
 };
-
+ 
 function imgUrl(id, w=600, folder='') {
   return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;
 }
-
+ 
 // ---- Gruplama mantığı ----
 // Boyut pattern: \d+x\d+ (örn 60x120, 105x150)
 const hasDimension = id => /\d+x\d+/.test(id);
@@ -356,7 +356,7 @@ const getBase = id => {
   // Boyut yoksa — sondaki -N'i at (seri numarası)
   return noSuffix.replace(/-\d+$/, '');
 };
-
+ 
 function groupImages(ids) {
   const groups = {};
   const order = [];
@@ -367,25 +367,25 @@ function groupImages(ids) {
   });
   return order.map(base => ({ base, images: groups[base] }));
 }
-
+ 
 function prettyName(base) {
   // Boyut bilgisini paranteze al
   const withDim = base.replace(/[-_](\d+x\d+)/, ' ($1)');
   return withDim.replace(/[-_]/g,' ').replace(/\b\w/g, c => c.toUpperCase()).trim();
 }
-
+ 
 function catLabel(cat) {
   const labels = {resimler:'Resim',heykeller:'Heykel',dijital:'Dijital Tasarım',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',pipolar:'Pipo'};
   return labels[cat] || cat;
 }
-
+ 
 // Tüm gruplar (detay sayfası için)
 const GROUPS = {};
 Object.keys(RAW).forEach(cat => { GROUPS[cat] = groupImages(RAW[cat]); });
-
+ 
 // ---- Mosaic render ----
 let currentCat = 'resimler';
-
+ 
 function renderGallery(cat) {
   currentCat = cat;
   const groups = GROUPS[cat] || [];
@@ -406,19 +406,19 @@ function renderGallery(cat) {
     el.addEventListener('click', () => openDetay(el.dataset.cat, +el.dataset.idx));
   });
 }
-
+ 
 // ---- Detay sayfası ----
 function openDetay(cat, idx) {
   const groups = GROUPS[cat];
   const g = groups[idx];
   const name = prettyName(g.base);
-
+ 
   // Ana görsel
   document.getElementById('detayMainImg').src = imgUrl(g.images[0], 1200, cat);
   document.getElementById('detayCat').textContent = catLabel(cat);
   document.getElementById('detayTitle').textContent = name;
   document.getElementById('detayDesc').textContent = SAMPLE_DESC;
-
+ 
   // Özellikler
   let propsHTML = '';
   const props = {...SAMPLE_PROPS};
@@ -429,7 +429,7 @@ function openDetay(cat, idx) {
     propsHTML += `<div class="detay-prop"><div class="detay-prop-key">${k}</div><div class="detay-prop-val">${v}</div></div>`;
   });
   document.getElementById('detayProps').innerHTML = propsHTML;
-
+ 
   // Thumbnail'ler
   const thumbsEl = document.getElementById('detayThumbs');
   if (g.images.length > 1) {
@@ -448,7 +448,7 @@ function openDetay(cat, idx) {
     thumbsEl.innerHTML = '';
     document.getElementById('detayImgCount').textContent = '';
   }
-
+ 
   // İlgili eserler (aynı kategoriden, bu eser hariç, max 8)
   const related = groups.filter((_,i) => i !== idx).slice(0,8);
   document.getElementById('relatedGrid').innerHTML = related.map((rg,ri) => {
@@ -461,20 +461,20 @@ function openDetay(cat, idx) {
   document.querySelectorAll('.related-item').forEach(el => {
     el.addEventListener('click', () => { openDetay(el.dataset.cat, +el.dataset.idx); window.scrollTo(0,0); });
   });
-
+ 
   // Göster
   document.getElementById('mainPage').style.display = 'none';
   document.getElementById('detayPage').classList.add('open');
   window.scrollTo(0,0);
   // history disabled
 }
-
+ 
 function closeDetay() {
   document.getElementById('detayPage').classList.remove('open');
   document.getElementById('mainPage').style.display = '';
   
 }
-
+ 
 document.getElementById('detayBack').addEventListener('click', closeDetay);
 window.addEventListener('popstate_disabled', e => {
   if (e.state && e.state.cat) {
@@ -484,7 +484,7 @@ window.addEventListener('popstate_disabled', e => {
     document.getElementById('mainPage').style.display = '';
   }
 });
-
+ 
 // ---- Tabs ----
 document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -506,7 +506,7 @@ document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(bt
     renderGallery(btn.dataset.sub);
   });
 });
-
+ 
 window.navGo = function(cat) {
   setTimeout(() => {
     const sub = document.getElementById('subcatTabs');
@@ -526,31 +526,31 @@ window.navGo = function(cat) {
     document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'});
   }, 300);
 }
-
+ 
 window.closeMenu = function() { document.getElementById('navLinks').classList.remove('open'); }
-
+ 
 // İlk yükleme
 if (document.getElementById('mosaicGrid')) {
   renderGallery('resimler');
 } else {
   document.addEventListener('DOMContentLoaded', () => renderGallery('resimler'));
 }
-
+ 
 // ---- Hero slider ----
 const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
 let cur=0,timer;
 function goTo(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=i;slides[cur].classList.add('active');dots[cur].classList.add('active');}
 timer=setInterval(()=>goTo((cur+1)%slides.length),5000);
 dots.forEach(d=>d.addEventListener('click',()=>{clearInterval(timer);goTo(+d.dataset.index);timer=setInterval(()=>goTo((cur+1)%slides.length),5000);}));
-
+ 
 // ---- Nav scroll ----
 window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60));
-
+ 
 // ---- Hamburger ----
 document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
-
+ 
 // ---- S
-/ ---- Smooth scroll ----
+// ---- Smooth scroll ----
 document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{
   a.addEventListener('click',e=>{
     const t=document.querySelector(a.getAttribute('href'));
