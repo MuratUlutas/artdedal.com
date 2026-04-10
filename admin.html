@@ -215,6 +215,14 @@ textarea{resize:vertical;min-height:80px;}
 <div class="toast" id="toast"></div>
 
 <script>
+(function(){
+  const SIFRE = 'artdedal2026';
+  const girilen = prompt('Admin şifresi:');
+  if(girilen !== SIFRE) {
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#999;">Erişim reddedildi.</div>';
+    throw new Error('Yetkisiz erişim');
+  }
+})();
 const BASE_CLOUDINARY = 'https://res.cloudinary.com/dhvrm1dcf/image/upload';
 
 // ---- BAŞLANGIÇ VERİSİ ----
