@@ -318,7 +318,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const C = 'dhvrm1dcf';
 const BASE = `https://res.cloudinary.com/${C}/image/upload`;
 
@@ -530,7 +530,11 @@ window.navGo = function(cat) {
 window.closeMenu = function() { document.getElementById('navLinks').classList.remove('open'); }
 
 // İlk yükleme
-renderGallery('resimler');
+if (document.getElementById('mosaicGrid')) {
+  renderGallery('resimler');
+} else {
+  document.addEventListener('DOMContentLoaded', () => renderGallery('resimler'));
+}
 
 // ---- Hero slider ----
 const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
