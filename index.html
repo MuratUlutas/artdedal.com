@@ -14,11 +14,11 @@
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:24px 60px;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent;}
-    nav.scrolled{background:rgba(245,240,232,.97);backdrop-filter:blur(8px);padding:14px 60px;border-bottom-color:var(--line);}nav.scrolled .nav-links>li>a{color:var(--ink);}nav.scrolled .nav-logo img{filter:none;}
-    .nav-logo img{height:40px;width:auto;filter:brightness(0) invert(1);transition:filter .4s;}
+    nav.scrolled{background:rgba(245,240,232,.97);backdrop-filter:blur(8px);padding:14px 60px;border-bottom-color:var(--line);}
+    .nav-logo img{height:40px;width:auto;}
     .nav-links{display:flex;gap:0;list-style:none;}
     .nav-links>li{position:relative;}
-    .nav-links>li>a{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);text-decoration:none;opacity:.8;transition:opacity .3s,color .4s;padding:8px 18px;display:block;}
+    .nav-links>li>a{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.6;transition:opacity .3s;padding:8px 18px;display:block;}
     .nav-links>li>a:hover{opacity:1;}
     .hamburger{display:none;flex-direction:column;gap:5px;border:none;background:none;padding:4px;cursor:pointer;}
     .hamburger span{width:24px;height:1px;background:var(--ink);display:block;transition:all .3s;}
@@ -274,7 +274,7 @@
       <h2 class="section-title">Birlikte<br/><em>çalışalım</em></h2>
       <p class="contact-text">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#30514244545554515c595e565f70575d51595c1e535f5d" class="contact-link"><span class="clt">E-posta</span><span class="clv"><span class="__cf_email__" data-cfemail="2a4b585e4e4f4e4b4643444c456a4d474b434604494547">[email&#160;protected]</span></span></a>
+        <a href="/cdn-cgi/l/email-protection#6f0e1d1b0b0a0b0e03060109002f08020e0603410c0002" class="contact-link"><span class="clt">E-posta</span><span class="clv"><span class="__cf_email__" data-cfemail="fd9c8f899998999c9194939b92bd9a909c9491d39e9290">[email&#160;protected]</span></span></a>
         <a href="https://www.instagram.com/art_dedal/" target="_blank" class="contact-link"><span class="clt">Instagram</span><span class="clv">@art_dedal</span></a>
       </div>
     </div>
@@ -285,7 +285,7 @@
     <div class="footer-copy">© 2026 ArtDedal. Bütün hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
-      <a href="/cdn-cgi/l/email-protection#3c5d4e485859585d5055525a537c5b515d5550125f5351">E-posta</a>
+      <a href="/cdn-cgi/l/email-protection#dfbeadabbbbabbbeb3b6b1b9b09fb8b2beb6b3f1bcb0b2">E-posta</a>
     </div>
   </footer>
 </div>
@@ -294,7 +294,7 @@
 <div id="detayPage">
   <nav class="detay-nav">
     <button class="detay-back" id="detayBack">Geri Dön</button>
-    <a class="nav-logo" href="#"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
+    <a class="nav-logo" href="javascript:void(0)" onclick="closeDetay()"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
     <div style="width:100px;"></div>
   </nav>
   <div class="detay-body">
@@ -550,7 +550,7 @@ document.getElementById('hamburger').addEventListener('click',()=>document.getEl
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const href = a.getAttribute('href');
-    if(href.startsWith('#eser')) return;
+    if(!href || href.startsWith('#eser')) return;
     const t=document.querySelector(href);
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
   });
