@@ -151,7 +151,7 @@
     .clt{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.35);width:80px;flex-shrink:0;}
     .clv{font-size:1rem;font-weight:300;color:var(--cream);transition:color .3s;}
 
-    footer{padding:44px 60px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+    footer{padding:28px 60px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
     .footer-logo img{height:32px;opacity:.6;}
     .footer-copy{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;color:var(--muted);}
     .footer-social{display:flex;gap:24px;}
@@ -274,7 +274,7 @@
       <h2 class="section-title">Birlikte<br/><em>çalışalım</em></h2>
       <p class="contact-text">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#aecfdcdacacbcacfc2c7c0c8c1eec9c3cfc7c280cdc1c3" class="contact-link"><span class="clt">E-posta</span><span class="clv"><span class="__cf_email__" data-cfemail="9effeceafafbfafff2f7f0f8f1def9f3fff7f2b0fdf1f3">[email&#160;protected]</span></span></a>
+        <a href="/cdn-cgi/l/email-protection#2445565040414045484d4a424b644349454d480a474b49" class="contact-link"><span class="clt">E-posta</span><span class="clv"><span class="__cf_email__" data-cfemail="a3c2d1d7c7c6c7c2cfcacdc5cce3c4cec2cacf8dc0ccce">[email&#160;protected]</span></span></a>
         <a href="https://www.instagram.com/art_dedal/" target="_blank" class="contact-link"><span class="clt">Instagram</span><span class="clv">@art_dedal</span></a>
       </div>
     </div>
@@ -285,7 +285,7 @@
     <div class="footer-copy">© 2026 ArtDedal. Bütün hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
-      <a href="/cdn-cgi/l/email-protection#fc9d8e889899989d9095929a93bc9b919d9590d29f9391">E-posta</a>
+      <a href="/cdn-cgi/l/email-protection#7e1f0c0a1a1b1a1f12171018113e19131f1712501d1113">E-posta</a>
     </div>
   </footer>
 </div>
@@ -341,10 +341,7 @@ const SAMPLE_PROPS = {
 };
 
 function imgUrl(id, w=600, folder='') {
-  // id zaten uzantı içeriyorsa ekleme, yoksa .jpg ekle
-  const hasExt = /\.(jpg|jpeg|png|webp|gif)$/i.test(id);
-  const suffix = hasExt ? '' : '.jpg';
-  return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}${suffix}`;
+  return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;
 }
 
 // ---- Gruplama mantığı ----
@@ -533,9 +530,7 @@ window.navGo = function(cat) {
 window.closeMenu = function() { document.getElementById('navLinks').classList.remove('open'); }
 
 // İlk yükleme
-document.addEventListener('DOMContentLoaded', () => renderGallery('resimler'));
-// Fallback
-if (document.readyState !== 'loading') renderGallery('resimler');
+renderGallery('resimler');
 
 // ---- Hero slider ----
 const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
