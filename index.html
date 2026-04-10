@@ -341,8 +341,7 @@ const SAMPLE_PROPS = {
 };
 
 function imgUrl(id, w=600, folder='') {
-  const path = folder ? `${folder}/${id}` : id;
-  return `${BASE}/w_${w},c_scale,q_auto,f_auto/${path}.jpg`;
+  return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;
 }
 
 // ---- Gruplama mantığı ----
