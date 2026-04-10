@@ -274,7 +274,7 @@
       <h2 class="section-title">Birlikte<br/><em>çalışalım</em></h2>
       <p class="contact-text">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</p>
       <div class="contact-links">
-        <a href="mailto:artdedalinfo@gmail.com" class="contact-link"><span class="clt">E-posta</span><span class="clv">artdedalinfo@gmail.com</span></a>
+        <a href="/cdn-cgi/l/email-protection#aecfdcdacacbcacfc2c7c0c8c1eec9c3cfc7c280cdc1c3" class="contact-link"><span class="clt">E-posta</span><span class="clv"><span class="__cf_email__" data-cfemail="9effeceafafbfafff2f7f0f8f1def9f3fff7f2b0fdf1f3">[email&#160;protected]</span></span></a>
         <a href="https://www.instagram.com/art_dedal/" target="_blank" class="contact-link"><span class="clt">Instagram</span><span class="clv">@art_dedal</span></a>
       </div>
     </div>
@@ -285,7 +285,7 @@
     <div class="footer-copy">© 2026 ArtDedal. Bütün hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
-      <a href="mailto:artdedalinfo@gmail.com">E-posta</a>
+      <a href="/cdn-cgi/l/email-protection#fc9d8e889899989d9095929a93bc9b919d9590d29f9391">E-posta</a>
     </div>
   </footer>
 </div>
@@ -318,7 +318,7 @@
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const C = 'dhvrm1dcf';
 const BASE = `https://res.cloudinary.com/${C}/image/upload`;
 
@@ -341,7 +341,10 @@ const SAMPLE_PROPS = {
 };
 
 function imgUrl(id, w=600, folder='') {
-  return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;
+  // id zaten uzantı içeriyorsa ekleme, yoksa .jpg ekle
+  const hasExt = /\.(jpg|jpeg|png|webp|gif)$/i.test(id);
+  const suffix = hasExt ? '' : '.jpg';
+  return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}${suffix}`;
 }
 
 // ---- Gruplama mantığı ----
@@ -530,7 +533,9 @@ window.navGo = function(cat) {
 window.closeMenu = function() { document.getElementById('navLinks').classList.remove('open'); }
 
 // İlk yükleme
-renderGallery('resimler');
+document.addEventListener('DOMContentLoaded', () => renderGallery('resimler'));
+// Fallback
+if (document.readyState !== 'loading') renderGallery('resimler');
 
 // ---- Hero slider ----
 const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
@@ -545,14 +550,4 @@ window.addEventListener('scroll',()=>document.getElementById('mainNav').classLis
 // ---- Hamburger ----
 document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
 
-// ---- Smooth scroll ----
-document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
-  });
-});
-
-</script>
-</body>
-</html>
+// ---- S
