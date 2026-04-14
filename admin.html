@@ -70,7 +70,10 @@ textarea{resize:vertical;min-height:80px;}
 .preview-thumb{width:48px;height:36px;object-fit:cover;border:1px solid var(--line);border-radius:2px;flex-shrink:0;}
 .download-area{background:var(--ink);color:var(--cream);padding:32px;border-radius:4px;text-align:center;}
 .download-area p{font-size:.7rem;letter-spacing:.1em;color:rgba(245,240,232,.4);margin-top:12px;}
-.toast{position:fixed;bottom:32px;right:32px;background:var(--ink);color:var(--cream);padding:14px 24px;border-radius:4px;font-size:.7rem;letter-spacing:.1em;opacity:0;transition:opacity .3s;pointer-events:none;}
+.modal-overlay{position:fixed;inset:0;background:rgba(26,22,18,.5);z-index:1000;display:flex;align-items:center;justify-content:center;}
+.modal{background:white;border:1px solid var(--line);padding:32px;border-radius:4px;min-width:360px;max-width:480px;}
+.modal-title{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin-bottom:20px;}
+.modal-actions{display:flex;gap:8px;margin-top:20px;}
 .toast.show{opacity:1;}
 </style>
 </head>
@@ -228,6 +231,18 @@ textarea{resize:vertical;min-height:80px;}
   </div>
 </div>
 
+<div id="moveModal" style="display:none;" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-title">Kategoriyi Taşı</div>
+    <p id="moveModalDesc" style="font-size:.85rem;color:var(--muted);margin-bottom:16px;"></p>
+    <label>Nereye taşınsın?</label>
+    <select id="moveTarget"></select>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="doMoveCat()">Taşı</button>
+      <button class="btn btn-outline" onclick="document.getElementById('moveModal').style.display='none'">İptal</button>
+    </div>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -335,6 +350,7 @@ function renderCats() {
                 </div>
                 <div style="display:flex;gap:8px;align-items:center;">
                   <span style="font-size:.6rem;color:var(--muted);">${(state.raw[sub]||[]).length} görsel</span>
+                  <button class="btn btn-outline" style="padding:6px 12px;font-size:.55rem;" onclick="event.stopPropagation();showMoveCat('${sub}','sub','sanatsal')">Taşı</button>
                   ${state.subCats.length > 1 ? `<button class="btn btn-danger" onclick="event.stopPropagation();removeSubCat('${sub}')">Sil</button>` : ''}
                 </div>
               </div>
@@ -360,6 +376,7 @@ function renderCats() {
           </div>
           <div style="display:flex;gap:8px;align-items:center;">
             <span style="font-size:.6rem;color:var(--muted);">${hasChildren ? children.length + ' alt kategori' : (state.raw[cat]||[]).length + ' görsel'}</span>
+            <button class="btn btn-outline" style="padding:6px 12px;font-size:.55rem;" onclick="event.stopPropagation();showMoveCat('${cat}','main')">Taşı</button>
             <button class="btn btn-danger" onclick="event.stopPropagation();removeMainCat('${cat}')">Sil</button>
           </div>
         </div>
@@ -377,6 +394,7 @@ function renderCats() {
                     </div>
                     <div style="display:flex;gap:8px;align-items:center;">
                       <span style="font-size:.6rem;color:var(--muted);">${(state.raw[sub]||[]).length} görsel</span>
+                      <button class="btn btn-outline" style="padding:6px 12px;font-size:.55rem;" onclick="event.stopPropagation();showMoveCat('${sub}','sub','${cat}')">Taşı</button>
                       <button class="btn btn-danger" onclick="event.stopPropagation();removeExtraSubCat('${cat}','${sub}')">Sil</button>
                     </div>
                   </div>
@@ -430,6 +448,95 @@ function removeImage(cat, i) {
   state.raw[cat].splice(i, 1);
   renderCats();
   showToast('Görsel silindi');
+}
+
+// ---- TAŞI ----
+let _moveCtx = null;
+
+function showMoveCat(key, type, currentParent) {
+  _moveCtx = { key, type, currentParent };
+  const label = type === 'main' ? (state.mainCatLabels[key]||key) :
+    (state.subCatLabels[key] || (state.extraSubLabels&&state.extraSubLabels[key]) || key);
+  document.getElementById('moveModalDesc').textContent = `"${label}" kategorisini taşı:`;
+
+  const sel = document.getElementById('moveTarget');
+  let opts = '';
+
+  if(type === 'main') {
+    // Ana kategoriyi → başka bir ana kategorinin alt kategorisi yap
+    opts += `<option value="__root__">Ana kategori olarak bırak</option>`;
+    state.mainCats.filter(c => c !== key).forEach(c => {
+      opts += `<option value="${c}">${state.mainCatLabels[c]} altına</option>`;
+    });
+  } else {
+    // Alt kategoriyi → farklı bir ana kategoriye taşı
+    state.mainCats.forEach(c => {
+      if(c !== currentParent) {
+        opts += `<option value="${c}">${state.mainCatLabels[c]} altına</option>`;
+      }
+    });
+    opts += `<option value="__main__">Ana kategori yap</option>`;
+  }
+
+  sel.innerHTML = opts;
+  document.getElementById('moveModal').style.display = 'flex';
+}
+
+function doMoveCat() {
+  const { key, type, currentParent } = _moveCtx;
+  const target = document.getElementById('moveTarget').value;
+  if(!state.catChildren) state.catChildren = {};
+  if(!state.extraSubLabels) state.extraSubLabels = {};
+
+  if(type === 'main') {
+    if(target === '__root__') { document.getElementById('moveModal').style.display='none'; return; }
+    // Ana kategoriyi alt kategori yap
+    const label = state.mainCatLabels[key];
+    // Ana listeden çıkar
+    state.mainCats = state.mainCats.filter(c => c !== key);
+    delete state.mainCatLabels[key];
+    // Hedef ana kategorinin altına ekle
+    if(!state.catChildren[target]) state.catChildren[target] = [];
+    state.catChildren[target].push(key);
+    state.extraSubLabels[key] = label;
+    // Alt kategorinin kendi çocukları varsa onları da taşı (basit: ana listeye ekle)
+    if(state.catChildren[key] && state.catChildren[key].length > 0) {
+      state.catChildren[key].forEach(child => {
+        state.mainCats.push(child);
+        state.mainCatLabels[child] = state.extraSubLabels[child] || child;
+        delete state.extraSubLabels[child];
+      });
+      delete state.catChildren[key];
+    }
+  } else {
+    // Alt kategoriyi başka yere taşı
+    const label = state.subCatLabels[key] || state.extraSubLabels[key] || key;
+    // Mevcut yerden çıkar
+    if(currentParent === 'sanatsal') {
+      state.subCats = state.subCats.filter(s => s !== key);
+      delete state.subCatLabels[key];
+    } else {
+      if(state.catChildren[currentParent]) {
+        state.catChildren[currentParent] = state.catChildren[currentParent].filter(s => s !== key);
+      }
+      delete state.extraSubLabels[key];
+    }
+    if(target === '__main__') {
+      // Ana kategori yap
+      state.mainCats.push(key);
+      state.mainCatLabels[key] = label;
+      state.catChildren[key] = [];
+    } else {
+      // Başka ana kategorinin altına ekle
+      if(!state.catChildren[target]) state.catChildren[target] = [];
+      state.catChildren[target].push(key);
+      state.extraSubLabels[key] = label;
+    }
+  }
+
+  document.getElementById('moveModal').style.display = 'none';
+  renderCats();
+  showToast('Kategori taşındı!');
 }
 
 function removeMainCat(cat) {
@@ -619,34 +726,19 @@ function buildHeroDots() {
 }
 
 function buildRawJS() {
-  const validKeys = [
-    ...state.mainCats,
-    ...state.subCats,
-    ...Object.values(state.catChildren||{}).flat()
-  ];
-  const filtered = {};
-  validKeys.forEach(k => { if(state.raw[k] !== undefined) filtered[k] = state.raw[k]; });
-  const entries = Object.entries(filtered).map(([k,v]) =>
+  const entries = Object.entries(state.raw).map(([k,v]) =>
     `  ${k}: ${JSON.stringify(v)}`
   ).join(',\n');
   return `{\n${entries}\n}`;
 }
 
 function buildCatLabelJS() {
-  const all = {...state.mainCatLabels, ...state.subCatLabels, ...(state.extraSubLabels||{})};
+  const all = {...state.mainCatLabels, ...state.subCatLabels};
   return JSON.stringify(all).replace(/"/g,"'");
 }
 
 function buildNavGoSubCats() {
   return JSON.stringify(state.subCats).replace(/"/g,"'");
-}
-
-function buildCatChildrenJS() {
-  return JSON.stringify(state.catChildren||{}).replace(/"/g,"'");
-}
-
-function buildExtraSubLabelsJS() {
-  return JSON.stringify(state.extraSubLabels||{}).replace(/"/g,"'");
 }
 
 function downloadHTML() {
@@ -981,53 +1073,24 @@ function closeDetay(){document.getElementById('detayPage').classList.remove('ope
 document.getElementById('detayBack').addEventListener('click',closeDetay);
 document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  const main=btn.dataset.main,subWrap=document.getElementById('subcatTabs');
-  const catChildren=${buildCatChildrenJS()};
-  const extraLabels=${buildExtraSubLabelsJS()};
-  if(main==='sanatsal'){
-    subWrap.innerHTML=\`${state.subCats.map((s,i)=>`<button class='subcat-tab${i===0?' active':''}' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('')}\`;
-    subWrap.classList.add('visible');
-    subWrap.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
-    renderGallery('${state.subCats[0]}');
-  } else if(catChildren[main]&&catChildren[main].length>0){
-    const children=catChildren[main];
-    subWrap.innerHTML=children.map((s,i)=>\`<button class="subcat-tab\${i===0?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
-    subWrap.classList.add('visible');
-    subWrap.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
-    renderGallery(children[0]);
-  } else {
-    subWrap.innerHTML='';subWrap.classList.remove('visible');renderGallery(main);
-  }
+  const main=btn.dataset.main,sub=document.getElementById('subcatTabs');
+  if(main==='sanatsal'){sub.classList.add('visible');document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.toggle('active',b.dataset.sub==='${state.subCats[0]}'));renderGallery('${state.subCats[0]}');}
+  else{sub.classList.remove('visible');renderGallery(main);}
 }));
 document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGallery(btn.dataset.sub);
 }));
 window.navGo=function(cat){setTimeout(()=>{
-  const subWrap=document.getElementById('subcatTabs');
-  const sanatSubs=${buildNavGoSubCats()};
-  const catChildren=${buildCatChildrenJS()};
-  const extraLabels=${buildExtraSubLabelsJS()};
-  if(sanatSubs.includes(cat)||cat==='sanatsal'){
-    const t=sanatSubs.includes(cat)?cat:'${state.subCats[0]}';
+  const sub=document.getElementById('subcatTabs'),s=${buildNavGoSubCats()};
+  if(s.includes(cat)||cat==='sanatsal'){
+    const t=s.includes(cat)?cat:'${state.subCats[0]}';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
-    subWrap.innerHTML=\`${state.subCats.map(s=>`<button class='subcat-tab' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('')}\`;
-    subWrap.classList.add('visible');
-    subWrap.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
+    sub.classList.add('visible');
+    document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.toggle('active',b.dataset.sub===t));
     renderGallery(t);
-  } else {
-    let foundParent=null;
-    Object.keys(catChildren).forEach(p=>{if(catChildren[p].includes(cat))foundParent=p;});
-    if(foundParent){
-      document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===foundParent));
-      const children=catChildren[foundParent];
-      subWrap.innerHTML=children.map(s=>\`<button class="subcat-tab\${s===cat?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
-      subWrap.classList.add('visible');
-      subWrap.querySelectorAll('.subcat-tab').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
-      renderGallery(cat);
-    } else {
-      document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===cat));
-      subWrap.innerHTML='';subWrap.classList.remove('visible');renderGallery(cat);
-    }
+  }else{
+    document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===cat));
+    sub.classList.remove('visible');renderGallery(cat);
   }
   window.closeMenu();
   document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'});
