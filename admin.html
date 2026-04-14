@@ -479,6 +479,21 @@ function loadIndexFile() {
       if(rawMatch) {
         const rawObj = eval('(' + rawMatch[1] + ')');
         state.raw = rawObj;
+        // Kategorileri RAW anahtarlarından yeniden oluştur
+        // cat-tabs'dan ana kategorileri çek
+        const catTabMatches = [...html.matchAll(/class="cat-tab[^"]*"\s*data-main="([^"]+)">([^<]+)</g)];
+        if(catTabMatches.length) {
+          state.mainCats = catTabMatches.map(m => m[1]);
+          state.mainCatLabels = {};
+          catTabMatches.forEach(m => { state.mainCatLabels[m[1]] = m[2].trim(); });
+        }
+        // subcat-tabs'dan alt kategorileri çek
+        const subTabMatches = [...html.matchAll(/class="subcat-tab[^"]*"\s*data-sub="([^"]+)">([^<]+)</g)];
+        if(subTabMatches.length) {
+          state.subCats = subTabMatches.map(m => m[1]);
+          state.subCatLabels = {};
+          subTabMatches.forEach(m => { state.subCatLabels[m[1]] = m[2].trim(); });
+        }
       }
       // Metinleri çek
       const heroTagMatch = html.match(/class="hero-tag">([^<]+)<\/div>/);
