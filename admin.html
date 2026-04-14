@@ -345,6 +345,8 @@ function renderCats() {
 
   // Diğer ana kategoriler
   state.mainCats.filter(c => c !== 'sanatsal').forEach(cat => {
+    const children = (state.catChildren && state.catChildren[cat]) || [];
+    const hasChildren = children.length > 0;
     html += `
       <div class="cat-block">
         <div class="cat-header" onclick="toggleCat('main-${cat}')">
@@ -353,12 +355,34 @@ function renderCats() {
             <span class="cat-name">${state.mainCatLabels[cat]}</span>
           </div>
           <div style="display:flex;gap:8px;align-items:center;">
-            <span style="font-size:.6rem;color:var(--muted);">${(state.raw[cat]||[]).length} görsel</span>
+            <span style="font-size:.6rem;color:var(--muted);">${hasChildren ? children.length + ' alt kategori' : (state.raw[cat]||[]).length + ' görsel'}</span>
             <button class="btn btn-danger" onclick="event.stopPropagation();removeMainCat('${cat}')">Sil</button>
           </div>
         </div>
         <div class="cat-body" id="cat-main-${cat}">
-          ${renderImageList(cat)}
+          ${hasChildren ? `
+            <div class="subcat-list">
+              ${children.map(sub => {
+                const subLabel = (state.extraSubLabels && state.extraSubLabels[sub]) || sub;
+                return `
+                <div class="cat-block" style="margin-bottom:8px;">
+                  <div class="cat-header" onclick="toggleCat('extra-${sub}')" style="background:#f5f0e8;">
+                    <div class="cat-header-left">
+                      <span class="cat-key">alt</span>
+                      <span class="cat-name">${subLabel}</span>
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                      <span style="font-size:.6rem;color:var(--muted);">${(state.raw[sub]||[]).length} görsel</span>
+                      <button class="btn btn-danger" onclick="event.stopPropagation();removeExtraSubCat('${cat}','${sub}')">Sil</button>
+                    </div>
+                  </div>
+                  <div class="cat-body" id="cat-extra-${sub}">
+                    ${renderImageList(sub)}
+                  </div>
+                </div>`;
+              }).join('')}
+            </div>
+          ` : renderImageList(cat)}
         </div>
       </div>`;
   });
@@ -411,6 +435,17 @@ function removeMainCat(cat) {
   delete state.raw[cat];
   renderCats();
   showToast('Kategori silindi');
+}
+
+function removeExtraSubCat(parent, sub) {
+  if(!confirm(`"${(state.extraSubLabels&&state.extraSubLabels[sub])||sub}" alt kategorisini silmek istiyor musunuz?`)) return;
+  if(state.catChildren && state.catChildren[parent]) {
+    state.catChildren[parent] = state.catChildren[parent].filter(s => s !== sub);
+  }
+  if(state.extraSubLabels) delete state.extraSubLabels[sub];
+  delete state.raw[sub];
+  renderCats();
+  showToast('Alt kategori silindi');
 }
 
 function removeSubCat(sub) {
@@ -540,6 +575,14 @@ function buildNavDropdown() {
     if(cat === 'sanatsal') {
       const subs = state.subCats.map(s => `<li><a href="#calismalarbg" onclick="navGo('${s}')">${state.subCatLabels[s]}</a></li>`).join('');
       return `<li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">${state.mainCatLabels[cat]}</a><ul class="sub-dropdown">${subs}</ul></li>`;
+    }
+    const children = (state.catChildren && state.catChildren[cat]) || [];
+    if(children.length > 0) {
+      const subs = children.map(s => {
+        const lbl = (state.extraSubLabels && state.extraSubLabels[s]) || s;
+        return `<li><a href="#calismalarbg" onclick="navGo('${s}')">${lbl}</a></li>`;
+      }).join('');
+      return `<li class="has-sub"><a href="#calismalarbg" onclick="navGo('${cat}')">${state.mainCatLabels[cat]}</a><ul class="sub-dropdown">${subs}</ul></li>`;
     }
     return `<li><a href="#calismalarbg" onclick="navGo('${cat}')">${state.mainCatLabels[cat]}</a></li>`;
   }).join('');
