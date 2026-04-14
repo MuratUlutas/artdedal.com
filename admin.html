@@ -619,19 +619,34 @@ function buildHeroDots() {
 }
 
 function buildRawJS() {
-  const entries = Object.entries(state.raw).map(([k,v]) =>
+  const validKeys = [
+    ...state.mainCats,
+    ...state.subCats,
+    ...Object.values(state.catChildren||{}).flat()
+  ];
+  const filtered = {};
+  validKeys.forEach(k => { if(state.raw[k] !== undefined) filtered[k] = state.raw[k]; });
+  const entries = Object.entries(filtered).map(([k,v]) =>
     `  ${k}: ${JSON.stringify(v)}`
   ).join(',\n');
   return `{\n${entries}\n}`;
 }
 
 function buildCatLabelJS() {
-  const all = {...state.mainCatLabels, ...state.subCatLabels};
+  const all = {...state.mainCatLabels, ...state.subCatLabels, ...(state.extraSubLabels||{})};
   return JSON.stringify(all).replace(/"/g,"'");
 }
 
 function buildNavGoSubCats() {
   return JSON.stringify(state.subCats).replace(/"/g,"'");
+}
+
+function buildCatChildrenJS() {
+  return JSON.stringify(state.catChildren||{}).replace(/"/g,"'");
+}
+
+function buildExtraSubLabelsJS() {
+  return JSON.stringify(state.extraSubLabels||{}).replace(/"/g,"'");
 }
 
 function downloadHTML() {
@@ -966,24 +981,53 @@ function closeDetay(){document.getElementById('detayPage').classList.remove('ope
 document.getElementById('detayBack').addEventListener('click',closeDetay);
 document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  const main=btn.dataset.main,sub=document.getElementById('subcatTabs');
-  if(main==='sanatsal'){sub.classList.add('visible');document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.toggle('active',b.dataset.sub==='${state.subCats[0]}'));renderGallery('${state.subCats[0]}');}
-  else{sub.classList.remove('visible');renderGallery(main);}
+  const main=btn.dataset.main,subWrap=document.getElementById('subcatTabs');
+  const catChildren=${buildCatChildrenJS()};
+  const extraLabels=${buildExtraSubLabelsJS()};
+  if(main==='sanatsal'){
+    subWrap.innerHTML=\`${state.subCats.map((s,i)=>`<button class='subcat-tab${i===0?' active':''}' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('')}\`;
+    subWrap.classList.add('visible');
+    subWrap.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
+    renderGallery('${state.subCats[0]}');
+  } else if(catChildren[main]&&catChildren[main].length>0){
+    const children=catChildren[main];
+    subWrap.innerHTML=children.map((s,i)=>\`<button class="subcat-tab\${i===0?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
+    subWrap.classList.add('visible');
+    subWrap.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
+    renderGallery(children[0]);
+  } else {
+    subWrap.innerHTML='';subWrap.classList.remove('visible');renderGallery(main);
+  }
 }));
 document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGallery(btn.dataset.sub);
 }));
 window.navGo=function(cat){setTimeout(()=>{
-  const sub=document.getElementById('subcatTabs'),s=${buildNavGoSubCats()};
-  if(s.includes(cat)||cat==='sanatsal'){
-    const t=s.includes(cat)?cat:'${state.subCats[0]}';
+  const subWrap=document.getElementById('subcatTabs');
+  const sanatSubs=${buildNavGoSubCats()};
+  const catChildren=${buildCatChildrenJS()};
+  const extraLabels=${buildExtraSubLabelsJS()};
+  if(sanatSubs.includes(cat)||cat==='sanatsal'){
+    const t=sanatSubs.includes(cat)?cat:'${state.subCats[0]}';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
-    sub.classList.add('visible');
-    document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.toggle('active',b.dataset.sub===t));
+    subWrap.innerHTML=\`${state.subCats.map(s=>`<button class='subcat-tab' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('')}\`;
+    subWrap.classList.add('visible');
+    subWrap.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
     renderGallery(t);
-  }else{
-    document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===cat));
-    sub.classList.remove('visible');renderGallery(cat);
+  } else {
+    let foundParent=null;
+    Object.keys(catChildren).forEach(p=>{if(catChildren[p].includes(cat))foundParent=p;});
+    if(foundParent){
+      document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===foundParent));
+      const children=catChildren[foundParent];
+      subWrap.innerHTML=children.map(s=>\`<button class="subcat-tab\${s===cat?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
+      subWrap.classList.add('visible');
+      subWrap.querySelectorAll('.subcat-tab').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
+      renderGallery(cat);
+    } else {
+      document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===cat));
+      subWrap.innerHTML='';subWrap.classList.remove('visible');renderGallery(cat);
+    }
   }
   window.closeMenu();
   document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'});
