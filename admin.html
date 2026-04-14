@@ -89,6 +89,10 @@ textarea{resize:vertical;min-height:80px;}
     <div class="sidebar-item" data-panel="kategoriler">Kategoriler & Eserler</div>
     <div class="sidebar-sep"></div>
     <div class="sidebar-item" data-panel="indir">İndir</div>
+    <div class="sidebar-sep"></div>
+    <div style="padding:16px 24px;">
+      <button onclick="syncFromInputs();downloadHTML()" style="width:100%;background:#27ae60;color:white;border:none;padding:12px;font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;border-radius:2px;">⬇ Kaydet & İndir</button>
+    </div>
   </nav>
 
   <div class="main">
@@ -216,7 +220,7 @@ textarea{resize:vertical;min-height:80px;}
         <div id="loadStatus" style="margin-top:8px;font-size:.75rem;color:var(--muted);"></div>
       </div>
       <div class="download-area">
-        <button class="btn btn-success" onclick="downloadHTML()">index.html İndir</button>
+        <button class="btn btn-success" onclick="downloadHTML()">⬇ index.html İndir</button>
         <p>İndirilen dosyayı GitHub'daki mevcut index.html ile değiştir</p>
       </div>
     </div>
@@ -346,7 +350,7 @@ function renderCats() {
   // Diğer ana kategoriler
   state.mainCats.filter(c => c !== 'sanatsal').forEach(cat => {
     const children = (state.catChildren && state.catChildren[cat]) || [];
-    const hasChildren = children.length > 0;
+    const hasChildren = state.catChildren && state.catChildren.hasOwnProperty(cat);
     html += `
       <div class="cat-block">
         <div class="cat-header" onclick="toggleCat('main-${cat}')">
@@ -474,23 +478,24 @@ function addNewCat() {
   const key = document.getElementById('newCatKey').value.trim().toLowerCase().replace(/\s+/g,'_');
   const type = document.getElementById('newCatType').value;
   if(!label || !key) { alert('Lütfen ad ve anahtar girin'); return; }
+
+  // catChildren ve extraSubLabels her zaman init edilsin
+  if(!state.catChildren) state.catChildren = {};
+  if(!state.extraSubLabels) state.extraSubLabels = {};
+
   if(type === 'main') {
     state.mainCats.push(key);
     state.mainCatLabels[key] = label;
     state.raw[key] = [];
-    // Bu ana kategori için alt kategori listesi
-    if(!state.catChildren) state.catChildren = {sanatsal: state.subCats};
     state.catChildren[key] = [];
   } else {
     const parent = document.getElementById('newCatParent').value;
-    if(!state.catChildren) state.catChildren = {sanatsal: state.subCats};
     if(parent === 'sanatsal') {
       state.subCats.push(key);
       state.subCatLabels[key] = label;
     } else {
       if(!state.catChildren[parent]) state.catChildren[parent] = [];
       state.catChildren[parent].push(key);
-      if(!state.extraSubLabels) state.extraSubLabels = {};
       state.extraSubLabels[key] = label;
     }
     state.raw[key] = [];
