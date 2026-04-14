@@ -417,12 +417,14 @@ function loadIndexFile(){
       // RAW
       const rawM=html.match(/const RAW\s*=\s*(\{[\s\S]*?\n\};)/);
       if(rawM)state.raw=eval('('+rawM[1].replace(/};$/,'}')+')');
-      // mainCats
+      // mainCats - sadece geçerli olanları al
       const ctM=[...html.matchAll(/class="cat-tab[^"]*"\s+data-main="([^"]+)">([^<]+)</g)];
-      if(ctM.length){state.mainCats=ctM.map(m=>m[1]);state.mainCatLabels={};ctM.forEach(m=>state.mainCatLabels[m[1]]=m[2].trim());}
-      // subCats
+      const validCats=ctM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
+      if(validCats.length){state.mainCats=validCats.map(m=>m[1]);state.mainCatLabels={};validCats.forEach(m=>state.mainCatLabels[m[1]]=m[2].trim());}
+      // subCats - sadece geçerli ($ içermeyen) olanları al
       const stM=[...html.matchAll(/class="subcat-tab[^"]*"\s+data-sub="([^"]+)">([^<]+)</g)];
-      if(stM.length){state.subCats=stM.map(m=>m[1]);state.subCatLabels={};stM.forEach(m=>state.subCatLabels[m[1]]=m[2].trim());}
+      const validSubs=stM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
+      if(validSubs.length){state.subCats=validSubs.map(m=>m[1]);state.subCatLabels={};validSubs.forEach(m=>state.subCatLabels[m[1]]=m[2].trim());}
       // catChildren
       const ccM=html.match(/const catChildren\s*=\s*(\{[^;]+\});/);
       if(ccM){try{state.catChildren=eval('('+ccM[1]+')');}catch(e){}}
