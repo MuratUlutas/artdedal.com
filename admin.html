@@ -434,12 +434,41 @@ function loadIndexFile(){
       // heroTag
       const htM=html.match(/class="hero-tag">([^<]+)</);
       if(htM){state.heroTag=htM[1];document.getElementById('heroTag').value=htM[1];}
-      // heroImages
-      const slM=[...html.matchAll(/hero-slide[^>]*><img src="([^"]+)"/g)];
-      if(slM.length)state.heroImages=slM.map(m=>m[1]);
+      // heroTitle
+      const htiM=html.match(/class="hero-title">([^<]+)</);
+      if(htiM){state.heroTitle=htiM[1];document.getElementById('heroTitle').value=htiM[1];}
+      // heroSub
+      const hsM=html.match(/class="hero-sub">([^<]+)</);
+      if(hsM){state.heroSub=hsM[1];document.getElementById('heroSub').value=hsM[1];}
+      // heroCta
+      const hcM=html.match(/class="hero-cta"[^>]*>([^<]+)</);
+      if(hcM){state.heroCta=hcM[1];document.getElementById('heroCta').value=hcM[1];}
+      // aboutTitle
+      const atM=html.match(/class="section-title">([^<]+)</);
+      if(atM){state.aboutTitle=atM[1];document.getElementById('aboutTitle').value=atM[1];}
+      // about paragraflar
+      const apM=[...html.matchAll(/class="about-text"[^>]*>([^<]+)</g)];
+      if(apM[0]){state.aboutP1=apM[0][1];document.getElementById('aboutP1').value=apM[0][1];}
+      if(apM[1]){state.aboutP2=apM[1][1];document.getElementById('aboutP2').value=apM[1][1];}
+      if(apM[2]){state.aboutP3=apM[2][1];document.getElementById('aboutP3').value=apM[2][1];}
+      // aboutSign
+      const asM=html.match(/class="about-sign">([^<]+)</);
+      if(asM){state.aboutSign=asM[1];document.getElementById('aboutSign').value=asM[1];}
+      // contactText
+      const ctM2=html.match(/class="contact-text">([^<]+)</);
+      if(ctM2){state.contactText=ctM2[1];document.getElementById('contactText').value=ctM2[1];}
+      // contactInsta
+      const ciM=html.match(/class="clv">(@[^<]+)</);
+      if(ciM){state.contactInsta=ciM[1];document.getElementById('contactInsta').value=ciM[1];}
+      // footerCopy
+      const fcM=html.match(/class="footer-copy">([^<]+)</);
+      if(fcM){state.footerCopy=fcM[1];document.getElementById('footerCopy').value=fcM[1];}
       // email
       const emM=html.match(/mailto:([^"]+)"/);
       if(emM){state.contactEmail=emM[1];document.getElementById('contactEmail').value=emM[1];}
+      // heroImages
+      const slM=[...html.matchAll(/hero-slide[^>]*><img src="([^"]+)"/g)];
+      if(slM.length)state.heroImages=slM.map(m=>m[1]);
       st.style.color='#27ae60';st.textContent='✓ Veriler yüklendi!';
       renderCats();showToast('index.html okundu!');
     }catch(err){st.style.color='#c0392b';st.textContent='Hata: '+err.message;}
