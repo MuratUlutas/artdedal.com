@@ -182,12 +182,17 @@ textarea{resize:vertical;min-height:80px;}
           </div>
         </div>
         <br/>
-        <label>Ana Kategori mi, Alt Kategori mi?</label>
-        <select id="newCatType">
+        <label>Tür</label>
+        <select id="newCatType" onchange="toggleParentSelect()">
           <option value="main">Ana Kategori (tab olarak görünür)</option>
-          <option value="sub">Sanatsal alt kategorisi (Resimler gibi)</option>
+          <option value="sub">Alt Kategori (bir ana kategorinin altında)</option>
         </select>
-        <br/><br/>
+        <br/>
+        <div id="parentCatWrap" style="display:none;">
+          <label>Hangi Ana Kategorinin Altında?</label>
+          <select id="newCatParent"></select>
+          <br/>
+        </div>
         <div style="display:flex;gap:8px;">
           <button class="btn btn-primary" onclick="addNewCat()">Kategori Ekle</button>
           <button class="btn btn-outline" onclick="document.getElementById('newCatForm').style.display='none'">İptal</button>
@@ -203,6 +208,13 @@ textarea{resize:vertical;min-height:80px;}
     <div class="panel" id="panel-indir">
       <div class="section-title">index.html İndir</div>
       <div class="section-sub">Tüm değişiklikleri uygulayarak dosyayı indir</div>
+      <div class="card">
+        <div class="card-title">Mevcut index.html'i Yükle</div>
+        <p style="font-size:.75rem;color:var(--muted);margin-bottom:16px;">GitHub'dan indirdiğin güncel index.html dosyasını seç. Panel, içindeki kategori ve görsel verilerini okuyacak.</p>
+        <input type="file" id="indexFileInput" accept=".html" style="margin-bottom:12px;"/>
+        <button class="btn btn-outline" onclick="loadIndexFile()">Dosyayı Yükle & Veriyi Al</button>
+        <div id="loadStatus" style="margin-top:8px;font-size:.75rem;color:var(--muted);"></div>
+      </div>
       <div class="download-area">
         <button class="btn btn-success" onclick="downloadHTML()">index.html İndir</button>
         <p>İndirilen dosyayı GitHub'daki mevcut index.html ile değiştir</p>
@@ -410,6 +422,18 @@ function removeSubCat(sub) {
   showToast('Alt kategori silindi');
 }
 
+function toggleParentSelect() {
+  const type = document.getElementById('newCatType').value;
+  const wrap = document.getElementById('parentCatWrap');
+  if(type === 'sub') {
+    wrap.style.display = 'block';
+    const sel = document.getElementById('newCatParent');
+    sel.innerHTML = state.mainCats.map(c => `<option value="${c}">${state.mainCatLabels[c]}</option>`).join('');
+  } else {
+    wrap.style.display = 'none';
+  }
+}
+
 function addNewCat() {
   const label = document.getElementById('newCatLabel').value.trim();
   const key = document.getElementById('newCatKey').value.trim().toLowerCase().replace(/\s+/g,'_');
@@ -419,9 +443,21 @@ function addNewCat() {
     state.mainCats.push(key);
     state.mainCatLabels[key] = label;
     state.raw[key] = [];
+    // Bu ana kategori için alt kategori listesi
+    if(!state.catChildren) state.catChildren = {sanatsal: state.subCats};
+    state.catChildren[key] = [];
   } else {
-    state.subCats.push(key);
-    state.subCatLabels[key] = label;
+    const parent = document.getElementById('newCatParent').value;
+    if(!state.catChildren) state.catChildren = {sanatsal: state.subCats};
+    if(parent === 'sanatsal') {
+      state.subCats.push(key);
+      state.subCatLabels[key] = label;
+    } else {
+      if(!state.catChildren[parent]) state.catChildren[parent] = [];
+      state.catChildren[parent].push(key);
+      if(!state.extraSubLabels) state.extraSubLabels = {};
+      state.extraSubLabels[key] = label;
+    }
     state.raw[key] = [];
   }
   document.getElementById('newCatLabel').value = '';
@@ -429,6 +465,42 @@ function addNewCat() {
   document.getElementById('newCatForm').style.display = 'none';
   renderCats();
   showToast('Kategori eklendi!');
+}
+
+function loadIndexFile() {
+  const file = document.getElementById('indexFileInput').files[0];
+  if(!file) { alert('Önce bir dosya seç'); return; }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const html = e.target.result;
+    try {
+      // RAW verisini çek
+      const rawMatch = html.match(/const RAW\s*=\s*(\{[\s\S]*?\});/);
+      if(rawMatch) {
+        const rawObj = eval('(' + rawMatch[1] + ')');
+        state.raw = rawObj;
+      }
+      // Metinleri çek
+      const heroTagMatch = html.match(/class="hero-tag">([^<]+)<\/div>/);
+      if(heroTagMatch) { state.heroTag = heroTagMatch[1]; document.getElementById('heroTag').value = state.heroTag; }
+      const heroSubMatch = html.match(/class="hero-sub">([^<]+)<\/p>/);
+      if(heroSubMatch) { state.heroSub = heroSubMatch[1]; document.getElementById('heroSub').value = state.heroSub; }
+      const heroCtaMatch = html.match(/class="hero-cta"[^>]*>([^<]+)<\/a>/);
+      if(heroCtaMatch) { state.heroCta = heroCtaMatch[1]; document.getElementById('heroCta').value = state.heroCta; }
+      const emailMatch = html.match(/mailto:([^"]+)"/);
+      if(emailMatch) { state.contactEmail = emailMatch[1]; document.getElementById('contactEmail').value = state.contactEmail; }
+      // Hero görselleri
+      const slideMatches = [...html.matchAll(/hero-slide[^>]*><img src="([^"]+)"/g)];
+      if(slideMatches.length) { state.heroImages = slideMatches.map(m => m[1]); }
+      document.getElementById('loadStatus').textContent = '✓ Veriler yüklendi! Şimdi düzenleme yapabilirsiniz.';
+      document.getElementById('loadStatus').style.color = '#27ae60';
+      showToast('index.html başarıyla okundu!');
+    } catch(err) {
+      document.getElementById('loadStatus').textContent = 'Hata: Dosya okunamadı.';
+      document.getElementById('loadStatus').style.color = '#c0392b';
+    }
+  };
+  reader.readAsText(file);
 }
 
 // ---- SYNC ----
