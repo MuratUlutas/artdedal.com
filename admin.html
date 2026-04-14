@@ -434,18 +434,18 @@ function loadIndexFile(){
       // heroTag
       const htM=html.match(/class="hero-tag">([^<]+)</);
       if(htM){state.heroTag=htM[1];document.getElementById('heroTag').value=htM[1];}
-      // heroTitle
-      const htiM=html.match(/class="hero-title">([^<]+)</);
-      if(htiM){state.heroTitle=htiM[1];document.getElementById('heroTitle').value=htiM[1];}
+      // heroTitle - br içerebilir, tüm içeriği al
+      const htiM=html.match(/class="hero-title">([\s\S]*?)<\/h1>/);
+      if(htiM){const v=htiM[1].replace(/<br\/?>/g,' ').replace(/<[^>]+>/g,'').trim();state.heroTitle=v;document.getElementById('heroTitle').value=v;}
       // heroSub
       const hsM=html.match(/class="hero-sub">([^<]+)</);
       if(hsM){state.heroSub=hsM[1];document.getElementById('heroSub').value=hsM[1];}
-      // heroCta
+      // heroCta - href içinde olduğu için özel regex
       const hcM=html.match(/class="hero-cta"[^>]*>([^<]+)</);
       if(hcM){state.heroCta=hcM[1];document.getElementById('heroCta').value=hcM[1];}
-      // aboutTitle
-      const atM=html.match(/class="section-title">([^<]+)</);
-      if(atM){state.aboutTitle=atM[1];document.getElementById('aboutTitle').value=atM[1];}
+      // aboutTitle - hakkimizda section içinde
+      const atM=html.match(/id="hakkimizda"[\s\S]*?class="section-title">([\s\S]*?)<\/h2>/);
+      if(atM){const v=atM[1].replace(/<[^>]+>/g,'').trim();state.aboutTitle=v;document.getElementById('aboutTitle').value=v;}
       // about paragraflar
       const apM=[...html.matchAll(/class="about-text"[^>]*>([^<]+)</g)];
       if(apM[0]){state.aboutP1=apM[0][1];document.getElementById('aboutP1').value=apM[0][1];}
@@ -455,14 +455,14 @@ function loadIndexFile(){
       const asM=html.match(/class="about-sign">([^<]+)</);
       if(asM){state.aboutSign=asM[1];document.getElementById('aboutSign').value=asM[1];}
       // contactText
-      const ctM2=html.match(/class="contact-text">([^<]+)</);
-      if(ctM2){state.contactText=ctM2[1];document.getElementById('contactText').value=ctM2[1];}
+      const ctxM=html.match(/class="contact-text">([^<]+)</);
+      if(ctxM){state.contactText=ctxM[1];document.getElementById('contactText').value=ctxM[1];}
       // contactInsta
       const ciM=html.match(/class="clv">(@[^<]+)</);
       if(ciM){state.contactInsta=ciM[1];document.getElementById('contactInsta').value=ciM[1];}
       // footerCopy
-      const fcM=html.match(/class="footer-copy">([^<]+)</);
-      if(fcM){state.footerCopy=fcM[1];document.getElementById('footerCopy').value=fcM[1];}
+      const fcpM=html.match(/class="footer-copy">([^<]+)</);
+      if(fcpM){state.footerCopy=fcpM[1];document.getElementById('footerCopy').value=fcpM[1];}
       // email
       const emM=html.match(/mailto:([^"]+)"/);
       if(emM){state.contactEmail=emM[1];document.getElementById('contactEmail').value=emM[1];}
