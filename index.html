@@ -169,7 +169,7 @@
       <li class="has-dropdown">
         <a href="#calismalarbg">Çalışmalar</a>
         <ul class="dropdown">
-          <li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li>
+          <li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li>
         </ul>
       </li>
       <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
@@ -208,7 +208,7 @@
     </div>
     <div class="gallery-tabs-wrap reveal">
       <div class="cat-tabs" id="catTabs">
-        <button class="cat-tab active" data-main="sanatsal">Sanatsal Çalışmalar</button><button class="cat-tab" data-main="dekorasyon">Dekorasyon</button><button class="cat-tab" data-main="peyzaj">Peyzaj</button><button class="cat-tab" data-main="pipolar">Pipolar</button><button class="cat-tab" data-main="aksesuarlar">Aksesuarlar</button>
+        <button class="cat-tab active" data-main="sanatsal">Sanatsal Çalışmalar</button><button class="cat-tab" data-main="dekorasyon">Dekorasyon</button><button class="cat-tab" data-main="peyzaj">Peyzaj</button><button class="cat-tab" data-main="aksesuarlar">Aksesuarlar</button>
       </div>
       <div class="subcat-tabs visible" id="subcatTabs">
         <button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button>
@@ -333,8 +333,8 @@ document.getElementById('detayBack').addEventListener('click',closeDetay);
 document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
   const main=btn.dataset.main,subWrap=document.getElementById('subcatTabs');
-  const catChildren={'aksesuarlar':['anahtarlık']};
-  const extraLabels={'anahtarlık':'Anahtarlık'};
+  const catChildren={'aksesuarlar':['pipolar','anahtarlık']};
+  const extraLabels={'pipolar':'Pipolar','anahtarlık':'Anahtarlık'};
   if(main==='sanatsal'){
     subWrap.innerHTML=`<button class='subcat-tab active' data-sub='resimler'>Resimler</button><button class='subcat-tab' data-sub='heykeller'>Heykeller</button><button class='subcat-tab' data-sub='dijital'>Dijital Tasarımlar</button>`;
     subWrap.classList.add('visible');
@@ -356,8 +356,8 @@ document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(bt
 window.navGo=function(cat){setTimeout(()=>{
   const subWrap=document.getElementById('subcatTabs');
   const sanatSubs=['resimler','heykeller','dijital'];
-  const catChildren={'aksesuarlar':['anahtarlık']};
-  const extraLabels={'anahtarlık':'Anahtarlık'};
+  const catChildren={'aksesuarlar':['pipolar','anahtarlık']};
+  const extraLabels={'pipolar':'Pipolar','anahtarlık':'Anahtarlık'};
   if(sanatSubs.includes(cat)||cat==='sanatsal'){
     const t=sanatSubs.includes(cat)?cat:'resimler';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
