@@ -966,6 +966,8 @@ document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{a.add
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
   showToast('index.html indirildi!');
+}
+
 // ---- ESER VERİSİ ----
 let eserData = {}; // { "base_key": { desc, props:{}, images:[] } }
 let currentEserKey = null;
