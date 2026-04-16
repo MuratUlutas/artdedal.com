@@ -294,11 +294,12 @@ function showToast(msg){const t=document.getElementById('toast');t.textContent=m
 // NAV
 document.querySelectorAll('.sidebar-item').forEach(item=>{
   item.addEventListener('click',()=>{
-    syncFromInputs();
+    try{syncFromInputs();}catch(e){}
     document.querySelectorAll('.sidebar-item').forEach(i=>i.classList.remove('active'));
     document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
     item.classList.add('active');
-    document.getElementById('panel-'+item.dataset.panel).classList.add('active');
+    const panel=document.getElementById('panel-'+item.dataset.panel);
+    if(panel)panel.classList.add('active');
     if(item.dataset.panel==='kategoriler')renderCats();
     if(item.dataset.panel==='hero')renderHeroImgs();
     if(item.dataset.panel==='eserler')renderEserPanel();
