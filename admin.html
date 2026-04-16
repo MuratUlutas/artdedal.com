@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ArtDedal – Admin Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--cream:#f5f0e8;--ink:#1a1612;--warm:#c8a97e;--muted:#9e9385;--line:rgba(26,22,18,.12);--dark:#111009;}
+body{background:#f0ebe2;color:var(--ink);font-family:'Tenor Sans',sans-serif;min-height:100vh;}
+header{background:var(--ink);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;}
+header img{height:32px;}
+header span{color:rgba(245,240,232,.4);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;}
+.layout{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 64px);}
+.sidebar{background:var(--dark);padding:24px 0;display:flex;flex-direction:column;}
+.sidebar-item{display:block;padding:12px 24px;color:rgba(245,240,232,.4);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .2s;border-left:2px solid transparent;}
+.sidebar-item:hover{color:var(--cream);background:rgba(245,240,232,.04);}
+.sidebar-item.active{color:var(--cream);border-left-color:var(--warm);}
+.sidebar-sep{height:1px;background:rgba(245,240,232,.06);margin:16px 24px;}
+.sidebar-bottom{margin-top:auto;padding:16px 24px;}
+.main{padding:40px;}
+.panel{display:none;}.panel.active{display:block;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;margin-bottom:8px;}
+.section-sub{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;}
+.card{background:white;border:1px solid var(--line);padding:24px;margin-bottom:16px;border-radius:4px;}
+.card-title{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin-bottom:16px;}
+label{display:block;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;margin-top:12px;}
+label:first-child{margin-top:0;}
+input[type=text],textarea,select{width:100%;padding:10px 14px;border:1px solid var(--line);background:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--ink);outline:none;border-radius:2px;transition:border-color .2s;}
+input[type=text]:focus,textarea:focus,select:focus{border-color:var(--warm);}
+textarea{resize:vertical;min-height:80px;}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.btn{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:10px 24px;cursor:pointer;border-radius:2px;transition:all .2s;}
+.btn-primary{background:var(--ink);color:var(--cream);border:1px solid var(--ink);}.btn-primary:hover{background:#333;}
+.btn-outline{background:none;color:var(--ink);border:1px solid var(--line);}.btn-outline:hover{border-color:var(--ink);}
+.btn-danger{background:none;color:#c0392b;border:1px solid #c0392b;padding:6px 12px;font-size:.55rem;font-family:'Tenor Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s;}.btn-danger:hover{background:#c0392b;color:white;}
+.btn-move{background:none;color:var(--muted);border:1px solid var(--line);padding:6px 12px;font-size:.55rem;font-family:'Tenor Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .2s;}.btn-move:hover{border-color:var(--ink);color:var(--ink);}
+.btn-success{background:#27ae60;color:white;border:none;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Tenor Sans',sans-serif;padding:14px 24px;width:100%;cursor:pointer;border-radius:2px;}.btn-success:hover{background:#219a52;}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.tag{display:flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--line);padding:6px 12px;font-size:.7rem;border-radius:2px;}
+.tag button{background:none;border:none;cursor:pointer;color:var(--muted);font-size:1rem;line-height:1;padding:0;}.tag button:hover{color:#c0392b;}
+.add-row{display:flex;gap:8px;margin-top:8px;}.add-row input{flex:1;}
+.cat-block{background:white;border:1px solid var(--line);border-radius:4px;margin-bottom:10px;overflow:hidden;}
+.cat-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;cursor:pointer;background:var(--cream);user-select:none;}.cat-header:hover{background:#ede8e0;}
+.cat-header-left{display:flex;align-items:center;gap:10px;}
+.cat-key{font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:rgba(26,22,18,.08);padding:3px 8px;border-radius:2px;flex-shrink:0;}
+.cat-name{font-size:.9rem;}
+.cat-actions{display:flex;gap:6px;align-items:center;}
+.cat-count{font-size:.6rem;color:var(--muted);}
+.cat-body{padding:20px;border-top:1px solid var(--line);display:none;}.cat-body.open{display:block;}
+.hero-img-row{display:flex;gap:8px;align-items:center;margin-bottom:8px;}.hero-img-row input{flex:1;}
+.preview-thumb{width:48px;height:36px;object-fit:cover;border:1px solid var(--line);border-radius:2px;flex-shrink:0;}
+.download-area{background:var(--ink);color:var(--cream);padding:32px;border-radius:4px;text-align:center;margin-top:16px;}
+.download-area p{font-size:.7rem;color:rgba(245,240,232,.4);margin-top:12px;}
+.load-card{background:white;border:1px solid var(--line);padding:24px;border-radius:4px;margin-bottom:16px;}
+.modal-overlay{position:fixed;inset:0;background:rgba(26,22,18,.5);z-index:1000;display:flex;align-items:center;justify-content:center;}
+.modal{background:white;border:1px solid var(--line);padding:32px;border-radius:4px;min-width:360px;max-width:480px;}
+.modal-title{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);margin-bottom:12px;}
+.modal-desc{font-size:.9rem;color:var(--muted);margin-bottom:16px;}
+.modal-actions{display:flex;gap:8px;margin-top:20px;}
+.new-cat-form{background:white;border:2px dashed var(--line);border-radius:4px;padding:24px;margin-bottom:16px;}
+.toast{position:fixed;bottom:32px;right:32px;background:var(--ink);color:var(--cream);padding:14px 24px;border-radius:4px;font-size:.7rem;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2000;}.toast.show{opacity:1;}
+.eser-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:16px;}
+.eser-card{background:white;border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:pointer;transition:border-color .2s;}
+.eser-card:hover{border-color:var(--warm);}
+.eser-card.edited{border-color:#27ae60;}
+.eser-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;}
+.eser-card-name{font-size:.65rem;padding:8px 10px;color:var(--ink);letter-spacing:.05em;line-height:1.3;}
+.eser-edit{background:white;border:1px solid var(--line);border-radius:4px;padding:24px;margin-top:20px;}
+.eser-edit-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;}
+.prop-row{display:flex;gap:8px;margin-bottom:8px;align-items:center;}
+.prop-row input{flex:1;}
+.prop-row input:first-child{max-width:140px;}
+.img-order-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.img-order-item{position:relative;width:80px;}
+.img-order-item img{width:80px;height:80px;object-fit:cover;border:2px solid var(--line);border-radius:2px;}
+.img-order-item.main-img img{border-color:var(--warm);}
+.img-order-item .img-btns{display:flex;gap:2px;margin-top:4px;}
+.img-order-item .img-btns button{flex:1;background:none;border:1px solid var(--line);font-size:.5rem;padding:3px 2px;cursor:pointer;border-radius:2px;color:var(--muted);}
+.img-order-item .img-btns button:hover{background:var(--cream);}
+.cat-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.cat-filter button{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;padding:8px 16px;border:1px solid var(--line);background:none;cursor:pointer;border-radius:2px;transition:all .2s;}
+.cat-filter button.active{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+.data-download{background:var(--dark);color:var(--cream);padding:20px 24px;border-radius:4px;display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+.data-download p{font-size:.7rem;color:rgba(245,240,232,.5);}
+.btn-data{background:#2980b9;color:white;border:none;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Tenor Sans',sans-serif;padding:10px 20px;cursor:pointer;border-radius:2px;white-space:nowrap;}.btn-data:hover{background:#2471a3;}
+</style>
+</head>
+<body>
+<header>
+  <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121529/Artdedal_likon_s_nbk1zz.png" alt="ArtDedal"/>
+  <span>Admin Panel</span>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-item active" data-panel="metinler">Metinler</div>
+    <div class="sidebar-item" data-panel="hero">Hero Görseller</div>
+    <div class="sidebar-sep"></div>
+    <div class="sidebar-item" data-panel="kategoriler">Kategoriler</div>
+    <div class="sidebar-item" data-panel="eserler">Eser Detayları</div>
+    <div class="sidebar-sep"></div>
+    <div class="sidebar-item" data-panel="indir">Yükle & İndir</div>
+    <div class="sidebar-bottom">
+      <button class="btn-success" onclick="syncFromInputs();downloadHTML()">⬇ Kaydet & İndir</button>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="panel active" id="panel-metinler">
+      <div class="section-title">Metinler</div>
+      <div class="section-sub">Sitedeki tüm yazıları buradan düzenle</div>
+      <div class="card">
+        <div class="card-title">Hero</div>
+        <label>Slogan</label><input type="text" id="heroTag" value="Sanat İyileştirir"/>
+        <label>Ana Başlık</label><input type="text" id="heroTitle" value="Her düşüş yeni bir başlangıçtır"/>
+        <label>Alt Metin</label><textarea id="heroSub">Heykel, resim ve özgün tasarımlarla duygulara dokunan, yaşam alanlarınıza anlam katan eserler.</textarea>
+        <label>Buton</label><input type="text" id="heroCta" value="Eserleri Keşfet"/>
+      </div>
+      <div class="card">
+        <div class="card-title">Hakkımızda</div>
+        <label>Başlık</label><input type="text" id="aboutTitle" value="Murat & Elif — birlikte yaratmanın büyüsüne inananlar"/>
+        <label>1. Paragraf</label><textarea id="aboutP1">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</textarea>
+        <label>2. Paragraf</label><textarea id="aboutP2">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</textarea>
+        <label>3. Paragraf</label><textarea id="aboutP3">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</textarea>
+        <label>İmza</label><input type="text" id="aboutSign" value="Sevgi, sanat ve yaratma aşkıyla…"/>
+      </div>
+      <div class="card">
+        <div class="card-title">İletişim</div>
+        <label>E-posta</label><input type="text" id="contactEmail" value="artdedalinfo@gmail.com"/>
+        <label>Instagram</label><input type="text" id="contactInsta" value="@art_dedal"/>
+        <label>Metin</label><textarea id="contactText">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</textarea>
+      </div>
+      <div class="card">
+        <div class="card-title">Footer</div>
+        <label>Telif</label><input type="text" id="footerCopy" value="© 2026 ArtDedal. Bütün hakları saklıdır."/>
+      </div>
+    </div>
+    <div class="panel" id="panel-hero">
+      <div class="section-title">Hero Görseller</div>
+      <div class="section-sub">Anasayfadaki slider görselleri</div>
+      <div class="card">
+        <div class="card-title">Slider Görselleri</div>
+        <p style="font-size:.75rem;color:var(--muted);margin-bottom:16px;">Cloudinary tam URL'ini yapıştır. Max 4 görsel önerilir.</p>
+        <div id="heroImgList"></div>
+        <div style="margin-top:12px;"><button class="btn btn-outline" onclick="addHeroImg()">+ Görsel Ekle</button></div>
+      </div>
+    </div>
+    <div class="panel" id="panel-kategoriler">
+      <div class="section-title">Kategoriler & Eserler</div>
+      <div class="section-sub">Kategorileri düzenle, yeni ekle, eser ID'lerini yönet</div>
+      <div class="new-cat-form" id="newCatForm" style="display:none;">
+        <div class="card-title" style="color:var(--muted);">Yeni Kategori</div>
+        <div class="row">
+          <div><label>Görünen Ad</label><input type="text" id="newCatLabel" placeholder="ör: Aksesuarlar"/></div>
+          <div><label>Anahtar (küçük harf, boşuksuz)</label><input type="text" id="newCatKey" placeholder="ör: aksesuarlar"/></div>
+        </div>
+        <label>Tür</label>
+        <select id="newCatType" onchange="toggleParentSelect()">
+          <option value="main">Ana Kategori</option>
+          <option value="sub">Alt Kategori</option>
+        </select>
+        <div id="parentCatWrap" style="display:none;">
+          <label>Hangi Ana Kategorinin Altında?</label>
+          <select id="newCatParent"></select>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px;">
+          <button class="btn btn-primary" onclick="addNewCat()">Ekle</button>
+          <button class="btn btn-outline" onclick="document.getElementById('newCatForm').style.display='none'">İptal</button>
+        </div>
+      </div>
+      <button class="btn btn-outline" onclick="showNewCatForm()" style="margin-bottom:20px;">+ Yeni Kategori Ekle</button>
+      <div id="catList"></div>
+    </div>
+    <div class="panel" id="panel-eserler">
+      <div class="section-title">Eser Detayları</div>
+      <div class="section-sub">Her eserin açıklama, özellik ve görsellerini düzenle</div>
+      <div class="data-download">
+        <div>
+          <p style="font-size:.8rem;color:var(--cream);margin-bottom:4px;">data.json</p>
+          <p>Eser bilgilerini içeren dosya — index.html ile aynı klasöre yükle</p>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-data" onclick="loadDataJson()">📂 data.json Yükle</button>
+          <button class="btn-data" onclick="downloadDataJson()">⬇ data.json İndir</button>
+          <input type="file" id="dataJsonInput" accept=".json" style="display:none" onchange="onDataJsonLoaded(this)"/>
+        </div>
+      </div>
+      <div class="cat-filter" id="eserCatFilter"></div>
+      <div id="eserGrid" class="eser-grid"></div>
+      <div id="eserEdit" style="display:none;" class="eser-edit">
+        <div class="eser-edit-title">
+          <span id="eserEditName"></span>
+          <button class="btn btn-outline" onclick="closeEserEdit()" style="padding:6px 16px;">✕ Kapat</button>
+        </div>
+        <div class="card">
+          <div class="card-title">Açıklama</div>
+          <textarea id="eserDesc" style="min-height:100px;" placeholder="Bu eser hakkında bilgi..."></textarea>
+        </div>
+        <div class="card">
+          <div class="card-title">Özellikler</div>
+          <p style="font-size:.75rem;color:var(--muted);margin-bottom:12px;">İstediğin özellikleri ekle: Yıl, Teknik, Boyut, Durum, Fiyat vb.</p>
+          <div id="eserPropList"></div>
+          <button class="btn btn-outline" onclick="addEserProp()" style="margin-top:8px;">+ Özellik Ekle</button>
+        </div>
+        <div class="card">
+          <div class="card-title">Görseller</div>
+          <p style="font-size:.75rem;color:var(--muted);margin-bottom:12px;">Altın çerçeveli = ana görsel. Ok butonlarıyla sırala, + ile yeni ekle.</p>
+          <div id="eserImgList" class="img-order-list"></div>
+          <div class="add-row" style="margin-top:12px;">
+            <input type="text" id="eserNewImg" placeholder="Yeni Cloudinary ID (ör: Phoenix-1_abc123)"/>
+            <button class="btn btn-outline" onclick="addEserImg()">Ekle</button>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button class="btn btn-primary" onclick="saveEserEdit()">Kaydet</button>
+          <button class="btn btn-outline" onclick="closeEserEdit()">İptal</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="section-title">Yükle & İndir</div>
+      <div class="section-sub">Mevcut siteyi yükle, değiştir, indir</div>
+      <div class="load-card">
+        <div class="card-title">Mevcut index.html'i Yükle</div>
+        <p style="font-size:.75rem;color:var(--muted);margin-bottom:12px;">GitHub'dan indirdiğin güncel index.html dosyasını seç. Panel kategori ve görsel verilerini okuyacak.</p>
+        <input type="file" id="indexFileInput" accept=".html"/>
+        <div style="margin-top:12px;"><button class="btn btn-outline" onclick="loadIndexFile()">Dosyayı Yükle</button></div>
+        <div id="loadStatus" style="margin-top:8px;font-size:.75rem;color:var(--muted);"></div>
+      </div>
+      <div class="download-area">
+        <button class="btn-success" onclick="syncFromInputs();downloadHTML()">⬇ index.html İndir</button>
+        <p>İndirilen dosyayı GitHub'daki mevcut index.html ile değiştir</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="moveModal" style="display:none;" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-title">Kategoriyi Taşı</div>
+    <div class="modal-desc" id="moveModalDesc"></div>
+    <label>Nereye?</label><select id="moveTarget"></select>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="doMoveCat()">Taşı</button>
+      <button class="btn btn-outline" onclick="document.getElementById('moveModal').style.display='none'">İptal</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  const S='artdedal2026';
+  const g=prompt('Admin şifresi:');
+  if(g!==S){document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#999;">Erişim reddedildi.</div>';throw new Error('x');}
+})();
+
+let state = {
+  heroTag:'Sanat İyileştirir',heroTitle:'Her düşüş yeni bir başlangıçtır',
+  heroSub:'Heykel, resim ve özgün tasarımlarla duygulara dokunan, yaşam alanlarınıza anlam katan eserler.',
+  heroCta:'Eserleri Keşfet',
+  aboutTitle:'Murat & Elif — birlikte yaratmanın büyüsüne inananlar',
+  aboutP1:'Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.',
+  aboutP2:'Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.',
+  aboutP3:'Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.',
+  aboutSign:'Sevgi, sanat ve yaratma aşkıyla…',
+  contactEmail:'artdedalinfo@gmail.com',contactInsta:'@art_dedal',
+  contactText:'Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.',
+  footerCopy:'© 2026 ArtDedal. Bütün hakları saklıdır.',
+  heroImages:[
+    'https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/Dream_Bird_mpxyks.jpg',
+    'https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/HYPNOS-2048x2015_zz2vej.jpg'
+  ],
+  mainCats:['sanatsal','dekorasyon','peyzaj','aksesuarlar'],
+  mainCatLabels:{sanatsal:'Sanatsal Çalışmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar'},
+  subCats:['resimler','heykeller','dijital'],
+  subCatLabels:{resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasarımlar'},
+  catChildren:{aksesuarlar:['pipolar','anahtarlık']},
+  extraSubLabels:{pipolar:'Pipolar','anahtarlık':'Anahtarlık'},
+  raw:{
+    resimler:['Spinning_Ball-10-50x70_gcnorj','Spinning_Ball-9-50x70_ofmvwp','Spinning_Ball-8_s0xcp9','Spinning_Ball-7_cimtxe','Spinning_Ball-6_k86rrs','Spinning_Ball-5_oe7okt','Spinning_Ball-4_pheddf','Spinning_Ball-3_awqhp6','Spinning_Ball-2_qgyeuo','Spinning_Ball-1-50x70_solpdm','Rebirth_lv8ufw','Purification-40x45_vepgac','Portrait-Sappho-40x50_hrkwnf','Portrait-Rimbaud-40x50_odgsco','Portrait-Nefertiti-40x50_dpecde','Portrait-Michelangelo-40x50_zipjnd','Portrait-Kafka-40x50_narqu9','Portrait-Hegel-40x50_g51an2','Portrait-Goethe-40x50_hrfl7n','Portrait-Galileo-40x50_npzyki','Portrait-Dante-40x50_djhg9c','Portrait-Beethoven-40x50_vhq0aj','Phoenix-30-110x130_d82myp','Phoenix-29-105x150_gukx3b','Phoenix-28-40x30_hz3ncb','Phoenix-27-40x30_qmihse','Phoenix-26-40x30_mz5jio','Phoenix-25-40x30_tollht','Phoenix-24-35x50_awhhss','Phoenix-23-30x40_mkoosw','Phoenix-22-30x40_oi9rn8','Phoenix-21-60x120_zzchcg','Phoenix-20-50x65_sxt3sb','Phoenix-19-50x70_zjolfh','Phoenix-18-50x70_juyta4','Phoenix-17-55x70_z4nzlg','Phoenix-16-60x60_jzkww6','Phoenix-15-60x120_qwivq2','Phoenix-14-50x100_b3dsjb','Phoenix-13-70x100_dspuqq','Phoenix-12-60x60_vo7mdo','Phoenix-11-50x80_dd1y6o','Phoenix-10-70x100_h94kfr','Phoenix-9-110x120_rwhdcf','Phoenix-8-100x120_stfobq','Phoenix-7-60x90_uwmubk','Phoenix-6-70x100_hkubrj','Phoenix-5-60x60_yxadjy','Phoenix-4-60x120_lowl0u','Phoenix-3-70x100_ghvsr7','Phoenix-2-50x70_nv6kfy','Phoenix-1-65x80_mr8e0n','Mrs_Catherine_Swindell-80x100_ofvutr','Magnolia-50x70_iiukde','Bird_of_Fortune-50x50_mqgqwy'],
+    heykeller:['Ödül_heykelciği-3_ta8lq3','Ödül_heykelciği-2_brrkz4','Ödül_heykelciği-1_hjmjms','Melek-3_uwiyea','Melek-2_d9wci8','Melek-1_krrz86','Kralice_Olba-5_x5jjze','Kralice_Olba-4_bzqpcn','Kralice_Olba-3_k0pxhs','Kralice_Olba-2_bfkwtm','Kralice_Olba-1_l4bdrt','Baretli_Kaplumbağa-2_gwlw2x','Baretli_Kaplumbağa-1_n9xaxl','At-4_js3pma','At-3_r6vitq','At-2_p2douo','At-1_klmrpj'],
+    dijital:['Dream_Bird_mpxyks','Spinning_Ball_m3yvc9','Soulmade_ur9mzm','Second_Trip_To_Me_hybr1f','Sappho_s_Imaginary_umdwth','Rimbaud_s_Imaginary_km6ojh','Nefertiti_s_Imaginary_ab59cx','Michelangelo_s_Imaginary_u3cqsr','Kafka_s_Imaginary_vv9cum','Journey_nd2sjl','Hegel_s_Imaginary_fycheo','Goethe_s_Imaginary_zt0byo','Galileo_s_Imaginary_u3r2p5','Fear_luabb6','Distant_Past_qstci9','Distant_Colour_v51u41','Dante_s_Imaginary_gccmfu','Born_asleep_quoekf','Birth_z3gicz','Beethoven_s_Imaginary_jc43sv','Back_to_Yourself_jrwmh4'],
+    dekorasyon:['Begonvil_Restaurant-4_o91xy7','Begonvil_Restaurant-3_lhwwho','Begonvil_Restaurant-2_pzuxhc','Begonvil_Restaurant-1_trdg6i'],
+    peyzaj:['Apollo_Tapınağı-4_z13avz','Apollo_Tapınağı-3_tgpbva','Apollo_Tapınağı-2_rxjx34','Apollo_Tapınağı-1_rulxrg','Aslan-3_zsiuqe','Aslan-2_mwa4bu','Aslan-1_gpgcqc'],
+    pipolar:['R1001-7_r9vrsg','R1001-6_lescfd','R1001-5_vgivlu','R1001-4_o1hlrf','R1001-3_eijyio','R1001-2_j2zvlh','R1001-1_db0pse','Pipolar-2_jyyyva','Pipolar-1_n40mx0','P1008-4_bf9zoz','P1008-3_imi1co','P1008-2_u3ztn7','P1008-1_xvn9fs','P1007-4_ovut8d','P1007-3_hrkc6i','P1007-2_yactsj','P1007-1_iae865','P1006-4_vmjldh','P1006-3_fynhks','P1006-2_pglo3i','P1006-1_yzix4m','P1005-4_shvno4','P1005-3_g39tu6','P1005-2_m55876','P1005-1_k8eesx','P1004-4_fhitxg','P1004-3_lp7lpo','P1004-2_y2bru7','P1004-1_m7okps','P1003-4_fqkevz','P1003-3_axnznx','P1003-2_egbje1','P1003-1_bxm38m','P1002-7_eln7n6','P1002-6_upkefe','P1002-5_bd8noq','P1002-4_es5ezm','P1002-3_yqor4x','P1002-2_cdh8wm','P1002-1_x9gxxg','P1001-6_ifpssz','P1001-5_api8ue','P1001-4_r7ezqd','P1001-3_xtlitq','P1001-2_fzm1cy','P1001-1_zbiq7y'],
+    'anahtarlık':['yakinda-scaled_rkv3uj']
+  }
+};
+
+function getLabel(k){return state.mainCatLabels[k]||state.subCatLabels[k]||state.extraSubLabels[k]||k;}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+
+// NAV
+document.querySelectorAll('.sidebar-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    syncFromInputs();
+    document.querySelectorAll('.sidebar-item').forEach(i=>i.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    item.classList.add('active');
+    document.getElementById('panel-'+item.dataset.panel).classList.add('active');
+    if(item.dataset.panel==='kategoriler')renderCats();
+    if(item.dataset.panel==='hero')renderHeroImgs();
+    if(item.dataset.panel==='eserler')renderEserPanel();
+  });
+});
+
+// HERO
+function renderHeroImgs(){
+  document.getElementById('heroImgList').innerHTML=state.heroImages.map((url,i)=>`
+    <div class="hero-img-row">
+      <img class="preview-thumb" src="${url}" onerror="this.style.display='none'"/>
+      <input type="text" value="${url}" onchange="state.heroImages[${i}]=this.value"/>
+      <button class="btn btn-danger" onclick="removeHeroImg(${i})">Sil</button>
+    </div>`).join('');
+}
+function addHeroImg(){state.heroImages.push('');renderHeroImgs();}
+function removeHeroImg(i){state.heroImages.splice(i,1);renderHeroImgs();}
+
+// KATEGORİLER RENDER
+function renderCats(){
+  let html='';
+  html+=renderMainBlock('sanatsal');
+  state.mainCats.filter(c=>c!=='sanatsal').forEach(cat=>{html+=renderMainBlock(cat);});
+  document.getElementById('catList').innerHTML=html;
+}
+
+function renderMainBlock(cat){
+  const isSanatsal=cat==='sanatsal';
+  const label=isSanatsal?'Sanatsal Çalışmalar':(state.mainCatLabels[cat]||cat);
+  const children=isSanatsal?state.subCats:(state.catChildren[cat]||[]);
+  const hasChildren=children.length>0;
+  const count=hasChildren?`${children.length} alt kategori`:`${(state.raw[cat]||[]).length} görsel`;
+  const moveBtn=isSanatsal?'':` <button class="btn btn-move" onclick="event.stopPropagation();showMoveCat('${cat}','main')">Taşı</button>`;
+  const delBtn=isSanatsal?'':` <button class="btn btn-danger" onclick="event.stopPropagation();removeMainCat('${cat}')">Sil</button>`;
+  let bodyHTML='';
+  if(isSanatsal){
+    bodyHTML=state.subCats.map(sub=>renderSubBlock(sub,'sanatsal')).join('');
+  } else if(hasChildren){
+    bodyHTML=children.map(sub=>renderSubBlock(sub,cat)).join('');
+  } else {
+    bodyHTML=renderImgList(cat);
+  }
+  return `<div class="cat-block">
+    <div class="cat-header" onclick="toggleCat('m-${cat}')">
+      <div class="cat-header-left"><span class="cat-key">ana</span><span class="cat-name">${label}</span></div>
+      <div class="cat-actions"><span class="cat-count">${count}</span>${moveBtn}${delBtn}</div>
+    </div>
+    <div class="cat-body" id="cat-m-${cat}">${bodyHTML}</div>
+  </div>`;
+}
+
+function renderSubBlock(sub,parent){
+  const label=getLabel(sub);
+  const canDel=!(parent==='sanatsal'&&state.subCats.length<=1);
+  const delBtn=canDel?` <button class="btn btn-danger" onclick="event.stopPropagation();removeSubCat('${sub}','${parent}')">Sil</button>`:'';
+  return `<div class="cat-block" style="margin:8px 0;">
+    <div class="cat-header" onclick="toggleCat('s-${sub}')" style="background:#f5f0e8;">
+      <div class="cat-header-left"><span class="cat-key">alt</span><span class="cat-name">${label}</span></div>
+      <div class="cat-actions">
+        <span class="cat-count">${(state.raw[sub]||[]).length} görsel</span>
+        <button class="btn btn-move" onclick="event.stopPropagation();showMoveCat('${sub}','sub','${parent}')">Taşı</button>
+        ${delBtn}
+      </div>
+    </div>
+    <div class="cat-body" id="cat-s-${sub}">${renderImgList(sub)}</div>
+  </div>`;
+}
+
+function renderImgList(cat){
+  const ids=state.raw[cat]||[];
+  return `<div class="tag-list">${ids.map((id,i)=>`<div class="tag"><span>${id}</span><button onclick="removeImage('${cat}',${i})">×</button></div>`).join('')}</div>
+  <div class="add-row" style="margin-top:12px;">
+    <input type="text" id="ni-${cat}" placeholder="Cloudinary ID (ör: Phoenix-1_abc123)"/>
+    <button class="btn btn-outline" onclick="addImage('${cat}')">Ekle</button>
+  </div>`;
+}
+
+function toggleCat(id){const el=document.getElementById('cat-'+id);if(el)el.classList.toggle('open');}
+
+// GÖRSEL
+function addImage(cat){
+  const inp=document.getElementById('ni-'+cat);
+  const val=inp.value.trim();if(!val)return;
+  if(!state.raw[cat])state.raw[cat]=[];
+  state.raw[cat].push(val);inp.value='';renderCats();showToast('Görsel eklendi');
+}
+function removeImage(cat,i){state.raw[cat].splice(i,1);renderCats();showToast('Görsel silindi');}
+
+// KATEGORİ SİL
+function removeMainCat(cat){
+  if(!confirm(`"${getLabel(cat)}" silinsin mi?`))return;
+  state.mainCats=state.mainCats.filter(c=>c!==cat);
+  delete state.mainCatLabels[cat];delete state.raw[cat];
+  (state.catChildren[cat]||[]).forEach(sub=>{delete state.raw[sub];delete state.extraSubLabels[sub];});
+  delete state.catChildren[cat];
+  renderCats();showToast('Kategori silindi');
+}
+function removeSubCat(sub,parent){
+  if(!confirm(`"${getLabel(sub)}" silinsin mi?`))return;
+  if(parent==='sanatsal'){state.subCats=state.subCats.filter(s=>s!==sub);delete state.subCatLabels[sub];}
+  else{state.catChildren[parent]=(state.catChildren[parent]||[]).filter(s=>s!==sub);delete state.extraSubLabels[sub];}
+  delete state.raw[sub];renderCats();showToast('Alt kategori silindi');
+}
+
+// YENİ KATEGORİ
+function showNewCatForm(){
+  document.getElementById('newCatForm').style.display='block';
+  document.getElementById('newCatLabel').value='';
+  document.getElementById('newCatKey').value='';
+  document.getElementById('newCatType').value='main';
+  document.getElementById('parentCatWrap').style.display='none';
+}
+function toggleParentSelect(){
+  const type=document.getElementById('newCatType').value;
+  const wrap=document.getElementById('parentCatWrap');
+  if(type==='sub'){
+    wrap.style.display='block';
+    document.getElementById('newCatParent').innerHTML=state.mainCats.map(c=>`<option value="${c}">${getLabel(c)}</option>`).join('');
+  } else {wrap.style.display='none';}
+}
+function addNewCat(){
+  const label=document.getElementById('newCatLabel').value.trim();
+  const key=document.getElementById('newCatKey').value.trim().toLowerCase().replace(/\s+/g,'_');
+  const type=document.getElementById('newCatType').value;
+  if(!label||!key){alert('Ad ve anahtar girin');return;}
+  if(type==='main'){
+    state.mainCats.push(key);state.mainCatLabels[key]=label;
+    state.catChildren[key]=[];state.raw[key]=[];
+  } else {
+    const parent=document.getElementById('newCatParent').value;
+    if(parent==='sanatsal'){state.subCats.push(key);state.subCatLabels[key]=label;}
+    else{if(!state.catChildren[parent])state.catChildren[parent]=[];state.catChildren[parent].push(key);state.extraSubLabels[key]=label;}
+    state.raw[key]=[];
+  }
+  document.getElementById('newCatForm').style.display='none';
+  renderCats();showToast('Kategori eklendi!');
+}
+
+// TAŞI
+let _mv=null;
+function showMoveCat(key,type,parent){
+  _mv={key,type,parent};
+  document.getElementById('moveModalDesc').textContent=`"${getLabel(key)}" nereye taşınsın?`;
+  const sel=document.getElementById('moveTarget');
+  let opts='';
+  if(type==='main'){
+    opts+=`<option value="__root__">Ana kategori olarak bırak</option>`;
+    state.mainCats.filter(c=>c!==key).forEach(c=>{opts+=`<option value="${c}">${getLabel(c)} altına</option>`;});
+  } else {
+    state.mainCats.forEach(c=>{if(c!==parent)opts+=`<option value="${c}">${getLabel(c)} altına</option>`;});
+    opts+=`<option value="__main__">Ana kategori yap</option>`;
+  }
+  sel.innerHTML=opts;
+  document.getElementById('moveModal').style.display='flex';
+}
+function doMoveCat(){
+  const {key,type,parent}=_mv;
+  const target=document.getElementById('moveTarget').value;
+  if(type==='main'){
+    if(target==='__root__'){document.getElementById('moveModal').style.display='none';return;}
+    const label=state.mainCatLabels[key];
+    state.mainCats=state.mainCats.filter(c=>c!==key);delete state.mainCatLabels[key];
+    const ch=state.catChildren[key]||[];delete state.catChildren[key];
+    if(!state.catChildren[target])state.catChildren[target]=[];
+    state.catChildren[target].push(key);
+    ch.forEach(c=>{state.mainCats.push(c);state.mainCatLabels[c]=state.extraSubLabels[c]||c;delete state.extraSubLabels[c];});
+    state.extraSubLabels[key]=label;
+  } else {
+    const label=getLabel(key);
+    if(parent==='sanatsal'){state.subCats=state.subCats.filter(s=>s!==key);delete state.subCatLabels[key];}
+    else{state.catChildren[parent]=(state.catChildren[parent]||[]).filter(s=>s!==key);delete state.extraSubLabels[key];}
+    if(target==='__main__'){state.mainCats.push(key);state.mainCatLabels[key]=label;state.catChildren[key]=[];}
+    else{if(!state.catChildren[target])state.catChildren[target]=[];state.catChildren[target].push(key);state.extraSubLabels[key]=label;}
+  }
+  document.getElementById('moveModal').style.display='none';
+  renderCats();showToast('Kategori taşındı!');
+}
+
+// INDEX.HTML YÜKLE
+function loadIndexFile(){
+  const file=document.getElementById('indexFileInput').files[0];
+  if(!file){alert('Önce dosya seç');return;}
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const html=e.target.result;
+    const st=document.getElementById('loadStatus');
+    try{
+      // RAW
+      const rawM=html.match(/const RAW\s*=\s*(\{[\s\S]*?\n\};)/);
+      if(rawM)state.raw=eval('('+rawM[1].replace(/};$/,'}')+')');
+      // mainCats - sadece geçerli olanları al
+      const ctM=[...html.matchAll(/class="cat-tab[^"]*"\s+data-main="([^"]+)">([^<]+)</g)];
+      const validCats=ctM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
+      if(validCats.length){state.mainCats=validCats.map(m=>m[1]);state.mainCatLabels={};validCats.forEach(m=>state.mainCatLabels[m[1]]=m[2].trim());}
+      // subCats - sadece geçerli ($ içermeyen) olanları al
+      const stM=[...html.matchAll(/class="subcat-tab[^"]*"\s+data-sub="([^"]+)">([^<]+)</g)];
+      const validSubs=stM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
+      if(validSubs.length){state.subCats=validSubs.map(m=>m[1]);state.subCatLabels={};validSubs.forEach(m=>state.subCatLabels[m[1]]=m[2].trim());}
+      // catChildren
+      const ccM=html.match(/const catChildren\s*=\s*(\{[^;]+\});/);
+      if(ccM){try{state.catChildren=eval('('+ccM[1]+')');}catch(e){}}
+      // extraLabels
+      const elM=html.match(/const extraLabels\s*=\s*(\{[^;]+\});/);
+      if(elM){try{state.extraSubLabels=eval('('+elM[1]+')');}catch(e){}}
+      // heroTag
+      const htM=html.match(/class="hero-tag">([^<]+)</);
+      if(htM){state.heroTag=htM[1];document.getElementById('heroTag').value=htM[1];}
+      // heroTitle - br içerebilir, tüm içeriği al
+      const htiM=html.match(/class="hero-title">([\s\S]*?)<\/h1>/);
+      if(htiM){const v=htiM[1].replace(/<br\/?>/g,' ').replace(/<[^>]+>/g,'').trim();state.heroTitle=v;document.getElementById('heroTitle').value=v;}
+      // heroSub
+      const hsM=html.match(/class="hero-sub">([^<]+)</);
+      if(hsM){state.heroSub=hsM[1];document.getElementById('heroSub').value=hsM[1];}
+      // heroCta - href içinde olduğu için özel regex
+      const hcM=html.match(/class="hero-cta"[^>]*>([^<]+)</);
+      if(hcM){state.heroCta=hcM[1];document.getElementById('heroCta').value=hcM[1];}
+      // aboutTitle - hakkimizda section içinde
+      const atM=html.match(/id="hakkimizda"[\s\S]*?class="section-title">([\s\S]*?)<\/h2>/);
+      if(atM){const v=atM[1].replace(/<[^>]+>/g,'').trim();state.aboutTitle=v;document.getElementById('aboutTitle').value=v;}
+      // about paragraflar
+      const apM=[...html.matchAll(/class="about-text"[^>]*>([^<]+)</g)];
+      if(apM[0]){state.aboutP1=apM[0][1];document.getElementById('aboutP1').value=apM[0][1];}
+      if(apM[1]){state.aboutP2=apM[1][1];document.getElementById('aboutP2').value=apM[1][1];}
+      if(apM[2]){state.aboutP3=apM[2][1];document.getElementById('aboutP3').value=apM[2][1];}
+      // aboutSign
+      const asM=html.match(/class="about-sign">([^<]+)</);
+      if(asM){state.aboutSign=asM[1];document.getElementById('aboutSign').value=asM[1];}
+      // contactText
+      const ctxM=html.match(/class="contact-text">([^<]+)</);
+      if(ctxM){state.contactText=ctxM[1];document.getElementById('contactText').value=ctxM[1];}
+      // contactInsta
+      const ciM=html.match(/class="clv">(@[^<]+)</);
+      if(ciM){state.contactInsta=ciM[1];document.getElementById('contactInsta').value=ciM[1];}
+      // footerCopy
+      const fcpM=html.match(/class="footer-copy">([^<]+)</);
+      if(fcpM){state.footerCopy=fcpM[1];document.getElementById('footerCopy').value=fcpM[1];}
+      // email
+      const emM=html.match(/mailto:([^"]+)"/);
+      if(emM){state.contactEmail=emM[1];document.getElementById('contactEmail').value=emM[1];}
+      // heroImages
+      const slM=[...html.matchAll(/hero-slide[^>]*><img src="([^"]+)"/g)];
+      if(slM.length)state.heroImages=slM.map(m=>m[1]);
+      st.style.color='#27ae60';st.textContent='✓ Veriler yüklendi!';
+      renderCats();showToast('index.html okundu!');
+    }catch(err){st.style.color='#c0392b';st.textContent='Hata: '+err.message;}
+  };
+  reader.readAsText(file);
+}
+
+// SYNC
+function syncFromInputs(){
+  ['heroTag','heroTitle','heroSub','heroCta','aboutTitle','aboutP1','aboutP2','aboutP3','aboutSign','contactEmail','contactInsta','contactText','footerCopy'].forEach(id=>{
+    const el=document.getElementById(id);if(el)state[id]=el.value;
+  });
+}
+
+// BUILD FONKSIYONLARI
+function bNavDropdown(){
+  return state.mainCats.map(cat=>{
+    if(cat==='sanatsal'){
+      const subs=state.subCats.map(s=>`<li><a href="#calismalarbg" onclick="navGo('${s}')">${state.subCatLabels[s]||s}</a></li>`).join('');
+      return `<li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">${state.mainCatLabels[cat]}</a><ul class="sub-dropdown">${subs}</ul></li>`;
+    }
+    const ch=state.catChildren[cat]||[];
+    if(ch.length){
+      const subs=ch.map(s=>`<li><a href="#calismalarbg" onclick="navGo('${s}')">${state.extraSubLabels[s]||s}</a></li>`).join('');
+      return `<li class="has-sub"><a href="#calismalarbg" onclick="navGo('${cat}')">${state.mainCatLabels[cat]}</a><ul class="sub-dropdown">${subs}</ul></li>`;
+    }
+    return `<li><a href="#calismalarbg" onclick="navGo('${cat}')">${state.mainCatLabels[cat]}</a></li>`;
+  }).join('');
+}
+function bCatTabs(){return state.mainCats.map((c,i)=>`<button class="cat-tab${i===0?' active':''}" data-main="${c}">${state.mainCatLabels[c]||c}</button>`).join('');}
+function bSubCatTabs(){return state.subCats.map((s,i)=>`<button class="subcat-tab${i===0?' active':''}" data-sub="${s}">${state.subCatLabels[s]||s}</button>`).join('');}
+function bHeroSlides(){return state.heroImages.map((u,i)=>`<div class="hero-slide${i===0?' active':''}"><img src="${u}" alt=""/></div>`).join('');}
+function bHeroDots(){return state.heroImages.map((_,i)=>`<div class="hero-dot${i===0?' active':''}" data-index="${i}"></div>`).join('');}
+function bRaw(){
+  const keys=[...state.mainCats,...state.subCats,...Object.values(state.catChildren).flat()];
+  const entries=keys.filter(k=>state.raw[k]!==undefined).map(k=>`  ${k}: ${JSON.stringify(state.raw[k])}`).join(',\n');
+  return `{\n${entries}\n}`;
+}
+function bCatLabels(){
+  const all={...state.mainCatLabels,...state.subCatLabels,...state.extraSubLabels};
+  return JSON.stringify(all).replace(/"/g,"'");
+}
+function bCatChildren(){return JSON.stringify(state.catChildren).replace(/"/g,"'");}
+function bExtraLabels(){return JSON.stringify(state.extraSubLabels).replace(/"/g,"'");}
+
+function downloadHTML(){
+  syncFromInputs();
+  const fc=state.subCats[0]||state.mainCats[0];
+  const ssHTML=state.subCats.map((s,i)=>`<button class='subcat-tab${i===0?" active":''}' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('').replace(/'/g,"\\'");
+  const ssHTMLS=state.subCats.map(s=>`<button class='subcat-tab' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('').replace(/'/g,"\\'");
+
+  const html=`<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArtDedal – Sanat İyileştirir</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121527/Artdedal_likon_r_jzmfex.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    :root{--cream:#f5f0e8;--ink:#1a1612;--warm:#c8a97e;--muted:#9e9385;--line:rgba(26,22,18,.12);--dark:#111009;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',serif;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:24px 60px;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent;}
+    nav.scrolled{background:rgba(245,240,232,.97);backdrop-filter:blur(8px);padding:14px 60px;border-bottom-color:var(--line);}
+    nav.scrolled .nav-links>li>a{color:var(--ink);}
+    nav.scrolled .nav-logo img{filter:none;}
+    .nav-logo img{height:40px;width:auto;filter:brightness(0) invert(1);transition:filter .4s;}
+    .nav-links{display:flex;gap:0;list-style:none;}
+    .nav-links>li{position:relative;}
+    .nav-links>li>a{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);text-decoration:none;opacity:.8;transition:opacity .3s,color .4s;padding:8px 18px;display:block;}
+    .nav-links>li>a:hover{opacity:1;}
+    .hamburger{display:none;flex-direction:column;gap:5px;border:none;background:none;padding:4px;cursor:pointer;}
+    .hamburger span{width:24px;height:1px;background:var(--ink);display:block;transition:all .3s;}
+    .dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--cream);border:1px solid var(--line);min-width:220px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .3s;z-index:300;box-shadow:0 8px 32px rgba(26,22,18,.08);}
+    .dropdown li{list-style:none;position:relative;}
+    .dropdown li a{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:13px 22px;display:block;opacity:.6;transition:all .3s;border-bottom:1px solid var(--line);}
+    .dropdown li:last-child a{border-bottom:none;}
+    .dropdown li a:hover{opacity:1;padding-left:30px;background:rgba(200,169,126,.06);}
+    .has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+    .has-sub>a::after{content:' ›';opacity:.4;}
+    .sub-dropdown{position:absolute;top:-1px;left:100%;background:var(--cream);border:1px solid var(--line);min-width:200px;opacity:0;visibility:hidden;transform:translateX(-8px);transition:all .3s;z-index:301;box-shadow:0 8px 32px rgba(26,22,18,.08);}
+    .sub-dropdown li a{font-family:'Tenor Sans',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:12px 20px;display:block;opacity:.6;transition:all .3s;border-bottom:1px solid var(--line);}
+    .sub-dropdown li:last-child a{border-bottom:none;}
+    .sub-dropdown li a:hover{opacity:1;padding-left:28px;background:rgba(200,169,126,.06);}
+    .has-sub:hover .sub-dropdown{opacity:1;visibility:visible;transform:translateX(0);}
+    #hero{height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
+    .hero-slides{position:absolute;inset:0;}
+    .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;}
+    .hero-slide.active{opacity:1;}
+    .hero-slide img{width:100%;height:100%;object-fit:cover;}
+    .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,22,18,.1) 0%,transparent 40%,rgba(26,22,18,.72) 100%);}
+    .hero-content{position:relative;z-index:2;padding:0 60px 80px;color:var(--cream);display:flex;flex-direction:column;justify-content:flex-end;height:100%;}
+    .hero-tag{font-family:'Tenor Sans',sans-serif;font-size:1rem;letter-spacing:.3em;text-transform:uppercase;color:#f0c060;margin-bottom:20px;opacity:0;animation:fadeUp 1s .3s forwards;text-shadow:0 1px 12px rgba(0,0,0,.8);}
+    .hero-title{font-size:clamp(48px,7vw,88px);font-weight:300;line-height:1.0;opacity:0;animation:fadeUp 1s .5s forwards;}
+    .hero-title em{font-style:italic;color:rgba(245,240,232,.6);}
+    .hero-sub{margin-top:20px;font-size:1.1rem;font-weight:300;color:rgba(245,240,232,.75);max-width:440px;line-height:1.8;opacity:0;animation:fadeUp 1s .7s forwards;}
+    .hero-cta{margin-top:40px;display:inline-block;font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(245,240,232,.5);padding-bottom:4px;opacity:0;animation:fadeUp 1s .9s forwards;transition:color .3s,border-color .3s;}
+    .hero-cta:hover{color:var(--warm);border-color:var(--warm);}
+    .hero-dots{position:absolute;bottom:40px;right:60px;z-index:3;display:flex;gap:8px;}
+    .hero-dot{width:24px;height:1px;background:rgba(245,240,232,.4);cursor:pointer;transition:background .3s,width .3s;}
+    .hero-dot.active{background:var(--cream);width:40px;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+    #hakkimizda{padding:120px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    .section-label{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+    .section-label::before{content:'';width:32px;height:1px;background:var(--warm);}
+    .section-title{font-size:clamp(28px,3.5vw,48px);font-weight:300;line-height:1.15;}
+    .section-title em{font-style:italic;color:var(--muted);}
+    .about-text{font-size:1.05rem;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:16px;}
+    .about-sign{margin-top:32px;font-size:1.3rem;font-style:italic;color:var(--ink);opacity:.7;}
+    .about-image{position:relative;}
+    .about-image img{width:100%;display:block;border:1px solid var(--line);}
+    .about-image::before{content:'';position:absolute;top:-16px;right:-16px;width:55%;height:55%;border:1px solid var(--warm);opacity:.25;pointer-events:none;}
+    #calismalarbg{background:var(--dark);padding:100px 60px 60px;}
+    .gallery-header{margin-bottom:24px;}
+    .gallery-header .section-label{color:var(--warm);}
+    .gallery-header .section-label::before{background:var(--warm);}
+    .cat-tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid rgba(245,240,232,.1);}
+    .cat-tab{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.4);background:none;border:none;cursor:pointer;padding:12px 28px;border-bottom:2px solid transparent;transition:all .3s;margin-bottom:-1px;}
+    .cat-tab.active,.cat-tab:hover{color:var(--cream);border-bottom-color:var(--warm);}
+    .subcat-tabs{display:none;flex-wrap:wrap;gap:8px;padding:20px 0 0;}
+    .subcat-tabs.visible{display:flex;}
+    .subcat-tab{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.35);background:none;border:1px solid rgba(245,240,232,.1);cursor:pointer;padding:8px 18px;transition:all .3s;}
+    .subcat-tab.active,.subcat-tab:hover{color:var(--cream);border-color:rgba(245,240,232,.4);}
+    .gallery-tabs-wrap{margin-bottom:40px;}
+    .mosaic{columns:3;column-gap:4px;}
+    .mosaic-item{break-inside:avoid;margin-bottom:4px;position:relative;overflow:hidden;cursor:pointer;}
+    .mosaic-item img{width:100%;display:block;transition:transform .6s cubic-bezier(.25,.46,.45,.94);}
+    .mosaic-item:hover img{transform:scale(1.05);}
+    .mosaic-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,16,9,.88) 0%,transparent 55%);opacity:0;transition:opacity .4s;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
+    .mosaic-item:hover .mosaic-overlay{opacity:1;}
+    .mosaic-title{font-size:.95rem;font-weight:300;color:var(--cream);}
+    .mosaic-count{font-family:'Tenor Sans',sans-serif;font-size:.55rem;letter-spacing:.1em;color:var(--warm);margin-top:3px;}
+    .gallery-loading{text-align:center;padding:60px 0;color:rgba(245,240,232,.25);font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;}
+    #detayPage{display:none;min-height:100vh;background:var(--cream);}
+    #detayPage.open{display:block;}
+    .detay-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:rgba(245,240,232,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+    .detay-back{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.6;transition:opacity .3s;display:flex;align-items:center;gap:8px;cursor:pointer;border:none;background:none;}
+    .detay-back:hover{opacity:1;}
+    .detay-back::before{content:'←';}
+    .detay-body{padding:100px 60px 80px;}
+    .detay-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1200px;margin:0 auto;}
+    .detay-gallery{position:sticky;top:100px;}
+    .detay-main-img{width:100%;height:auto;display:block;margin-bottom:12px;border:1px solid var(--line);}
+    .detay-thumbs{display:flex;gap:8px;flex-wrap:wrap;}
+    .detay-thumb{width:72px;height:72px;object-fit:cover;cursor:pointer;border:2px solid transparent;opacity:.6;transition:opacity .3s,border-color .3s;}
+    .detay-thumb.active,.detay-thumb:hover{border-color:var(--warm);opacity:1;}
+    .detay-img-count{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;color:var(--muted);margin-top:8px;}
+    .detay-info{padding-top:8px;}
+    .detay-cat{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--warm);margin-bottom:16px;}
+    .detay-title{font-size:clamp(28px,3vw,44px);font-weight:300;line-height:1.15;margin-bottom:28px;}
+    .detay-desc{font-size:1.05rem;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:36px;}
+    .detay-props{border-top:1px solid var(--line);padding-top:28px;}
+    .detay-prop{display:flex;gap:0;padding:12px 0;border-bottom:1px solid var(--line);}
+    .detay-prop:last-child{border-bottom:none;}
+    .detay-prop-key{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);width:120px;flex-shrink:0;padding-top:2px;}
+    .detay-prop-val{font-size:1rem;font-weight:300;color:var(--ink);}
+    .detay-related{max-width:1200px;margin:60px auto 0;padding-top:48px;border-top:1px solid var(--line);}
+    .detay-related-title{font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
+    .related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+    .related-item{position:relative;overflow:hidden;cursor:pointer;}
+    .related-item img{width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:transform .5s;}
+    .related-item:hover img{transform:scale(1.06);}
+    .related-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,16,9,.8) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:12px;}
+    .related-item:hover .related-overlay{opacity:1;}
+    .related-name{font-size:.85rem;font-weight:300;color:var(--cream);}
+    #iletisim{position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden;}
+    .contact-bg{position:absolute;inset:0;}
+    .contact-bg img{width:100%;height:100%;object-fit:cover;}
+    .contact-bg::after{content:'';position:absolute;inset:0;background:rgba(17,16,9,.8);}
+    .contact-inner{position:relative;z-index:2;padding:100px 60px;}
+    .contact-inner .section-label{color:var(--warm);}
+    .contact-inner .section-label::before{background:var(--warm);}
+    .contact-inner .section-title{color:var(--cream);}
+    .contact-inner .section-title em{color:rgba(245,240,232,.4);}
+    .contact-text{font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(245,240,232,.65);margin-top:20px;margin-bottom:36px;max-width:480px;}
+    .contact-links{display:flex;flex-direction:column;gap:14px;}
+    .contact-link{display:flex;align-items:baseline;gap:20px;text-decoration:none;}
+    .contact-link:hover .clv{color:var(--warm);}
+    .clt{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.35);width:80px;flex-shrink:0;}
+    .clv{font-size:1rem;font-weight:300;color:var(--cream);transition:color .3s;}
+    footer{padding:28px 60px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+    .footer-logo img{height:32px;opacity:.6;}
+    .footer-copy{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;color:var(--muted);}
+    .footer-social{display:flex;gap:24px;}
+    .footer-social a{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s;}
+    .footer-social a:hover{color:var(--ink);}
+    .reveal{opacity:1;transform:none;}
+    @media(max-width:900px){
+      nav,#calismalarbg,#hakkimizda,.contact-inner,footer{padding-left:24px;padding-right:24px;}
+      nav{padding-top:20px;padding-bottom:20px;}
+      nav.scrolled{padding-top:12px;padding-bottom:12px;}
+      .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--cream);flex-direction:column;justify-content:center;align-items:center;z-index:300;overflow-y:auto;gap:0;}
+      .nav-links.open{display:flex;}
+      .nav-links>li>a{font-family:'Tenor Sans',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);padding:10px 32px;display:block;text-align:center;opacity:.7;}
+      .nav-links>li>a:hover{opacity:1;}
+      .dropdown{display:none !important;}.sub-dropdown{display:none !important;}
+      .hamburger{display:flex;}
+      #hakkimizda{grid-template-columns:1fr;padding-top:80px;padding-bottom:80px;}.about-image{order:-1;}
+      #calismalarbg{padding-top:80px;padding-bottom:80px;}
+      .mosaic{columns:2;}
+      .detay-body{padding:90px 24px 60px;}
+      .detay-grid{grid-template-columns:1fr;gap:40px;}
+      .detay-gallery{position:static;}
+      .detay-nav{padding:16px 24px;}
+      .related-grid{grid-template-columns:repeat(2,1fr);}
+      footer{flex-direction:column;gap:18px;text-align:center;padding-top:36px;padding-bottom:36px;}
+    }
+    @media(max-width:500px){.mosaic{columns:1;}}
+  </style>
+</head>
+<body>
+<div id="mainPage">
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" onclick="closeMenu()">Anasayfa</a></li>
+      <li><a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a></li>
+      <li class="has-dropdown">
+        <a href="#calismalarbg">Çalışmalar</a>
+        <ul class="dropdown">${bNavDropdown()}</ul>
+      </li>
+      <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
+    </ul>
+  </nav>
+  <section id="hero">
+    <div class="hero-slides">${bHeroSlides()}</div>
+    <div class="hero-content">
+      <div class="hero-tag">${state.heroTag}</div>
+      <h1 class="hero-title">${state.heroTitle}</h1>
+      <p class="hero-sub">${state.heroSub}</p>
+      <a href="#calismalarbg" class="hero-cta">${state.heroCta}</a>
+    </div>
+    <div class="hero-dots">${bHeroDots()}</div>
+  </section>
+  <section id="hakkimizda">
+    <div class="reveal">
+      <div class="section-label">Hakkımızda</div>
+      <h2 class="section-title">${state.aboutTitle}</h2>
+      <p class="about-text" style="margin-top:28px;">${state.aboutP1}</p>
+      <p class="about-text">${state.aboutP2}</p>
+      <p class="about-text">${state.aboutP3}</p>
+      <div class="about-sign">${state.aboutSign}</div>
+    </div>
+    <div class="about-image reveal">
+      <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_800,q_auto,f_auto/IMG_2160_ygxy7r.png" alt="Murat ve Elif"/>
+    </div>
+  </section>
+  <section id="calismalarbg">
+    <div class="gallery-header reveal"><div class="section-label">Çalışmalar</div></div>
+    <div class="gallery-tabs-wrap reveal">
+      <div class="cat-tabs" id="catTabs">${bCatTabs()}</div>
+      <div class="subcat-tabs visible" id="subcatTabs">${bSubCatTabs()}</div>
+    </div>
+    <div class="mosaic reveal" id="mosaicGrid"><div class="gallery-loading">Yükleniyor…</div></div>
+  </section>
+  <section id="iletisim">
+    <div class="contact-bg"><img src="${state.heroImages[0]||''}" alt=""/></div>
+    <div class="contact-inner reveal">
+      <div class="section-label">İletişim</div>
+      <h2 class="section-title">Birlikte<br/><em>çalışalım</em></h2>
+      <p class="contact-text">${state.contactText}</p>
+      <div class="contact-links">
+        <a href="mailto:${state.contactEmail}" class="contact-link"><span class="clt">E-posta</span><span class="clv">${state.contactEmail}</span></a>
+        <a href="https://www.instagram.com/${state.contactInsta.replace('@','')}/" target="_blank" class="contact-link"><span class="clt">Instagram</span><span class="clv">${state.contactInsta}</span></a>
+      </div>
+    </div>
+  </section>
+  <footer class="reveal">
+    <div class="footer-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></div>
+    <div class="footer-copy">${state.footerCopy}</div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
+      <a href="mailto:${state.contactEmail}">E-posta</a>
+    </div>
+  </footer>
+</div>
+<div id="detayPage">
+  <nav class="detay-nav">
+    <button class="detay-back" id="detayBack">Geri Dön</button>
+    <a class="nav-logo" href="javascript:void(0)" onclick="closeDetay()"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
+    <div style="width:100px;"></div>
+  </nav>
+  <div class="detay-body">
+    <div class="detay-grid">
+      <div class="detay-gallery">
+        <img class="detay-main-img" id="detayMainImg" src="" alt=""/>
+        <div class="detay-thumbs" id="detayThumbs"></div>
+        <div class="detay-img-count" id="detayImgCount"></div>
+      </div>
+      <div class="detay-info">
+        <div class="detay-cat" id="detayCat"></div>
+        <h1 class="detay-title" id="detayTitle"></h1>
+        <p class="detay-desc" id="detayDesc"></p>
+        <div class="detay-props" id="detayProps"></div>
+      </div>
+    </div>
+    <div class="detay-related">
+      <div class="detay-related-title">Diğer Eserler</div>
+      <div class="related-grid" id="relatedGrid"></div>
+    </div>
+  </div>
+</div>
+<script>
+const C='dhvrm1dcf';
+const BASE=\`https://res.cloudinary.com/\${C}/image/upload\`;
+const RAW=${bRaw()};
+const SAMPLE_DESC='Bu eser, sanatçının özgün yorumuyla hayat bulmuş, duygu ve estetiğin bir araya geldiği özel bir çalışmadır.';
+const SAMPLE_PROPS={'Yıl':'2024','Teknik':'Özgün teknik','Durum':'Orijinal eser'};
+function imgUrl(id,w=600){return \`\${BASE}/w_\${w},c_scale,q_auto,f_auto/\${id}.jpg\`;}
+const hasDimension=id=>/\\d+x\\d+/.test(id);
+const getBase=id=>{const n=id.replace(/_[a-z0-9]{6,8}$/,'');return hasDimension(n)?n:n.replace(/-\\d+$/,'');};
+function groupImages(ids){const g={},o=[];ids.forEach(id=>{const b=getBase(id);if(!g[b]){g[b]=[];o.push(b);}g[b].push(id);});return o.map(b=>({base:b,images:g[b]}));}
+function prettyName(base){return base.replace(/[-_](\\d+x\\d+)/,' ($1)').replace(/[-_]/g,' ').replace(/\\b\\w/g,c=>c.toUpperCase()).trim();}
+function catLabel(cat){return ${bCatLabels()}[cat]||cat;}
+const GROUPS={};Object.keys(RAW).forEach(cat=>{GROUPS[cat]=groupImages(RAW[cat]);});
+let currentCat='${fc}';
+function renderGallery(cat){
+  currentCat=cat;const groups=GROUPS[cat]||[];
+  const grid=document.getElementById('mosaicGrid');
+  if(!groups.length){grid.innerHTML='<div class="gallery-loading">Bu kategoride eser yok.</div>';return;}
+  grid.innerHTML=groups.map((g,i)=>{
+    const name=prettyName(g.base),count=g.images.length;
+    return \`<div class="mosaic-item" data-cat="\${cat}" data-idx="\${i}">
+      <img src="\${imgUrl(g.images[0])}" alt="\${name}" loading="lazy"/>
+      <div class="mosaic-overlay">
+        <div class="mosaic-title">\${name}</div>
+        \${count>1?\`<div class="mosaic-count">\${count} görsel</div>\`:''}
+      </div></div>\`;
+  }).join('');
+  grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetay(el.dataset.cat,+el.dataset.idx)));
+}
+function openDetay(cat,idx){
+  const groups=GROUPS[cat],g=groups[idx],name=prettyName(g.base);
+  document.getElementById('detayMainImg').src=imgUrl(g.images[0],1200);
+  document.getElementById('detayCat').textContent=catLabel(cat);
+  document.getElementById('detayTitle').textContent=name;
+  document.getElementById('detayDesc').textContent=SAMPLE_DESC;
+  const props={...SAMPLE_PROPS};
+  const dim=g.base.match(/(\\d+x\\d+)/);if(dim)props['Boyut']=dim[1]+' cm';
+  document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>\`<div class="detay-prop"><div class="detay-prop-key">\${k}</div><div class="detay-prop-val">\${v}</div></div>\`).join('');
+  const th=document.getElementById('detayThumbs');
+  if(g.images.length>1){
+    th.innerHTML=g.images.map((img,i)=>\`<img class="detay-thumb\${i===0?' active':''}" src="\${imgUrl(img,200)}" data-full="\${imgUrl(img,1200)}" alt=""/>\`).join('');
+    th.querySelectorAll('.detay-thumb').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.detay-thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById('detayMainImg').src=t.dataset.full;}));
+    document.getElementById('detayImgCount').textContent=\`\${g.images.length} farklı açı\`;
+  }else{th.innerHTML='';document.getElementById('detayImgCount').textContent='';}
+  const related=groups.filter((_,i)=>i!==idx).slice(0,8);
+  document.getElementById('relatedGrid').innerHTML=related.map(rg=>{
+    const ri=groups.indexOf(rg);
+    return \`<div class="related-item" data-cat="\${cat}" data-idx="\${ri}"><img src="\${imgUrl(rg.images[0],400)}" alt="\${prettyName(rg.base)}" loading="lazy"/><div class="related-overlay"><div class="related-name">\${prettyName(rg.base)}</div></div></div>\`;
+  }).join('');
+  document.querySelectorAll('.related-item').forEach(el=>el.addEventListener('click',()=>{openDetay(el.dataset.cat,+el.dataset.idx);window.scrollTo(0,0);}));
+  document.getElementById('mainPage').style.display='none';
+  document.getElementById('detayPage').classList.add('open');
+  window.scrollTo(0,0);
+}
+function closeDetay(){document.getElementById('detayPage').classList.remove('open');document.getElementById('mainPage').style.display='';}
+document.getElementById('detayBack').addEventListener('click',closeDetay);
+const catChildren=${bCatChildren()};
+const extraLabels=${bExtraLabels()};
+document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const main=btn.dataset.main,sw=document.getElementById('subcatTabs');
+  if(main==='sanatsal'){
+    sw.innerHTML='${ssHTML}';sw.classList.add('visible');
+    sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
+    renderGallery('${fc}');
+  } else if(catChildren[main]&&catChildren[main].length>0){
+    const ch=catChildren[main];
+    sw.innerHTML=ch.map((s,i)=>\`<button class="subcat-tab\${i===0?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
+    sw.classList.add('visible');
+    sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
+    renderGallery(ch[0]);
+  } else {sw.innerHTML='';sw.classList.remove('visible');renderGallery(main);}
+}));
+document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGallery(btn.dataset.sub);
+}));
+window.navGo=function(cat){setTimeout(()=>{
+  const sw=document.getElementById('subcatTabs');
+  const ss=${JSON.stringify(state.subCats).replace(/"/g,"'")};
+  if(ss.includes(cat)||cat==='sanatsal'){
+    const t=ss.includes(cat)?cat:'${fc}';
+    document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
+    sw.innerHTML='${ssHTMLS}';sw.classList.add('visible');
+    sw.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
+    renderGallery(t);
+  } else {
+    let fp=null;Object.keys(catChildren).forEach(p=>{if(catChildren[p].includes(cat))fp=p;});
+    if(fp){
+      document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===fp));
+      const ch=catChildren[fp];
+      sw.innerHTML=ch.map(s=>\`<button class="subcat-tab\${s===cat?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
+      sw.classList.add('visible');
+      sw.querySelectorAll('.subcat-tab').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
+      renderGallery(cat);
+    } else {
+      document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main===cat));
+      sw.innerHTML='';sw.classList.remove('visible');renderGallery(cat);
+    }
+  }
+  window.closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'});
+},300);};
+window.closeMenu=function(){document.getElementById('navLinks').classList.remove('open');};
+renderGallery('${fc}');
+const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
+let cur=0,timer;
+function goTo(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=i;slides[cur].classList.add('active');dots[cur].classList.add('active');}
+timer=setInterval(()=>goTo((cur+1)%slides.length),5000);
+dots.forEach(d=>d.addEventListener('click',()=>{clearInterval(timer);goTo(+d.dataset.index);timer=setInterval(()=>goTo((cur+1)%slides.length),5000);}));
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+<\/script>
+</body>
+</html>`;
+
+  const blob=new Blob([html],{type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
+  showToast('index.html indirildi!');
+// ---- ESER VERİSİ ----
+let eserData = {}; // { "base_key": { desc, props:{}, images:[] } }
+let currentEserKey = null;
+let currentEserCat = null;
+
+function prettyNameAdmin(base){
+  return base.replace(/[-_](\d+x\d+)/,' ($1)').replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()).trim();
+}
+
+function getBaseKey(id){
+  const n=id.replace(/_[a-z0-9]{6,8}$/,'');
+  return /\d+x\d+/.test(n)?n:n.replace(/-\d+$/,'');
+}
+
+function getAllCatsFlat(){
+  const cats=[];
+  state.mainCats.forEach(c=>{
+    if(c==='sanatsal'){state.subCats.forEach(s=>cats.push(s));}
+    else{
+      const ch=state.catChildren[c]||[];
+      if(ch.length){ch.forEach(s=>cats.push(s));}
+      else cats.push(c);
+    }
+  });
+  return cats;
+}
+
+function renderEserPanel(){
+  const cats=getAllCatsFlat();
+  // Cat filter butonları
+  document.getElementById('eserCatFilter').innerHTML=cats.map((c,i)=>
+    `<button class="${i===0?'active':''}" onclick="selectEserCat('${c}',this)">${getLabel(c)}</button>`
+  ).join('');
+  selectEserCat(cats[0]);
+}
+
+function selectEserCat(cat, btn){
+  currentEserCat=cat;
+  if(btn){
+    document.querySelectorAll('.cat-filter button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  closeEserEdit();
+  const raw=state.raw[cat]||[];
+  // Gruplama
+  const groups={},order=[];
+  raw.forEach(id=>{
+    const base=getBaseKey(id);
+    if(!groups[base]){groups[base]=[];order.push(base);}
+    groups[base].push(id);
+  });
+  const grid=document.getElementById('eserGrid');
+  grid.innerHTML=order.map(base=>{
+    const ids=groups[base];
+    const hasData=!!eserData[base];
+    const imgId=ids[0];
+    const thumb=`https://res.cloudinary.com/dhvrm1dcf/image/upload/w_200,c_scale,q_auto,f_auto/${imgId}.jpg`;
+    return `<div class="eser-card${hasData?' edited':''}" onclick="openEserEdit('${base}',${JSON.stringify(ids).replace(/"/g,"'")})">
+      <img src="${thumb}" alt="${prettyNameAdmin(base)}" loading="lazy" onerror="this.style.background='#eee'"/>
+      <div class="eser-card-name">${prettyNameAdmin(base)}${hasData?' ✓':''}</div>
+    </div>`;
+  }).join('');
+}
+
+function openEserEdit(base, rawImages){
+  currentEserKey=base;
+  const data=eserData[base]||{desc:'',props:{},images:null};
+  const images=data.images||rawImages;
+  document.getElementById('eserEditName').textContent=prettyNameAdmin(base);
+  document.getElementById('eserDesc').value=data.desc||'';
+  // Props
+  renderEserProps(data.props||{});
+  // Görseller
+  renderEserImgs(images, rawImages);
+  document.getElementById('eserEdit').style.display='block';
+  document.getElementById('eserEdit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function closeEserEdit(){
+  document.getElementById('eserEdit').style.display='none';
+  currentEserKey=null;
+}
+
+function renderEserProps(props){
+  const entries=Object.entries(props);
+  document.getElementById('eserPropList').innerHTML=entries.map(([k,v],i)=>`
+    <div class="prop-row" id="prop-${i}">
+      <input type="text" value="${k}" placeholder="Özellik (ör: Yıl)" id="pk-${i}"/>
+      <input type="text" value="${v}" placeholder="Değer (ör: 2022)" id="pv-${i}"/>
+      <button class="btn btn-danger" onclick="removeEserProp(${i})">Sil</button>
+    </div>`).join('');
+  document.getElementById('eserPropList').dataset.count=entries.length;
+}
+
+function addEserProp(){
+  const list=document.getElementById('eserPropList');
+  const i=parseInt(list.dataset.count||0);
+  list.innerHTML+=`<div class="prop-row" id="prop-${i}">
+    <input type="text" placeholder="Özellik (ör: Yıl)" id="pk-${i}"/>
+    <input type="text" placeholder="Değer (ör: 2022)" id="pv-${i}"/>
+    <button class="btn btn-danger" onclick="removeEserProp(${i})">Sil</button>
+  </div>`;
+  list.dataset.count=i+1;
+}
+
+function removeEserProp(i){
+  const el=document.getElementById('prop-'+i);
+  if(el)el.remove();
+}
+
+function getEserProps(){
+  const props={};
+  document.querySelectorAll('#eserPropList .prop-row').forEach(row=>{
+    const id=row.id.replace('prop-','');
+    const k=document.getElementById('pk-'+id)?.value.trim();
+    const v=document.getElementById('pv-'+id)?.value.trim();
+    if(k&&v)props[k]=v;
+  });
+  return props;
+}
+
+function renderEserImgs(images, rawImages){
+  document.getElementById('eserImgList').innerHTML=images.map((id,i)=>`
+    <div class="img-order-item${i===0?' main-img':''}" id="eimg-${i}">
+      <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_160,c_scale,q_auto,f_auto/${id}.jpg" alt=""/>
+      <div class="img-btns">
+        ${i>0?`<button onclick="moveEserImg(${i},-1)" title="Sola">◀</button>`:'<button disabled>◀</button>'}
+        <button onclick="setMainEserImg(${i})" title="Ana Görsel Yap" style="${i===0?'color:var(--warm)':''}">★</button>
+        ${i<images.length-1?`<button onclick="moveEserImg(${i},1)" title="Sağa">▶</button>`:'<button disabled>▶</button>'}
+        <button onclick="removeEserImg(${i})" title="Sil" style="color:#c0392b;">✕</button>
+      </div>
+    </div>`).join('');
+  document.getElementById('eserImgList').dataset.images=JSON.stringify(images);
+  document.getElementById('eserImgList').dataset.rawImages=JSON.stringify(rawImages);
+}
+
+function getCurrentEserImages(){
+  return JSON.parse(document.getElementById('eserImgList').dataset.images||'[]');
+}
+
+function moveEserImg(i, dir){
+  const imgs=getCurrentEserImages();
+  const j=i+dir;
+  if(j<0||j>=imgs.length)return;
+  [imgs[i],imgs[j]]=[imgs[j],imgs[i]];
+  const raw=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
+  renderEserImgs(imgs,raw);
+}
+
+function setMainEserImg(i){
+  const imgs=getCurrentEserImages();
+  const main=imgs.splice(i,1)[0];
+  imgs.unshift(main);
+  const raw=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
+  renderEserImgs(imgs,raw);
+}
+
+function removeEserImg(i){
+  const imgs=getCurrentEserImages();
+  if(imgs.length<=1){alert('En az 1 görsel olmalı');return;}
+  imgs.splice(i,1);
+  const raw=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
+  renderEserImgs(imgs,raw);
+}
+
+function addEserImg(){
+  const inp=document.getElementById('eserNewImg');
+  const val=inp.value.trim();
+  if(!val)return;
+  const imgs=getCurrentEserImages();
+  imgs.push(val);
+  const raw=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
+  renderEserImgs(imgs,raw);
+  inp.value='';
+}
+
+function saveEserEdit(){
+  if(!currentEserKey)return;
+  const desc=document.getElementById('eserDesc').value.trim();
+  const props=getEserProps();
+  const images=getCurrentEserImages();
+  const rawImages=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
+  // Görseller rawImages ile aynıysa kaydetme (boş bırak, RAW'dan okusun)
+  const imgsChanged=JSON.stringify(images)!==JSON.stringify(rawImages);
+  eserData[currentEserKey]={
+    desc,
+    props,
+    images: imgsChanged?images:undefined
+  };
+  if(!imgsChanged)delete eserData[currentEserKey].images;
+  // Boşsa kaydı sil
+  if(!desc&&Object.keys(props).length===0&&!imgsChanged){
+    delete eserData[currentEserKey];
+  }
+  closeEserEdit();
+  selectEserCat(currentEserCat);
+  showToast('Eser kaydedildi!');
+}
+
+// data.json indir/yükle
+function downloadDataJson(){
+  const blob=new Blob([JSON.stringify(eserData,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='data.json';a.click();
+  showToast('data.json indirildi!');
+}
+
+function loadDataJson(){
+  document.getElementById('dataJsonInput').click();
+}
+
+function onDataJsonLoaded(input){
+  const file=input.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      eserData=JSON.parse(e.target.result);
+      if(currentEserCat)selectEserCat(currentEserCat);
+      showToast('data.json yüklendi! '+Object.keys(eserData).length+' eser');
+    }catch(err){alert('Geçersiz JSON dosyası');}
+  };
+  reader.readAsText(file);
+}
+</script>
+</body>
+</html>
