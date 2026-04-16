@@ -973,9 +973,15 @@ document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{a.add
 }
 
 // ---- ESER VERİSİ ----
-let eserData = {}; // { "base_key": { desc, props:{}, images:[] } }
+let eserData = {};
 let currentEserKey = null;
 let currentEserCat = null;
+
+// Sayfa açılınca data.json'ı otomatik yükle
+fetch('data.json').then(r=>r.json()).then(d=>{
+  eserData=d;
+  showToast('data.json yüklendi — '+Object.keys(d).length+' eser');
+}).catch(()=>{});
 
 function prettyNameAdmin(base){
   return base.replace(/[-_](\d+x\d+)/,' ($1)').replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()).trim();
