@@ -265,7 +265,7 @@ const RAW={
   anahtarlık: ["yakinda-scaled_rkv3uj"]
 };
 let ESER_DATA={};
-fetch('data.json').then(r=>r.json()).then(d=>{ESER_DATA=d;}).catch(()=>{});
+fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{ESER_DATA=d;}).catch(()=>{});
 function imgUrl(id,w=600){return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;}
 const hasDimension=id=>/\d+x\d+/.test(id);
 const getBase=id=>{const n=id.replace(/_[a-z0-9]{6,8}$/,'');return hasDimension(n)?n:n.replace(/-\d+$/,'');};
