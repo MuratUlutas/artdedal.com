@@ -297,7 +297,7 @@ function openDetay(cat,idx){
   document.getElementById('detayTitle').textContent=eser.name||name;
   document.getElementById('detayDesc').textContent=eser.desc||'';
   const props={...eser.props||{}};
-  const dim=g.base.match(/(\d+x\d+)/);if(dim&&!props['Boyut'])props['Boyut']=dim[1]+' cm';
+  const dim=g.base.match(/(\d+x\d+)/);if(dim&&!props['Boyutu'])props['Boyutu']=dim[1]+' cm';
   document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>`<div class="detay-prop"><div class="detay-prop-key">${k}</div><div class="detay-prop-val">${v}</div></div>`).join('');
   const th=document.getElementById('detayThumbs');
   if(g.images.length>1){
