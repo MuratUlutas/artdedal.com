@@ -9,6 +9,7 @@
     }
   },
   "Spinning_Ball-10-50x70": {
+    "name": "Spinning Ball-10",
     "desc": "",
     "props": {
       "Yapım Yılı": "2010",
@@ -95,6 +96,15 @@
       "Yapım yılı": "2021",
       "Tekniği": "Tuval üzerine yağlı boya",
       "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Spinning_Ball-9-50x70": {
+    "name": "Spinning Ball-9",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2010",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 70 cm"
     }
   }
 }
