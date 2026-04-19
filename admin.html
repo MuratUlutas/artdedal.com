@@ -1200,9 +1200,14 @@ function onDataJsonLoaded(input){
   reader.onload=e=>{
     try{
       eserData=JSON.parse(e.target.result);
-      if(currentEserCat)selectEserCat(currentEserCat);
+      if(currentEserCat) selectEserCat(currentEserCat);
+      else if(document.getElementById('panel-eserler').classList.contains('active')) renderEserPanel();
+      if(currentEserKey){
+        const rawImages=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
+        openEserEdit(currentEserKey, rawImages);
+      }
       showToast('data.json yüklendi! '+Object.keys(eserData).length+' eser');
-    }catch(err){alert('Geçersiz JSON dosyası');}
+    }catch(err){alert('Geçersiz JSON dosyası: '+err.message);}
   };
   reader.readAsText(file);
 }
