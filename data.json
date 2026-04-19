@@ -24,5 +24,14 @@
       "Tekniği": "Tuval üzerine yağlı boya",
       "Boyutu": "40 x 50 cm"
     }
+  },
+  "Portrait-Sappho-40x50": {
+    "name": "Portrait of Sappho",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
   }
 }
