@@ -264,8 +264,8 @@ const RAW={
   pipolar: ["R1001-7_r9vrsg","R1001-6_lescfd","R1001-5_vgivlu","R1001-4_o1hlrf","R1001-3_eijyio","R1001-2_j2zvlh","R1001-1_db0pse","Pipolar-2_jyyyva","Pipolar-1_n40mx0","P1008-4_bf9zoz","P1008-3_imi1co","P1008-2_u3ztn7","P1008-1_xvn9fs","P1007-4_ovut8d","P1007-3_hrkc6i","P1007-2_yactsj","P1007-1_iae865","P1006-4_vmjldh","P1006-3_fynhks","P1006-2_pglo3i","P1006-1_yzix4m","P1005-4_shvno4","P1005-3_g39tu6","P1005-2_m55876","P1005-1_k8eesx","P1004-4_fhitxg","P1004-3_lp7lpo","P1004-2_y2bru7","P1004-1_m7okps","P1003-4_fqkevz","P1003-3_axnznx","P1003-2_egbje1","P1003-1_bxm38m","P1002-7_eln7n6","P1002-6_upkefe","P1002-5_bd8noq","P1002-4_es5ezm","P1002-3_yqor4x","P1002-2_cdh8wm","P1002-1_x9gxxg","P1001-6_ifpssz","P1001-5_api8ue","P1001-4_r7ezqd","P1001-3_xtlitq","P1001-2_fzm1cy","P1001-1_zbiq7y"],
   anahtarlık: ["yakinda-scaled_rkv3uj"]
 };
-const SAMPLE_DESC='Bu eser, sanatçının özgün yorumuyla hayat bulmuş, duygu ve estetiğin bir araya geldiği özel bir çalışmadır.';
-const SAMPLE_PROPS={'Yıl':'2024','Teknik':'Özgün teknik','Durum':'Orijinal eser'};
+let ESER_DATA={};
+fetch('data.json').then(r=>r.json()).then(d=>{ESER_DATA=d;}).catch(()=>{});
 function imgUrl(id,w=600){return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;}
 const hasDimension=id=>/\d+x\d+/.test(id);
 const getBase=id=>{const n=id.replace(/_[a-z0-9]{6,8}$/,'');return hasDimension(n)?n:n.replace(/-\d+$/,'');};
@@ -293,10 +293,11 @@ function openDetay(cat,idx){
   const groups=GROUPS[cat],g=groups[idx],name=prettyName(g.base);
   document.getElementById('detayMainImg').src=imgUrl(g.images[0],1200);
   document.getElementById('detayCat').textContent=catLabel(cat);
-  document.getElementById('detayTitle').textContent=name;
-  document.getElementById('detayDesc').textContent=SAMPLE_DESC;
-  const props={...SAMPLE_PROPS};
-  const dim=g.base.match(/(\d+x\d+)/);if(dim)props['Boyut']=dim[1]+' cm';
+  const eser=ESER_DATA[g.base]||{};
+  document.getElementById('detayTitle').textContent=eser.name||name;
+  document.getElementById('detayDesc').textContent=eser.desc||'';
+  const props={...eser.props||{}};
+  const dim=g.base.match(/(\d+x\d+)/);if(dim&&!props['Boyut'])props['Boyut']=dim[1]+' cm';
   document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>`<div class="detay-prop"><div class="detay-prop-key">${k}</div><div class="detay-prop-val">${v}</div></div>`).join('');
   const th=document.getElementById('detayThumbs');
   if(g.images.length>1){
