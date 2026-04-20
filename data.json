@@ -1,0 +1,263 @@
+{
+  "Portrait-Hegel-40x50": {
+    "name": "Portrait of Hegel",
+    "desc": "Bu çalışma Hegel'in portresi ile ilgilidir, detaylar hazırlanıyor.",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Spinning_Ball-10-50x70": {
+    "name": "Spinning Ball-10",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2010",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 70 cm"
+    }
+  },
+  "Portrait-Rimbaud-40x50": {
+    "name": "Portrait of Rimbaud",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Sappho-40x50": {
+    "name": "Portrait of Sappho",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Nefertiti-40x50": {
+    "name": "Portrait of Nefertiti",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Michelangelo-40x50": {
+    "name": "Portrait of Michelangelo",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Kafka-40x50": {
+    "name": "Portrait of Kafka",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Goethe-40x50": {
+    "name": "Portrait of Goethe",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Galileo-40x50": {
+    "name": "Portrait of Galileo",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Dante-40x50": {
+    "name": "Portrait of Dante",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Portrait-Beethoven-40x50": {
+    "name": "Portrait of Beethoven",
+    "desc": "",
+    "props": {
+      "Yapım yılı": "2021",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 50 cm"
+    }
+  },
+  "Spinning_Ball-9-50x70": {
+    "name": "Spinning Ball-9",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2010",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 70 cm"
+    }
+  },
+  "Phoenix-30-110x130": {
+    "name": "Phoenix-30",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "110 x 130 cm"
+    }
+  },
+  "Phoenix-13-70x100": {
+    "name": "Phoenix-13",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "70 x 100 cm"
+    }
+  },
+  "Phoenix-29-105x150": {
+    "name": "Phoenix-29",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "105 x 150 cm"
+    }
+  },
+  "Phoenix-12-60x60": {
+    "name": "Phoenix-12",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 60 cm"
+    }
+  },
+  "Phoenix-28-40x30": {
+    "name": "Phoenix-28",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 30 cm"
+    }
+  },
+  "Phoenix-11-50x80": {
+    "name": "Phoenix-11",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 80 cm"
+    }
+  },
+  "Phoenix-27-40x30": {
+    "name": "Phoenix-27",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 30 cm"
+    }
+  },
+  "Phoenix-10-70x100": {
+    "name": "Phoenix-10",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "70 x 100 cm"
+    }
+  },
+  "Phoenix-26-40x30": {
+    "name": "Phoenix-26",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 30 cm"
+    }
+  },
+  "Phoenix-9-110x120": {
+    "name": "Phoenix-9",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "110 x 120 cm"
+    }
+  },
+  "Phoenix-25-40x30": {
+    "name": "Phoenix-25",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 30 cm"
+    }
+  },
+  "Phoenix-8-100x120": {
+    "name": "Phoenix-8",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "100 x 120 cm"
+    }
+  },
+  "Phoenix-24-35x50": {
+    "name": "Phoenix-24",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "35 x 50 cm"
+    }
+  },
+  "Phoenix-23-30x40": {
+    "name": "Phoenix-23",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "30 x 40 cm"
+    }
+  },
+  "Phoenix-7-60x90": {
+    "name": "Phoenix-7",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 90 cm"
+    }
+  },
+  "Phoenix-22-30x40": {
+    "name": "Phoenix-22",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "30 x 40 cm"
+    }
+  },
+  "Phoenix-6-70x100": {
+    "name": "Phoenix-6",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "70 x 100 cm"
+    }
+  }
+}
