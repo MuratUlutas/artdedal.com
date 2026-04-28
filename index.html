@@ -294,7 +294,8 @@ function renderGallery(cat){
   const grid=document.getElementById('mosaicGrid');
   if(!groups.length){grid.innerHTML='<div class="gallery-loading">Bu kategoride eser yok.</div>';return;}
   grid.innerHTML=groups.map((g,i)=>{
-    const name=prettyName(g.base),count=g.images.length;
+    const eser=ESER_DATA[g.base]||{};
+    const name=eser.name||prettyName(g.base),count=g.images.length;
     return `<div class="mosaic-item" data-cat="${cat}" data-idx="${i}">
       <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
