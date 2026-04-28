@@ -259,5 +259,14 @@
       "Tekniği": "Tuval üzerine yağlı boya",
       "Boyutu": "70 x 100 cm"
     }
+  },
+  "Phoenix-16-60x60": {
+    "name": "Phoenix-16",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 60 cm"
+    }
   }
 }
