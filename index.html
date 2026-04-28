@@ -140,9 +140,9 @@
       nav,#calismalarbg,#hakkimizda,.contact-inner,footer{padding-left:24px;padding-right:24px;}
       nav{padding-top:20px;padding-bottom:20px;}
       nav.scrolled{padding-top:12px;padding-bottom:12px;}
-      .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--cream);flex-direction:column;justify-content:center;align-items:center;z-index:300;overflow-y:auto;gap:0;}
+      .nav-links{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:var(--cream);flex-direction:column;justify-content:center;align-items:center;z-index:300;overflow-y:auto;gap:0;}
       .nav-links.open{display:flex;}
-      .nav-links>li>a{font-family:'Tenor Sans',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);padding:10px 32px;display:block;text-align:center;opacity:.7;}
+      .nav-links>li>a{font-family:'Tenor Sans',sans-serif;font-size:.9rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);padding:14px 32px;display:block;text-align:center;opacity:.7;}
       .nav-links>li>a:hover{opacity:1;}
       .dropdown{display:none !important;}.sub-dropdown{display:none !important;}
       .hamburger{display:flex;}
@@ -472,7 +472,18 @@ function goTo(i){slides[cur].classList.remove('active');dots[cur].classList.remo
 timer=setInterval(()=>goTo((cur+1)%slides.length),5000);
 dots.forEach(d=>d.addEventListener('click',()=>{clearInterval(timer);goTo(+d.dataset.index);timer=setInterval(()=>goTo((cur+1)%slides.length),5000);}));
 window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60));
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+document.getElementById('hamburger').addEventListener('click',()=>{
+  const nl=document.getElementById('navLinks');
+  nl.classList.toggle('open');
+  const h=document.getElementById('hamburger');
+  if(nl.classList.contains('open')){
+    h.innerHTML='<span style="transform:rotate(45deg);position:absolute"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg);position:absolute"></span>';
+    h.style.position='relative';
+  } else {
+    h.innerHTML='<span></span><span></span><span></span>';
+    h.style.position='';
+  }
+});
 document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
 </script>
 </body>
