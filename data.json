@@ -268,5 +268,113 @@
       "Tekniği": "Tuval üzerine yağlı boya",
       "Boyutu": "60 x 60 cm"
     }
+  },
+  "Phoenix-21-60x120": {
+    "name": "Phoenix-21",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 120 cm"
+    }
+  },
+  "Phoenix-20-50x65": {
+    "name": "Phoenix-20",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 65 cm"
+    }
+  },
+  "Phoenix-19-50x70": {
+    "name": "Phoenix-19",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 70 cm"
+    }
+  },
+  "Phoenix-18-50x70": {
+    "name": "Phoenix-18",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 70 cm"
+    }
+  },
+  "Phoenix-17-55x70": {
+    "name": "Phoenix-17",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "55 x 70 cm"
+    }
+  },
+  "Phoenix-15-60x120": {
+    "name": "Phoenix-15",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 120 cm"
+    }
+  },
+  "Phoenix-14-50x100": {
+    "name": "Phoenix-14",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 100 cm"
+    }
+  },
+  "Phoenix-5-60x60": {
+    "name": "Phoenix-5",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 60 cm"
+    }
+  },
+  "Phoenix-4-60x120": {
+    "name": "Phoenix-4",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 120 cm"
+    }
+  },
+  "Phoenix-3-70x100": {
+    "name": "Phoenix-3",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "70 x 100 cm"
+    }
+  },
+  "Phoenix-2-50x70": {
+    "name": "Phoenix-2",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 70 cm"
+    }
+  },
+  "Phoenix-1-65x80": {
+    "name": "Phoenix-1",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2015",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "65 x 80 cm"
+    }
   }
 }
