@@ -281,11 +281,9 @@ function prettyName(base){
   return base
     .replace(/[-_](\d+x\d+)/,' ($1)')
     .replace(/[-_]/g,' ')
-    .replace(/\b\w/g, c => {
-      if(c==='i') return 'İ';
-      if(c==='ı') return 'I';
-      return c.toLocaleUpperCase('tr-TR');
-    })
+    .split(' ')
+    .map(w => w.length ? w[0].toLocaleUpperCase('tr-TR') + w.slice(1).toLocaleLowerCase('tr-TR') : '')
+    .join(' ')
     .trim();
 }
 function catLabel(cat){return {'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','resimler':'Resimler','heykeller':'Heykeller','dijital':'Dijital Tasarımlar','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}[cat]||cat;}
