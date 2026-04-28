@@ -203,7 +203,7 @@
       <li><a href="#hero" onclick="closeMenu()">Anasayfa</a></li>
       <li><a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a></li>
       <li class="has-dropdown">
-        <a href="#calismalarbg">Çalışmalar</a>
+        <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
         <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
       </li>
       <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
@@ -423,7 +423,12 @@ window.navGo=function(cat){setTimeout(()=>{
   }
   window.closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'});
 },300);};
-window.closeMenu=function(){document.getElementById('navLinks').classList.remove('open');};
+window.closeMenu=function(){
+  document.getElementById('navLinks').classList.remove('open');
+  const h=document.getElementById('hamburger');
+  h.innerHTML='<span></span><span></span><span></span>';
+  h.style.position='';
+};
 
 // ---- ARAMA ----
 function openSearch(){
