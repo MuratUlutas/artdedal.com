@@ -345,7 +345,12 @@ function renderGallery(cat){
   }).join('');
   grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetay(el.dataset.cat,+el.dataset.idx)));
 }
+let _detayCat = null;
+let _detayIdx = null;
+
 function openDetay(cat,idx){
+  _detayCat = cat;
+  _detayIdx = idx;
   const groups=GROUPS[cat],g=groups[idx],name=prettyName(g.base);
   document.getElementById('detayMainImg').src=imgUrl(g.images[0],1200);
   document.getElementById('detayCat').textContent=catLabel(cat);
@@ -375,6 +380,11 @@ function openDetay(cat,idx){
 function closeDetay(){
   document.getElementById('detayPage').classList.remove('open');
   document.getElementById('mainPage').style.display='';
+  // Gelinen kategoriye dön
+  if(_detayCat){
+    navGo(_detayCat);
+    setTimeout(()=>document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'}),100);
+  }
   history.replaceState(null,'','#calismalarbg');
 }
 document.getElementById('detayBack').addEventListener('click',closeDetay);
