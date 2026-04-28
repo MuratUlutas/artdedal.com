@@ -277,7 +277,17 @@ function imgUrl(id,w=600){return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg
 const hasDimension=id=>/\d+x\d+/.test(id);
 const getBase=id=>{const n=id.replace(/_[a-z0-9]{6,8}$/,'');return hasDimension(n)?n:n.replace(/-\d+$/,'');};
 function groupImages(ids){const g={},o=[];ids.forEach(id=>{const b=getBase(id);if(!g[b]){g[b]=[];o.push(b);}g[b].push(id);});return o.map(b=>({base:b,images:g[b]}));}
-function prettyName(base){return base.replace(/[-_](\d+x\d+)/,' ($1)').replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()).trim();}
+function prettyName(base){
+  return base
+    .replace(/[-_](\d+x\d+)/,' ($1)')
+    .replace(/[-_]/g,' ')
+    .replace(/\b\w/g, c => {
+      if(c==='i') return 'İ';
+      if(c==='ı') return 'I';
+      return c.toLocaleUpperCase('tr-TR');
+    })
+    .trim();
+}
 function catLabel(cat){return {'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','resimler':'Resimler','heykeller':'Heykeller','dijital':'Dijital Tasarımlar','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}[cat]||cat;}
 const GROUPS={};Object.keys(RAW).forEach(cat=>{GROUPS[cat]=groupImages(RAW[cat]);});
 let currentCat='resimler';
