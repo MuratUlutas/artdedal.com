@@ -329,10 +329,51 @@ function prettyName(base){
 function catLabel(cat){return {'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','resimler':'Resimler','heykeller':'Heykeller','dijital':'Dijital Tasarımlar','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}[cat]||cat;}
 const GROUPS={};Object.keys(RAW).forEach(cat=>{GROUPS[cat]=groupImages(RAW[cat]);});
 let currentCat='resimler';
+// Fisher-Yates shuffle
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+const SHUFFLED={};
+function getShuffled(cat){
+  if(!SHUFFLED[cat])SHUFFLED[cat]=shuffle(GROUPS[cat]||[]);
+  return SHUFFLED[cat];
+}
+
+const MOBIL_LIMIT=6;
+
 function renderGallery(cat){
-  currentCat=cat;const groups=GROUPS[cat]||[];
+  currentCat=cat;
+  const groups=getShuffled(cat);
   const grid=document.getElementById('mosaicGrid');
   if(!groups.length){grid.innerHTML='<div class="gallery-loading">Bu kategoride eser yok.</div>';return;}
+  const isMobile=window.innerWidth<=900;
+  const shown=isMobile?groups.slice(0,MOBIL_LIMIT):groups;
+  const hasMore=isMobile&&groups.length>MOBIL_LIMIT;
+  grid.innerHTML=shown.map((g,i)=>{
+    const origIdx=groups.indexOf(g);
+    const eser=ESER_DATA[g.base]||{};
+    const name=eser.name||prettyName(g.base),count=g.images.length;
+    return `<div class="mosaic-item" data-cat="${cat}" data-idx="${origIdx}">
+      <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
+      <div class="mosaic-overlay">
+        <div class="mosaic-title">${name}</div>
+        ${count>1?`<div class="mosaic-count">${count} görsel</div>`:''}
+      </div></div>`;
+  }).join('');
+  if(hasMore){
+    const btn=document.createElement('div');
+    btn.style.cssText='column-span:all;text-align:center;padding:24px 0;';
+    btn.innerHTML=`<button onclick="showAllGallery('${cat}')" style="font-family:Tenor Sans,sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;background:none;border:1px solid rgba(245,240,232,.3);color:rgba(245,240,232,.7);padding:12px 32px;cursor:pointer;border-radius:2px;">Tümünü Gör (${groups.length})</button>`;
+    grid.appendChild(btn);
+  }
+  grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetay(el.dataset.cat,+el.dataset.idx)));
+}
+
+function showAllGallery(cat){
+  const groups=getShuffled(cat);
+  const grid=document.getElementById('mosaicGrid');
   grid.innerHTML=groups.map((g,i)=>{
     const eser=ESER_DATA[g.base]||{};
     const name=eser.name||prettyName(g.base),count=g.images.length;
