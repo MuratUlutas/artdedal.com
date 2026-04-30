@@ -383,11 +383,7 @@
     "props": {
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital tasarım"
-    },
-    "images": [
-      "Goethe_s_Imaginary_zt0byo",
-      "Portrait-Goethe-40x50_hrfl7n"
-    ]
+    }
   },
   "Sappho_s_Imaginary": {
     "name": "Sappho's Imaginary",
@@ -395,11 +391,7 @@
     "props": {
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital tasarım"
-    },
-    "images": [
-      "Sappho_s_Imaginary_umdwth",
-      "Portrait-Sappho-40x50_hrkwnf"
-    ]
+    } 
   },
   "Dante_s_Imaginary": {
     "name": "Dante's Imaginary",
