@@ -397,19 +397,20 @@ function openDetay(cat,idx){
   _detayCat = cat;
   _detayIdx = idx;
   const groups=GROUPS[cat],g=groups[idx],name=prettyName(g.base);
-  document.getElementById('detayMainImg').src=imgUrl(g.images[0],1200);
-  document.getElementById('detayCat').textContent=catLabel(cat);
   const eser=ESER_DATA[g.base]||{};
+  const images=eser.images||g.images;
+  document.getElementById('detayMainImg').src=imgUrl(images[0],1200);
+  document.getElementById('detayCat').textContent=catLabel(cat);
   document.getElementById('detayTitle').textContent=eser.name||name;
   document.getElementById('detayDesc').textContent=eser.desc||'';
   const props={...eser.props||{}};
   const dim=g.base.match(/(\d+x\d+)/);if(dim&&!props['Boyutu'])props['Boyutu']=dim[1]+' cm';
   document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>`<div class="detay-prop"><div class="detay-prop-key">${k}</div><div class="detay-prop-val">${v}</div></div>`).join('');
   const th=document.getElementById('detayThumbs');
-  if(g.images.length>1){
-    th.innerHTML=g.images.map((img,i)=>`<img class="detay-thumb${i===0?' active':''}" src="${imgUrl(img,200)}" data-full="${imgUrl(img,1200)}" alt=""/>`).join('');
+  if(images.length>1){
+    th.innerHTML=images.map((img,i)=>`<img class="detay-thumb${i===0?' active':''}" src="${imgUrl(img,200)}" data-full="${imgUrl(img,1200)}" alt=""/>`).join('');
     th.querySelectorAll('.detay-thumb').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.detay-thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById('detayMainImg').src=t.dataset.full;}));
-    document.getElementById('detayImgCount').textContent=`${g.images.length} farklı açı`;
+    document.getElementById('detayImgCount').textContent=`${images.length} farklı açı`;
   }else{th.innerHTML='';document.getElementById('detayImgCount').textContent='';}
   const related=groups.filter((_,i)=>i!==idx).slice(0,8);
   document.getElementById('relatedGrid').innerHTML=related.map(rg=>{
