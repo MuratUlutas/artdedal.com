@@ -400,5 +400,53 @@
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital tasarım"
     }
+  },
+  "Michelangelo_s_Imaginary": {
+    "name": "Michelangelo's Imaginary",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
+  },
+  "Nefertiti_s_Imaginary": {
+    "name": "Nefertiti's Imaginary",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
+  },
+  "Beethoven_s_Imaginary": {
+    "name": "Beethoven's Imaginary",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
+  },
+  "Galileo_s_Imaginary": {
+    "name": "Galileo's Imaginary",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
+  },
+  "Kafka_s_Imaginary": {
+    "name": "Kafka's Imaginary",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
+  },
+  "Rimbaud_s_Imaginary": {
+    "name": "Rimbaud's Imaginary",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
   }
 }
