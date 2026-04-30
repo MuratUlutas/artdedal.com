@@ -2,14 +2,6 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8"/>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD4XJ185VP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VD4XJ185VP');
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ArtDedal – Sanat İyileştirir</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121527/Artdedal_likon_r_jzmfex.png"/>
@@ -360,10 +352,9 @@ function renderGallery(cat){
   const shown=isMobile?groups.slice(0,MOBIL_LIMIT):groups;
   const hasMore=isMobile&&groups.length>MOBIL_LIMIT;
   grid.innerHTML=shown.map((g,i)=>{
-    const origIdx=groups.indexOf(g);
     const eser=ESER_DATA[g.base]||{};
     const name=eser.name||prettyName(g.base),count=g.images.length;
-    return `<div class="mosaic-item" data-cat="${cat}" data-idx="${origIdx}">
+    return `<div class="mosaic-item" data-cat="${cat}" data-base="${g.base}">
       <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
         <div class="mosaic-title">${name}</div>
@@ -376,7 +367,7 @@ function renderGallery(cat){
     btn.innerHTML=`<button onclick="showAllGallery('${cat}')" style="font-family:Tenor Sans,sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;background:none;border:1px solid rgba(245,240,232,.3);color:rgba(245,240,232,.7);padding:12px 32px;cursor:pointer;border-radius:2px;">Tümünü Gör (${groups.length})</button>`;
     grid.appendChild(btn);
   }
-  grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetay(el.dataset.cat,+el.dataset.idx)));
+  grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetayByBase(el.dataset.cat,el.dataset.base)));
 }
 
 function showAllGallery(cat){
@@ -385,18 +376,23 @@ function showAllGallery(cat){
   grid.innerHTML=groups.map((g,i)=>{
     const eser=ESER_DATA[g.base]||{};
     const name=eser.name||prettyName(g.base),count=g.images.length;
-    return `<div class="mosaic-item" data-cat="${cat}" data-idx="${i}">
+    return `<div class="mosaic-item" data-cat="${cat}" data-base="${g.base}">
       <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
         <div class="mosaic-title">${name}</div>
         ${count>1?`<div class="mosaic-count">${count} görsel</div>`:''}
       </div></div>`;
   }).join('');
-  grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetay(el.dataset.cat,+el.dataset.idx)));
+  grid.querySelectorAll('.mosaic-item').forEach(el=>el.addEventListener('click',()=>openDetayByBase(el.dataset.cat,el.dataset.base)));
 }
 let _detayCat = null;
 let _detayIdx = null;
 
+function openDetayByBase(cat, base){
+  const groups=GROUPS[cat];
+  const idx=groups.findIndex(g=>g.base===base);
+  if(idx>=0)openDetay(cat,idx);
+}
 function openDetay(cat,idx){
   _detayCat = cat;
   _detayIdx = idx;
