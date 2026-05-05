@@ -332,8 +332,33 @@ fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
 });
 function imgUrl(id,w=600){return `${BASE}/w_${w},c_scale,q_auto,f_auto/${id}.jpg`;}
 const hasDimension=id=>/\d+x\d+/.test(id);
-const getBase=id=>{const n=id.replace(/_[a-z0-9]{6,8}$/,'');return hasDimension(n)?n:n.replace(/-\d+$/,'');};
-function groupImages(ids){const g={},o=[];ids.forEach(id=>{const b=getBase(id);if(!g[b]){g[b]=[];o.push(b);}g[b].push(id);});return o.map(b=>({base:b,images:g[b]}));}
+const getBase=id=>{
+  const n=id.replace(/_[a-z0-9]{6,8}$/,'');
+  if(hasDimension(n)) return n; // boyut varsa olduğu gibi kullan
+  return n.replace(/-\d+$/,''); // boyut yoksa numarayı kaldır (gruplama için)
+};
+function groupImages(ids){
+  // Önce normal base ile grupla
+  const g={},o=[];
+  ids.forEach(id=>{
+    const b=getBase(id);
+    if(!g[b]){g[b]=[];o.push(b);}
+    g[b].push(id);
+  });
+  // Tek elemanlı grupları kontrol et: boyutsuz ve tek eleman varsa id'yi base olarak kullan
+  const result=[];
+  o.forEach(b=>{
+    if(g[b].length===1 && !hasDimension(b)){
+      // Tek eleman ve boyutsuz - id'nin kendisini base olarak kullan
+      const id=g[b][0];
+      const realBase=id.replace(/_[a-z0-9]{6,8}$/,'');
+      result.push({base:realBase,images:g[b]});
+    } else {
+      result.push({base:b,images:g[b]});
+    }
+  });
+  return result;
+}
 function prettyName(base){
   return base
     .replace(/[-_](\d+x\d+)/,' ($1)')
