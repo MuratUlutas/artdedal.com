@@ -439,7 +439,8 @@ function openDetay(cat,idx){
   const related=groups.filter((_,i)=>i!==idx).slice(0,8);
   document.getElementById('relatedGrid').innerHTML=related.map(rg=>{
     const ri=groups.indexOf(rg);
-    return `<div class="related-item" data-cat="${cat}" data-idx="${ri}"><img src="${imgUrl(rg.images[0],400)}" alt="${prettyName(rg.base)}" loading="lazy"/><div class="related-overlay"><div class="related-name">${prettyName(rg.base)}</div></div></div>`;
+    const rgEser=ESER_DATA[rg.base]||{};
+    return `<div class="related-item" data-cat="${cat}" data-idx="${ri}"><img src="${imgUrl(rg.images[0],400)}" alt="${rgEser.name||prettyName(rg.base)}" loading="lazy"/><div class="related-overlay"><div class="related-name">${rgEser.name||prettyName(rg.base)}</div></div></div>`;
   }).join('');
   document.querySelectorAll('.related-item').forEach(el=>el.addEventListener('click',()=>{openDetay(el.dataset.cat,+el.dataset.idx);window.scrollTo(0,0);}));
   document.getElementById('mainPage').style.display='none';
