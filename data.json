@@ -487,5 +487,13 @@
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital tasarım"
     }
+  },
+  "Spinning_Ball": {
+    "name": "Spinning Ball-8",
+    "desc": "",
+    "props": {},
+    "images": [
+      "Spinning_Ball-8_s0xcp9"
+    ]
   }
 }
