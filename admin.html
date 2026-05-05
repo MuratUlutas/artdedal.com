@@ -1040,6 +1040,30 @@ function selectEserCat(cat, btn){
       <div class="eser-card-name">${prettyNameAdmin(base)}${hasData?' ✓':''}</div>
     </div>`;
   }).join('');
+
+  // Yeni eser ekleme alanı
+  const addDiv=document.createElement('div');
+  addDiv.style.cssText='grid-column:1/-1;margin-top:16px;background:white;border:1px dashed var(--line);border-radius:4px;padding:16px;';
+  addDiv.innerHTML=`
+    <div class="card-title" style="color:var(--muted);margin-bottom:12px;">Bu Kategoriye Yeni Eser Ekle</div>
+    <p style="font-size:.7rem;color:var(--muted);margin-bottom:10px;">Cloudinary ID'sini yapıştır (ör: Spinning_Ball-8-50x70_s0xcp9)</p>
+    <div style="display:flex;gap:8px;">
+      <input type="text" id="newEserInput" placeholder="Cloudinary ID" style="flex:1;padding:10px 14px;border:1px solid var(--line);background:var(--cream);font-family:monospace;font-size:.85rem;outline:none;border-radius:2px;"/>
+      <button class="btn btn-primary" onclick="addNewEser('${cat}')">Ekle</button>
+    </div>
+  `;
+  grid.appendChild(addDiv);
+}
+
+function addNewEser(cat){
+  const inp=document.getElementById('newEserInput');
+  const val=inp.value.trim();
+  if(!val){alert('Cloudinary ID girin');return;}
+  if(!state.raw[cat])state.raw[cat]=[];
+  state.raw[cat].push(val);
+  inp.value='';
+  selectEserCat(cat);
+  showToast('Eser eklendi! Kaydet & İndir\'i unutma.');
 }
 
 function openEserEdit(base, rawImages){
