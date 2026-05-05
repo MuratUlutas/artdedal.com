@@ -10,9 +10,7 @@
   },
   "Spinning_Ball-10-50x70": {
     "name": "Spinning Ball-10",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...
-Elif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. 
-Seri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
     "props": {
       "Yapım Yılı": "2010",
       "Tekniği": "Tuval üzerine yağlı boya",
@@ -423,7 +421,7 @@ Seri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle bulu
     "props": {
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital tasarım"
-    } 
+    }
   },
   "Dante_s_Imaginary": {
     "name": "Dante's Imaginary",
