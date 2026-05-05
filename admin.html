@@ -384,13 +384,22 @@ function renderImgList(cat){
 function toggleCat(id){const el=document.getElementById('cat-'+id);if(el)el.classList.toggle('open');}
 
 // GÖRSEL
+function refreshImgList(cat){
+  const bodyM=document.getElementById('cat-m-'+cat);
+  const bodyS=document.getElementById('cat-s-'+cat);
+  const body=bodyM||bodyS;
+  if(!body){renderCats();return;}
+  body.innerHTML=renderImgList(cat);
+  const header=body.previousElementSibling;
+  if(header){const countEl=header.querySelector('.cat-count');if(countEl)countEl.textContent=`${(state.raw[cat]||[]).length} görsel`;}
+}
 function addImage(cat){
   const inp=document.getElementById('ni-'+cat);
   const val=inp.value.trim();if(!val)return;
   if(!state.raw[cat])state.raw[cat]=[];
-  state.raw[cat].push(val);inp.value='';renderCats();showToast('Görsel eklendi');
+  state.raw[cat].push(val);inp.value='';refreshImgList(cat);showToast('Görsel eklendi');
 }
-function removeImage(cat,i){state.raw[cat].splice(i,1);renderCats();showToast('Görsel silindi');}
+function removeImage(cat,i){state.raw[cat].splice(i,1);refreshImgList(cat);showToast('Görsel silindi');}
 
 // KATEGORİ SİL
 function removeMainCat(cat){
