@@ -574,5 +574,69 @@
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital Tasarım"
     }
+  },
+  "Birth": {
+    "name": "Birth",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2022",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Back_to_Yourself": {
+    "name": "Back To Yourself",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Second_Trip_To_Me": {
+    "name": "Second Trip To Me",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2022",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Journey": {
+    "name": "Journey",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Fear": {
+    "name": "Fear",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Distant_Past": {
+    "name": "Distant Past",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Distant_Colour": {
+    "name": "Distant Colour",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2023",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Born_asleep": {
+    "name": "Born Asleep",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
   }
 }
