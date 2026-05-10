@@ -565,5 +565,11 @@
 
 
 
-  "Symmetry_in_Motion": {}
-}
+  "Symmetry_in_Motion": {
+    "name": "Spinning Ball-2",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital tasarım"
+    }
+  }
