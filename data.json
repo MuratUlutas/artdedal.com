@@ -551,19 +551,28 @@
       "Boyutu": "20 x 60 cm"
     }
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "Symmetry_in_Motion": {}
+  "Symmetry_in_Motion": {
+    "name": "Symmetry In Motion",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
+  },
+  "Dream_Bird": {
+    "name": "Dream Bird",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijitl Tasarım"
+    }
+  },
+  "Soulmade": {
+    "name": "Soulmade",
+    "desc": "",
+    "props": {
+      "Yapım Yılı": "2021",
+      "Tekniği": "Dijital Tasarım"
+    }
+  }
 }
