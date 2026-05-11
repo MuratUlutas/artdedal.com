@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ArtDedal – Sanat İyileştirir</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121527/Artdedal_likon_r_jzmfex.png"/>
+  <meta property="og:site_name" content="ArtDedal"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" id="ogTitle" content="ArtDedal – Sanat İyileştirir"/>
+  <meta property="og:description" id="ogDesc" content="Heykel, resim ve özgün tasarımlarla duygulara dokunan eserler."/>
+  <meta property="og:image" id="ogImage" content="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1200,q_auto,f_auto/Artdedal_likon_r_jzmfex.png"/>
+  <meta property="og:url" id="ogUrl" content="https://artdedal.com"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -457,11 +464,24 @@ function openDetay(cat,idx){
   document.getElementById('detayPage').classList.add('open');
   window.scrollTo(0,0);
   history.replaceState(null,'','#eser-'+cat+'-'+idx);
+  const _ogImg=imgUrl(images[0],1200);
+  const _ogTitle=(eser.name||name)+' — ArtDedal';
+  const _ogUrl='https://artdedal.com/#eser-'+cat+'-'+idx;
+  updateOGTags(_ogTitle,_ogImg,_ogUrl);
+}
+function updateOGTags(title, imgUrl, url){
+  const setMeta=(id,val)=>{const el=document.getElementById(id);if(el)el.setAttribute('content',val);};
+  setMeta('ogTitle', title+' — ArtDedal');
+  setMeta('ogDesc', 'ArtDedal özgün sanat eseri');
+  setMeta('ogImage', imgUrl);
+  setMeta('ogUrl', url);
 }
 function shareWhatsApp(){
   const title=document.getElementById('detayTitle').textContent;
   const url=window.location.href;
-  window.open('https://wa.me/?text='+encodeURIComponent(title+' — '+url),'_blank');
+  const img=document.getElementById('detayMainImg').src;
+  updateOGTags(title, img, url);
+  window.open('https://wa.me/?text='+encodeURIComponent(title+' — ArtDedal\n'+url),'_blank');
 }
 function closeDetay(){
   document.getElementById('detayPage').classList.remove('open');
