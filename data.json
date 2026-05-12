@@ -642,6 +642,53 @@
   "Rebirth": {
     "name": "Rebirth",
     "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "props": {
+      "Yapım Yılı": "2024",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "60 x 120"
+    }
+  },
+  "Bird_of_Fortune-50x50": {
+    "name": "Bird Of Fortune",
+    "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "props": {
+      "Yapım Yılı": "2022",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "50 x 50"
+    }
+  },
+  "Mrs_Catherine_Swindell-80x100": {
+    "name": "Mrs Catherine Swindell",
+    "desc": "",
     "props": {}
+  },
+  "Purification-40x45": {
+    "name": "Purification",
+    "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "props": {
+      "Yapım Yılı": "2023",
+      "Tekniği": "Tuval üzerine yağlı boya",
+      "Boyutu": "40 x 45"
+    }
+  },
+  "Begonvil_Restaurant": {
+    "desc": "",
+    "props": {},
+    "images": [
+      "Begonvil_Restaurant-1_trdg6i",
+      "Begonvil_Restaurant-4_o91xy7",
+      "Begonvil_Restaurant-3_lhwwho",
+      "Begonvil_Restaurant-2_pzuxhc"
+    ]
+  },
+  "Apollo_Tapınağı": {
+    "desc": "",
+    "props": {},
+    "images": [
+      "Apollo_Tapınağı-1_rulxrg",
+      "Apollo_Tapınağı-4_z13avz",
+      "Apollo_Tapınağı-3_tgpbva",
+      "Apollo_Tapınağı-2_rxjx34"
+    ]
   }
 }
