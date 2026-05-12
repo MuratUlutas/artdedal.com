@@ -465,6 +465,7 @@ function openDetay(cat,idx){
   }).join('');
   document.querySelectorAll('.related-item').forEach(el=>el.addEventListener('click',()=>{openDetay(el.dataset.cat,+el.dataset.idx);window.scrollTo(0,0);}));
   document.getElementById('mainPage').style.display='none';
+  document.getElementById('mainNav').style.display='none';
   document.getElementById('detayPage').classList.add('open');
   window.scrollTo(0,0);
   history.replaceState(null,'','#eser-'+cat+'-'+idx);
@@ -491,6 +492,7 @@ function shareEmail(){const title=document.getElementById('detayTitle').textCont
 function closeDetay(){
   document.getElementById('detayPage').classList.remove('open');
   document.getElementById('mainPage').style.display='';
+  document.getElementById('mainNav').style.display='';
   if(_detayCat){navGo(_detayCat);setTimeout(()=>document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'}),100);}
   history.replaceState(null,'','#calismalarbg');
 }
