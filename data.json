@@ -638,5 +638,10 @@
       "Yapım Yılı": "2021",
       "Tekniği": "Dijital Tasarım"
     }
+  },
+  "Rebirth": {
+    "name": "Rebirth",
+    "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "props": {}
   }
 }
