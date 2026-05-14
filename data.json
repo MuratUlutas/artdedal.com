@@ -819,7 +819,7 @@
     "name": "Masal Park",
     "desc": "",
     "props": {
-     "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
+      "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
       "Müteahhit-Proje": "Çizgi dekorasyon",
       "Sanat Danışmanı": "Murat Ulutaş",
       "Uygulama": "Murat Ulutaş Atölyesi",
@@ -830,11 +830,21 @@
     "name": "Hayvanat Bahçesi Yolu İçin Hayvan Heykelleri",
     "desc": "",
     "props": {
-    "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
+      "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
       "Müteahhit-Proje": "Çizgi dekorasyon",
       "Sanat Danışmanı": "Murat Ulutaş",
       "Uygulama": "Murat Ulutaş Atölyesi",
       "Yapım Yılı": "2008"
-   }
+    }
+  },
+  "P1008-3_imi1c": {
+    "desc": "",
+    "props": {},
+    "images": [
+      "P1008-3_imi1co",
+      "P1008-2_u3ztn7",
+      "P1008-1_xvn9fs",
+      "P1008-4_bf9zoz"
+    ]
   }
 }
