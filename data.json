@@ -778,5 +778,19 @@
       "Uygulama": "Murat Ulutaş Atölyesi",
       "Yapım Yılı": "2009"
     }
+  },
+  "David": {
+    "name": "David",
+    "desc": "\"Kurtlar Vadisi Filistin\" film dekoru",
+    "props": {
+      "Yatırımcı": "Pana Film",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2010"
+    },
+    "images": [
+      "David-1_jjavfn",
+      "David-2_ugzzly",
+      "David-3_pk2xul"
+    ]
   }
 }
