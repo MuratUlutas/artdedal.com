@@ -682,8 +682,15 @@
     ]
   },
   "Apollo_Tapınağı": {
+    "name": "Side Apollo Tapınağı Replikası",
     "desc": "",
-    "props": {},
+    "props": {
+      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+      "Müteahhit-Proje": "Çizgi Dekorasyon",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2005"
+    },
     "images": [
       "Apollo_Tapınağı-1_rulxrg",
       "Apollo_Tapınağı-4_z13avz",
@@ -715,6 +722,56 @@
       "Sanat Danışmanı": "Murat Ulutaş",
       "Uygulama": "Murat Ulutaş Atölyesi",
       "Yapım Yılı": "2005"
+    }
+  },
+  "Baretli_Kaplumbağa": {
+    "name": "Baretli Kaplumbağa",
+    "desc": "",
+    "props": {
+      "Yatırımcı": "Site İnşaat",
+      "Üstlenici": "Pankart Reklam",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2007"
+    }
+  },
+  "Ödül_heykelciği": {
+    "name": "İçel Koleji 50. Yıl Ödül Heykeli",
+    "desc": "",
+    "props": {
+      "Yatırımcı": "İçel Koleji",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2009"
+    }
+  },
+  "Melek": {
+    "name": "Melek",
+    "desc": "Tılgör Aile Mezarlığı, Mersin",
+    "props": {
+      "Uygulama": "Murat Ulutaş",
+      "Yapım Yılı": "2013",
+      "Malzeme": "Akdeniz Traverten",
+      "Boyutu": "175 x 120 x 60 cm"
+    }
+  },
+  "Kralice_Olba": {
+    "name": "Kraliçe Olba",
+    "desc": "IV. Uluslararası Hüseyin Gezer Taş ve Beton Heykel Sempozyumu",
+    "props": {
+      "Malzeme": "Marmara Mermeri",
+      "Boyutu": "250 x 120 x 80 cm",
+      "Yapım Yılı": "2006"
+    }
+  },
+  "At": {
+    "name": "At Rölyefi",
+    "desc": "",
+    "props": {
+      "Yatırımcı": "Kürk İnşaat",
+      "Proje": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2009"
     }
   }
 }
