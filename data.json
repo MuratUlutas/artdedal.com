@@ -705,5 +705,16 @@
       "R1001-7_r9vrsg",
       "Pipolar-1_n40mx0"
     ]
+  },
+  "Aslan": {
+    "name": "Galatasaray Meydanı Tasarımı ve Aslan Heykeli",
+    "desc": "",
+    "props": {
+      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+      "Müteahhit-Proje": "Çizgi Dekorasyon",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2005"
+    }
   }
 }
