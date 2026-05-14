@@ -672,8 +672,13 @@
     }
   },
   "Begonvil_Restaurant": {
+    "name": "Begonvil Restaurant",
     "desc": "",
-    "props": {},
+    "props": {
+      "Yatırımcı": "Begonvil Restaurant",
+      "Müteahhit-Proje": "Murat Ulutaş, Elif Ulutaş",
+      "Yapım Yılı": "2009"
+    },
     "images": [
       "Begonvil_Restaurant-1_trdg6i",
       "Begonvil_Restaurant-4_o91xy7",
