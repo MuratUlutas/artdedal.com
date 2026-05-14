@@ -792,5 +792,49 @@
       "David-2_ugzzly",
       "David-3_pk2xul"
     ]
+  },
+  "Truva": {
+    "name": "Truva Kabartmaları",
+    "desc": "",
+    "props": {
+      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+      "Müteahhit-Proje": "Çizgi dekorasyon",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2006"
+    }
+  },
+  "Hitit": {
+    "name": "Hitit Kabartmaları",
+    "desc": "",
+    "props": {
+      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+      "Müteahhit-Proje": "Çizgi dekorasyon",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2006"
+    }
+  },
+  "Masal_Park": {
+    "name": "Masal Park",
+    "desc": "",
+    "props": {
+     "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
+      "Müteahhit-Proje": "Çizgi dekorasyon",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2008"
+    }
+  },
+  "Hayvanat_Bahçesi": {
+    "name": "Hayvanat Bahçesi Yolu İçin Hayvan Heykelleri",
+    "desc": "",
+    "props": {
+    "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
+      "Müteahhit-Proje": "Çizgi dekorasyon",
+      "Sanat Danışmanı": "Murat Ulutaş",
+      "Uygulama": "Murat Ulutaş Atölyesi",
+      "Yapım Yılı": "2008"
+   }
   }
 }
