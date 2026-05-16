@@ -1,427 +1,896 @@
 {
   "Portrait-Hegel-40x50": {
     "name": "Portrait of Hegel",
-    "desc": "Bu çalışma Hegel'in portresi ile ilgilidir, detaylar hazırlanıyor.",
+    "desc": {
+      "tr": "Bu çalışma Hegel'in portresi ile ilgilidir, detaylar hazırlanıyor.",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Spinning_Ball-10-50x70": {
     "name": "Spinning Ball-10",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "50 x 70 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "50 x 70 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "50 x 70 cm"
+      }
     }
   },
   "Spinning_Ball-1-50x70": {
     "name": "Spinning Ball-1",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "50 x 70 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "50 x 70 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "50 x 70 cm"
+      }
     }
   },
   "Spinning_Ball-9-50x70": {
     "name": "Spinning Ball-9",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "50 x 70 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "50 x 70 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "50 x 70 cm"
+      }
     }
   },
   "Portrait-Rimbaud-40x50": {
     "name": "Portrait of Rimbaud",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Sappho-40x50": {
     "name": "Portrait of Sappho",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Nefertiti-40x50": {
     "name": "Portrait of Nefertiti",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Michelangelo-40x50": {
     "name": "Portrait of Michelangelo",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Kafka-40x50": {
     "name": "Portrait of Kafka",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Goethe-40x50": {
     "name": "Portrait of Goethe",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Galileo-40x50": {
     "name": "Portrait of Galileo",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Dante-40x50": {
     "name": "Portrait of Dante",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Portrait-Beethoven-40x50": {
     "name": "Portrait of Beethoven",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yapım yılı": "2021",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 50 cm"
+      "tr": {
+        "Yapım yılı": "2021",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 50 cm"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 50 cm"
+      }
     }
   },
   "Phoenix-30-110x130": {
     "name": "Phoenix-30",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "110 x 130 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "110 x 130 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "110 x 130 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-13-70x100": {
     "name": "Phoenix-13",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "70 x 100 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "70 x 100 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "70 x 100 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-29-105x150": {
     "name": "Phoenix-29",
-    "desc": "Simurg, bir masal kuşudur. Uzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş... Kuşların sultanıdır. Kaf Dağı'nın ardında yaşar. Efsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün... Yol uzun, yolculuk zorludur. “Aşk Denizi”nden geçerler önce... “Ayrılık Vadisi”nden uçarlar... “Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar... Kuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden... Kimi hırslanıp düşer ovaya, kimi kıskanıp batar göle... Yolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir. Sultanları Simurg’u bulamazlar orada... Sonunda sırrı, sözcükler çözer: Farsça “si”, “otuz” demektir. “ömurg” ise “kuş”... “30 kuş”, anlar ki, aradıkları sultan, kendileridir. Ve gerçek yolculuk, kendine yapılan yolculuktur.   Mısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi, “Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.” Saklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında... Ve sonunda “kendi hazinesi”ni bulur... Anlar ki, keşfedilecek ülke, insanın kendisidir.    Aktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur. Uzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş... Kuşların sultanıdır. Kaf Dağı'nın ardında yaşar. Efsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün... Yol uzun, yolculuk zorludur. “Aşk Denizi”nden geçerler önce... “Ayrılık Vadisi”nden uçarlar... “Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar... Kuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden... Kimi hırslanıp düşer ovaya, kimi kıskanıp batar göle... Yolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir. Sultanları Simurg’u bulamazlar orada... Sonunda sırrı, sözcükler çözer: Farsça “si”, “otuz” demektir. “ömurg” ise “kuş”... “30 kuş”, anlar ki, aradıkları sultan, kendileridir. Ve gerçek yolculuk, kendine yapılan yolculuktur.   Mısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi, “Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.” Saklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında... Ve sonunda “kendi hazinesi”ni bulur... Anlar ki, keşfedilecek ülke, insanın kendisidir.    Aktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "105 x 150 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "105 x 150 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "105 x 150 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-12-60x60": {
     "name": "Phoenix-12",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 60 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 60 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 60 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-28-40x30": {
     "name": "Phoenix-28",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 30 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 30 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 30 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-11-50x80": {
     "name": "Phoenix-11",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 80 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 80 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 80 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-27-40x30": {
     "name": "Phoenix-27",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 30 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 30 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 30 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-10-70x100": {
     "name": "Phoenix-10",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "70 x 100 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "70 x 100 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "70 x 100 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-26-40x30": {
     "name": "Phoenix-26",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 30 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 30 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 30 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-9-110x120": {
     "name": "Phoenix-9",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "110 x 120 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "110 x 120 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "110 x 120 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-25-40x30": {
     "name": "Phoenix-25",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 30 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 30 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 30 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-8-100x120": {
     "name": "Phoenix-8",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "100 x 120 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "100 x 120 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "100 x 120 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-24-35x50": {
     "name": "Phoenix-24",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "35 x 50 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "35 x 50 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "35 x 50 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-23-30x40": {
     "name": "Phoenix-23",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "30 x 40 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "30 x 40 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "30 x 40 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-7-60x90": {
     "name": "Phoenix-7",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 90 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 90 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 90 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-22-30x40": {
     "name": "Phoenix-22",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "30 x 40 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "30 x 40 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "30 x 40 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-6-70x100": {
     "name": "Phoenix-6",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "70 x 100 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "70 x 100 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "70 x 100 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-16-60x60": {
     "name": "Phoenix-16",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 60 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 60 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 60 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-21-60x120": {
     "name": "Phoenix-21",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 120 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 120 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 120 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-20-50x65": {
     "name": "Phoenix-20",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 65 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 65 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 65 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-19-50x70": {
     "name": "Phoenix-19",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 70 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 70 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 70 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-18-50x70": {
     "name": "Phoenix-18",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 70 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 70 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 70 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-17-55x70": {
     "name": "Phoenix-17",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "55 x 70 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "55 x 70 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "55 x 70 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-15-60x120": {
     "name": "Phoenix-15",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 120 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 120 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 120 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-14-50x100": {
     "name": "Phoenix-14",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 100 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 100 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 100 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-5-60x60": {
     "name": "Phoenix-5",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 60 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 60 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 60 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-4-60x120": {
     "name": "Phoenix-4",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 120 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 120 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 120 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-3-70x100": {
     "name": "Phoenix-3",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "70 x 100 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "70 x 100 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "70 x 100 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-2-50x70": {
     "name": "Phoenix-2",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 70 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 70 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 70 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Phoenix-1-65x80": {
     "name": "Phoenix-1",
-    "desc": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+    "desc": {
+      "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2015",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "65 x 80 cm",
-      "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      "tr": {
+        "Yapım Yılı": "2015",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "65 x 80 cm",
+        "Açıklama": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      },
+      "en": {
+        "Year": "2015",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "65 x 80 cm",
+        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+      }
     }
   },
   "Goethe_s_Imaginary": {
     "name": "Goethe's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Goethe\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Goethe'nin imgesi klasik teknikle aktarılırken; bu çalışmada Faust'un iyiyle kötü arasındaki evrensel çatışması, satranç oyuncuları, terazi ve melek figürleriyle yeniden kurgulanmıştır. Teolojik ikiyüzlülüğe yönelik Goethe'nin ironik bakışı, ideolojik eklektizm yöntemiyle görsel bir sorgulamaya dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Goethe\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Goethe'nin imgesi klasik teknikle aktarılırken; bu çalışmada Faust'un iyiyle kötü arasındaki evrensel çatışması, satranç oyuncuları, terazi ve melek figürleriyle yeniden kurgulanmıştır. Teolojik ikiyüzlülüğe yönelik Goethe'nin ironik bakışı, ideolojik eklektizm yöntemiyle görsel bir sorgulamaya dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Goethe_s_Imaginary_zt0byo",
@@ -430,10 +899,19 @@
   },
   "Sappho_s_Imaginary": {
     "name": "Sappho's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Sappho\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Sappho'nun imgesi klasik teknikle aktarılırken; bu çalışmada antik dünyanın şiir geleneği, farklı dönemlerin kadın imgeleri ve çağdaş mimari bir arada kurgulanmıştır. Tarihsel belleğin büyük boşluklarıyla var olan bu şairin izleri, çakışan zaman dilimleri aracılığıyla bugüne taşınmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Sappho\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Sappho'nun imgesi klasik teknikle aktarılırken; bu çalışmada antik dünyanın şiir geleneği, farklı dönemlerin kadın imgeleri ve çağdaş mimari bir arada kurgulanmıştır. Tarihsel belleğin büyük boşluklarıyla var olan bu şairin izleri, çakışan zaman dilimleri aracılığıyla bugüne taşınmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Sappho_s_Imaginary_umdwth",
@@ -442,10 +920,19 @@
   },
   "Dante_s_Imaginary": {
     "name": "Dante's Imaginary",
-    "desc": "Bu dijital tasarım, aynı projenin ilk aşaması olan \"Portrait of Dante\" (tuval üzerine yağlı boya) ile birlikte düşünülmüştür. Portrede Dante'nin fiziksel imgesi klasik teknikle aktarılırken; bu çalışmada İlahi Komedya'nın cehennem haritası, modern kapitalizmin simgesi gökdelenler ve Japon Butoh dansından alınan figürlerle yeniden kurgulanmıştır. Değişmeyen iktidar baskısı ve insanlık acısı, farklı çağların imgelerini aynı mekânda buluşturarak görselleştirilmiştir. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, aynı projenin ilk aşaması olan \"Portrait of Dante\" (tuval üzerine yağlı boya) ile birlikte düşünülmüştür. Portrede Dante'nin fiziksel imgesi klasik teknikle aktarılırken; bu çalışmada İlahi Komedya'nın cehennem haritası, modern kapitalizmin simgesi gökdelenler ve Japon Butoh dansından alınan figürlerle yeniden kurgulanmıştır. Değişmeyen iktidar baskısı ve insanlık acısı, farklı çağların imgelerini aynı mekânda buluşturarak görselleştirilmiştir. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Dante_s_Imaginary_gccmfu",
@@ -454,10 +941,19 @@
   },
   "Michelangelo_s_Imaginary": {
     "name": "Michelangelo's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Michelangelo\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Michelangelo'nun imgesi klasik teknikle aktarılırken; bu çalışmada Sistine Şapeli'nin \"Son Yargı\" freski, \"Asi Köle\" heykeli ve çağdaş metropol görüntüleri iç içe kurgulanmıştır. Sanatçının tanrısal bir yaratıcı rolü üstlenme çabası ile yeryüzündeki iktidar ve yok oluş döngüsü, çakışan zaman dilimleri aracılığıyla sorgulanmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Michelangelo\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Michelangelo'nun imgesi klasik teknikle aktarılırken; bu çalışmada Sistine Şapeli'nin \"Son Yargı\" freski, \"Asi Köle\" heykeli ve çağdaş metropol görüntüleri iç içe kurgulanmıştır. Sanatçının tanrısal bir yaratıcı rolü üstlenme çabası ile yeryüzündeki iktidar ve yok oluş döngüsü, çakışan zaman dilimleri aracılığıyla sorgulanmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Michelangelo_s_Imaginary_u3cqsr",
@@ -466,10 +962,19 @@
   },
   "Nefertiti_s_Imaginary": {
     "name": "Nefertiti's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Nefertiti\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Nefertiti'nin imgesi klasik teknikle aktarılırken; bu çalışmada Antik Mısır ikonografisi, Rönesans figürleri ve çağdaş imgeler aynı mekânda buluşturulmuştur. Büyük ölçüde söylenceye dayanan bu tarihin farklı çağların estetik diliyle yeniden kurgulanması, güç, güzellik ve mitoloji üzerine çok katmanlı bir sorgulama oluşturmaktadır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Nefertiti\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Nefertiti'nin imgesi klasik teknikle aktarılırken; bu çalışmada Antik Mısır ikonografisi, Rönesans figürleri ve çağdaş imgeler aynı mekânda buluşturulmuştur. Büyük ölçüde söylenceye dayanan bu tarihin farklı çağların estetik diliyle yeniden kurgulanması, güç, güzellik ve mitoloji üzerine çok katmanlı bir sorgulama oluşturmaktadır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Nefertiti_s_Imaginary_ab59cx",
@@ -478,10 +983,19 @@
   },
   "Beethoven_s_Imaginary": {
     "name": "Beethoven's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Beethoven\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Beethoven'in imgesi klasik teknikle aktarılırken; bu çalışmada onun müzik anlayışı, sağırlığı ve dönemler üstü etkisi postmodern bir dil ve dijital kolaj yöntemiyle yeniden kurgulanmıştır. Beethoven ile Pink Floyd'dan Roger Waters aynı sahnede buluşturularak, sanatçının erk karşısındaki çaresizliği ile toplumsal etkisinin her çağda nasıl yinelendiği sorgulanmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Beethoven\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Beethoven'in imgesi klasik teknikle aktarılırken; bu çalışmada onun müzik anlayışı, sağırlığı ve dönemler üstü etkisi postmodern bir dil ve dijital kolaj yöntemiyle yeniden kurgulanmıştır. Beethoven ile Pink Floyd'dan Roger Waters aynı sahnede buluşturularak, sanatçının erk karşısındaki çaresizliği ile toplumsal etkisinin her çağda nasıl yinelendiği sorgulanmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Beethoven_s_Imaginary_jc43sv",
@@ -490,10 +1004,19 @@
   },
   "Galileo_s_Imaginary": {
     "name": "Galileo's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Galileo\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Galileo'nun imgesi klasik teknikle aktarılırken; bu çalışmada engizisyon mahkemesi, Kopernik'in evren diyagramı, modern teleskop ve uzaydaki astronot bir araya getirilmiştir. Bilimsel gerçeğin her çağda değiştiği, ama sıradan insanın bu değişime kayıtsız kaldığı fikri dijital kolaj aracılığıyla görsel bir düşünce metnine dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Galileo\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Galileo'nun imgesi klasik teknikle aktarılırken; bu çalışmada engizisyon mahkemesi, Kopernik'in evren diyagramı, modern teleskop ve uzaydaki astronot bir araya getirilmiştir. Bilimsel gerçeğin her çağda değiştiği, ama sıradan insanın bu değişime kayıtsız kaldığı fikri dijital kolaj aracılığıyla görsel bir düşünce metnine dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Galileo_s_Imaginary_u3r2p5",
@@ -502,10 +1025,19 @@
   },
   "Kafka_s_Imaginary": {
     "name": "Kafka's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Kafka\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Kafka'nın imgesi klasik teknikle aktarılırken; bu çalışmada \"Dönüşüm\" başta olmak üzere yapıtlarının yarattığı evrenle buluşturulmuştur. Bürokratik baskı, kimlik dönüşümü ve bireyin çaresizliği dijital kolaj aracılığıyla görsel bir düşünce metnine dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Kafka\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Kafka'nın imgesi klasik teknikle aktarılırken; bu çalışmada \"Dönüşüm\" başta olmak üzere yapıtlarının yarattığı evrenle buluşturulmuştur. Bürokratik baskı, kimlik dönüşümü ve bireyin çaresizliği dijital kolaj aracılığıyla görsel bir düşünce metnine dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital Tasarım"
+      }
     },
     "images": [
       "Kafka_s_Imaginary_vv9cum",
@@ -514,10 +1046,19 @@
   },
   "Rimbaud_s_Imaginary": {
     "name": "Rimbaud's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Rimbaud\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Rimbaud'nun imgesi klasik teknikle aktarılırken; bu çalışmada \"Asılmışların Balosu\" şiirinin yarattığı karanlık evren, sahne tasarımı ve simgesel imgelerle yeniden kurgulanmıştır. Genç yaşta terk ettiği şiirin bıraktığı derin iz, ölüm ve isyan temalarıyla görselleştirilmiştir. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Rimbaud\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Rimbaud'nun imgesi klasik teknikle aktarılırken; bu çalışmada \"Asılmışların Balosu\" şiirinin yarattığı karanlık evren, sahne tasarımı ve simgesel imgelerle yeniden kurgulanmıştır. Genç yaşta terk ettiği şiirin bıraktığı derin iz, ölüm ve isyan temalarıyla görselleştirilmiştir. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital tasarım"
+      }
     },
     "images": [
       "Rimbaud_s_Imaginary_km6ojh",
@@ -526,194 +1067,409 @@
   },
   "Spinning_Ball-7-50x70": {
     "name": "Spinning Ball-7",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "30 x 70 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "30 x 70 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "30 x 70 cm"
+      }
     }
   },
   "Spinning_Ball-8-50x70": {
     "name": "Spinning Ball-8",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "60 x 100 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "60 x 100 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "60 x 100 cm"
+      }
     }
   },
   "Spinning_Ball-6-50x70": {
     "name": "Spinning Ball-6",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "20 x 60 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "20 x 60 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "20 x 60 cm"
+      }
     }
   },
   "Spinning_Ball-5-50x70": {
     "name": "Spinning Ball-5",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "20 x 50 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "20 x 50 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "20 x 50 cm"
+      }
     }
   },
   "Spinning_Ball-4-50x70": {
     "name": "Spinning Ball-4",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "30 x 65 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "30 x 65 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "30 x 65 cm"
+      }
     }
   },
   "Spinning_Ball-3-50x70": {
     "name": "Spinning Ball-3",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "20 x 60 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "20 x 60 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "20 x 60 cm"
+      }
     }
   },
   "Spinning_Ball-2-50x70": {
     "name": "Spinning Ball-2",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2010",
-      "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
-      "Boyutu": "20 x 60 cm"
+      "tr": {
+        "Yapım Yılı": "2010",
+        "Tekniği": "MDF üzerine yağlı boya, karışık teknik",
+        "Boyutu": "20 x 60 cm"
+      },
+      "en": {
+        "Year": "2010",
+        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Dimensions": "20 x 60 cm"
+      }
     }
   },
   "Symmetry_in_Motion": {
     "name": "Symmetry In Motion",
-    "desc": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler.",
+    "desc": {
+      "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Dream_Bird": {
     "name": "Dream Bird",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Soulmade": {
     "name": "Soulmade",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Birth": {
     "name": "Birth",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2022",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2022",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2022",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Back_to_Yourself": {
     "name": "Back To Yourself",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Second_Trip_To_Me": {
     "name": "Second Trip To Me",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2022",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2022",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2022",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Journey": {
     "name": "Journey",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Fear": {
     "name": "Fear",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Distant_Past": {
     "name": "Distant Past",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Distant_Colour": {
     "name": "Distant Colour",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2023",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2023",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2023",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Born_asleep": {
     "name": "Born Asleep",
-    "desc": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+    "desc": {
+      "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2021",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2021",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2021",
+        "Technique": "Dijital Tasarım"
+      }
     }
   },
   "Rebirth": {
     "name": "Rebirth",
-    "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "desc": {
+      "tr": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2024",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "60 x 120"
+      "tr": {
+        "Yapım Yılı": "2024",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "60 x 120"
+      },
+      "en": {
+        "Year": "2024",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "60 x 120"
+      }
     }
   },
   "Bird_of_Fortune-50x50": {
     "name": "Bird Of Fortune",
-    "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "desc": {
+      "tr": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2022",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "50 x 50"
+      "tr": {
+        "Yapım Yılı": "2022",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "50 x 50"
+      },
+      "en": {
+        "Year": "2022",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "50 x 50"
+      }
     }
   },
   "Mrs_Catherine_Swindell-80x100": {
     "name": "Mrs Catherine Swindell",
-    "desc": "",
-    "props": {}
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
+    "props": {
+      "tr": {},
+      "en": {}
+    }
   },
   "Purification-40x45": {
     "name": "Purification",
-    "desc": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+    "desc": {
+      "tr": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2023",
-      "Tekniği": "Tuval üzerine yağlı boya",
-      "Boyutu": "40 x 45"
+      "tr": {
+        "Yapım Yılı": "2023",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "40 x 45"
+      },
+      "en": {
+        "Year": "2023",
+        "Technique": "Tuval üzerine yağlı boya",
+        "Dimensions": "40 x 45"
+      }
     }
   },
   "Begonvil_Restaurant": {
     "name": "Begonvil Restaurant",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Begonvil Restaurant",
-      "Müteahhit-Proje": "Murat Ulutaş, Elif Ulutaş",
-      "Yapım Yılı": "2009"
+      "tr": {
+        "Yatırımcı": "Begonvil Restaurant",
+        "Müteahhit-Proje": "Murat Ulutaş, Elif Ulutaş",
+        "Yapım Yılı": "2009"
+      },
+      "en": {
+        "Investor": "Begonvil Restaurant",
+        "Contractor-Project": "Murat Ulutaş, Elif Ulutaş",
+        "Year": "2009"
+      }
     },
     "images": [
       "Begonvil_Restaurant-1_trdg6i",
@@ -724,13 +1480,25 @@
   },
   "Apollo_Tapınağı": {
     "name": "Side Apollo Tapınağı Replikası",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
-      "Müteahhit-Proje": "Çizgi Dekorasyon",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2005"
+      "tr": {
+        "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+        "Müteahhit-Proje": "Çizgi Dekorasyon",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2005"
+      },
+      "en": {
+        "Investor": "Mersin Büyükşehir Belediyesi",
+        "Contractor-Project": "Çizgi Dekorasyon",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2005"
+      }
     },
     "images": [
       "Apollo_Tapınağı-1_rulxrg",
@@ -740,8 +1508,15 @@
     ]
   },
   "R1001": {
-    "desc": "",
-    "props": {},
+    "name": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
+    "props": {
+      "tr": {},
+      "en": {}
+    },
     "images": [
       "Pipolar-2_jyyyva",
       "R1001-3_eijyio",
@@ -756,72 +1531,149 @@
   },
   "Aslan": {
     "name": "Galatasaray Meydanı Tasarımı ve Aslan Heykeli",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
-      "Müteahhit-Proje": "Çizgi Dekorasyon",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2005"
+      "tr": {
+        "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+        "Müteahhit-Proje": "Çizgi Dekorasyon",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2005"
+      },
+      "en": {
+        "Investor": "Mersin Büyükşehir Belediyesi",
+        "Contractor-Project": "Çizgi Dekorasyon",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2005"
+      }
     }
   },
   "Baretli_Kaplumbağa": {
     "name": "Baretli Kaplumbağa",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Site İnşaat",
-      "Üstlenici": "Pankart Reklam",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2007"
+      "tr": {
+        "Yatırımcı": "Site İnşaat",
+        "Üstlenici": "Pankart Reklam",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2007"
+      },
+      "en": {
+        "Investor": "Site İnşaat",
+        "Contractor": "Pankart Reklam",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2007"
+      }
     }
   },
   "Ödül_heykelciği": {
     "name": "İçel Koleji 50. Yıl Ödül Heykeli",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "İçel Koleji",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2009"
+      "tr": {
+        "Yatırımcı": "İçel Koleji",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2009"
+      },
+      "en": {
+        "Investor": "İçel Koleji",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2009"
+      }
     }
   },
   "Melek": {
     "name": "Melek",
-    "desc": "Yılgör Aile Mezarlığı, Mersin",
+    "desc": {
+      "tr": "Yılgör Aile Mezarlığı, Mersin",
+      "en": ""
+    },
     "props": {
-      "Uygulama": "Murat Ulutaş",
-      "Yapım Yılı": "2013",
-      "Malzeme": "Akdeniz Traverten",
-      "Boyutu": "175 x 120 x 60 cm"
+      "tr": {
+        "Uygulama": "Murat Ulutaş",
+        "Yapım Yılı": "2013",
+        "Malzeme": "Akdeniz Traverten",
+        "Boyutu": "175 x 120 x 60 cm"
+      },
+      "en": {
+        "Application": "Murat Ulutaş",
+        "Year": "2013",
+        "Material": "Akdeniz Traverten",
+        "Dimensions": "175 x 120 x 60 cm"
+      }
     }
   },
   "Kralice_Olba": {
     "name": "Kraliçe Olba",
-    "desc": "IV. Uluslararası Hüseyin Gezer Taş ve Beton Heykel Sempozyumu",
+    "desc": {
+      "tr": "IV. Uluslararası Hüseyin Gezer Taş ve Beton Heykel Sempozyumu",
+      "en": ""
+    },
     "props": {
-      "Malzeme": "Marmara Mermeri",
-      "Boyutu": "250 x 120 x 80 cm",
-      "Yapım Yılı": "2006"
+      "tr": {
+        "Malzeme": "Marmara Mermeri",
+        "Boyutu": "250 x 120 x 80 cm",
+        "Yapım Yılı": "2006"
+      },
+      "en": {
+        "Material": "Marmara Mermeri",
+        "Dimensions": "250 x 120 x 80 cm",
+        "Year": "2006"
+      }
     }
   },
   "At": {
     "name": "At Rölyefi",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Kürk İnşaat",
-      "Proje": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2009"
+      "tr": {
+        "Yatırımcı": "Kürk İnşaat",
+        "Proje": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2009"
+      },
+      "en": {
+        "Investor": "Kürk İnşaat",
+        "Project": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2009"
+      }
     }
   },
   "David": {
     "name": "David",
-    "desc": "\"Kurtlar Vadisi Filistin\" film dekoru",
+    "desc": {
+      "tr": "\"Kurtlar Vadisi Filistin\" film dekoru",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Pana Film",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2010"
+      "tr": {
+        "Yatırımcı": "Pana Film",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2010"
+      },
+      "en": {
+        "Investor": "Pana Film",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2010"
+      }
     },
     "images": [
       "David-1_jjavfn",
@@ -831,51 +1683,106 @@
   },
   "Truva": {
     "name": "Truva Kabartmaları",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
-      "Müteahhit-Proje": "Çizgi dekorasyon",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2006"
+      "tr": {
+        "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+        "Müteahhit-Proje": "Çizgi dekorasyon",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2006"
+      },
+      "en": {
+        "Investor": "Mersin Büyükşehir Belediyesi",
+        "Contractor-Project": "Çizgi dekorasyon",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2006"
+      }
     }
   },
   "Hitit": {
     "name": "Hitit Kabartmaları",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Mersin Büyükşehir Belediyesi",
-      "Müteahhit-Proje": "Çizgi dekorasyon",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2006"
+      "tr": {
+        "Yatırımcı": "Mersin Büyükşehir Belediyesi",
+        "Müteahhit-Proje": "Çizgi dekorasyon",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2006"
+      },
+      "en": {
+        "Investor": "Mersin Büyükşehir Belediyesi",
+        "Contractor-Project": "Çizgi dekorasyon",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2006"
+      }
     }
   },
   "Masal_Park": {
     "name": "Masal Park",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
-      "Müteahhit-Proje": "Çizgi dekorasyon",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2008"
+      "tr": {
+        "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
+        "Müteahhit-Proje": "Çizgi dekorasyon",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2008"
+      },
+      "en": {
+        "Investor": "Gaziantep Büyükşehir Belediyesi",
+        "Contractor-Project": "Çizgi dekorasyon",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2008"
+      }
     }
   },
   "Hayvanat_Bahçesi": {
     "name": "Hayvanat Bahçesi Yolu İçin Hayvan Heykelleri",
-    "desc": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
     "props": {
-      "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
-      "Müteahhit-Proje": "Çizgi dekorasyon",
-      "Sanat Danışmanı": "Murat Ulutaş",
-      "Uygulama": "Murat Ulutaş Atölyesi",
-      "Yapım Yılı": "2008"
+      "tr": {
+        "Yatırımcı": "Gaziantep Büyükşehir Belediyesi",
+        "Müteahhit-Proje": "Çizgi dekorasyon",
+        "Sanat Danışmanı": "Murat Ulutaş",
+        "Uygulama": "Murat Ulutaş Atölyesi",
+        "Yapım Yılı": "2008"
+      },
+      "en": {
+        "Investor": "Gaziantep Büyükşehir Belediyesi",
+        "Contractor-Project": "Çizgi dekorasyon",
+        "Art Consultant": "Murat Ulutaş",
+        "Application": "Murat Ulutaş Atölyesi",
+        "Year": "2008"
+      }
     }
   },
   "P1008-3_imi1c": {
-    "desc": "",
-    "props": {},
+    "name": "",
+    "desc": {
+      "tr": "",
+      "en": ""
+    },
+    "props": {
+      "tr": {},
+      "en": {}
+    },
     "images": [
       "P1008-3_imi1co",
       "P1008-2_u3ztn7",
@@ -885,10 +1792,19 @@
   },
   "Hegel_s_Imaginary": {
     "name": "Hegel's Imaginary",
-    "desc": "Bu dijital tasarım, \"Portrait of Hegel\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Hegel'in imgesi klasik teknikle aktarılırken; bu çalışmada diyalektik felsefenin sonsuz değişim ve gelişim fikri helezonik bir form aracılığıyla görselleştirilmiştir. 1977'de uzaya fırlatılan Voyager Altın Plak'ındaki insan figürleri ve belirsiz bir gece ufku, tarihin helezonik ilerleyişini ve ütopyanın erişilebilirliğini sorgulamaktadır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+    "desc": {
+      "tr": "Bu dijital tasarım, \"Portrait of Hegel\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Hegel'in imgesi klasik teknikle aktarılırken; bu çalışmada diyalektik felsefenin sonsuz değişim ve gelişim fikri helezonik bir form aracılığıyla görselleştirilmiştir. 1977'de uzaya fırlatılan Voyager Altın Plak'ındaki insan figürleri ve belirsiz bir gece ufku, tarihin helezonik ilerleyişini ve ütopyanın erişilebilirliğini sorgulamaktadır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
+      "en": ""
+    },
     "props": {
-      "Yapım Yılı": "2020",
-      "Tekniği": "Dijital Tasarım"
+      "tr": {
+        "Yapım Yılı": "2020",
+        "Tekniği": "Dijital Tasarım"
+      },
+      "en": {
+        "Year": "2020",
+        "Technique": "Dijital Tasarım"
+      }
     },
     "images": [
       "Hegel_s_Imaginary_fycheo",
