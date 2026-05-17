@@ -303,7 +303,7 @@
   <nav class="detay-nav">
     <button class="detay-back" id="detayBack">Geri Dön</button>
     <a class="nav-logo" href="javascript:void(0)" onclick="closeDetay()"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121529/Artdedal_likon_s_nbk1zz.png" alt="ArtDedal" style="filter:brightness(0.2)"/></a>
-    <button class="search-btn" onclick="openSearch()" style="color:var(--ink);">Ara</button>
+    <button class="search-btn" onclick="openSearch()" style="color:var(--ink);"><span id="searchBtnText">Ara</span></button>
   </nav>
   <div class="detay-body">
     <div class="detay-grid">
@@ -359,6 +359,7 @@ var TRANSLATIONS = {
     aboutP2: 'Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.',
     aboutP3: 'Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.',
     aboutQuote: 'Sevgi, sanat ve yaratma aşkıyla...',
+    searchBtnText: 'Ara',
     catTR: {sanatsal:'Sanatsal \u00c7al\u0131\u015fmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar',resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasar\u0131mlar',pipolar:'Pipolar','anahtarl\u0131k':'Anahtarl\u0131k'}
   },
   en: {
@@ -389,6 +390,7 @@ var TRANSLATIONS = {
     aboutP2: 'In our sculptures you will feel the importance we give to detail, in our paintings the power of color, and in our decorative works our passion for combining functionality with aesthetics.',
     aboutP3: 'In each of our works lies a meaning that reflects both our own story and yours. For us, art is not just a profession — it is a journey we share together.',
     aboutQuote: 'With love, art and the passion of creation...',
+    searchBtnText: 'Search',
     catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
   }
 };
@@ -417,6 +419,8 @@ function setLang(lang) {
   if (ct) ct.innerHTML = T.contactTitle;
   var si = document.getElementById('searchInput');
   if (si) si.placeholder = T.searchPlaceholder;
+  var sb = document.getElementById('searchBtnText');
+  if (sb && T.searchBtnText) sb.textContent = T.searchBtnText;
   // Kategori tab etiketleri
   document.querySelectorAll('.cat-tab').forEach(function(b) {
     var lbl = T.catTR[b.dataset.main];

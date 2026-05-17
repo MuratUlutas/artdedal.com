@@ -205,7 +205,10 @@ textarea{resize:vertical;min-height:80px;}
         </div>
         <div class="card">
           <div class="card-title">Açıklama</div>
-          <textarea id="eserDesc" style="min-height:100px;" placeholder="Bu eser hakkında bilgi..."></textarea>
+          <label style="font-size:.75rem;color:var(--muted);display:block;margin-bottom:4px;">🇹🇷 Türkçe</label>
+          <textarea id="eserDescTR" style="min-height:90px;" placeholder="Bu eser hakkında bilgi..."></textarea>
+          <label style="font-size:.75rem;color:var(--muted);display:block;margin:10px 0 4px;">🇬🇧 English</label>
+          <textarea id="eserDescEN" style="min-height:90px;" placeholder="Description in English..."></textarea>
         </div>
         <div class="card">
           <div class="card-title">Özellikler</div>
@@ -1061,7 +1064,8 @@ function openDetay(cat,idx){
   document.getElementById('detayMainImg').onclick=()=>openLightbox(images,0);
   document.getElementById('detayCat').textContent=catLabel(cat);
   document.getElementById('detayTitle').textContent=eser.name||name;
-  document.getElementById('detayDesc').textContent=eser.desc||'';
+  var _dd=eser.desc||'';
+  document.getElementById('detayDesc').textContent=typeof _dd==='object'?(_dd.tr||''):_dd;
   const props={...eser.props||{}};
   const dim=g.base.match(/(\\d+x\\d+)/);if(dim&&!props['Boyutu'])props['Boyutu']=dim[1]+' cm';
   document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>\`<div class="detay-prop"><div class="detay-prop-key">\${k}</div><div class="detay-prop-val">\${v}</div></div>\`).join('');
@@ -1128,7 +1132,8 @@ document.getElementById('searchInput').addEventListener('input',function(){
     GROUPS[cat].forEach((g,idx)=>{
       const eser=ESER_DATA[g.base]||{};
       const name=(eser.name||prettyName(g.base)).toLocaleLowerCase('tr-TR');
-      const desc=(eser.desc||'').toLocaleLowerCase('tr-TR');
+      var _sd=eser.desc||'';var _sdt=typeof _sd==='object'?(_sd.tr||''):_sd;
+      const desc=_sdt.toLocaleLowerCase('tr-TR');
       const props=Object.entries(eser.props||{}).map(([k,v])=>k+' '+v).join(' ').toLocaleLowerCase('tr-TR');
       const catName=catLabel(cat).toLocaleLowerCase('tr-TR');
       if(name.includes(q)||desc.includes(q)||props.includes(q)||catName.includes(q)){
@@ -1329,7 +1334,15 @@ function openEserEdit(base, rawImages){
   const images=data.images||rawImages;
   document.getElementById('eserEditName').textContent=prettyNameAdmin(base);
   document.getElementById('eserName').value=data.name||'';
-  document.getElementById('eserDesc').value=data.desc||'';
+  // desc: eski string formatı veya yeni {tr,en} formatı
+  var descVal = data.desc||'';
+  if(typeof descVal === 'object') {
+    document.getElementById('eserDescTR').value=descVal.tr||'';
+    document.getElementById('eserDescEN').value=descVal.en||'';
+  } else {
+    document.getElementById('eserDescTR').value=descVal;
+    document.getElementById('eserDescEN').value='';
+  }
   // Props
   renderEserProps(data.props||{});
   // Görseller
@@ -1448,7 +1461,9 @@ function addEserImg(){
 
 function saveEserEdit(){
   if(!currentEserKey)return;
-  const desc=document.getElementById('eserDesc').value.trim();
+  var descTR=document.getElementById('eserDescTR').value.trim();
+  var descEN=document.getElementById('eserDescEN').value.trim();
+  var desc = (descTR||descEN) ? {tr:descTR, en:descEN} : '';
   const name=document.getElementById('eserName').value.trim();
   const props=getEserProps();
   const images=getCurrentEserImages();
@@ -1464,7 +1479,8 @@ function saveEserEdit(){
   if(!name)delete eserData[currentEserKey].name;
   if(!imgsChanged)delete eserData[currentEserKey].images;
   // Boşsa kaydı sil
-  if(!name&&!desc&&Object.keys(props).length===0&&!imgsChanged){
+  var descEmpty = !desc || (typeof desc==='object' && !desc.tr && !desc.en);
+  if(!name&&descEmpty&&Object.keys(props).length===0&&!imgsChanged){
     delete eserData[currentEserKey];
   }
   closeEserEdit();
