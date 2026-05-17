@@ -196,13 +196,13 @@
     .search-result-meta span{margin-right:12px;}
     .search-empty,.search-hint{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-align:center;padding:40px 0;}
 
-    .lang-switcher{display:flex;align-items:center;gap:0;margin-left:8px;}
-    .lang-btn{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;background:none;border:none;cursor:pointer;color:rgba(245,240,232,.5);padding:4px 6px;transition:color .3s;}
-    .lang-btn.active{color:var(--cream);font-weight:bold;}
-    nav.scrolled .lang-btn{color:rgba(26,22,18,.4);}
-    nav.scrolled .lang-btn.active{color:var(--ink);}
-    .lang-sep{color:rgba(245,240,232,.25);font-size:.6rem;line-height:1;}
-    nav.scrolled .lang-sep{color:rgba(26,22,18,.2);}
+    .lang-switcher{display:flex;align-items:center;gap:0;margin-left:8px}
+    .lang-btn{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;background:none;border:none;cursor:pointer;color:rgba(245,240,232,.5);padding:4px 6px;transition:color .3s}
+    .lang-btn.active{color:var(--cream);font-weight:bold}
+    nav.scrolled .lang-btn{color:rgba(26,22,18,.4)}
+    nav.scrolled .lang-btn.active{color:var(--ink)}
+    .lang-sep{color:rgba(245,240,232,.25);font-size:.6rem}
+    nav.scrolled .lang-sep{color:rgba(26,22,18,.2)}
   </style>
 </head>
 <body>
@@ -218,7 +218,7 @@
     <button class="search-close" onclick="closeSearch()">✕</button>
   </div>
   <div class="search-results" id="searchResults">
-    <div class="search-hint" id="searchHint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>
+    <div class="search-hint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>
   </div>
 </div>
 <div id="mainPage">
@@ -226,21 +226,21 @@
     <a href="#hero" class="nav-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#hero" onclick="closeMenu()" id="navHome">Anasayfa</a></li>
-      <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
+      <li><a href="#hero" onclick="closeMenu()">Anasayfa</a></li>
+      <li><a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a></li>
       <li class="has-dropdown">
         <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
         <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
       </li>
-      <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
-      <li style="display:flex;align-items:center;">
+      <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
+      <li style="display:flex;align-items:center">
         <div class="lang-switcher">
           <button class="lang-btn active" id="btnTR" onclick="setLang('tr')">TR</button>
           <span class="lang-sep">|</span>
           <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
         </div>
       </li>
-            <li class="search-nav-item" style="display:flex;align-items:center;padding:0 8px;">
+      <li class="search-nav-item" style="display:flex;align-items:center;padding:0 8px;">
         <div onclick="openSearch()" class="search-fake-input">
           <span style="font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.7);">Ara…</span>
         </div>
@@ -260,7 +260,7 @@
   <section id="hakkimizda">
     <div class="reveal">
       <div class="section-label" id="aboutLabel">Hakkımızda</div>
-      <h2 class="section-title" id="aboutTitle">Murat & Elif — birlikte yaratmanın büyüsüne inananlar</h2>
+      <h2 class="section-title">Murat & Elif — birlikte yaratmanın büyüsüne inananlar</h2>
       <p class="about-text" style="margin-top:28px;">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</p>
       <p class="about-text">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</p>
       <p class="about-text">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</p>
@@ -276,7 +276,7 @@
       <div class="cat-tabs" id="catTabs"><button class="cat-tab active" data-main="sanatsal">Sanatsal Çalışmalar</button><button class="cat-tab" data-main="dekorasyon">Dekorasyon</button><button class="cat-tab" data-main="peyzaj">Peyzaj</button><button class="cat-tab" data-main="aksesuarlar">Aksesuarlar</button></div>
       <div class="subcat-tabs visible" id="subcatTabs"><button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button></div>
     </div>
-    <div class="mosaic reveal" id="mosaicGrid"><div class="gallery-loading" id="galleryInitLoading">Yükleniyor…</div></div>
+    <div class="mosaic reveal" id="mosaicGrid"><div class="gallery-loading">Yükleniyor…</div></div>
   </section>
   <section id="iletisim">
     <div class="contact-bg"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/Dream_Bird_mpxyks.jpg" alt=""/></div>
@@ -303,7 +303,7 @@
   <nav class="detay-nav">
     <button class="detay-back" id="detayBack">Geri Dön</button>
     <a class="nav-logo" href="javascript:void(0)" onclick="closeDetay()"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121529/Artdedal_likon_s_nbk1zz.png" alt="ArtDedal" style="filter:brightness(0.2)"/></a>
-    <button class="search-btn" onclick="openSearch()" style="color:var(--ink);" id="detaySearchBtn">Ara</button>
+    <button class="search-btn" onclick="openSearch()" style="color:var(--ink);">Ara</button>
   </nav>
   <div class="detay-body">
     <div class="detay-grid">
@@ -326,182 +326,6 @@
   </div>
 </div>
 <script>
-
-// ═══════════════════════════════════════════════════════════════════
-// DIL SİSTEMİ
-// ═══════════════════════════════════════════════════════════════════
-const TRANSLATIONS = {
-  tr: {
-    pageTitle: 'ArtDedal – Sanat İyileştirir',
-    heroTag: 'Sanat İyileştirir',
-    heroTitle: 'Her düşüş yeni bir başlangıçtır',
-    heroSub: 'Heykel, resim ve özgün tasarımlarla duygulara dokunan, yaşam alanlarınıza anlam katan eserler.',
-    heroCta: 'Eserleri Keşfet',
-    navHome: 'Anasayfa',
-    navAbout: 'Hakkımızda',
-    navWorks: 'Çalışmalar',
-    navContact: 'İletişim',
-    aboutLabel: 'Hakkımızda',
-    aboutTitle: 'Murat & Elif — birlikte yaratmanın büyüsüne inananlar',
-    worksLabel: 'Çalışmalar',
-    contactLabel: 'İletişim',
-    contactTitle: 'Birlikte<br/><em>çalışalım</em>',
-    contactText: 'Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.',
-    footerCopy: '© 2026 ArtDedal. Bütün hakları saklıdır.',
-    detayBack: 'Geri Dön',
-    relatedTitle: 'Diğer Eserler',
-    detaySearchBtn: 'Ara',
-    searchHint: 'Eser adı, teknik, tür, yıl veya açıklama ile arayın',
-    searchEmpty: 'Sonuç bulunamadı',
-    searchPlaceholder: 'Eser ara…',
-    galleryLoading: 'Yükleniyor…',
-    galleryEmpty: 'Bu kategoride eser yok.',
-    showAll: 'Tümünü Gör',
-    multiImg: ' görsel',
-    imgAngle: ' farklı açı',
-    catLabels: {
-      sanatsal:'Sanatsal Çalışmalar', dekorasyon:'Dekorasyon', peyzaj:'Peyzaj',
-      aksesuarlar:'Aksesuarlar', resimler:'Resimler', heykeller:'Heykeller',
-      dijital:'Dijital Tasarımlar', pipolar:'Pipolar', 'anahtarlık':'Anahtarlık'
-    },
-    subcatLabels: {resimler:'Resimler', heykeller:'Heykeller', dijital:'Dijital Tasarımlar'},
-    mainTabLabels: {sanatsal:'Sanatsal Çalışmalar', dekorasyon:'Dekorasyon', peyzaj:'Peyzaj', aksesuarlar:'Aksesuarlar'},
-  },
-  en: {
-    pageTitle: 'ArtDedal – Art Heals',
-    heroTag: 'Art Heals',
-    heroTitle: 'Every fall is a new beginning',
-    heroSub: 'Sculptures, paintings and original designs that touch emotions and bring meaning to your spaces.',
-    heroCta: 'Explore Works',
-    navHome: 'Home',
-    navAbout: 'About',
-    navWorks: 'Works',
-    navContact: 'Contact',
-    aboutLabel: 'About',
-    aboutTitle: 'Murat & Elif — believers in the magic of creating together',
-    worksLabel: 'Works',
-    contactLabel: 'Contact',
-    contactTitle: 'Let's work<br/><em>together</em>',
-    contactText: 'For custom orders, exhibition invitations or information, feel free to reach out. Our doors are always open.',
-    footerCopy: '© 2026 ArtDedal. All rights reserved.',
-    detayBack: 'Back',
-    relatedTitle: 'Other Works',
-    detaySearchBtn: 'Search',
-    searchHint: 'Search by title, technique, category, year or description',
-    searchEmpty: 'No results found',
-    searchPlaceholder: 'Search works…',
-    galleryLoading: 'Loading…',
-    galleryEmpty: 'No works in this category.',
-    showAll: 'Show All',
-    multiImg: ' images',
-    imgAngle: ' views',
-    catLabels: {
-      sanatsal:'Artistic Works', dekorasyon:'Decoration', peyzaj:'Landscape',
-      aksesuarlar:'Accessories', resimler:'Paintings', heykeller:'Sculptures',
-      dijital:'Digital Designs', pipolar:'Pipes', 'anahtarlık':'Keychains'
-    },
-    subcatLabels: {resimler:'Paintings', heykeller:'Sculptures', dijital:'Digital Designs'},
-    mainTabLabels: {sanatsal:'Artistic Works', dekorasyon:'Decoration', peyzaj:'Landscape', aksesuarlar:'Accessories'},
-  }
-};
-
-let LANG = localStorage.getItem('artdedal_lang') || 'tr';
-
-function setLang(lang) {
-  LANG = lang;
-  localStorage.setItem('artdedal_lang', lang);
-  document.getElementById('htmlRoot').lang = lang;
-  document.getElementById('btnTR').classList.toggle('active', lang === 'tr');
-  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
-  const T = TRANSLATIONS[lang];
-  // Static texts
-  const ids = ['pageTitle','heroTag','heroTitle','heroSub','heroCta','navHome','navAbout',
-    'navContact','aboutLabel','aboutTitle','worksLabel','contactLabel','contactText',
-    'footerCopy','detayBack','relatedTitle','detaySearchBtn','searchHint'];
-  ids.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    if (id === 'pageTitle') { document.title = T[id]; return; }
-    el.innerHTML = T[id];
-  });
-  // Contact title (has em tag)
-  const ct = document.getElementById('contactTitle');
-  if (ct) ct.innerHTML = T.contactTitle;
-  // Search placeholder
-  const si = document.getElementById('searchInput');
-  if (si) si.placeholder = T.searchPlaceholder;
-  // Search hint (reset if empty)
-  const sr = document.getElementById('searchResults');
-  if (sr && !document.getElementById('searchInput').value) {
-    sr.innerHTML = '<div class="search-hint">' + T.searchHint + '</div>';
-  }
-  // Nav Works link
-  const nw = document.querySelector('[data-main="sanatsal"]')?.closest('li')?.querySelector('a');
-  if (nw) nw.textContent = T.navWorks;
-  // Category tabs
-  document.querySelectorAll('.cat-tab').forEach(b => {
-    const lbl = T.mainTabLabels[b.dataset.main];
-    if (lbl) b.textContent = lbl;
-  });
-  // Subcat tabs
-  document.querySelectorAll('.subcat-tab').forEach(b => {
-    const lbl = T.subcatLabels[b.dataset.sub] || T.catLabels[b.dataset.sub];
-    if (lbl) b.textContent = lbl;
-  });
-  // Re-render gallery with new language
-  if (currentCat) renderGallery(currentCat);
-  // Re-render detay if open
-  if (document.getElementById('detayPage').classList.contains('open') && _detayCat !== null && _detayIdx !== null) {
-    refreshDetayLang();
-  }
-}
-
-function getLangDesc(eser) {
-  if (!eser.desc) return '';
-  if (typeof eser.desc === 'string') return eser.desc;
-  return eser.desc[LANG] || eser.desc['tr'] || '';
-}
-
-function getLangProps(eser, base) {
-  let props;
-  if (!eser.props) {
-    props = {};
-  } else if (eser.props.tr || eser.props.en) {
-    props = {...(eser.props[LANG] || eser.props['tr'] || {})};
-  } else {
-    props = {...eser.props};
-  }
-  const dim = base ? base.match(/(\d+x\d+)/) : null;
-  const dimKey = LANG === 'en' ? 'Dimensions' : 'Boyutu';
-  if (dim && !props[dimKey] && !props['Boyutu'] && !props['Dimensions']) {
-    props[dimKey] = dim[1] + ' cm';
-  }
-  return props;
-}
-
-function refreshDetayLang() {
-  const T = TRANSLATIONS[LANG];
-  const groups = GROUPS[_detayCat], g = groups[_detayIdx];
-  const eser = ESER_DATA[g.base] || {};
-  document.getElementById('detayCat').textContent = T.catLabels[_detayCat] || _detayCat;
-  document.getElementById('detayDesc').textContent = getLangDesc(eser);
-  const props = getLangProps(eser, g.base);
-  document.getElementById('detayProps').innerHTML = Object.entries(props)
-    .map(([k,v]) => `<div class="detay-prop"><div class="detay-prop-key">${k}</div><div class="detay-prop-val">${v}</div></div>`)
-    .join('');
-  const imgCount = document.getElementById('detayImgCount');
-  if (imgCount && imgCount.textContent) {
-    const imgs = (eser.images || g.images);
-    if (imgs.length > 1) imgCount.textContent = imgs.length + T.imgAngle;
-  }
-}
-
-function initLang() {
-  document.getElementById('btnTR').classList.toggle('active', LANG === 'tr');
-  document.getElementById('btnEN').classList.toggle('active', LANG === 'en');
-  if (LANG !== 'tr') setLang(LANG);
-}
-
 const C='dhvrm1dcf';
 const BASE=`https://res.cloudinary.com/${C}/image/upload`;
 const RAW={
@@ -516,6 +340,7 @@ const RAW={
 let ESER_DATA={};
 fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
   ESER_DATA=d;
+  if(typeof renderGallery==="function"&&typeof currentCat!=="undefined")renderGallery(currentCat);
   const h=location.hash.match(/^#eser-(.+)-(\d+)$/);
   if(h){const cat=h[1],idx=parseInt(h[2]);if(GROUPS[cat]&&GROUPS[cat][idx])openDetay(cat,idx);}
 }).catch(()=>{
@@ -535,7 +360,7 @@ function prettyName(base){
     .join(' ')
     .trim();
 }
-function catLabel(cat){return (TRANSLATIONS[LANG]&&TRANSLATIONS[LANG].catLabels[cat])||{'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','resimler':'Resimler','heykeller':'Heykeller','dijital':'Dijital Tasarımlar','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}[cat]||cat;}
+function catLabel(cat){return getLangCat(cat);}
 const GROUPS={};Object.keys(RAW).forEach(cat=>{GROUPS[cat]=groupImages(RAW[cat]);});
 let currentCat='resimler';
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
@@ -557,7 +382,7 @@ function renderGallery(cat){
       <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
         <div class="mosaic-title">${name}</div>
-        ${count>1?`<div class="mosaic-count">${count}${(TRANSLATIONS[LANG]?TRANSLATIONS[LANG].multiImg:' görsel')}</div>`:''}
+        ${count>1?`<div class="mosaic-count">${count} görsel</div>`:''}
       </div></div>`;
   }).join('');
   if(hasMore){
@@ -596,11 +421,11 @@ function openDetay(cat,idx){
   const images=eser.images||g.images;
   document.getElementById('detayMainImg').src=imgUrl(images[0],1200);
   document.getElementById('detayMainImg').onclick=()=>openLightbox(images,0);
-  document.getElementById('detayCat').textContent=catLabel(cat);
+  document.getElementById('detayCat').textContent=getLangCat(cat);
   document.getElementById('detayTitle').textContent=eser.name||name;
   document.getElementById('detayDesc').textContent=getLangDesc(eser);
-  const props=getLangProps(eser,g.base);
-  document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>`<div class="detay-prop"><div class="detay-prop-key">${k}</div><div class="detay-prop-val">${v}</div></div>`).join('');
+  var _props=getLangProps(eser,g.base);
+  document.getElementById('detayProps').innerHTML=Object.keys(_props).map(function(k){return '<div class="detay-prop"><div class="detay-prop-key">'+k+'</div><div class="detay-prop-val">'+_props[k]+'</div></div>';}).join('');
   const th=document.getElementById('detayThumbs');
   if(images.length>1){
     th.innerHTML=images.map((img,i)=>`<img class="detay-thumb${i===0?' active':''}" src="${imgUrl(img,200)}" data-full="${imgUrl(img,1200)}" data-idx="${i}" alt=""/>`).join('');
@@ -653,19 +478,19 @@ function openSearch(){document.getElementById('searchOverlay').classList.add('op
 function closeSearch(){
   document.getElementById('searchOverlay').classList.remove('open');
   document.getElementById('searchInput').value='';
-  document.getElementById('searchResults').innerHTML='<div class="search-hint" id="searchHint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>';
+  document.getElementById('searchResults').innerHTML='<div class="search-hint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>';
 }
 document.getElementById('searchInput').addEventListener('input',function(){
   const q=this.value.trim().toLocaleLowerCase('tr-TR');
   const res=document.getElementById('searchResults');
-  if(!q){res.innerHTML='<div class="search-hint" id="searchHint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>';return;}
+  if(!q){res.innerHTML='<div class="search-hint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>';return;}
   const results=[];
   Object.keys(GROUPS).forEach(cat=>{
     GROUPS[cat].forEach((g,idx)=>{
       const eser=ESER_DATA[g.base]||{};
       const name=(eser.name||prettyName(g.base)).toLocaleLowerCase('tr-TR');
       const desc=getLangDesc(eser).toLocaleLowerCase('tr-TR');
-      const props=Object.entries(getLangProps(eser,g.base)||{}).map(([k,v])=>k+' '+v).join(' ').toLocaleLowerCase('tr-TR');
+      var _sp=getLangProps(eser,g.base);const props=Object.keys(_sp).map(function(k){return k+' '+_sp[k];}).join(' ').toLocaleLowerCase('tr-TR');
       const catName=catLabel(cat).toLocaleLowerCase('tr-TR');
       if(name.includes(q)||desc.includes(q)||props.includes(q)||catName.includes(q)){
         results.push({cat,idx,g,eser,name:eser.name||prettyName(g.base),catName:catLabel(cat)});
@@ -674,7 +499,7 @@ document.getElementById('searchInput').addEventListener('input',function(){
   });
   if(!results.length){res.innerHTML='<div class="search-empty">'+(TRANSLATIONS[LANG]?TRANSLATIONS[LANG].searchEmpty:'Sonuç bulunamadı')+'</div>';return;}
   res.innerHTML=results.slice(0,30).map(r=>{
-    const props=Object.entries(getLangProps(r.eser,r.g.base)||{}).map(([k,v])=>`<span>${v}</span>`).join('');
+    var _rp=getLangProps(r.eser,r.g.base);const props=Object.keys(_rp).map(function(k){return '<span>'+_rp[k]+'</span>';}).join('');
     return `<div class="search-result-item" onclick="closeSearch();openDetay('${r.cat}',${r.idx})">
       <img class="search-result-thumb" src="${imgUrl(r.g.images[0],120)}" alt="${r.name}" loading="lazy"/>
       <div class="search-result-info">
@@ -693,7 +518,6 @@ document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn
     sw.innerHTML='<button class=\'subcat-tab active\' data-sub=\'resimler\'>Resimler</button><button class=\'subcat-tab\' data-sub=\'heykeller\'>Heykeller</button><button class=\'subcat-tab\' data-sub=\'dijital\'>Dijital Tasarımlar</button>';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
     renderGallery('resimler');
-initLang();
   } else if(catChildren[main]&&catChildren[main].length>0){
     const ch=catChildren[main];
     sw.innerHTML=ch.map((s,i)=>`<button class="subcat-tab${i===0?' active':''}" data-sub="${s}">${extraLabels[s]||s}</button>`).join('');
@@ -737,6 +561,7 @@ window.closeMenu=function(){
   h.style.position='';
 };
 renderGallery('resimler');
+initLang();
 const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
 let cur=0,timer;
 function goTo(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=i;slides[cur].classList.add('active');dots[cur].classList.add('active');}
@@ -756,6 +581,158 @@ document.getElementById('hamburger').addEventListener('click',()=>{
   }
 });
 document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+
+// ══════════════════════════════════════════════
+// DIL SİSTEMİ
+// ══════════════════════════════════════════════
+var TRANSLATIONS = {
+  tr: {
+    pageTitle: 'ArtDedal \u2013 Sanat \u0130yile\u015ftirir',
+    heroTag: 'Sanat \u0130yile\u015ftirir',
+    heroTitle: 'Her d\u00fc\u015f\u00fc\u015f yeni bir ba\u015flang\u0131\u00e7t\u0131r',
+    heroSub: 'Heykel, resim ve \u00f6zg\u00fcn tasar\u0131mlarla duygulara dokunan, ya\u015fam alanlar\u0131n\u0131za anlam katan eserler.',
+    heroCta: 'Eserleri Ke\u015ffet',
+    aboutLabel: 'Hakk\u0131m\u0131zda',
+    worksLabel: '\u00c7al\u0131\u015fmalar',
+    contactLabel: '\u0130leti\u015fim',
+    contactTitle: 'Birlikte<br/><em>\u00e7al\u0131\u015fal\u0131m</em>',
+    contactText: '\u00d6zel sipari\u015f, sergi daveti veya bilgi almak i\u00e7in benimle ileti\u015fime ge\u00e7ebilirsiniz. Kap\u0131lar\u0131m\u0131z her zaman a\u00e7\u0131kt\u0131r.',
+    footerCopy: '\u00a9 2026 ArtDedal. B\u00fct\u00fcn haklar\u0131 sakl\u0131d\u0131r.',
+    detayBack: 'Geri D\u00f6n',
+    relatedTitle: 'Di\u011fer Eserler',
+    searchPlaceholder: 'Eser ara\u2026',
+    searchHint: 'Eser ad\u0131, teknik, t\u00fcr, y\u0131l veya a\u00e7\u0131klama ile aray\u0131n',
+    searchEmpty: 'Sonu\u00e7 bulunamad\u0131',
+    galleryEmpty: 'Bu kategoride eser yok.',
+    showAll: 'T\u00fcm\u00fcn\u00fc G\u00f6r',
+    imgAngle: ' farkl\u0131 a\u00e7\u0131',
+    catTR: {sanatsal:'Sanatsal \u00c7al\u0131\u015fmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar',resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasar\u0131mlar',pipolar:'Pipolar','anahtarl\u0131k':'Anahtarl\u0131k'}
+  },
+  en: {
+    pageTitle: 'ArtDedal \u2013 Art Heals',
+    heroTag: 'Art Heals',
+    heroTitle: 'Every fall is a new beginning',
+    heroSub: 'Sculptures, paintings and original designs that touch emotions and bring meaning to your spaces.',
+    heroCta: 'Explore Works',
+    aboutLabel: 'About',
+    worksLabel: 'Works',
+    contactLabel: 'Contact',
+    contactTitle: "Let's work<br/><em>together</em>",
+    contactText: 'For custom orders, exhibition invitations or information, feel free to reach out. Our doors are always open.',
+    footerCopy: '\u00a9 2026 ArtDedal. All rights reserved.',
+    detayBack: 'Back',
+    relatedTitle: 'Other Works',
+    searchPlaceholder: 'Search works\u2026',
+    searchHint: 'Search by title, technique, category, year or description',
+    searchEmpty: 'No results found',
+    galleryEmpty: 'No works in this category.',
+    showAll: 'Show All',
+    imgAngle: ' views',
+    catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
+  }
+};
+
+var LANG = localStorage.getItem('artdedal_lang') || 'tr';
+
+function setLang(lang) {
+  LANG = lang;
+  localStorage.setItem('artdedal_lang', lang);
+  document.getElementById('htmlRoot').lang = lang;
+  document.getElementById('btnTR').classList.toggle('active', lang === 'tr');
+  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  var T = TRANSLATIONS[lang];
+  document.title = T.pageTitle;
+  var els = {
+    heroTag:'heroTag', heroTitle:'heroTitle', heroSub:'heroSub',
+    heroCta:'heroCta', aboutLabel:'aboutLabel', worksLabel:'worksLabel',
+    contactLabel:'contactLabel', contactText:'contactText',
+    footerCopy:'footerCopy', detayBack:'detayBack', relatedTitle:'relatedTitle'
+  };
+  Object.keys(els).forEach(function(key) {
+    var el = document.getElementById(els[key]);
+    if (el) el.innerHTML = T[key];
+  });
+  var ct = document.getElementById('contactTitle');
+  if (ct) ct.innerHTML = T.contactTitle;
+  var si = document.getElementById('searchInput');
+  if (si) si.placeholder = T.searchPlaceholder;
+  // Kategori tab etiketleri
+  document.querySelectorAll('.cat-tab').forEach(function(b) {
+    var lbl = T.catTR[b.dataset.main];
+    if (lbl) b.textContent = lbl;
+  });
+  document.querySelectorAll('.subcat-tab').forEach(function(b) {
+    var lbl = T.catTR[b.dataset.sub];
+    if (lbl) b.textContent = lbl;
+  });
+  // Galeriyi yeniden çiz
+  if (typeof renderGallery === 'function' && typeof currentCat !== 'undefined') {
+    renderGallery(currentCat);
+  }
+  // Detay sayfası açıksa yenile
+  var dp = document.getElementById('detayPage');
+  if (dp && dp.classList.contains('open') &&
+      typeof _detayCat !== 'undefined' && _detayCat !== null) {
+    refreshDetayLang();
+  }
+}
+
+function getLangDesc(eser) {
+  if (!eser || !eser.desc) return '';
+  if (typeof eser.desc === 'string') return eser.desc;
+  return eser.desc[LANG] || eser.desc['tr'] || '';
+}
+
+function getLangProps(eser, base) {
+  var props;
+  if (!eser || !eser.props) {
+    props = {};
+  } else if (eser.props.tr || eser.props.en) {
+    props = Object.assign({}, eser.props[LANG] || eser.props['tr'] || {});
+  } else {
+    props = Object.assign({}, eser.props);
+  }
+  if (base) {
+    var dim = base.match(/(\d+x\d+)/);
+    var dimKey = LANG === 'en' ? 'Dimensions' : 'Boyutu';
+    if (dim && !props[dimKey] && !props['Boyutu'] && !props['Dimensions']) {
+      props[dimKey] = dim[1] + ' cm';
+    }
+  }
+  return props;
+}
+
+function getLangCat(cat) {
+  return (TRANSLATIONS[LANG] && TRANSLATIONS[LANG].catTR[cat]) || cat;
+}
+
+function refreshDetayLang() {
+  if (typeof _detayCat === 'undefined' || !_detayCat) return;
+  var T = TRANSLATIONS[LANG];
+  var groups = GROUPS[_detayCat];
+  if (!groups) return;
+  var g = groups[_detayIdx];
+  if (!g) return;
+  var eser = ESER_DATA[g.base] || {};
+  var catEl = document.getElementById('detayCat');
+  if (catEl) catEl.textContent = getLangCat(_detayCat);
+  var descEl = document.getElementById('detayDesc');
+  if (descEl) descEl.textContent = getLangDesc(eser);
+  var propsEl = document.getElementById('detayProps');
+  if (propsEl) {
+    var props = getLangProps(eser, g.base);
+    propsEl.innerHTML = Object.keys(props).map(function(k) {
+      return '<div class="detay-prop"><div class="detay-prop-key">' + k + '</div><div class="detay-prop-val">' + props[k] + '</div></div>';
+    }).join('');
+  }
+}
+
+function initLang() {
+  document.getElementById('btnTR').classList.toggle('active', LANG === 'tr');
+  document.getElementById('btnEN').classList.toggle('active', LANG !== 'tr');
+  if (LANG !== 'tr') setLang(LANG);
+}
+
 </script>
 </body>
 </html>
