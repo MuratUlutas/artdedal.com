@@ -85,6 +85,11 @@ textarea{resize:vertical;min-height:80px;}
 .data-download{background:var(--dark);color:var(--cream);padding:20px 24px;border-radius:4px;display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
 .data-download p{font-size:.7rem;color:rgba(245,240,232,.5);}
 .btn-data{background:#2980b9;color:white;border:none;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Tenor Sans',sans-serif;padding:10px 20px;cursor:pointer;border-radius:2px;white-space:nowrap;}.btn-data:hover{background:#2471a3;}
+
+.lang-tabs{display:flex;gap:0;margin-bottom:12px;border-bottom:1px solid var(--line);}
+.lang-tab{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;padding:8px 16px;cursor:pointer;border:none;background:none;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;}
+.lang-tab.active{color:var(--warm);border-bottom-color:var(--warm);}
+.lang-pane{display:none;}.lang-pane.active{display:block;}
 </style>
 </head>
 <body>
@@ -109,30 +114,67 @@ textarea{resize:vertical;min-height:80px;}
     <div class="panel active" id="panel-metinler">
       <div class="section-title">Metinler</div>
       <div class="section-sub">Sitedeki tüm yazıları buradan düzenle</div>
-      <div class="card">
-        <div class="card-title">Hero</div>
-        <label>Slogan</label><input type="text" id="heroTag" value="Sanat İyileştirir"/>
-        <label>Ana Başlık</label><input type="text" id="heroTitle" value="Her düşüş yeni bir başlangıçtır"/>
-        <label>Alt Metin</label><textarea id="heroSub">Heykel, resim ve özgün tasarımlarla duygulara dokunan, yaşam alanlarınıza anlam katan eserler.</textarea>
-        <label>Buton</label><input type="text" id="heroCta" value="Eserleri Keşfet"/>
+
+      <!-- Dil sekmeleri -->
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchMetinLang('tr',this)">🇹🇷 Türkçe</button>
+        <button class="lang-tab" onclick="switchMetinLang('en',this)">🇬🇧 English</button>
       </div>
-      <div class="card">
-        <div class="card-title">Hakkımızda</div>
-        <label>Başlık</label><input type="text" id="aboutTitle" value="Murat & Elif — birlikte yaratmanın büyüsüne inananlar"/>
-        <label>1. Paragraf</label><textarea id="aboutP1">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</textarea>
-        <label>2. Paragraf</label><textarea id="aboutP2">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</textarea>
-        <label>3. Paragraf</label><textarea id="aboutP3">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</textarea>
-        <label>İmza</label><input type="text" id="aboutSign" value="Sevgi, sanat ve yaratma aşkıyla…"/>
+
+      <!-- TÜRKÇE -->
+      <div class="lang-pane active" id="metin-tr">
+        <div class="card">
+          <div class="card-title">Hero</div>
+          <label>Slogan</label><input type="text" id="heroTag" value="Sanat İyileştirir"/>
+          <label>Ana Başlık</label><input type="text" id="heroTitle" value="Her düşüş yeni bir başlangıçtır"/>
+          <label>Alt Metin</label><textarea id="heroSub">Heykel, resim ve özgün tasarımlarla duygulara dokunan, yaşam alanlarınıza anlam katan eserler.</textarea>
+          <label>Buton</label><input type="text" id="heroCta" value="Eserleri Keşfet"/>
+        </div>
+        <div class="card">
+          <div class="card-title">Hakkımızda</div>
+          <label>Başlık</label><input type="text" id="aboutTitle" value="Murat & Elif — birlikte yaratmanın büyüsüne inananlar"/>
+          <label>1. Paragraf</label><textarea id="aboutP1">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</textarea>
+          <label>2. Paragraf</label><textarea id="aboutP2">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</textarea>
+          <label>3. Paragraf</label><textarea id="aboutP3">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</textarea>
+          <label>İmza</label><input type="text" id="aboutSign" value="Sevgi, sanat ve yaratma aşkıyla…"/>
+        </div>
+        <div class="card">
+          <div class="card-title">İletişim</div>
+          <label>E-posta</label><input type="text" id="contactEmail" value="artdedalinfo@gmail.com"/>
+          <label>Instagram</label><input type="text" id="contactInsta" value="@art_dedal"/>
+          <label>Metin</label><textarea id="contactText">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</textarea>
+        </div>
+        <div class="card">
+          <div class="card-title">Footer</div>
+          <label>Telif</label><input type="text" id="footerCopy" value="© 2026 ArtDedal. Bütün hakları saklıdır."/>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title">İletişim</div>
-        <label>E-posta</label><input type="text" id="contactEmail" value="artdedalinfo@gmail.com"/>
-        <label>Instagram</label><input type="text" id="contactInsta" value="@art_dedal"/>
-        <label>Metin</label><textarea id="contactText">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</textarea>
-      </div>
-      <div class="card">
-        <div class="card-title">Footer</div>
-        <label>Telif</label><input type="text" id="footerCopy" value="© 2026 ArtDedal. Bütün hakları saklıdır."/>
+
+      <!-- İNGİLİZCE -->
+      <div class="lang-pane" id="metin-en">
+        <div class="card">
+          <div class="card-title">Hero</div>
+          <label>Slogan</label><input type="text" id="heroTagEN" value="Art Heals"/>
+          <label>Main Title</label><input type="text" id="heroTitleEN" value="Every fall is a new beginning"/>
+          <label>Subtitle</label><textarea id="heroSubEN">Sculptures, paintings and original designs that touch emotions and bring meaning to your spaces.</textarea>
+          <label>Button</label><input type="text" id="heroCtaEN" value="Explore Works"/>
+        </div>
+        <div class="card">
+          <div class="card-title">About</div>
+          <label>Title</label><input type="text" id="aboutTitleEN" value="Murat & Elif — believers in the magic of creating together"/>
+          <label>Paragraph 1</label><textarea id="aboutP1EN">We are a couple who place art at the center of life and believe in the magic of creating together. We bring different disciplines of art together to offer a unique aesthetic.</textarea>
+          <label>Paragraph 2</label><textarea id="aboutP2EN">In our sculptures you will feel the importance we give to detail, in our paintings the power of color, and in our decorative works our passion for combining functionality with aesthetics.</textarea>
+          <label>Paragraph 3</label><textarea id="aboutP3EN">In each of our works lies a meaning that reflects both our own story and yours. For us, art is not just a profession — it is a journey we share together.</textarea>
+          <label>Signature</label><input type="text" id="aboutSignEN" value="With love, art and the passion of creation…"/>
+        </div>
+        <div class="card">
+          <div class="card-title">Contact</div>
+          <label>Text</label><textarea id="contactTextEN">For custom orders, exhibition invitations or information, feel free to reach out. Our doors are always open.</textarea>
+        </div>
+        <div class="card">
+          <div class="card-title">Footer</div>
+          <label>Copyright</label><input type="text" id="footerCopyEN" value="© 2026 ArtDedal. All rights reserved."/>
+        </div>
       </div>
     </div>
     <div class="panel" id="panel-hero">
@@ -282,6 +324,16 @@ let state = {
   contactEmail:'artdedalinfo@gmail.com',contactInsta:'@art_dedal',
   contactText:'Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.',
   footerCopy:'© 2026 ArtDedal. Bütün hakları saklıdır.',
+  heroTagEN:'Art Heals',heroTitleEN:'Every fall is a new beginning',
+  heroSubEN:'Sculptures, paintings and original designs that touch emotions and bring meaning to your spaces.',
+  heroCtaEN:'Explore Works',
+  aboutTitleEN:'Murat & Elif — believers in the magic of creating together',
+  aboutP1EN:'We are a couple who place art at the center of life and believe in the magic of creating together. We bring different disciplines of art together to offer a unique aesthetic.',
+  aboutP2EN:'In our sculptures you will feel the importance we give to detail, in our paintings the power of color, and in our decorative works our passion for combining functionality with aesthetics.',
+  aboutP3EN:'In each of our works lies a meaning that reflects both our own story and yours. For us, art is not just a profession — it is a journey we share together.',
+  aboutSignEN:'With love, art and the passion of creation…',
+  contactTextEN:'For custom orders, exhibition invitations or information, feel free to reach out. Our doors are always open.',
+  footerCopyEN:'© 2026 ArtDedal. All rights reserved.',
   heroImages:[
     'https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/Dream_Bird_mpxyks.jpg',
     'https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1600,q_auto,f_auto/HYPNOS-2048x2015_zz2vej.jpg'
@@ -304,6 +356,13 @@ let state = {
 };
 
 function getLabel(k){return state.mainCatLabels[k]||state.subCatLabels[k]||state.extraSubLabels[k]||k;}
+
+function switchMetinLang(lang, btn){
+  document.querySelectorAll('.lang-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.lang-pane').forEach(p=>p.classList.remove('active'));
+  document.getElementById('metin-'+lang).classList.add('active');
+}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
 
 // NAV
@@ -624,6 +683,11 @@ function syncFromInputs(){
   ['heroTag','heroTitle','heroSub','heroCta','aboutTitle','aboutP1','aboutP2','aboutP3','aboutSign','contactEmail','contactInsta','contactText','footerCopy'].forEach(id=>{
     const el=document.getElementById(id);if(el)state[id]=el.value;
   });
+  // EN alanları
+  var enFields=['heroTagEN','heroTitleEN','heroSubEN','heroCtaEN','aboutTitleEN','aboutP1EN','aboutP2EN','aboutP3EN','aboutSignEN','contactTextEN','footerCopyEN'];
+  enFields.forEach(id=>{
+    const el=document.getElementById(id);if(el)state[id]=el.value;
+  });
 }
 
 // BUILD FONKSIYONLARI
@@ -664,7 +728,7 @@ function downloadHTML(){
   const ssHTMLS=state.subCats.map(s=>`<button class='subcat-tab' data-sub='${s}'>${state.subCatLabels[s]||s}</button>`).join('').replace(/'/g,"\\'");
 
   const html=`<!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" id="htmlRoot">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -860,6 +924,14 @@ function downloadHTML(){
     .search-result-meta{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
     .search-result-meta span{margin-right:12px;}
     .search-empty,.search-hint{font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-align:center;padding:40px 0;}
+
+    .lang-switcher{display:flex;align-items:center;gap:0;margin-left:8px}
+    .lang-btn{font-family:'Tenor Sans',sans-serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;background:none;border:none;cursor:pointer;color:rgba(245,240,232,.5);padding:4px 6px;transition:color .3s}
+    .lang-btn.active{color:var(--cream);font-weight:bold}
+    nav.scrolled .lang-btn{color:rgba(26,22,18,.4)}
+    nav.scrolled .lang-btn.active{color:var(--ink)}
+    .lang-sep{color:rgba(245,240,232,.25);font-size:.6rem}
+    nav.scrolled .lang-sep{color:rgba(26,22,18,.2)}
   </style>
 </head>
 <body>
@@ -883,16 +955,23 @@ function downloadHTML(){
     <a href="#hero" class="nav-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#hero" onclick="closeMenu()">Anasayfa</a></li>
-      <li><a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a></li>
+      <li><a href="#hero" onclick="closeMenu()" id="navHome">Anasayfa</a></li>
+      <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
       <li class="has-dropdown">
         <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
         <ul class="dropdown">${bNavDropdown()}</ul>
       </li>
-      <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
+      <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
+      <li style="display:flex;align-items:center">
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btnTR" onclick="setLang('tr')">TR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
+        </div>
+      </li>
       <li class="search-nav-item" style="display:flex;align-items:center;padding:0 8px;">
         <div onclick="openSearch()" class="search-fake-input">
-          <span style="font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.7);">Ara…</span>
+          <span style="font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.7);"><span id="searchBtnText">Ara…</span></span>
         </div>
       </li>
     </ul>
@@ -900,28 +979,28 @@ function downloadHTML(){
   <section id="hero">
     <div class="hero-slides">${bHeroSlides()}</div>
     <div class="hero-content">
-      <div class="hero-tag">${state.heroTag}</div>
-      <h1 class="hero-title">${state.heroTitle}</h1>
-      <p class="hero-sub">${state.heroSub}</p>
-      <a href="#calismalarbg" class="hero-cta">${state.heroCta}</a>
+      <div class="hero-tag" id="heroTag">${state.heroTag}</div>
+      <h1 class="hero-title" id="heroTitle">${state.heroTitle}</h1>
+      <p class="hero-sub" id="heroSub">${state.heroSub}</p>
+      <a href="#calismalarbg" class="hero-cta" id="heroCta">${state.heroCta}</a>
     </div>
     <div class="hero-dots">${bHeroDots()}</div>
   </section>
   <section id="hakkimizda">
     <div class="reveal">
-      <div class="section-label">Hakkımızda</div>
-      <h2 class="section-title">${state.aboutTitle}</h2>
-      <p class="about-text" style="margin-top:28px;">${state.aboutP1}</p>
-      <p class="about-text">${state.aboutP2}</p>
-      <p class="about-text">${state.aboutP3}</p>
-      <div class="about-sign">${state.aboutSign}</div>
+      <div class="section-label" id="aboutLabel">Hakkımızda</div>
+      <h2 class="section-title" id="aboutTitle">${state.aboutTitle}</h2>
+      <p class="about-text" id="aboutP1" style="margin-top:28px;">${state.aboutP1}</p>
+      <p class="about-text" id="aboutP2">${state.aboutP2}</p>
+      <p class="about-text" id="aboutP3">${state.aboutP3}</p>
+      <div class="about-sign" id="aboutQuote">${state.aboutSign}</div>
     </div>
     <div class="about-image reveal">
       <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_800,q_auto,f_auto/IMG_2160_ygxy7r.png" alt="Murat ve Elif"/>
     </div>
   </section>
   <section id="calismalarbg">
-    <div class="gallery-header reveal"><div class="section-label">Çalışmalar</div></div>
+    <div class="gallery-header reveal"><div class="section-label" id="worksLabel">Çalışmalar</div></div>
     <div class="gallery-tabs-wrap reveal">
       <div class="cat-tabs" id="catTabs">${bCatTabs()}</div>
       <div class="subcat-tabs visible" id="subcatTabs">${bSubCatTabs()}</div>
@@ -931,9 +1010,9 @@ function downloadHTML(){
   <section id="iletisim">
     <div class="contact-bg"><img src="${state.heroImages[0]||''}" alt=""/></div>
     <div class="contact-inner reveal">
-      <div class="section-label">İletişim</div>
+      <div class="section-label" id="contactLabel">İletişim</div>
       <h2 class="section-title">Birlikte<br/><em>çalışalım</em></h2>
-      <p class="contact-text">${state.contactText}</p>
+      <p class="contact-text" id="contactText">${state.contactText}</p>
       <div class="contact-links">
         <a href="mailto:${state.contactEmail}" class="contact-link"><span class="clt">E-posta</span><span class="clv">${state.contactEmail}</span></a>
         <a href="https://www.instagram.com/${state.contactInsta.replace('@','')}/" target="_blank" class="contact-link"><span class="clt">Instagram</span><span class="clv">${state.contactInsta}</span></a>
@@ -942,7 +1021,7 @@ function downloadHTML(){
   </section>
   <footer class="reveal">
     <div class="footer-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></div>
-    <div class="footer-copy">${state.footerCopy}</div>
+    <div class="footer-copy" id="footerCopy">${state.footerCopy}</div>
     <div class="footer-social">
       <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
       <a href="mailto:${state.contactEmail}">E-posta</a>
@@ -970,18 +1049,119 @@ function downloadHTML(){
       </div>
     </div>
     <div class="detay-related">
-      <div class="detay-related-title">Diğer Eserler</div>
+      <div class="detay-related-title" id="relatedTitle">Diğer Eserler</div>
       <div class="related-grid" id="relatedGrid"></div>
     </div>
   </div>
 </div>
 <script>
+var TRANSLATIONS = {
+  tr: {
+    pageTitle: 'ArtDedal \u2013 Sanat \u0130yile\u015ftirir',
+    heroTag: '${state.heroTag}',
+    heroTitle: '${state.heroTitle}',
+    heroSub: '${state.heroSub}',
+    heroCta: '${state.heroCta}',
+    aboutLabel: 'Hakk\u0131m\u0131zda',
+    worksLabel: '\u00c7al\u0131\u015fmalar',
+    contactLabel: '\u0130leti\u015fim',
+    contactTitle: 'Birlikte<br/><em>\u00e7al\u0131\u015fal\u0131m</em>',
+    contactText: '${state.contactText}',
+    footerCopy: '${state.footerCopy}',
+    detayBack: 'Geri D\u00f6n',
+    relatedTitle: 'Di\u011fer Eserler',
+    searchBtnText: 'Ara',
+    searchPlaceholder: 'Eser ara\u2026',
+    searchHint: 'Eser ad\u0131, teknik, t\u00fcr, y\u0131l veya a\u00e7\u0131klama ile aray\u0131n',
+    searchEmpty: 'Sonu\u00e7 bulunamad\u0131',
+    galleryEmpty: 'Bu kategoride eser yok.',
+    showAll: 'T\u00fcm\u00fcn\u00fc G\u00f6r',
+    imgAngle: ' farkl\u0131 a\u00e7\u0131',
+    navHome: 'Anasayfa', navAbout: 'Hakk\u0131m\u0131zda', navWorks: '\u00c7al\u0131\u015fmalar', navContact: '\u0130leti\u015fim',
+    aboutTitle: '${state.aboutTitle}', aboutP1: '${state.aboutP1}', aboutP2: '${state.aboutP2}', aboutP3: '${state.aboutP3}', aboutQuote: '${state.aboutSign}',
+    catTR: {sanatsal:'${state.mainCatLabels["sanatsal"]||"Sanatsal \u00c7al\u0131\u015fmalar"}',dekorasyon:'${state.mainCatLabels["dekorasyon"]||"Dekorasyon"}',peyzaj:'${state.mainCatLabels["peyzaj"]||"Peyzaj"}',aksesuarlar:'${state.mainCatLabels["aksesuarlar"]||"Aksesuarlar"}',resimler:'${state.subCatLabels["resimler"]||"Resimler"}',heykeller:'${state.subCatLabels["heykeller"]||"Heykeller"}',dijital:'${state.subCatLabels["dijital"]||"Dijital Tasar\u0131mlar"}',pipolar:'${state.extraSubLabels["pipolar"]||"Pipolar"}','anahtarl\u0131k':'${state.extraSubLabels["anahtarl\u0131k"]||"Anahtarl\u0131k"}'}
+  },
+  en: {
+    pageTitle: 'ArtDedal \u2013 ' + '${state.heroTagEN}',
+    heroTag: '${state.heroTagEN}',
+    heroTitle: '${state.heroTitleEN}',
+    heroSub: '${state.heroSubEN}',
+    heroCta: '${state.heroCtaEN}',
+    aboutLabel: 'About',
+    worksLabel: 'Works',
+    contactLabel: 'Contact',
+    contactTitle: "Let\'s work<br/><em>together</em>",
+    contactText: '${state.contactTextEN}',
+    footerCopy: '${state.footerCopyEN}',
+    detayBack: 'Back',
+    relatedTitle: 'Other Works',
+    searchBtnText: 'Search',
+    searchPlaceholder: 'Search works\u2026',
+    searchHint: 'Search by title, technique, category, year or description',
+    searchEmpty: 'No results found',
+    galleryEmpty: 'No works in this category.',
+    showAll: 'Show All',
+    imgAngle: ' views',
+    navHome: 'Home', navAbout: 'About', navWorks: 'Works', navContact: 'Contact',
+    aboutTitle: '${state.aboutTitleEN}', aboutP1: '${state.aboutP1EN}', aboutP2: '${state.aboutP2EN}', aboutP3: '${state.aboutP3EN}', aboutQuote: '${state.aboutSignEN}',
+    catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
+  }
+};
+var LANG = localStorage.getItem('artdedal_lang') || 'tr';
+function setLang(lang){
+  LANG=lang;localStorage.setItem('artdedal_lang',lang);
+  document.getElementById('htmlRoot').lang=lang;
+  document.getElementById('btnTR').classList.toggle('active',lang==='tr');
+  document.getElementById('btnEN').classList.toggle('active',lang!=='tr');
+  var T=TRANSLATIONS[lang];
+  document.title=T.pageTitle;
+  var ids={heroTag:'heroTag',heroTitle:'heroTitle',heroSub:'heroSub',heroCta:'heroCta',
+    aboutLabel:'aboutLabel',worksLabel:'worksLabel',contactLabel:'contactLabel',
+    contactText:'contactText',footerCopy:'footerCopy',detayBack:'detayBack',
+    relatedTitle:'relatedTitle',searchBtnText:'searchBtnText',
+    navHome:'navHome',navAbout:'navAbout',navWorks:'navWorks',navContact:'navContact',
+    aboutTitle:'aboutTitle',aboutP1:'aboutP1',aboutP2:'aboutP2',aboutP3:'aboutP3',aboutQuote:'aboutQuote'};
+  Object.keys(ids).forEach(function(k){var el=document.getElementById(ids[k]);if(el)el.innerHTML=T[k];});
+  var ct=document.getElementById('contactTitle');if(ct)ct.innerHTML=T.contactTitle;
+  var si=document.getElementById('searchInput');if(si)si.placeholder=T.searchPlaceholder;
+  document.querySelectorAll('.cat-tab').forEach(function(b){var lbl=T.catTR[b.dataset.main];if(lbl)b.textContent=lbl;});
+  document.querySelectorAll('.subcat-tab').forEach(function(b){var lbl=T.catTR[b.dataset.sub];if(lbl)b.textContent=lbl;});
+  if(typeof renderGallery==='function'&&typeof currentCat!=='undefined')renderGallery(currentCat);
+  var dp=document.getElementById('detayPage');
+  if(dp&&dp.classList.contains('open')&&typeof _detayCat!=='undefined'&&_detayCat!==null)refreshDetayLang();
+}
+function getLangDesc(eser){if(!eser||!eser.desc)return '';if(typeof eser.desc==='string')return eser.desc;return eser.desc[LANG]||eser.desc['tr']||'';}
+function getLangProps(eser,base){
+  var props;
+  if(!eser||!eser.props){props={};}
+  else if(eser.props.tr||eser.props.en){props=Object.assign({},eser.props[LANG]||eser.props['tr']||{});}
+  else{props=Object.assign({},eser.props);}
+  if(base){var dim=base.match(/(\d+x\d+)/);var dimKey=LANG==='en'?'Dimensions':'Boyutu';if(dim&&!props[dimKey]&&!props['Boyutu']&&!props['Dimensions'])props[dimKey]=dim[1]+' cm';}
+  return props;
+}
+function getLangCat(cat){return (TRANSLATIONS[LANG]&&TRANSLATIONS[LANG].catTR[cat])||cat;}
+function refreshDetayLang(){
+  if(typeof _detayCat==='undefined'||!_detayCat)return;
+  var T=TRANSLATIONS[LANG];var g=GROUPS[_detayCat]&&GROUPS[_detayCat][_detayIdx];if(!g)return;
+  var eser=ESER_DATA[g.base]||{};
+  var catEl=document.getElementById('detayCat');if(catEl)catEl.textContent=getLangCat(_detayCat);
+  var descEl=document.getElementById('detayDesc');if(descEl)descEl.textContent=getLangDesc(eser);
+  var propsEl=document.getElementById('detayProps');
+  if(propsEl){var props=getLangProps(eser,g.base);propsEl.innerHTML=Object.keys(props).map(function(k){return '<div class="detay-prop"><div class="detay-prop-key">'+k+'</div><div class="detay-prop-val">'+props[k]+'</div></div>';}).join('');}
+}
+function initLang(){
+  document.getElementById('btnTR').classList.toggle('active',LANG==='tr');
+  document.getElementById('btnEN').classList.toggle('active',LANG!=='tr');
+  if(LANG!=='tr')setLang(LANG);
+}
+
 const C='dhvrm1dcf';
 const BASE=\`https://res.cloudinary.com/\${C}/image/upload\`;
 const RAW=${bRaw()};
 let ESER_DATA={};
 fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
   ESER_DATA=d;
+  if(typeof renderGallery==='function'&&typeof currentCat!=='undefined')renderGallery(currentCat);
   const h=location.hash.match(/^#eser-(.+)-(\\d+)$/);
   if(h){const cat=h[1],idx=parseInt(h[2]);if(GROUPS[cat]&&GROUPS[cat][idx])openDetay(cat,idx);}
 }).catch(()=>{
@@ -1001,7 +1181,7 @@ function prettyName(base){
     .join(' ')
     .trim();
 }
-function catLabel(cat){return ${bCatLabels()}[cat]||cat;}
+function catLabel(cat){return getLangCat(cat);}
 const GROUPS={};Object.keys(RAW).forEach(cat=>{GROUPS[cat]=groupImages(RAW[cat]);});
 let currentCat='${fc}';
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
@@ -1062,13 +1242,12 @@ function openDetay(cat,idx){
   const images=eser.images||g.images;
   document.getElementById('detayMainImg').src=imgUrl(images[0],1200);
   document.getElementById('detayMainImg').onclick=()=>openLightbox(images,0);
-  document.getElementById('detayCat').textContent=catLabel(cat);
+  document.getElementById('detayCat').textContent=getLangCat(cat);
   document.getElementById('detayTitle').textContent=eser.name||name;
-  var _dd=eser.desc||'';
-  document.getElementById('detayDesc').textContent=typeof _dd==='object'?(_dd.tr||''):_dd;
-  const props={...eser.props||{}};
-  const dim=g.base.match(/(\\d+x\\d+)/);if(dim&&!props['Boyutu'])props['Boyutu']=dim[1]+' cm';
-  document.getElementById('detayProps').innerHTML=Object.entries(props).map(([k,v])=>\`<div class="detay-prop"><div class="detay-prop-key">\${k}</div><div class="detay-prop-val">\${v}</div></div>\`).join('');
+
+  document.getElementById('detayDesc').textContent=getLangDesc(eser);
+var _props=getLangProps(eser,g.base);
+  document.getElementById('detayProps').innerHTML=Object.keys(_props).map(function(k){return '<div class="detay-prop"><div class="detay-prop-key">'+k+'</div><div class="detay-prop-val">'+_props[k]+'</div></div>';}).join('');
   const th=document.getElementById('detayThumbs');
   if(images.length>1){
     th.innerHTML=images.map((img,i)=>\`<img class="detay-thumb\${i===0?' active':''}" src="\${imgUrl(img,200)}" data-full="\${imgUrl(img,1200)}" data-idx="\${i}" alt=""/>\`).join('');
@@ -1132,9 +1311,8 @@ document.getElementById('searchInput').addEventListener('input',function(){
     GROUPS[cat].forEach((g,idx)=>{
       const eser=ESER_DATA[g.base]||{};
       const name=(eser.name||prettyName(g.base)).toLocaleLowerCase('tr-TR');
-      var _sd=eser.desc||'';var _sdt=typeof _sd==='object'?(_sd.tr||''):_sd;
-      const desc=_sdt.toLocaleLowerCase('tr-TR');
-      const props=Object.entries(eser.props||{}).map(([k,v])=>k+' '+v).join(' ').toLocaleLowerCase('tr-TR');
+      const desc=getLangDesc(eser).toLocaleLowerCase('tr-TR');
+      var _sp=getLangProps(eser,g.base);const props=Object.keys(_sp).map(function(k){return k+' '+_sp[k];}).join(' ').toLocaleLowerCase('tr-TR');
       const catName=catLabel(cat).toLocaleLowerCase('tr-TR');
       if(name.includes(q)||desc.includes(q)||props.includes(q)||catName.includes(q)){
         results.push({cat,idx,g,eser,name:eser.name||prettyName(g.base),catName:catLabel(cat)});
@@ -1162,6 +1340,7 @@ document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn
     sw.innerHTML='${ssHTML}';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
     renderGallery('${fc}');
+initLang();
   } else if(catChildren[main]&&catChildren[main].length>0){
     const ch=catChildren[main];
     sw.innerHTML=ch.map((s,i)=>\`<button class="subcat-tab\${i===0?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
