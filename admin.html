@@ -1366,7 +1366,12 @@ function closeEserEdit(){
 }
 
 function renderEserProps(props){
-  const entries=Object.entries(props);
+  // {tr:{...}, en:{...}} formatını destekle — her zaman TR'yi göster
+  var propsToShow = props;
+  if(props && (props.tr || props.en)) {
+    propsToShow = props.tr || {};
+  }
+  const entries=Object.entries(propsToShow);
   document.getElementById('eserPropList').innerHTML=entries.map(([k,v],i)=>`
     <div class="prop-row" id="prop-${i}">
       <input type="text" value="${k}" placeholder="Özellik (ör: Yıl)" id="pk-${i}"/>
@@ -1394,14 +1399,21 @@ function removeEserProp(i){
 }
 
 function getEserProps(){
-  const props={};
+  var propTR={};
+  var propTRtoEN={'Yapım Yılı': 'Year', 'Yapım yılı': 'Year', 'Yıl': 'Year', 'Tekniği': 'Technique', 'Teknik': 'Technique', 'Boyutu': 'Dimensions', 'Boyut': 'Dimensions', 'Malzeme': 'Material', 'Açıklama': 'Description', 'Proje': 'Project', 'Uygulama': 'Application', 'Sanat Danışmanı': 'Art Consultant', 'Durum': 'Status', 'Fiyat': 'Price', 'Müteahhit-Proje': 'Contractor-Project', 'Yatırımcı': 'Investor', 'Üstlenici': 'Contractor'};
   document.querySelectorAll('#eserPropList .prop-row').forEach(row=>{
     const id=row.id.replace('prop-','');
     const k=document.getElementById('pk-'+id)?.value.trim();
     const v=document.getElementById('pv-'+id)?.value.trim();
-    if(k&&v)props[k]=v;
+    if(k&&v)propTR[k]=v;
   });
-  return props;
+  // EN props: bilinen anahtarları çevir, bilinmeyenleri olduğu gibi bırak
+  var propEN={};
+  Object.keys(propTR).forEach(function(k){
+    var enKey = propTRtoEN[k] || k;
+    propEN[enKey] = propTR[k];
+  });
+  return {tr: propTR, en: propEN};
 }
 
 function renderEserImgs(images, rawImages){
@@ -1480,7 +1492,8 @@ function saveEserEdit(){
   if(!imgsChanged)delete eserData[currentEserKey].images;
   // Boşsa kaydı sil
   var descEmpty = !desc || (typeof desc==='object' && !desc.tr && !desc.en);
-  if(!name&&descEmpty&&Object.keys(props).length===0&&!imgsChanged){
+  var propsEmpty = !props || (typeof props==='object' && props.tr && Object.keys(props.tr).length===0) || (!props.tr && Object.keys(props).length===0);
+  if(!name&&descEmpty&&propsEmpty&&!imgsChanged){
     delete eserData[currentEserKey];
   }
   closeEserEdit();
