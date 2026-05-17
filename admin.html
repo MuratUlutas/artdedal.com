@@ -69,9 +69,12 @@ textarea{resize:vertical;min-height:80px;}
 .eser-card-name{font-size:.65rem;padding:8px 10px;color:var(--ink);letter-spacing:.05em;line-height:1.3;}
 .eser-edit{background:white;border:1px solid var(--line);border-radius:4px;padding:24px;margin-top:20px;}
 .eser-edit-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;}
-.prop-row{display:flex;gap:8px;margin-bottom:8px;align-items:center;}
-.prop-row input{flex:1;}
-.prop-row input:first-child{max-width:140px;}
+.prop-row{display:flex;gap:6px;margin-bottom:8px;align-items:center;flex-wrap:wrap;}
+.prop-row input{flex:1;min-width:80px;}
+.prop-row .pk-tr{max-width:130px;}
+.prop-row .pk-en{max-width:130px;}
+.prop-row .pv{flex:2;}
+.prop-row-label{font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;}
 .img-order-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
 .img-order-item{position:relative;width:80px;}
 .img-order-item img{width:80px;height:80px;object-fit:cover;border:2px solid var(--line);border-radius:2px;}
@@ -193,8 +196,11 @@ textarea{resize:vertical;min-height:80px;}
       <div class="new-cat-form" id="newCatForm" style="display:none;">
         <div class="card-title" style="color:var(--muted);">Yeni Kategori</div>
         <div class="row">
-          <div><label>Görünen Ad</label><input type="text" id="newCatLabel" placeholder="ör: Aksesuarlar"/></div>
-          <div><label>Anahtar (küçük harf, boşuksuz)</label><input type="text" id="newCatKey" placeholder="ör: aksesuarlar"/></div>
+          <div><label>🇹🇷 Türkçe Ad</label><input type="text" id="newCatLabel" placeholder="ör: Aksesuarlar"/></div>
+          <div><label>🇬🇧 English Name</label><input type="text" id="newCatLabelEN" placeholder="e.g. Accessories"/></div>
+        </div>
+        <div style="margin-top:8px">
+          <label>Anahtar (küçük harf, boşuksuz)</label><input type="text" id="newCatKey" placeholder="ör: aksesuarlar"/>
         </div>
         <label>Tür</label>
         <select id="newCatType" onchange="toggleParentSelect()">
@@ -344,6 +350,7 @@ let state = {
   subCatLabels:{resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasarımlar'},
   catChildren:{aksesuarlar:['pipolar','anahtarlık']},
   extraSubLabels:{pipolar:'Pipolar','anahtarlık':'Anahtarlık'},
+  catLabelsEN:{},
   raw:{
     resimler:['Spinning_Ball-10-50x70_gcnorj','Spinning_Ball-9-50x70_ofmvwp','Spinning_Ball-8-50x70_nfvsee','Spinning_Ball-7-50x70_xnauso','Spinning_Ball-6-50x70_nws3tx','Spinning_Ball-5-50x70_n8gazo','Spinning_Ball-4-50x70_is4402','Spinning_Ball-3-50x70_oinknr','Spinning_Ball-2-50x70_zykiwz','Spinning_Ball-1-50x70_solpdm','Rebirth_lv8ufw','Purification-40x45_vepgac','Portrait-Sappho-40x50_hrkwnf','Portrait-Rimbaud-40x50_odgsco','Portrait-Nefertiti-40x50_dpecde','Portrait-Michelangelo-40x50_zipjnd','Portrait-Kafka-40x50_narqu9','Portrait-Hegel-40x50_g51an2','Portrait-Goethe-40x50_hrfl7n','Portrait-Galileo-40x50_npzyki','Portrait-Dante-40x50_djhg9c','Portrait-Beethoven-40x50_vhq0aj','Phoenix-30-110x130_d82myp','Phoenix-29-105x150_gukx3b','Phoenix-28-40x30_hz3ncb','Phoenix-27-40x30_qmihse','Phoenix-26-40x30_mz5jio','Phoenix-25-40x30_tollht','Phoenix-24-35x50_awhhss','Phoenix-23-30x40_mkoosw','Phoenix-22-30x40_oi9rn8','Phoenix-21-60x120_zzchcg','Phoenix-20-50x65_sxt3sb','Phoenix-19-50x70_zjolfh','Phoenix-18-50x70_juyta4','Phoenix-17-55x70_z4nzlg','Phoenix-16-60x60_jzkww6','Phoenix-15-60x120_qwivq2','Phoenix-14-50x100_b3dsjb','Phoenix-13-70x100_dspuqq','Phoenix-12-60x60_vo7mdo','Phoenix-11-50x80_dd1y6o','Phoenix-10-70x100_h94kfr','Phoenix-9-110x120_rwhdcf','Phoenix-8-100x120_stfobq','Phoenix-7-60x90_uwmubk','Phoenix-6-70x100_hkubrj','Phoenix-5-60x60_yxadjy','Phoenix-4-60x120_lowl0u','Phoenix-3-70x100_ghvsr7','Phoenix-2-50x70_nv6kfy','Phoenix-1-65x80_mr8e0n','Mrs_Catherine_Swindell-80x100_ofvutr','Magnolia-50x70_iiukde','Bird_of_Fortune-50x50_mqgqwy'],
     heykeller:['Ödül_heykelciği-3_ta8lq3','Ödül_heykelciği-2_brrkz4','Ödül_heykelciği-1_hjmjms','Melek-3_uwiyea','Melek-2_d9wci8','Melek-1_krrz86','Kralice_Olba-5_x5jjze','Kralice_Olba-4_bzqpcn','Kralice_Olba-3_k0pxhs','Kralice_Olba-2_bfkwtm','Kralice_Olba-1_l4bdrt','Baretli_Kaplumbağa-2_gwlw2x','Baretli_Kaplumbağa-1_n9xaxl','At-4_js3pma','At-3_r6vitq','At-2_p2douo','At-1_klmrpj'],
@@ -356,6 +363,23 @@ let state = {
 };
 
 function getLabel(k){return state.mainCatLabels[k]||state.subCatLabels[k]||state.extraSubLabels[k]||k;}
+
+var PROP_TR_TO_EN = {
+  'Yapım Yılı':'Year','Yapım yılı':'Year','Yıl':'Year',
+  'Tekniği':'Technique','Teknik':'Technique',
+  'Boyutu':'Dimensions','Boyut':'Dimensions',
+  'Malzeme':'Material','Renk':'Color',
+  'Açıklama':'Description','Proje':'Project',
+  'Uygulama':'Application','Sanat Danışmanı':'Art Consultant',
+  'Durum':'Status','Fiyat':'Price',
+  'Müteahhit-Proje':'Contractor-Project',
+  'Yatırımcı':'Investor','Üstlenici':'Contractor'
+};
+
+function autoFillEN(i, trKey){
+  var el = document.getElementById('pken-'+i);
+  if(el && !el.value) el.value = PROP_TR_TO_EN[trKey.trim()] || '';
+}
 
 function switchMetinLang(lang, btn){
   document.querySelectorAll('.lang-tab').forEach(b=>b.classList.remove('active'));
@@ -537,6 +561,7 @@ function removeSubCat(sub,parent){
 function showNewCatForm(){
   document.getElementById('newCatForm').style.display='block';
   document.getElementById('newCatLabel').value='';
+  document.getElementById('newCatLabelEN').value='';
   document.getElementById('newCatKey').value='';
   document.getElementById('newCatType').value='main';
   document.getElementById('parentCatWrap').style.display='none';
@@ -551,9 +576,11 @@ function toggleParentSelect(){
 }
 function addNewCat(){
   const label=document.getElementById('newCatLabel').value.trim();
+  const labelEN=(document.getElementById('newCatLabelEN').value.trim())||label;
   const key=document.getElementById('newCatKey').value.trim().toLowerCase().replace(/\s+/g,'_');
   const type=document.getElementById('newCatType').value;
   if(!label||!key){alert('Ad ve anahtar girin');return;}
+  // TR etiket
   if(type==='main'){
     state.mainCats.push(key);state.mainCatLabels[key]=label;
     state.catChildren[key]=[];state.raw[key]=[];
@@ -563,6 +590,9 @@ function addNewCat(){
     else{if(!state.catChildren[parent])state.catChildren[parent]=[];state.catChildren[parent].push(key);state.extraSubLabels[key]=label;}
     state.raw[key]=[];
   }
+  // EN etiket — state'e kaydet
+  if(!state.catLabelsEN)state.catLabelsEN={};
+  state.catLabelsEN[key]=labelEN;
   document.getElementById('newCatForm').style.display='none';
   renderCats();showToast('Kategori eklendi!');
 }
@@ -716,6 +746,12 @@ function bRaw(){
 }
 function bCatLabels(){
   const all={...state.mainCatLabels,...state.subCatLabels,...state.extraSubLabels};
+  return JSON.stringify(all).replace(/"/g,"'");
+}
+function bCatLabelsEN(){
+  // EN karşılıkları: sabit çeviriler + kullanıcı girişleri
+  const defaults={sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarlık':'Keychains'};
+  const all={...defaults,...(state.catLabelsEN||{})};
   return JSON.stringify(all).replace(/"/g,"'");
 }
 function bCatChildren(){return JSON.stringify(state.catChildren).replace(/"/g,"'");}
@@ -1079,7 +1115,7 @@ var TRANSLATIONS = {
     imgAngle: ' farkl\u0131 a\u00e7\u0131',
     navHome: 'Anasayfa', navAbout: 'Hakk\u0131m\u0131zda', navWorks: '\u00c7al\u0131\u015fmalar', navContact: '\u0130leti\u015fim',
     aboutTitle: '${state.aboutTitle}', aboutP1: '${state.aboutP1}', aboutP2: '${state.aboutP2}', aboutP3: '${state.aboutP3}', aboutQuote: '${state.aboutSign}',
-    catTR: {sanatsal:'${state.mainCatLabels["sanatsal"]||"Sanatsal \u00c7al\u0131\u015fmalar"}',dekorasyon:'${state.mainCatLabels["dekorasyon"]||"Dekorasyon"}',peyzaj:'${state.mainCatLabels["peyzaj"]||"Peyzaj"}',aksesuarlar:'${state.mainCatLabels["aksesuarlar"]||"Aksesuarlar"}',resimler:'${state.subCatLabels["resimler"]||"Resimler"}',heykeller:'${state.subCatLabels["heykeller"]||"Heykeller"}',dijital:'${state.subCatLabels["dijital"]||"Dijital Tasar\u0131mlar"}',pipolar:'${state.extraSubLabels["pipolar"]||"Pipolar"}','anahtarl\u0131k':'${state.extraSubLabels["anahtarl\u0131k"]||"Anahtarl\u0131k"}'}
+    catTR: ${bCatLabels()}',dekorasyon:'${state.mainCatLabels["dekorasyon"]||"Dekorasyon"}',peyzaj:'${state.mainCatLabels["peyzaj"]||"Peyzaj"}',aksesuarlar:'${state.mainCatLabels["aksesuarlar"]||"Aksesuarlar"}',resimler:'${state.subCatLabels["resimler"]||"Resimler"}',heykeller:'${state.subCatLabels["heykeller"]||"Heykeller"}',dijital:'${state.subCatLabels["dijital"]||"Dijital Tasar\u0131mlar"}',pipolar:'${state.extraSubLabels["pipolar"]||"Pipolar"}','anahtarl\u0131k':'${state.extraSubLabels["anahtarl\u0131k"]||"Anahtarl\u0131k"}'}
   },
   en: {
     pageTitle: 'ArtDedal \u2013 ' + '${state.heroTagEN}',
@@ -1104,7 +1140,7 @@ var TRANSLATIONS = {
     imgAngle: ' views',
     navHome: 'Home', navAbout: 'About', navWorks: 'Works', navContact: 'Contact',
     aboutTitle: '${state.aboutTitleEN}', aboutP1: '${state.aboutP1EN}', aboutP2: '${state.aboutP2EN}', aboutP3: '${state.aboutP3EN}', aboutQuote: '${state.aboutSignEN}',
-    catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
+    catTR: ${bCatLabelsEN()}
   }
 };
 var LANG = localStorage.getItem('artdedal_lang') || 'tr';
@@ -1545,19 +1581,28 @@ function closeEserEdit(){
 }
 
 function renderEserProps(props){
-  // {tr:{...}, en:{...}} formatını destekle — her zaman TR'yi göster
-  var propsToShow = props;
+  var propsTR = {};
+  var propsEN = {};
   if(props && (props.tr || props.en)) {
-    propsToShow = props.tr || {};
+    propsTR = props.tr || {};
+    propsEN = props.en || {};
+  } else if(props) {
+    propsTR = props;
+    // EN'i propTRtoEN ile tahmin et
+    Object.keys(props).forEach(function(k){ propsEN[PROP_TR_TO_EN[k]||k] = props[k]; });
   }
-  const entries=Object.entries(propsToShow);
-  document.getElementById('eserPropList').innerHTML=entries.map(([k,v],i)=>`
-    <div class="prop-row" id="prop-${i}">
-      <input type="text" value="${k}" placeholder="Özellik (ör: Yıl)" id="pk-${i}"/>
-      <input type="text" value="${v}" placeholder="Değer (ör: 2022)" id="pv-${i}"/>
-      <button class="btn btn-danger" onclick="removeEserProp(${i})">Sil</button>
-    </div>`).join('');
-  document.getElementById('eserPropList').dataset.count=entries.length;
+  const keys = Object.keys(propsTR);
+  document.getElementById('eserPropList').innerHTML = keys.map(function(k,i){
+    var enKey = Object.keys(propsEN)[i] || PROP_TR_TO_EN[k] || k;
+    var val = propsTR[k];
+    return `<div class="prop-row" id="prop-${i}">
+      <div style="flex:1;min-width:80px"><span class="prop-row-label">🇹🇷 Başlık</span><input type="text" value="${k}" placeholder="ör: Tekniği" id="pk-${i}" class="pk-tr"/></div>
+      <div style="flex:1;min-width:80px"><span class="prop-row-label">🇬🇧 Label</span><input type="text" value="${enKey}" placeholder="ör: Technique" id="pken-${i}" class="pk-en"/></div>
+      <div style="flex:2;min-width:100px"><span class="prop-row-label">Değer</span><input type="text" value="${val}" placeholder="ör: Yağlı Boya" id="pv-${i}" class="pv"/></div>
+      <button class="btn btn-danger" onclick="removeEserProp(${i})" style="align-self:flex-end;margin-bottom:0">Sil</button>
+    </div>`;
+  }).join('');
+  document.getElementById('eserPropList').dataset.count = keys.length;
 }
 
 function addEserProp(){
@@ -1565,9 +1610,11 @@ function addEserProp(){
   const i=parseInt(list.dataset.count||0);
   const div=document.createElement('div');
   div.className='prop-row';div.id='prop-'+i;
-  div.innerHTML=`<input type="text" placeholder="Özellik (ör: Yıl)" id="pk-${i}"/>
-    <input type="text" placeholder="Değer (ör: 2022)" id="pv-${i}"/>
-    <button class="btn btn-danger" onclick="removeEserProp(${i})">Sil</button>`;
+  div.innerHTML=`
+    <div style="flex:1;min-width:80px"><span class="prop-row-label">🇹🇷 Başlık</span><input type="text" placeholder="ör: Tekniği" id="pk-${i}" class="pk-tr" oninput="autoFillEN(${i},this.value)"/></div>
+    <div style="flex:1;min-width:80px"><span class="prop-row-label">🇬🇧 Label</span><input type="text" placeholder="ör: Technique" id="pken-${i}" class="pk-en"/></div>
+    <div style="flex:2;min-width:100px"><span class="prop-row-label">Değer</span><input type="text" placeholder="ör: Yağlı Boya" id="pv-${i}" class="pv"/></div>
+    <button class="btn btn-danger" onclick="removeEserProp(${i})" style="align-self:flex-end">Sil</button>`;
   list.appendChild(div);
   list.dataset.count=i+1;
 }
@@ -1579,18 +1626,16 @@ function removeEserProp(i){
 
 function getEserProps(){
   var propTR={};
-  var propTRtoEN={'Yapım Yılı': 'Year', 'Yapım yılı': 'Year', 'Yıl': 'Year', 'Tekniği': 'Technique', 'Teknik': 'Technique', 'Boyutu': 'Dimensions', 'Boyut': 'Dimensions', 'Malzeme': 'Material', 'Açıklama': 'Description', 'Proje': 'Project', 'Uygulama': 'Application', 'Sanat Danışmanı': 'Art Consultant', 'Durum': 'Status', 'Fiyat': 'Price', 'Müteahhit-Proje': 'Contractor-Project', 'Yatırımcı': 'Investor', 'Üstlenici': 'Contractor'};
-  document.querySelectorAll('#eserPropList .prop-row').forEach(row=>{
-    const id=row.id.replace('prop-','');
-    const k=document.getElementById('pk-'+id)?.value.trim();
-    const v=document.getElementById('pv-'+id)?.value.trim();
-    if(k&&v)propTR[k]=v;
-  });
-  // EN props: bilinen anahtarları çevir, bilinmeyenleri olduğu gibi bırak
   var propEN={};
-  Object.keys(propTR).forEach(function(k){
-    var enKey = propTRtoEN[k] || k;
-    propEN[enKey] = propTR[k];
+  document.querySelectorAll('#eserPropList .prop-row').forEach(function(row){
+    const id=row.id.replace('prop-','');
+    const kTR=(document.getElementById('pk-'+id)||{value:''}).value.trim();
+    const kEN=(document.getElementById('pken-'+id)||{value:''}).value.trim();
+    const v=(document.getElementById('pv-'+id)||{value:''}).value.trim();
+    if(kTR&&v){
+      propTR[kTR]=v;
+      propEN[kEN||PROP_TR_TO_EN[kTR]||kTR]=v;
+    }
   });
   return {tr: propTR, en: propEN};
 }
