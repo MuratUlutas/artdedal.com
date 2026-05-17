@@ -226,13 +226,13 @@
     <a href="#hero" class="nav-logo"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png" alt="ArtDedal"/></a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#hero" onclick="closeMenu()">Anasayfa</a></li>
-      <li><a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a></li>
+      <li><a href="#hero" onclick="closeMenu()" id="navHome">Anasayfa</a></li>
+      <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
       <li class="has-dropdown">
-        <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
-        <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
+        <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})" id="navWorks">Çalışmalar</a>
+        <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')" id="navSanatsal">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')" id="navResimler">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')" id="navHeykeller">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')" id="navDijital">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')" id="navDekorasyon">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')" id="navPeyzaj">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')" id="navAksesuarlar">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
       </li>
-      <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
+      <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
       <li style="display:flex;align-items:center">
         <div class="lang-switcher">
           <button class="lang-btn active" id="btnTR" onclick="setLang('tr')">TR</button>
@@ -260,10 +260,10 @@
   <section id="hakkimizda">
     <div class="reveal">
       <div class="section-label" id="aboutLabel">Hakkımızda</div>
-      <h2 class="section-title">Murat & Elif — birlikte yaratmanın büyüsüne inananlar</h2>
-      <p class="about-text" style="margin-top:28px;">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</p>
-      <p class="about-text">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</p>
-      <p class="about-text">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</p>
+      <h2 class="section-title" id="aboutTitle">Murat & Elif — birlikte yaratmanın büyüsüne inananlar</h2>
+      <p class="about-text" id="aboutP1" style="margin-top:28px;">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</p>
+      <p class="about-text" id="aboutP2">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</p>
+      <p class="about-text" id="aboutP3">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</p>
       <div class="about-sign">Sevgi, sanat ve yaratma aşkıyla…</div>
     </div>
     <div class="about-image reveal">
@@ -351,6 +351,14 @@ var TRANSLATIONS = {
     galleryEmpty: 'Bu kategoride eser yok.',
     showAll: 'T\u00fcm\u00fcn\u00fc G\u00f6r',
     imgAngle: ' farkl\u0131 a\u00e7\u0131',
+    navHome: 'Anasayfa', navAbout: 'Hakkımızda', navWorks: 'Çalışmalar', navContact: 'İletişim',
+    navSanatsal: 'Sanatsal Çalışmalar', navResimler: 'Resimler', navHeykeller: 'Heykeller',
+    navDijital: 'Dijital Tasarımlar', navDekorasyon: 'Dekorasyon', navPeyzaj: 'Peyzaj', navAksesuarlar: 'Aksesuarlar',
+    aboutTitle: 'Murat & Elif — birlikte yaratmanın büyüsüne inananlar',
+    aboutP1: 'Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.',
+    aboutP2: 'Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.',
+    aboutP3: 'Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.',
+    aboutQuote: 'Sevgi, sanat ve yaratma aşkıyla...',
     catTR: {sanatsal:'Sanatsal \u00c7al\u0131\u015fmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar',resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasar\u0131mlar',pipolar:'Pipolar','anahtarl\u0131k':'Anahtarl\u0131k'}
   },
   en: {
@@ -373,6 +381,14 @@ var TRANSLATIONS = {
     galleryEmpty: 'No works in this category.',
     showAll: 'Show All',
     imgAngle: ' views',
+    navHome: 'Home', navAbout: 'About', navWorks: 'Works', navContact: 'Contact',
+    navSanatsal: 'Artistic Works', navResimler: 'Paintings', navHeykeller: 'Sculptures',
+    navDijital: 'Digital Designs', navDekorasyon: 'Decoration', navPeyzaj: 'Landscape', navAksesuarlar: 'Accessories',
+    aboutTitle: 'Murat & Elif — believers in the magic of creating together',
+    aboutP1: 'We are a couple who place art at the center of life and believe in the magic of creating together. We bring different disciplines of art together to offer a unique aesthetic.',
+    aboutP2: 'In our sculptures you will feel the importance we give to detail, in our paintings the power of color, and in our decorative works our passion for combining functionality with aesthetics.',
+    aboutP3: 'In each of our works lies a meaning that reflects both our own story and yours. For us, art is not just a profession — it is a journey we share together.',
+    aboutQuote: 'With love, art and the passion of creation...',
     catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
   }
 };
@@ -409,6 +425,20 @@ function setLang(lang) {
   document.querySelectorAll('.subcat-tab').forEach(function(b) {
     var lbl = T.catTR[b.dataset.sub];
     if (lbl) b.textContent = lbl;
+  });
+  // Menü linkleri
+  var navIds = ['navHome','navAbout','navWorks','navContact',
+    'navSanatsal','navResimler','navHeykeller','navDijital',
+    'navDekorasyon','navPeyzaj','navAksesuarlar'];
+  navIds.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && T[id]) el.textContent = T[id];
+  });
+  // Hakkımızda bölümü
+  var aboutIds = ['aboutTitle','aboutP1','aboutP2','aboutP3','aboutQuote'];
+  aboutIds.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && T[id]) el.innerHTML = T[id];
   });
   // Galeriyi yeniden çiz
   if (typeof renderGallery === 'function' && typeof currentCat !== 'undefined') {
