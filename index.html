@@ -326,6 +326,157 @@
   </div>
 </div>
 <script>
+
+// ══════════════════════════════════════════════
+// DIL SİSTEMİ
+// ══════════════════════════════════════════════
+var TRANSLATIONS = {
+  tr: {
+    pageTitle: 'ArtDedal \u2013 Sanat \u0130yile\u015ftirir',
+    heroTag: 'Sanat \u0130yile\u015ftirir',
+    heroTitle: 'Her d\u00fc\u015f\u00fc\u015f yeni bir ba\u015flang\u0131\u00e7t\u0131r',
+    heroSub: 'Heykel, resim ve \u00f6zg\u00fcn tasar\u0131mlarla duygulara dokunan, ya\u015fam alanlar\u0131n\u0131za anlam katan eserler.',
+    heroCta: 'Eserleri Ke\u015ffet',
+    aboutLabel: 'Hakk\u0131m\u0131zda',
+    worksLabel: '\u00c7al\u0131\u015fmalar',
+    contactLabel: '\u0130leti\u015fim',
+    contactTitle: 'Birlikte<br/><em>\u00e7al\u0131\u015fal\u0131m</em>',
+    contactText: '\u00d6zel sipari\u015f, sergi daveti veya bilgi almak i\u00e7in benimle ileti\u015fime ge\u00e7ebilirsiniz. Kap\u0131lar\u0131m\u0131z her zaman a\u00e7\u0131kt\u0131r.',
+    footerCopy: '\u00a9 2026 ArtDedal. B\u00fct\u00fcn haklar\u0131 sakl\u0131d\u0131r.',
+    detayBack: 'Geri D\u00f6n',
+    relatedTitle: 'Di\u011fer Eserler',
+    searchPlaceholder: 'Eser ara\u2026',
+    searchHint: 'Eser ad\u0131, teknik, t\u00fcr, y\u0131l veya a\u00e7\u0131klama ile aray\u0131n',
+    searchEmpty: 'Sonu\u00e7 bulunamad\u0131',
+    galleryEmpty: 'Bu kategoride eser yok.',
+    showAll: 'T\u00fcm\u00fcn\u00fc G\u00f6r',
+    imgAngle: ' farkl\u0131 a\u00e7\u0131',
+    catTR: {sanatsal:'Sanatsal \u00c7al\u0131\u015fmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar',resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasar\u0131mlar',pipolar:'Pipolar','anahtarl\u0131k':'Anahtarl\u0131k'}
+  },
+  en: {
+    pageTitle: 'ArtDedal \u2013 Art Heals',
+    heroTag: 'Art Heals',
+    heroTitle: 'Every fall is a new beginning',
+    heroSub: 'Sculptures, paintings and original designs that touch emotions and bring meaning to your spaces.',
+    heroCta: 'Explore Works',
+    aboutLabel: 'About',
+    worksLabel: 'Works',
+    contactLabel: 'Contact',
+    contactTitle: "Let's work<br/><em>together</em>",
+    contactText: 'For custom orders, exhibition invitations or information, feel free to reach out. Our doors are always open.',
+    footerCopy: '\u00a9 2026 ArtDedal. All rights reserved.',
+    detayBack: 'Back',
+    relatedTitle: 'Other Works',
+    searchPlaceholder: 'Search works\u2026',
+    searchHint: 'Search by title, technique, category, year or description',
+    searchEmpty: 'No results found',
+    galleryEmpty: 'No works in this category.',
+    showAll: 'Show All',
+    imgAngle: ' views',
+    catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
+  }
+};
+
+var LANG = localStorage.getItem('artdedal_lang') || 'tr';
+
+function setLang(lang) {
+  LANG = lang;
+  localStorage.setItem('artdedal_lang', lang);
+  document.getElementById('htmlRoot').lang = lang;
+  document.getElementById('btnTR').classList.toggle('active', lang === 'tr');
+  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  var T = TRANSLATIONS[lang];
+  document.title = T.pageTitle;
+  var els = {
+    heroTag:'heroTag', heroTitle:'heroTitle', heroSub:'heroSub',
+    heroCta:'heroCta', aboutLabel:'aboutLabel', worksLabel:'worksLabel',
+    contactLabel:'contactLabel', contactText:'contactText',
+    footerCopy:'footerCopy', detayBack:'detayBack', relatedTitle:'relatedTitle'
+  };
+  Object.keys(els).forEach(function(key) {
+    var el = document.getElementById(els[key]);
+    if (el) el.innerHTML = T[key];
+  });
+  var ct = document.getElementById('contactTitle');
+  if (ct) ct.innerHTML = T.contactTitle;
+  var si = document.getElementById('searchInput');
+  if (si) si.placeholder = T.searchPlaceholder;
+  // Kategori tab etiketleri
+  document.querySelectorAll('.cat-tab').forEach(function(b) {
+    var lbl = T.catTR[b.dataset.main];
+    if (lbl) b.textContent = lbl;
+  });
+  document.querySelectorAll('.subcat-tab').forEach(function(b) {
+    var lbl = T.catTR[b.dataset.sub];
+    if (lbl) b.textContent = lbl;
+  });
+  // Galeriyi yeniden çiz
+  if (typeof renderGallery === 'function' && typeof currentCat !== 'undefined') {
+    renderGallery(currentCat);
+  }
+  // Detay sayfası açıksa yenile
+  var dp = document.getElementById('detayPage');
+  if (dp && dp.classList.contains('open') &&
+      typeof _detayCat !== 'undefined' && _detayCat !== null) {
+    refreshDetayLang();
+  }
+}
+
+function getLangDesc(eser) {
+  if (!eser || !eser.desc) return '';
+  if (typeof eser.desc === 'string') return eser.desc;
+  return eser.desc[LANG] || eser.desc['tr'] || '';
+}
+
+function getLangProps(eser, base) {
+  var props;
+  if (!eser || !eser.props) {
+    props = {};
+  } else if (eser.props.tr || eser.props.en) {
+    props = Object.assign({}, eser.props[LANG] || eser.props['tr'] || {});
+  } else {
+    props = Object.assign({}, eser.props);
+  }
+  if (base) {
+    var dim = base.match(/(\d+x\d+)/);
+    var dimKey = LANG === 'en' ? 'Dimensions' : 'Boyutu';
+    if (dim && !props[dimKey] && !props['Boyutu'] && !props['Dimensions']) {
+      props[dimKey] = dim[1] + ' cm';
+    }
+  }
+  return props;
+}
+
+function getLangCat(cat) {
+  return (TRANSLATIONS[LANG] && TRANSLATIONS[LANG].catTR[cat]) || cat;
+}
+
+function refreshDetayLang() {
+  if (typeof _detayCat === 'undefined' || !_detayCat) return;
+  var T = TRANSLATIONS[LANG];
+  var groups = GROUPS[_detayCat];
+  if (!groups) return;
+  var g = groups[_detayIdx];
+  if (!g) return;
+  var eser = ESER_DATA[g.base] || {};
+  var catEl = document.getElementById('detayCat');
+  if (catEl) catEl.textContent = getLangCat(_detayCat);
+  var descEl = document.getElementById('detayDesc');
+  if (descEl) descEl.textContent = getLangDesc(eser);
+  var propsEl = document.getElementById('detayProps');
+  if (propsEl) {
+    var props = getLangProps(eser, g.base);
+    propsEl.innerHTML = Object.keys(props).map(function(k) {
+      return '<div class="detay-prop"><div class="detay-prop-key">' + k + '</div><div class="detay-prop-val">' + props[k] + '</div></div>';
+    }).join('');
+  }
+}
+
+function initLang() {
+  document.getElementById('btnTR').classList.toggle('active', LANG === 'tr');
+  document.getElementById('btnEN').classList.toggle('active', LANG !== 'tr');
+  if (LANG !== 'tr') setLang(LANG);
+}
 const C='dhvrm1dcf';
 const BASE=`https://res.cloudinary.com/${C}/image/upload`;
 const RAW={
@@ -582,156 +733,6 @@ document.getElementById('hamburger').addEventListener('click',()=>{
 });
 document.querySelectorAll('a[href^="#"]:not([href^="#eser"])').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
 
-// ══════════════════════════════════════════════
-// DIL SİSTEMİ
-// ══════════════════════════════════════════════
-var TRANSLATIONS = {
-  tr: {
-    pageTitle: 'ArtDedal \u2013 Sanat \u0130yile\u015ftirir',
-    heroTag: 'Sanat \u0130yile\u015ftirir',
-    heroTitle: 'Her d\u00fc\u015f\u00fc\u015f yeni bir ba\u015flang\u0131\u00e7t\u0131r',
-    heroSub: 'Heykel, resim ve \u00f6zg\u00fcn tasar\u0131mlarla duygulara dokunan, ya\u015fam alanlar\u0131n\u0131za anlam katan eserler.',
-    heroCta: 'Eserleri Ke\u015ffet',
-    aboutLabel: 'Hakk\u0131m\u0131zda',
-    worksLabel: '\u00c7al\u0131\u015fmalar',
-    contactLabel: '\u0130leti\u015fim',
-    contactTitle: 'Birlikte<br/><em>\u00e7al\u0131\u015fal\u0131m</em>',
-    contactText: '\u00d6zel sipari\u015f, sergi daveti veya bilgi almak i\u00e7in benimle ileti\u015fime ge\u00e7ebilirsiniz. Kap\u0131lar\u0131m\u0131z her zaman a\u00e7\u0131kt\u0131r.',
-    footerCopy: '\u00a9 2026 ArtDedal. B\u00fct\u00fcn haklar\u0131 sakl\u0131d\u0131r.',
-    detayBack: 'Geri D\u00f6n',
-    relatedTitle: 'Di\u011fer Eserler',
-    searchPlaceholder: 'Eser ara\u2026',
-    searchHint: 'Eser ad\u0131, teknik, t\u00fcr, y\u0131l veya a\u00e7\u0131klama ile aray\u0131n',
-    searchEmpty: 'Sonu\u00e7 bulunamad\u0131',
-    galleryEmpty: 'Bu kategoride eser yok.',
-    showAll: 'T\u00fcm\u00fcn\u00fc G\u00f6r',
-    imgAngle: ' farkl\u0131 a\u00e7\u0131',
-    catTR: {sanatsal:'Sanatsal \u00c7al\u0131\u015fmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar',resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasar\u0131mlar',pipolar:'Pipolar','anahtarl\u0131k':'Anahtarl\u0131k'}
-  },
-  en: {
-    pageTitle: 'ArtDedal \u2013 Art Heals',
-    heroTag: 'Art Heals',
-    heroTitle: 'Every fall is a new beginning',
-    heroSub: 'Sculptures, paintings and original designs that touch emotions and bring meaning to your spaces.',
-    heroCta: 'Explore Works',
-    aboutLabel: 'About',
-    worksLabel: 'Works',
-    contactLabel: 'Contact',
-    contactTitle: "Let's work<br/><em>together</em>",
-    contactText: 'For custom orders, exhibition invitations or information, feel free to reach out. Our doors are always open.',
-    footerCopy: '\u00a9 2026 ArtDedal. All rights reserved.',
-    detayBack: 'Back',
-    relatedTitle: 'Other Works',
-    searchPlaceholder: 'Search works\u2026',
-    searchHint: 'Search by title, technique, category, year or description',
-    searchEmpty: 'No results found',
-    galleryEmpty: 'No works in this category.',
-    showAll: 'Show All',
-    imgAngle: ' views',
-    catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
-  }
-};
-
-var LANG = localStorage.getItem('artdedal_lang') || 'tr';
-
-function setLang(lang) {
-  LANG = lang;
-  localStorage.setItem('artdedal_lang', lang);
-  document.getElementById('htmlRoot').lang = lang;
-  document.getElementById('btnTR').classList.toggle('active', lang === 'tr');
-  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
-  var T = TRANSLATIONS[lang];
-  document.title = T.pageTitle;
-  var els = {
-    heroTag:'heroTag', heroTitle:'heroTitle', heroSub:'heroSub',
-    heroCta:'heroCta', aboutLabel:'aboutLabel', worksLabel:'worksLabel',
-    contactLabel:'contactLabel', contactText:'contactText',
-    footerCopy:'footerCopy', detayBack:'detayBack', relatedTitle:'relatedTitle'
-  };
-  Object.keys(els).forEach(function(key) {
-    var el = document.getElementById(els[key]);
-    if (el) el.innerHTML = T[key];
-  });
-  var ct = document.getElementById('contactTitle');
-  if (ct) ct.innerHTML = T.contactTitle;
-  var si = document.getElementById('searchInput');
-  if (si) si.placeholder = T.searchPlaceholder;
-  // Kategori tab etiketleri
-  document.querySelectorAll('.cat-tab').forEach(function(b) {
-    var lbl = T.catTR[b.dataset.main];
-    if (lbl) b.textContent = lbl;
-  });
-  document.querySelectorAll('.subcat-tab').forEach(function(b) {
-    var lbl = T.catTR[b.dataset.sub];
-    if (lbl) b.textContent = lbl;
-  });
-  // Galeriyi yeniden çiz
-  if (typeof renderGallery === 'function' && typeof currentCat !== 'undefined') {
-    renderGallery(currentCat);
-  }
-  // Detay sayfası açıksa yenile
-  var dp = document.getElementById('detayPage');
-  if (dp && dp.classList.contains('open') &&
-      typeof _detayCat !== 'undefined' && _detayCat !== null) {
-    refreshDetayLang();
-  }
-}
-
-function getLangDesc(eser) {
-  if (!eser || !eser.desc) return '';
-  if (typeof eser.desc === 'string') return eser.desc;
-  return eser.desc[LANG] || eser.desc['tr'] || '';
-}
-
-function getLangProps(eser, base) {
-  var props;
-  if (!eser || !eser.props) {
-    props = {};
-  } else if (eser.props.tr || eser.props.en) {
-    props = Object.assign({}, eser.props[LANG] || eser.props['tr'] || {});
-  } else {
-    props = Object.assign({}, eser.props);
-  }
-  if (base) {
-    var dim = base.match(/(\d+x\d+)/);
-    var dimKey = LANG === 'en' ? 'Dimensions' : 'Boyutu';
-    if (dim && !props[dimKey] && !props['Boyutu'] && !props['Dimensions']) {
-      props[dimKey] = dim[1] + ' cm';
-    }
-  }
-  return props;
-}
-
-function getLangCat(cat) {
-  return (TRANSLATIONS[LANG] && TRANSLATIONS[LANG].catTR[cat]) || cat;
-}
-
-function refreshDetayLang() {
-  if (typeof _detayCat === 'undefined' || !_detayCat) return;
-  var T = TRANSLATIONS[LANG];
-  var groups = GROUPS[_detayCat];
-  if (!groups) return;
-  var g = groups[_detayIdx];
-  if (!g) return;
-  var eser = ESER_DATA[g.base] || {};
-  var catEl = document.getElementById('detayCat');
-  if (catEl) catEl.textContent = getLangCat(_detayCat);
-  var descEl = document.getElementById('detayDesc');
-  if (descEl) descEl.textContent = getLangDesc(eser);
-  var propsEl = document.getElementById('detayProps');
-  if (propsEl) {
-    var props = getLangProps(eser, g.base);
-    propsEl.innerHTML = Object.keys(props).map(function(k) {
-      return '<div class="detay-prop"><div class="detay-prop-key">' + k + '</div><div class="detay-prop-val">' + props[k] + '</div></div>';
-    }).join('');
-  }
-}
-
-function initLang() {
-  document.getElementById('btnTR').classList.toggle('active', LANG === 'tr');
-  document.getElementById('btnEN').classList.toggle('active', LANG !== 'tr');
-  if (LANG !== 'tr') setLang(LANG);
-}
 
 </script>
 </body>
