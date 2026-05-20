@@ -5,6 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title id="pageTitle">ArtDedal – Sanat İyileştirir</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121527/Artdedal_likon_r_jzmfex.png"/>
+
+  <!-- SEO Meta -->
+  <meta name="description" id="metaDesc" content="ArtDedal – Murat ve Elif Ulutaş'ın heykel, resim ve dekoratif sanat eserleri. Özgün sanat, iç mekan dekorasyon ve peyzaj projeleri."/>
+  <meta name="keywords" content="ArtDedal, Murat Ulutaş, Elif Ulutaş, heykel, resim, sanat, dekorasyon, peyzaj, dijital tasarım, Mersin, Türk sanatı, sculpture, painting, art, decoration, landscape, digital design, Turkish art"/>
+  <meta name="author" content="Murat Ulutaş, Elif Ulutaş"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://artdedal.com/"/>
+  <link rel="alternate" hreflang="tr" href="https://artdedal.com/"/>
+  <link rel="alternate" hreflang="en" href="https://artdedal.com/"/>
+  <link rel="alternate" hreflang="x-default" href="https://artdedal.com/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://artdedal.com/"/>
+  <meta property="og:site_name" content="ArtDedal"/>
+  <meta property="og:title" id="ogTitle" content="ArtDedal – Sanat İyileştirir"/>
+  <meta property="og:description" id="ogDesc" content="Murat ve Elif Ulutaş'ın heykel, resim ve dekoratif sanat eserleri. Özgün sanat, iç mekan dekorasyon ve peyzaj projeleri."/>
+  <meta property="og:image" content="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1200,q_auto,f_auto/Dream_Bird_mpxyks.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" id="ogLocale" content="tr_TR"/>
+  <meta property="og:locale:alternate" content="en_US"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@art_dedal"/>
+  <meta name="twitter:title" id="twTitle" content="ArtDedal – Sanat İyileştirir"/>
+  <meta name="twitter:description" id="twDesc" content="Murat ve Elif Ulutaş'ın heykel, resim ve dekoratif sanat eserleri."/>
+  <meta name="twitter:image" content="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1200,q_auto,f_auto/Dream_Bird_mpxyks.jpg"/>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ArtGallery",
+    "name": "ArtDedal",
+    "url": "https://artdedal.com",
+    "logo": "https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121546/Artdedal_logo_r_ntikkc.png",
+    "image": "https://res.cloudinary.com/dhvrm1dcf/image/upload/w_1200,q_auto,f_auto/Dream_Bird_mpxyks.jpg",
+    "description": "ArtDedal is a studio by Murat and Elif Ulutaş offering original sculptures, paintings, decorative art and landscape design.",
+    "email": "artdedalinfo@gmail.com",
+    "sameAs": ["https://www.instagram.com/art_dedal/"],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Murat Ulutaş",
+        "jobTitle": "Artist, Sculptor",
+        "sameAs": "https://www.instagram.com/art_dedal/"
+      },
+      {
+        "@type": "Person",
+        "name": "Elif Ulutaş",
+        "jobTitle": "Artist, Painter",
+        "sameAs": "https://www.instagram.com/art_dedal/"
+      }
+    ]
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -459,6 +518,25 @@ function setLang(lang) {
   if (cel && T.emailLabel) cel.textContent = T.emailLabel;
   var fel = document.getElementById('footerEmailLink');
   if (fel && T.emailLabel) fel.textContent = T.emailLabel;
+  // Meta tagları güncelle
+  var seoDesc = {
+    tr: 'Murat ve Elif Ulutaş\'ın heykel, resim ve dekoratif sanat eserleri. Özgün sanat, iç mekan dekorasyon ve peyzaj projeleri.',
+    en: 'Original sculptures, paintings and decorative artworks by Murat and Elif Ulutaş. Custom art, interior decoration and landscape design projects.'
+  };
+  var desc = seoDesc[lang] || seoDesc['tr'];
+  var metaDesc = document.getElementById('metaDesc');
+  if (metaDesc) metaDesc.setAttribute('content', desc);
+  var ogTitle = document.getElementById('ogTitle');
+  if (ogTitle) ogTitle.setAttribute('content', T.pageTitle);
+  var ogDesc = document.getElementById('ogDesc');
+  if (ogDesc) ogDesc.setAttribute('content', desc);
+  var ogLocale = document.getElementById('ogLocale');
+  if (ogLocale) ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'tr_TR');
+  var twTitle = document.getElementById('twTitle');
+  if (twTitle) twTitle.setAttribute('content', T.pageTitle);
+  var twDesc = document.getElementById('twDesc');
+  if (twDesc) twDesc.setAttribute('content', desc);
+  document.getElementById('htmlRoot').setAttribute('lang', lang);
   // Galeriyi yeniden çiz
   if (typeof renderGallery === 'function' && typeof currentCat !== 'undefined') {
     renderGallery(currentCat);
