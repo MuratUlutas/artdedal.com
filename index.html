@@ -242,7 +242,7 @@
       </li>
       <li class="search-nav-item" style="display:flex;align-items:center;padding:0 8px;">
         <div onclick="openSearch()" class="search-fake-input">
-          <span style="font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.7);">Ara…</span>
+          <span id="searchFakeText" style="font-family:'Tenor Sans',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.7);">Ara…</span>
         </div>
       </li>
     </ul>
@@ -264,7 +264,7 @@
       <p class="about-text" id="aboutP1" style="margin-top:28px;">Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.</p>
       <p class="about-text" id="aboutP2">Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.</p>
       <p class="about-text" id="aboutP3">Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.</p>
-      <div class="about-sign">Sevgi, sanat ve yaratma aşkıyla…</div>
+      <div class="about-sign" id="aboutQuote">Sevgi, sanat ve yaratma aşkıyla…</div>
     </div>
     <div class="about-image reveal">
       <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_800,q_auto,f_auto/IMG_2160_ygxy7r.png" alt="Murat ve Elif"/>
@@ -285,7 +285,7 @@
       <h2 class="section-title" id="contactTitle">Birlikte<br/><em>çalışalım</em></h2>
       <p class="contact-text" id="contactText">Özel sipariş, sergi daveti veya bilgi almak için benimle iletişime geçebilirsiniz. Kapılarımız her zaman açıktır.</p>
       <div class="contact-links">
-        <a href="mailto:artdedalinfo@gmail.com" class="contact-link"><span class="clt">E-posta</span><span class="clv">artdedalinfo@gmail.com</span></a>
+        <a href="mailto:artdedalinfo@gmail.com" class="contact-link"><span class="clt" id="contactEmailLabel">E-posta</span><span class="clv">artdedalinfo@gmail.com</span></a>
         <a href="https://www.instagram.com/art_dedal/" target="_blank" class="contact-link"><span class="clt">Instagram</span><span class="clv">@art_dedal</span></a>
       </div>
     </div>
@@ -295,7 +295,7 @@
     <div class="footer-copy" id="footerCopy">© 2026 ArtDedal. Bütün hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.instagram.com/art_dedal/" target="_blank">Instagram</a>
-      <a href="mailto:artdedalinfo@gmail.com">E-posta</a>
+      <a href="mailto:artdedalinfo@gmail.com" id="footerEmailLink">E-posta</a>
     </div>
   </footer>
 </div>
@@ -360,6 +360,8 @@ var TRANSLATIONS = {
     aboutP3: 'Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.',
     aboutQuote: 'Sevgi, sanat ve yaratma aşkıyla...',
     searchBtnText: 'Ara',
+    searchFakeText: 'Ara…',
+    emailLabel: 'E-posta',
     catTR: {sanatsal:'Sanatsal \u00c7al\u0131\u015fmalar',dekorasyon:'Dekorasyon',peyzaj:'Peyzaj',aksesuarlar:'Aksesuarlar',resimler:'Resimler',heykeller:'Heykeller',dijital:'Dijital Tasar\u0131mlar',pipolar:'Pipolar','anahtarl\u0131k':'Anahtarl\u0131k'}
   },
   en: {
@@ -391,6 +393,8 @@ var TRANSLATIONS = {
     aboutP3: 'In each of our works lies a meaning that reflects both our own story and yours. For us, art is not just a profession — it is a journey we share together.',
     aboutQuote: 'With love, art and the passion of creation...',
     searchBtnText: 'Search',
+    searchFakeText: 'Search…',
+    emailLabel: 'Email',
     catTR: {sanatsal:'Artistic Works',dekorasyon:'Decoration',peyzaj:'Landscape',aksesuarlar:'Accessories',resimler:'Paintings',heykeller:'Sculptures',dijital:'Digital Designs',pipolar:'Pipes','anahtarl\u0131k':'Keychains'}
   }
 };
@@ -444,6 +448,14 @@ function setLang(lang) {
     var el = document.getElementById(id);
     if (el && T[id]) el.innerHTML = T[id];
   });
+  // Arama fake input
+  var sft = document.getElementById('searchFakeText');
+  if (sft && T.searchFakeText) sft.textContent = T.searchFakeText;
+  // E-posta etiketleri
+  var cel = document.getElementById('contactEmailLabel');
+  if (cel && T.emailLabel) cel.textContent = T.emailLabel;
+  var fel = document.getElementById('footerEmailLink');
+  if (fel && T.emailLabel) fel.textContent = T.emailLabel;
   // Galeriyi yeniden çiz
   if (typeof renderGallery === 'function' && typeof currentCat !== 'undefined') {
     renderGallery(currentCat);
