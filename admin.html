@@ -1594,11 +1594,13 @@ function renderEserProps(props){
   const keys = Object.keys(propsTR);
   document.getElementById('eserPropList').innerHTML = keys.map(function(k,i){
     var enKey = Object.keys(propsEN)[i] || PROP_TR_TO_EN[k] || k;
-    var val = propsTR[k];
+    var valTR = propsTR[k] || '';
+    var valEN = propsEN[enKey] || propsEN[Object.keys(propsEN)[i]] || '';
     return `<div class="prop-row" id="prop-${i}">
       <div style="flex:1;min-width:80px"><span class="prop-row-label">🇹🇷 Başlık</span><input type="text" value="${k}" placeholder="ör: Tekniği" id="pk-${i}" class="pk-tr"/></div>
       <div style="flex:1;min-width:80px"><span class="prop-row-label">🇬🇧 Label</span><input type="text" value="${enKey}" placeholder="ör: Technique" id="pken-${i}" class="pk-en"/></div>
-      <div style="flex:2;min-width:100px"><span class="prop-row-label">Değer</span><input type="text" value="${val}" placeholder="ör: Yağlı Boya" id="pv-${i}" class="pv"/></div>
+      <div style="flex:2;min-width:100px"><span class="prop-row-label">🇹🇷 Değer</span><input type="text" value="${valTR}" placeholder="ör: Yağlı Boya" id="pv-${i}" class="pv"/></div>
+      <div style="flex:2;min-width:100px"><span class="prop-row-label">🇬🇧 Value</span><input type="text" value="${valEN}" placeholder="e.g. Oil Paint" id="pven-${i}" class="pven"/></div>
       <button class="btn btn-danger" onclick="removeEserProp(${i})" style="align-self:flex-end;margin-bottom:0">Sil</button>
     </div>`;
   }).join('');
@@ -1613,7 +1615,8 @@ function addEserProp(){
   div.innerHTML=`
     <div style="flex:1;min-width:80px"><span class="prop-row-label">🇹🇷 Başlık</span><input type="text" placeholder="ör: Tekniği" id="pk-${i}" class="pk-tr" oninput="autoFillEN(${i},this.value)"/></div>
     <div style="flex:1;min-width:80px"><span class="prop-row-label">🇬🇧 Label</span><input type="text" placeholder="ör: Technique" id="pken-${i}" class="pk-en"/></div>
-    <div style="flex:2;min-width:100px"><span class="prop-row-label">Değer</span><input type="text" placeholder="ör: Yağlı Boya" id="pv-${i}" class="pv"/></div>
+    <div style="flex:2;min-width:100px"><span class="prop-row-label">🇹🇷 Değer</span><input type="text" placeholder="ör: Yağlı Boya" id="pv-${i}" class="pv"/></div>
+    <div style="flex:2;min-width:100px"><span class="prop-row-label">🇬🇧 Value</span><input type="text" placeholder="e.g. Oil Paint" id="pven-${i}" class="pven"/></div>
     <button class="btn btn-danger" onclick="removeEserProp(${i})" style="align-self:flex-end">Sil</button>`;
   list.appendChild(div);
   list.dataset.count=i+1;
@@ -1632,9 +1635,11 @@ function getEserProps(){
     const kTR=(document.getElementById('pk-'+id)||{value:''}).value.trim();
     const kEN=(document.getElementById('pken-'+id)||{value:''}).value.trim();
     const v=(document.getElementById('pv-'+id)||{value:''}).value.trim();
+    const vEN=(document.getElementById('pven-'+id)||{value:''}).value.trim();
     if(kTR&&v){
       propTR[kTR]=v;
-      propEN[kEN||PROP_TR_TO_EN[kTR]||kTR]=v;
+      const enKey = kEN||PROP_TR_TO_EN[kTR]||kTR;
+      propEN[enKey]=vEN||v;
     }
   });
   return {tr: propTR, en: propEN};
