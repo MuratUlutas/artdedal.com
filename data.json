@@ -1,10 +1,7 @@
 {
   "Portrait-Hegel-40x50": {
     "name": "Portrait of Hegel",
-    "desc": {
-      "tr": "Bu çalışma Hegel'in portresi ile ilgilidir, detaylar hazırlanıyor.",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -13,7 +10,7 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
@@ -32,7 +29,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "50 x 70 cm"
       }
     }
@@ -41,7 +38,7 @@
     "name": "Spinning Ball-1",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -51,7 +48,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "50 x 70 cm"
       }
     }
@@ -70,17 +67,14 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "50 x 70 cm"
       }
     }
   },
   "Portrait-Rimbaud-40x50": {
     "name": "Portrait of Rimbaud",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -89,17 +83,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Sappho-40x50": {
     "name": "Portrait of Sappho",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -108,17 +99,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Nefertiti-40x50": {
     "name": "Portrait of Nefertiti",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -127,17 +115,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Michelangelo-40x50": {
     "name": "Portrait of Michelangelo",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -146,17 +131,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Kafka-40x50": {
     "name": "Portrait of Kafka",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -165,17 +147,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Goethe-40x50": {
     "name": "Portrait of Goethe",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -184,17 +163,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Galileo-40x50": {
     "name": "Portrait of Galileo",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -203,17 +179,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Dante-40x50": {
     "name": "Portrait of Dante",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -222,17 +195,14 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
   },
   "Portrait-Beethoven-40x50": {
     "name": "Portrait of Beethoven",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {
         "Yapım yılı": "2021",
@@ -241,7 +211,7 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 50 cm"
       }
     }
@@ -250,7 +220,7 @@
     "name": "Phoenix-30",
     "desc": {
       "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
-      "en": ""
+      "en": "Simurg is a bird of legend.\nA magnificent creature with a white ring around its long neck, saffron-colored feathers, a beautiful voice, and a form resembling that of a human...\nIt is the sultan of all birds.\nIt dwells beyond Mount Qaf.\nAccording to the myth, the birds gather one day and set out on a journey to find their sultan...\nThe road is long, the journey is hard.\nFirst they cross the 'Sea of Love'...\nThey fly through the 'Valley of Separation'...\nThey pass over the 'Plain of Ambition' and turn toward the 'Lake of Envy'...\nSome birds plunge into the Sea of Love, some break away from the flock in the Valley of Separation...\nSome fall to the plain, consumed by ambition; some sink into the lake, consumed by envy...\nWhen the journey ends, only 30 birds have made it beyond Mount Qaf.\nThey cannot find their sultan Simurg there...\nIn the end, the secret is unlocked by words:\nIn Persian, 'si' means 'thirty.'\n'Murg' means 'bird'...\nThe '30 birds' realize that the sultan they sought is none other than themselves.\nAnd the true journey is the journey to oneself.\nAs the Alchemist said to the Andalusian shepherd searching for treasure at the foot of the Egyptian pyramids,\n'Travel is a method of learning. It teaches us what we need to know.'\nThe wanderer who searches for hidden treasure, for a lost beloved, for a homeland left behind — passing through great trials and overcoming formidable obstacles — reaches their own self, attains consciousness, upon these Mount Qafs of legend...\nAnd in the end finds their own treasure...\nThey come to understand that the land waiting to be discovered is none other than the person themselves.\nNarrated by: Can Dündar, 'Journey to Mount Qaf', http://www.candundar.com.tr, 01.02.2015"
     },
     "props": {
       "tr": {
@@ -261,9 +231,9 @@
       },
       "en": {
         "Year": "2015",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "110 x 130 cm",
-        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+        "Description": "One of the thirty birds that comprised the solo exhibition titled Simurg, which opened on March 6, 2015 at the Mersin Naval Museum Exhibition Hall."
       }
     }
   },
@@ -334,7 +304,7 @@
     "name": "Phoenix-28",
     "desc": {
       "tr": "Simurg, bir masal kuşudur.\nUzun boynunda beyaz bir halka bulunan, safran tüylü, güzel sesli, insana benzer kocaman bir kuş...\nKuşların sultanıdır.\nKaf Dağı'nın ardında yaşar.\nEfsaneye göre, kuşlar, sultanlarını bulmak üzere toplanıp yola çıkarlar bir gün...\nYol uzun, yolculuk zorludur.\n“Aşk Denizi”nden geçerler önce...\n“Ayrılık Vadisi”nden uçarlar...\n“Hırs Ovası”nı aşıp, “Kıskançlık Gölü”ne saparlar...\nKuşların kimi Aşk Denizi'ne dalar, kimi Ayrılık Vadisi'nde kopar sürüden...\nKimi hırslanıp düşer ovaya, kimi kıskanıp batar göle...\nYolculuk bittiğinde, Kaf Dağı’nın ardına sadece 30 kuş varabilmiştir.\nSultanları Simurg’u bulamazlar orada...\nSonunda sırrı, sözcükler çözer:\nFarsça “si”, “otuz” demektir.\n“ömurg” ise “kuş”...\n“30 kuş”, anlar ki, aradıkları sultan, kendileridir.\nVe gerçek yolculuk, kendine yapılan yolculuktur.\n\n\nMısır piramitlerinin eteklerinde hazine arayan Endülüslü çobana Simyacı’nın dediği gibi,\n“Yolculuk bir öğrenme yöntemidir. Bilmemiz gerekenleri bize o öğretir.”\nSaklı hazineyi, vurulduğu sevgiliyi, kaybettiği ülkeyi arayan gezgin, büyük sınavlardan geçip yaman engeller aşarak kendi benliğine ulaşır, şuuruna kavuşur bu destanların Kaf dağlarında...\nVe sonunda “kendi hazinesi”ni bulur...\nAnlar ki, keşfedilecek ülke, insanın kendisidir.\n\n\nAktaran: Dündar Can, “Kaf Dağı’na yolculuk”, http://www.candundar.com.tr, 01.02.2015",
-      "en": ""
+      "en": "Simurg is a bird of legend.\nA magnificent creature with a white ring around its long neck, saffron-colored feathers, a beautiful voice, and a form resembling that of a human...\nIt is the sultan of all birds.\nIt dwells beyond Mount Qaf.\nAccording to the myth, the birds gather one day and set out on a journey to find their sultan...\nThe road is long, the journey is hard.\nFirst they cross the 'Sea of Love'...\nThey fly through the 'Valley of Separation'...\nThey pass over the 'Plain of Ambition' and turn toward the 'Lake of Envy'...\nSome birds plunge into the Sea of Love, some break away from the flock in the Valley of Separation...\nSome fall to the plain, consumed by ambition; some sink into the lake, consumed by envy...\nWhen the journey ends, only 30 birds have made it beyond Mount Qaf.\nThey cannot find their sultan Simurg there...\nIn the end, the secret is unlocked by words:\nIn Persian, 'si' means 'thirty.'\n'Murg' means 'bird'...\nThe '30 birds' realize that the sultan they sought is none other than themselves.\nAnd the true journey is the journey to oneself.\nAs the Alchemist said to the Andalusian shepherd searching for treasure at the foot of the Egyptian pyramids,\n'Travel is a method of learning. It teaches us what we need to know.'\nThe wanderer who searches for hidden treasure, for a lost beloved, for a homeland left behind — passing through great trials and overcoming formidable obstacles — reaches their own self, attains consciousness, upon these Mount Qafs of legend...\nAnd in the end finds their own treasure...\nThey come to understand that the land waiting to be discovered is none other than the person themselves.\nNarrated by: Can Dündar, 'Journey to Mount Qaf', http://www.candundar.com.tr, 01.02.2015"
     },
     "props": {
       "tr": {
@@ -345,9 +315,9 @@
       },
       "en": {
         "Year": "2015",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on papier-mâché",
         "Dimensions": "40 x 30 cm",
-        "Description": "06 Mart 2015 tarihinde Mersin Deniz Müzesi Sergi Salonunda açılan Simurg adlı kişisel sergiyi oluşturan otuz kuştan birisidir."
+        "Description": "One of the thirty birds that comprised the solo exhibition titled Simurg, which opened on March 6, 2015 at the Mersin Naval Museum Exhibition Hall."
       }
     }
   },
@@ -880,7 +850,7 @@
     "name": "Goethe's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Goethe\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Goethe'nin imgesi klasik teknikle aktarılırken; bu çalışmada Faust'un iyiyle kötü arasındaki evrensel çatışması, satranç oyuncuları, terazi ve melek figürleriyle yeniden kurgulanmıştır. Teolojik ikiyüzlülüğe yönelik Goethe'nin ironik bakışı, ideolojik eklektizm yöntemiyle görsel bir sorgulamaya dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Goethe.' While the portrait conveys Goethe's image through classical technique, this work reconstructs Faust's universal conflict between good and evil through chess players, scales, and angelic figures. Goethe's ironic gaze toward theological hypocrisy is transformed into a visual inquiry through the method of ideological eclecticism. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -889,7 +859,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -901,7 +871,7 @@
     "name": "Sappho's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Sappho\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Sappho'nun imgesi klasik teknikle aktarılırken; bu çalışmada antik dünyanın şiir geleneği, farklı dönemlerin kadın imgeleri ve çağdaş mimari bir arada kurgulanmıştır. Tarihsel belleğin büyük boşluklarıyla var olan bu şairin izleri, çakışan zaman dilimleri aracılığıyla bugüne taşınmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Sappho.' While the portrait conveys Sappho's image through classical technique, this work brings together the poetic tradition of the ancient world, feminine imagery from different eras, and contemporary architecture within a single composition. The traces of this poet — who exists through the vast gaps of historical memory — have been carried into the present through overlapping timelines. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -910,7 +880,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -922,7 +892,7 @@
     "name": "Dante's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, aynı projenin ilk aşaması olan \"Portrait of Dante\" (tuval üzerine yağlı boya) ile birlikte düşünülmüştür. Portrede Dante'nin fiziksel imgesi klasik teknikle aktarılırken; bu çalışmada İlahi Komedya'nın cehennem haritası, modern kapitalizmin simgesi gökdelenler ve Japon Butoh dansından alınan figürlerle yeniden kurgulanmıştır. Değişmeyen iktidar baskısı ve insanlık acısı, farklı çağların imgelerini aynı mekânda buluşturarak görselleştirilmiştir. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design was conceived alongside 'Portrait of Dante' (oil on canvas), the first phase of the same project. While the portrait conveys Dante's physical image through classical technique, this work reconstructs the hell map of the Divine Comedy together with skyscrapers as symbols of modern capitalism and figures drawn from Japanese Butoh dance. The unchanging nature of power and human suffering is visualized by bringing together imagery from different eras within a single space. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -931,7 +901,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -943,7 +913,7 @@
     "name": "Michelangelo's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Michelangelo\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Michelangelo'nun imgesi klasik teknikle aktarılırken; bu çalışmada Sistine Şapeli'nin \"Son Yargı\" freski, \"Asi Köle\" heykeli ve çağdaş metropol görüntüleri iç içe kurgulanmıştır. Sanatçının tanrısal bir yaratıcı rolü üstlenme çabası ile yeryüzündeki iktidar ve yok oluş döngüsü, çakışan zaman dilimleri aracılığıyla sorgulanmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Michelangelo.' While the portrait conveys Michelangelo's image through classical technique, this work interweaves the 'Last Judgment' fresco of the Sistine Chapel, the sculpture 'Rebellious Slave,' and images of the contemporary metropolis. The artist's striving to assume the role of a divine creator, alongside the cycle of power and dissolution on earth, is examined through overlapping timelines. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -952,7 +922,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -964,7 +934,7 @@
     "name": "Nefertiti's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Nefertiti\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Nefertiti'nin imgesi klasik teknikle aktarılırken; bu çalışmada Antik Mısır ikonografisi, Rönesans figürleri ve çağdaş imgeler aynı mekânda buluşturulmuştur. Büyük ölçüde söylenceye dayanan bu tarihin farklı çağların estetik diliyle yeniden kurgulanması, güç, güzellik ve mitoloji üzerine çok katmanlı bir sorgulama oluşturmaktadır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Rimbaud.' While the portrait conveys Rimbaud's image through classical technique, this work reconstructs the dark universe evoked by the poem 'Le Bal des pendus' through stage design and symbolic imagery. The deep imprint left by the poetry he abandoned at a young age is visualized through themes of death and revolt. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -973,7 +943,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -985,7 +955,7 @@
     "name": "Beethoven's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Beethoven\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Beethoven'in imgesi klasik teknikle aktarılırken; bu çalışmada onun müzik anlayışı, sağırlığı ve dönemler üstü etkisi postmodern bir dil ve dijital kolaj yöntemiyle yeniden kurgulanmıştır. Beethoven ile Pink Floyd'dan Roger Waters aynı sahnede buluşturularak, sanatçının erk karşısındaki çaresizliği ile toplumsal etkisinin her çağda nasıl yinelendiği sorgulanmıştır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Beethoven.' While the portrait conveys Beethoven's image through classical technique, this work reconstructs his understanding of music, his deafness, and his transcendent influence through a postmodern language and digital collage. Beethoven and Roger Waters of Pink Floyd are brought together on the same stage, prompting a questioning of the artist's helplessness before power and how their social impact repeats itself across every age. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -994,7 +964,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -1006,7 +976,7 @@
     "name": "Galileo's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Galileo\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Galileo'nun imgesi klasik teknikle aktarılırken; bu çalışmada engizisyon mahkemesi, Kopernik'in evren diyagramı, modern teleskop ve uzaydaki astronot bir araya getirilmiştir. Bilimsel gerçeğin her çağda değiştiği, ama sıradan insanın bu değişime kayıtsız kaldığı fikri dijital kolaj aracılığıyla görsel bir düşünce metnine dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Galileo.' While the portrait conveys Galileo's image through classical technique, this work brings together the Inquisition court, Copernicus's diagram of the universe, a modern telescope, and an astronaut in space. The idea that scientific truth changes with every age, yet the ordinary person remains indifferent to this change, is rendered into a visual text through digital collage. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -1015,7 +985,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -1027,7 +997,7 @@
     "name": "Kafka's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Kafka\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Kafka'nın imgesi klasik teknikle aktarılırken; bu çalışmada \"Dönüşüm\" başta olmak üzere yapıtlarının yarattığı evrenle buluşturulmuştur. Bürokratik baskı, kimlik dönüşümü ve bireyin çaresizliği dijital kolaj aracılığıyla görsel bir düşünce metnine dönüştürülmüştür. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Kafka.' While the portrait conveys Kafka's image through classical technique, this work brings it into dialogue with the universe created by his writings, most notably 'The Metamorphosis.' Bureaucratic oppression, the transformation of identity, and the helplessness of the individual are rendered into a visual text through digital collage. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -1036,7 +1006,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital Tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
@@ -1048,7 +1018,7 @@
     "name": "Rimbaud's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Rimbaud\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Rimbaud'nun imgesi klasik teknikle aktarılırken; bu çalışmada \"Asılmışların Balosu\" şiirinin yarattığı karanlık evren, sahne tasarımı ve simgesel imgelerle yeniden kurgulanmıştır. Genç yaşta terk ettiği şiirin bıraktığı derin iz, ölüm ve isyan temalarıyla görselleştirilmiştir. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Rimbaud.' While the portrait conveys Rimbaud's image through classical technique, this work reconstructs the dark universe evoked by the poem 'Le Bal des pendus' through stage design and symbolic imagery. The deep imprint left by the poetry he abandoned at a young age is visualized through themes of death and revolt. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -1057,7 +1027,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital tasarım"
+        "Technique": "Digital design"
       }
     },
     "images": [
@@ -1069,7 +1039,7 @@
     "name": "Spinning Ball-7",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -1079,7 +1049,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "30 x 70 cm"
       }
     }
@@ -1098,7 +1068,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "60 x 100 cm"
       }
     }
@@ -1107,7 +1077,7 @@
     "name": "Spinning Ball-6",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -1117,7 +1087,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "20 x 60 cm"
       }
     }
@@ -1126,7 +1096,7 @@
     "name": "Spinning Ball-5",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -1136,7 +1106,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "20 x 50 cm"
       }
     }
@@ -1145,7 +1115,7 @@
     "name": "Spinning Ball-4",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -1155,7 +1125,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "30 x 65 cm"
       }
     }
@@ -1164,7 +1134,7 @@
     "name": "Spinning Ball-3",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -1174,7 +1144,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "20 x 60 cm"
       }
     }
@@ -1183,7 +1153,7 @@
     "name": "Spinning Ball-2",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler. \nSeri, 2010 yılında Elif Ulutaş’ın ilk kişisel sergisinde izleyiciyle buluştu.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity.\nThe series met its audience in 2010 at Elif Ulutaş's first solo exhibition."
     },
     "props": {
       "tr": {
@@ -1193,7 +1163,7 @@
       },
       "en": {
         "Year": "2010",
-        "Technique": "MDF üzerine yağlı boya, karışık teknik",
+        "Technique": "Oil paint on MDF, mixed media",
         "Dimensions": "20 x 60 cm"
       }
     }
@@ -1202,7 +1172,7 @@
     "name": "Symmetry In Motion",
     "desc": {
       "tr": "Spinning Ball serisi, insanın edilgen varoluşuna bir eleştiridir. Tıpkı bir ipe sarılıp yerde dönen topaçlar gibi, dışarıdan güdümlenen, kendi ekseninde dönen ama hiçbir yere gitmeyen bir yaşayış...\nElif Ulutaş, bu seride sistemin biçimlendirdiği, sürü içinde eriyip giden insan figürlerini resmetti. Topaç kafalar; kimliksizliği, birbirinden ayırt edilemezliği ve edilgenliği simgeler.",
-      "en": ""
+      "en": "The Spinning Ball series is a critique of humanity's passive existence. Like spinning tops wound around a string and set spinning on the ground — driven by external forces, rotating on their own axis, yet going nowhere...\nIn this series, Elif Ulutaş painted human figures shaped by the system, dissolving into the herd. The top-shaped heads symbolize loss of identity, indistinguishability, and passivity."
     },
     "props": {
       "tr": {
@@ -1211,7 +1181,7 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Dijital Tasarım"
+        "Technique": "Digital Design"
       }
     }
   },
@@ -1219,7 +1189,7 @@
     "name": "Dream Bird",
     "desc": {
       "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
-      "en": ""
+      "en": "These works came to life through the digital reimagining of the Simurg series, originally created as oil paintings on canvas. The artist took photographs of her own paintings and merged them with figures of dancing women — the photograph ceased to be a photograph, the painting ceased to be a painting. Both were transformed. Just like the Simurg: what you were searching for was already within you."
     },
     "props": {
       "tr": {
@@ -1228,7 +1198,7 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Dijital Tasarım"
+        "Technique": "Digital Design"
       }
     }
   },
@@ -1236,7 +1206,7 @@
     "name": "Soulmade",
     "desc": {
       "tr": "Bu çalışmalar, tuval üzerine yağlı boya ile doğan Simurg serisi eserlerinin dijital ortamda yeniden yaratılmasıyla oluştu. Sanatçı, kendi tuvalinin fotoğrafını alıp, dans eden kadın figürleriyle birleştirdi — ne fotoğraf fotoğraf kaldı, ne resim resim. İkisi de dönüştü. Tıpkı Simurg gibi: aradığın şey, zaten içindeydi.",
-      "en": ""
+      "en": "These works came to life through the digital reimagining of the Simurg series, originally created as oil paintings on canvas. The artist took photographs of her own paintings and merged them with figures of dancing women — the photograph ceased to be a photograph, the painting ceased to be a painting. Both were transformed. Just like the Simurg: what you were searching for was already within you."
     },
     "props": {
       "tr": {
@@ -1245,7 +1215,7 @@
       },
       "en": {
         "Year": "2021",
-        "Technique": "Dijital Tasarım"
+        "Technique": "Digital Design"
       }
     }
   },
@@ -1389,7 +1359,7 @@
     "name": "Rebirth",
     "desc": {
       "tr": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
-      "en": ""
+      "en": "This work is a piece reborn through traditional means — oil on canvas — inspired by the digital designs that emerged from the Simurg series paintings. The process became a cyclical creative journey: painting gave birth to digital design, and digital design gave birth to painting once more."
     },
     "props": {
       "tr": {
@@ -1399,7 +1369,7 @@
       },
       "en": {
         "Year": "2024",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "60 x 120"
       }
     }
@@ -1408,7 +1378,7 @@
     "name": "Bird Of Fortune",
     "desc": {
       "tr": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
-      "en": ""
+      "en": "This work is a piece reborn through traditional means — oil on canvas — inspired by the digital designs that emerged from the Simurg series paintings. The process became a cyclical creative journey: painting gave birth to digital design, and digital design gave birth to painting once more."
     },
     "props": {
       "tr": {
@@ -1418,7 +1388,7 @@
       },
       "en": {
         "Year": "2022",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "50 x 50"
       }
     }
@@ -1438,7 +1408,7 @@
     "name": "Purification",
     "desc": {
       "tr": "Bu çalışma, Simurg serisi tuvallerinden doğan dijital tasarımların ışığında, bir kez daha geleneksel yöntemle — tuval üzerine yağlı boya ile — yeniden hayat bulan bir eserdir. Süreç döngüsel bir yaratım serüvenine dönüştü: resimden dijital tasarım doğdu, dijital tasarımdan yeniden resim.",
-      "en": ""
+      "en": "This work is a piece reborn through traditional means — oil on canvas — inspired by the digital designs that emerged from the Simurg series paintings. The process became a cyclical creative journey: painting gave birth to digital design, and digital design gave birth to painting once more."
     },
     "props": {
       "tr": {
@@ -1448,7 +1418,7 @@
       },
       "en": {
         "Year": "2023",
-        "Technique": "Tuval üzerine yağlı boya",
+        "Technique": "Oil on canvas",
         "Dimensions": "40 x 45"
       }
     }
@@ -1794,7 +1764,7 @@
     "name": "Hegel's Imaginary",
     "desc": {
       "tr": "Bu dijital tasarım, \"Portrait of Hegel\" adlı yağlıboya çalışmanın ikinci aşamasını oluşturmaktadır. Portrede Hegel'in imgesi klasik teknikle aktarılırken; bu çalışmada diyalektik felsefenin sonsuz değişim ve gelişim fikri helezonik bir form aracılığıyla görselleştirilmiştir. 1977'de uzaya fırlatılan Voyager Altın Plak'ındaki insan figürleri ve belirsiz bir gece ufku, tarihin helezonik ilerleyişini ve ütopyanın erişilebilirliğini sorgulamaktadır. (2019-2020, Yüksek Lisans tez çalışması, Mersin Üniversitesi Güzel Sanatlar Enstitüsü)",
-      "en": ""
+      "en": "This digital design constitutes the second phase of the oil painting titled 'Portrait of Hegel.' While the portrait conveys Hegel's image through classical technique, this work visualizes the dialectical philosophy's idea of endless change and development through a helical form. The human figures from the Voyager Golden Record, launched into space in 1977, and an ambiguous night horizon question the helical progression of history and the attainability of utopia. (2019–2020, Master's thesis, Mersin University Institute of Fine Arts)"
     },
     "props": {
       "tr": {
@@ -1803,7 +1773,7 @@
       },
       "en": {
         "Year": "2020",
-        "Technique": "Dijital Tasarım"
+        "Technique": "Digital Design"
       }
     },
     "images": [
