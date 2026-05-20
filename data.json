@@ -1449,11 +1449,11 @@
     ]
   },
   "Apollo_Tapınağı": {
-    "name": "Side Apollo Tapınağı Replikası",
-    "desc": {
-      "tr": "",
-      "en": ""
+    "name": {
+      "tr": "Side Apollo Tapınağı Replikası",
+      "en": "Side Apollo Temple Replica"
     },
+    "desc": "",
     "props": {
       "tr": {
         "Yatırımcı": "Mersin Büyükşehir Belediyesi",
@@ -1463,10 +1463,10 @@
         "Yapım Yılı": "2005"
       },
       "en": {
-        "Investor": "Mersin Büyükşehir Belediyesi",
+        "Investor": "Mersin Metropolitan Municipality",
         "Contractor-Project": "Çizgi Dekorasyon",
         "Art Consultant": "Murat Ulutaş",
-        "Application": "Murat Ulutaş Atölyesi",
+        "Application": "Murat Ulutaş Studio",
         "Year": "2005"
       }
     },
@@ -1500,11 +1500,11 @@
     ]
   },
   "Aslan": {
-    "name": "Galatasaray Meydanı Tasarımı ve Aslan Heykeli",
-    "desc": {
-      "tr": "",
-      "en": ""
+    "name": {
+      "tr": "Galatasaray Meydanı Tasarımı ve Aslan Heykeli",
+      "en": "Galatasaray Square Design and Lion Sculpture"
     },
+    "desc": "",
     "props": {
       "tr": {
         "Yatırımcı": "Mersin Büyükşehir Belediyesi",
@@ -1514,20 +1514,20 @@
         "Yapım Yılı": "2005"
       },
       "en": {
-        "Investor": "Mersin Büyükşehir Belediyesi",
+        "Investor": "Mersin Metropolitan Municipality",
         "Contractor-Project": "Çizgi Dekorasyon",
         "Art Consultant": "Murat Ulutaş",
-        "Application": "Murat Ulutaş Atölyesi",
+        "Application": "Murat Ulutaş Studio",
         "Year": "2005"
       }
     }
   },
   "Baretli_Kaplumbağa": {
-    "name": "Baretli Kaplumbağa",
-    "desc": {
-      "tr": "",
-      "en": ""
+    "name": {
+      "tr": "Baretli Kaplumbağa",
+      "en": "Helmeted Tortoise"
     },
+    "desc": "",
     "props": {
       "tr": {
         "Yatırımcı": "Site İnşaat",
@@ -1537,20 +1537,20 @@
         "Yapım Yılı": "2007"
       },
       "en": {
-        "Investor": "Site İnşaat",
-        "Contractor": "Pankart Reklam",
+        "Investor": "Site Construction",
+        "Contractor": "Pankart Advertising",
         "Art Consultant": "Murat Ulutaş",
-        "Application": "Murat Ulutaş Atölyesi",
+        "Application": "Murat Ulutaş Studio",
         "Year": "2007"
       }
     }
   },
   "Ödül_heykelciği": {
-    "name": "İçel Koleji 50. Yıl Ödül Heykeli",
-    "desc": {
-      "tr": "",
-      "en": ""
+    "name": {
+      "tr": "İçel Koleji 50. Yıl Ödül Heykelciği",
+      "en": "\"İçel College 50th Anniversary Award Statuette"
     },
+    "desc": "",
     "props": {
       "tr": {
         "Yatırımcı": "İçel Koleji",
@@ -1559,18 +1559,21 @@
         "Yapım Yılı": "2009"
       },
       "en": {
-        "Investor": "İçel Koleji",
+        "Investor": "İçel College",
         "Art Consultant": "Murat Ulutaş",
-        "Application": "Murat Ulutaş Atölyesi",
+        "Application": "Murat Ulutaş Studio",
         "Year": "2009"
       }
     }
   },
   "Melek": {
-    "name": "Melek",
+    "name": {
+      "tr": "Melek",
+      "en": "Angel"
+    },
     "desc": {
       "tr": "Yılgör Aile Mezarlığı, Mersin",
-      "en": ""
+      "en": "Yılgör Family Cemetery, Mersin"
     },
     "props": {
       "tr": {
@@ -1582,16 +1585,19 @@
       "en": {
         "Application": "Murat Ulutaş",
         "Year": "2013",
-        "Material": "Akdeniz Traverten",
+        "Material": "Mediterranean Travertine",
         "Dimensions": "175 x 120 x 60 cm"
       }
     }
   },
   "Kralice_Olba": {
-    "name": "Kraliçe Olba",
+    "name": {
+      "tr": "Kraliçe Olba",
+      "en": "Queen Olba"
+    },
     "desc": {
       "tr": "IV. Uluslararası Hüseyin Gezer Taş ve Beton Heykel Sempozyumu",
-      "en": ""
+      "en": "4th International Hüseyin Gezer Stone and Concrete Sculpture Symposium"
     },
     "props": {
       "tr": {
@@ -1600,18 +1606,18 @@
         "Yapım Yılı": "2006"
       },
       "en": {
-        "Material": "Marmara Mermeri",
+        "Material": "Marmara Marble",
         "Dimensions": "250 x 120 x 80 cm",
         "Year": "2006"
       }
     }
   },
   "At": {
-    "name": "At Rölyefi",
-    "desc": {
-      "tr": "",
-      "en": ""
+    "name": {
+      "tr": "At Rölyefi",
+      "en": "Horse Relief"
     },
+    "desc": "",
     "props": {
       "tr": {
         "Yatırımcı": "Kürk İnşaat",
@@ -1620,9 +1626,9 @@
         "Yapım Yılı": "2009"
       },
       "en": {
-        "Investor": "Kürk İnşaat",
+        "Investor": "Kürk Construction",
         "Project": "Murat Ulutaş",
-        "Application": "Murat Ulutaş Atölyesi",
+        "Application": "Murat Ulutaş Studio",
         "Year": "2009"
       }
     }
