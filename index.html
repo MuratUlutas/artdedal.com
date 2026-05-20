@@ -218,7 +218,7 @@
     <button class="search-close" onclick="closeSearch()">✕</button>
   </div>
   <div class="search-results" id="searchResults">
-    <div class="search-hint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>
+    <div class="search-hint" id="searchHint">Eser adı, teknik, tür, yıl veya açıklama ile arayın</div>
   </div>
 </div>
 <div id="mainPage">
@@ -451,6 +451,9 @@ function setLang(lang) {
   // Arama fake input
   var sft = document.getElementById('searchFakeText');
   if (sft && T.searchFakeText) sft.textContent = T.searchFakeText;
+  // Search hint
+  var sh = document.getElementById('searchHint');
+  if (sh && T.searchHint) sh.textContent = T.searchHint;
   // E-posta etiketleri
   var cel = document.getElementById('contactEmailLabel');
   if (cel && T.emailLabel) cel.textContent = T.emailLabel;
