@@ -249,7 +249,10 @@ textarea{resize:vertical;min-height:80px;}
         </div>
         <div class="card">
           <div class="card-title">Ad</div>
+          <label style="font-size:.75rem;color:var(--muted);display:block;margin-bottom:4px;">🇹🇷 Türkçe</label>
           <input type="text" id="eserName" placeholder="Boş bırakırsan otomatik ad kullanılır"/>
+          <label style="font-size:.75rem;color:var(--muted);display:block;margin:10px 0 4px;">🇬🇧 English</label>
+          <input type="text" id="eserNameEN" placeholder="Leave empty to use Turkish name"/>
         </div>
         <div class="card">
           <div class="card-title">Açıklama</div>
@@ -362,7 +365,7 @@ let state = {
   }
 };
 
-function getLabel(k){return state.mainCatLabels[k]||state.subCatLabels[k]||state.extraSubLabels[k]||k;}
+function getLabel(k){return state.mainCatLabels[k]||state.subCatLabels[k]||state.extraSubLabels[k]||(k==='sanatsal'?'Sanatsal Çalışmalar':k);}
 
 var PROP_TR_TO_EN = {
   'Yapım Yılı':'Year','Yapım yılı':'Year','Yıl':'Year',
@@ -1549,6 +1552,15 @@ function openEserEdit(base, rawImages){
   const images=data.images||rawImages;
   document.getElementById('eserEditName').textContent=prettyNameAdmin(base);
   document.getElementById('eserName').value=data.name||'';
+  // EN ad
+  var nameVal = data.name || '';
+  if(typeof nameVal === 'object') {
+    document.getElementById('eserName').value=nameVal.tr||'';
+    document.getElementById('eserNameEN').value=nameVal.en||'';
+  } else {
+    document.getElementById('eserName').value=nameVal;
+    document.getElementById('eserNameEN').value='';
+  }
   // desc: eski string formatı veya yeni {tr,en} formatı
   var descVal = data.desc||'';
   if(typeof descVal === 'object') {
@@ -1705,7 +1717,10 @@ function saveEserEdit(){
   var descTR=document.getElementById('eserDescTR').value.trim();
   var descEN=document.getElementById('eserDescEN').value.trim();
   var desc = (descTR||descEN) ? {tr:descTR, en:descEN} : '';
-  const name=document.getElementById('eserName').value.trim();
+  const nameTR=document.getElementById('eserName').value.trim();
+  const nameEN=document.getElementById('eserNameEN').value.trim();
+  // Ad: sadece TR varsa string, ikisi de varsa obje
+  const name = (nameTR && nameEN) ? {tr:nameTR, en:nameEN} : (nameTR || undefined);
   const props=getEserProps();
   const images=getCurrentEserImages();
   const rawImages=JSON.parse(document.getElementById('eserImgList').dataset.rawImages||'[]');
@@ -1722,7 +1737,8 @@ function saveEserEdit(){
   // Boşsa kaydı sil
   var descEmpty = !desc || (typeof desc==='object' && !desc.tr && !desc.en);
   var propsEmpty = !props || (typeof props==='object' && props.tr && Object.keys(props.tr).length===0) || (!props.tr && Object.keys(props).length===0);
-  if(!name&&descEmpty&&propsEmpty&&!imgsChanged){
+  var nameEmpty = !name || (typeof name==='object' && !name.tr && !name.en);
+  if(nameEmpty&&descEmpty&&propsEmpty&&!imgsChanged){
     delete eserData[currentEserKey];
   }
   closeEserEdit();

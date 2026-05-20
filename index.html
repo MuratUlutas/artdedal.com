@@ -477,6 +477,12 @@ function getLangDesc(eser) {
   return eser.desc[LANG] || eser.desc['tr'] || '';
 }
 
+function getLangName(eser, base) {
+  if (!eser || !eser.name) return prettyName(base);
+  if (typeof eser.name === 'string') return eser.name;
+  return eser.name[LANG] || eser.name['tr'] || prettyName(base);
+}
+
 function getLangProps(eser, base) {
   var props;
   if (!eser || !eser.props) {
@@ -515,6 +521,8 @@ function refreshDetayLang() {
   var eser = ESER_DATA[g.base] || {};
   var catEl = document.getElementById('detayCat');
   if (catEl) catEl.textContent = getLangCat(_detayCat);
+  var titleEl = document.getElementById('detayTitle');
+  if (titleEl) titleEl.textContent = getLangName(eser, g.base);
   var descEl = document.getElementById('detayDesc');
   if (descEl) descEl.textContent = getLangDesc(eser);
   var propsEl = document.getElementById('detayProps');
@@ -582,7 +590,7 @@ function renderGallery(cat){
   const hasMore=isMobile&&groups.length>MOBIL_LIMIT;
   grid.innerHTML=shown.map((g,i)=>{
     const eser=ESER_DATA[g.base]||{};
-    const name=eser.name||prettyName(g.base),count=g.images.length;
+    const name=getLangName(eser,g.base),count=g.images.length;
     return `<div class="mosaic-item" data-cat="${cat}" data-base="${g.base}">
       <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
@@ -603,7 +611,7 @@ function showAllGallery(cat){
   const grid=document.getElementById('mosaicGrid');
   grid.innerHTML=groups.map((g,i)=>{
     const eser=ESER_DATA[g.base]||{};
-    const name=eser.name||prettyName(g.base),count=g.images.length;
+    const name=getLangName(eser,g.base),count=g.images.length;
     return `<div class="mosaic-item" data-cat="${cat}" data-base="${g.base}">
       <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
@@ -627,7 +635,7 @@ function openDetay(cat,idx){
   document.getElementById('detayMainImg').src=imgUrl(images[0],1200);
   document.getElementById('detayMainImg').onclick=()=>openLightbox(images,0);
   document.getElementById('detayCat').textContent=getLangCat(cat);
-  document.getElementById('detayTitle').textContent=eser.name||name;
+  document.getElementById('detayTitle').textContent=getLangName(eser,g.base);
   document.getElementById('detayDesc').textContent=getLangDesc(eser);
   var _props=getLangProps(eser,g.base);
   document.getElementById('detayProps').innerHTML=Object.keys(_props).map(function(k){return '<div class="detay-prop"><div class="detay-prop-key">'+k+'</div><div class="detay-prop-val">'+_props[k]+'</div></div>';}).join('');
@@ -647,7 +655,7 @@ function openDetay(cat,idx){
   document.getElementById('relatedGrid').innerHTML=related.map(rg=>{
     const ri=groups.indexOf(rg);
     const rgEser=ESER_DATA[rg.base]||{};
-    return `<div class="related-item" data-cat="${cat}" data-idx="${ri}"><img src="${imgUrl(rg.images[0],400)}" alt="${rgEser.name||prettyName(rg.base)}" loading="lazy"/><div class="related-overlay"><div class="related-name">${rgEser.name||prettyName(rg.base)}</div></div></div>`;
+    return `<div class="related-item" data-cat="${cat}" data-idx="${ri}"><img src="${imgUrl(rg.images[0],400)}" alt="${getLangName(rgEser,rg.base)}" loading="lazy"/><div class="related-overlay"><div class="related-name">${getLangName(rgEser,rg.base)}</div></div></div>`;
   }).join('');
   document.querySelectorAll('.related-item').forEach(el=>el.addEventListener('click',()=>{openDetay(el.dataset.cat,+el.dataset.idx);window.scrollTo(0,0);}));
   document.getElementById('mainPage').style.display='none';
@@ -693,12 +701,12 @@ document.getElementById('searchInput').addEventListener('input',function(){
   Object.keys(GROUPS).forEach(cat=>{
     GROUPS[cat].forEach((g,idx)=>{
       const eser=ESER_DATA[g.base]||{};
-      const name=(eser.name||prettyName(g.base)).toLocaleLowerCase('tr-TR');
+      const name=(getLangName(eser,g.base)).toLocaleLowerCase('tr-TR');
       const desc=getLangDesc(eser).toLocaleLowerCase('tr-TR');
       var _sp=getLangProps(eser,g.base);const props=Object.keys(_sp).map(function(k){return k+' '+_sp[k];}).join(' ').toLocaleLowerCase('tr-TR');
       const catName=catLabel(cat).toLocaleLowerCase('tr-TR');
       if(name.includes(q)||desc.includes(q)||props.includes(q)||catName.includes(q)){
-        results.push({cat,idx,g,eser,name:eser.name||prettyName(g.base),catName:catLabel(cat)});
+        results.push({cat,idx,g,eser,name:getLangName(eser,g.base),catName:catLabel(cat)});
       }
     });
   });
