@@ -230,7 +230,7 @@
       <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
       <li class="has-dropdown">
         <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
-        <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li><li><a href="#calismalarbg" onclick="navGo(''+s+'')">'+getLangCat(s)+'</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
+        <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
       </li>
       <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
       <li style="display:flex;align-items:center">
@@ -274,7 +274,7 @@
     <div class="gallery-header reveal"><div class="section-label" id="worksLabel">Çalışmalar</div></div>
     <div class="gallery-tabs-wrap reveal">
       <div class="cat-tabs" id="catTabs"><button class="cat-tab active" data-main="sanatsal">Sanatsal Çalışmalar</button><button class="cat-tab" data-main="dekorasyon">Dekorasyon</button><button class="cat-tab" data-main="peyzaj">Peyzaj</button><button class="cat-tab" data-main="aksesuarlar">Aksesuarlar</button></div>
-      <div class="subcat-tabs visible" id="subcatTabs"><button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button><button class="subcat-tab" data-sub="'+s+'">'+getLangCat(s)+'</button></div>
+      <div class="subcat-tabs visible" id="subcatTabs"><button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button></div>
     </div>
     <div class="mosaic reveal" id="mosaicGrid"><div class="gallery-loading">Yükleniyor…</div></div>
   </section>
@@ -616,10 +616,9 @@ document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn
   document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
   const main=btn.dataset.main,sw=document.getElementById('subcatTabs');
   if(main==='sanatsal'){
-    sw.innerHTML='<button class=\'subcat-tab active\' data-sub=\'resimler\'>Resimler</button><button class=\'subcat-tab\' data-sub=\'heykeller\'>Heykeller</button><button class=\'subcat-tab\' data-sub=\'dijital\'>Dijital Tasarımlar</button><button class=\'subcat-tab\' data-sub=\'\'+s+\'\'>\'+getLangCat(s)+\'</button>';sw.classList.add('visible');
+    sw.innerHTML='<button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button>';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
     renderGallery('resimler');
-initLang();
   } else if(catChildren[main]&&catChildren[main].length>0){
     const ch=catChildren[main];
     sw.innerHTML=ch.map((s,i)=>`<button class="subcat-tab${i===0?' active':''}" data-sub="${s}">${extraLabels[s]||s}</button>`).join('');
