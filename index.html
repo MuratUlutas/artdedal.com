@@ -633,11 +633,11 @@ document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(bt
 }));
 window.navGo=function(cat){setTimeout(()=>{
   const sw=document.getElementById('subcatTabs');
-  const ss=['resimler','heykeller','dijital',''+s+''];
+  const ss=['resimler','heykeller','dijital'];
   if(ss.includes(cat)||cat==='sanatsal'){
     const t=ss.includes(cat)?cat:'resimler';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
-    sw.innerHTML='<button class=\'subcat-tab\' data-sub=\'resimler\'>Resimler</button><button class=\'subcat-tab\' data-sub=\'heykeller\'>Heykeller</button><button class=\'subcat-tab\' data-sub=\'dijital\'>Dijital Tasarımlar</button><button class=\'subcat-tab\' data-sub=\'\'+s+\'\'>\'+getLangCat(s)+\'</button>';sw.classList.add('visible');
+    sw.innerHTML='<button class=\'subcat-tab\' data-sub=\'resimler\'>Resimler</button><button class=\'subcat-tab\' data-sub=\'heykeller\'>Heykeller</button><button class=\'subcat-tab\' data-sub=\'dijital\'>Dijital Tasarımlar</button>';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
     renderGallery(t);
   } else {
