@@ -763,8 +763,10 @@ function bExtraLabels(){return JSON.stringify(state.extraSubLabels).replace(/"/g
 function downloadHTML(){
   syncFromInputs();
   const fc=state.subCats[0]||state.mainCats[0];
-  const ssHTML=state.subCats.map((s,i)=>`<button class="subcat-tab${i===0?' active':''}" data-sub="${s}">${state.subCatLabels[s]||s}</button>`).join('');
-  const ssHTMLS=state.subCats.map(s=>`<button class="subcat-tab" data-sub="${s}">${state.subCatLabels[s]||s}</button>`).join('');
+  const _subs=state.subCats;
+  const _subLabels=state.subCatLabels;
+  const ssHTML=_subs.map((s,i)=>'<button class="subcat-tab'+(i===0?' active':'')+'" data-sub="'+s+'">'+(_subLabels[s]||s)+'</button>').join('');
+  const ssHTMLS=_subs.map(s=>'<button class="subcat-tab" data-sub="'+s+'">'+(_subLabels[s]||s)+'</button>').join('');
 
   const html=`<!DOCTYPE html>
 <html lang="tr" id="htmlRoot">
@@ -1376,7 +1378,7 @@ document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn
   document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
   const main=btn.dataset.main,sw=document.getElementById('subcatTabs');
   if(main==='sanatsal'){
-    sw.innerHTML="${ssHTML}";sw.classList.add('visible');
+    sw.innerHTML='${ssHTML}';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
     renderGallery('${fc}');
   } else if(catChildren[main]&&catChildren[main].length>0){
@@ -1396,7 +1398,7 @@ window.navGo=function(cat){setTimeout(()=>{
   if(ss.includes(cat)||cat==='sanatsal'){
     const t=ss.includes(cat)?cat:'${fc}';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
-    sw.innerHTML="${ssHTMLS}";sw.classList.add('visible');
+    sw.innerHTML='${ssHTMLS}';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
     renderGallery(t);
   } else {
