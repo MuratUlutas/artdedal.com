@@ -274,7 +274,7 @@
     <div class="gallery-header reveal"><div class="section-label" id="worksLabel">Çalışmalar</div></div>
     <div class="gallery-tabs-wrap reveal">
       <div class="cat-tabs" id="catTabs"><button class="cat-tab active" data-main="sanatsal">Sanatsal Çalışmalar</button><button class="cat-tab" data-main="dekorasyon">Dekorasyon</button><button class="cat-tab" data-main="peyzaj">Peyzaj</button><button class="cat-tab" data-main="aksesuarlar">Aksesuarlar</button></div>
-      <div class="subcat-tabs visible" id="subcatTabs"><button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button><button class="subcat-tab" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button></div>
+      <div class="subcat-tabs visible" id="subcatTabs"><button class="subcat-tab active" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button></div>
     </div>
     <div class="mosaic reveal" id="mosaicGrid"><div class="gallery-loading">Yükleniyor…</div></div>
   </section>
@@ -635,11 +635,11 @@ document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(bt
 }));
 window.navGo=function(cat){setTimeout(()=>{
   const sw=document.getElementById('subcatTabs');
-  const ss=['resimler','heykeller','dijital','resimler','heykeller','dijital'];
+  const ss=['resimler','heykeller','dijital'];
   if(ss.includes(cat)||cat==='sanatsal'){
     const t=ss.includes(cat)?cat:'resimler';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
-    sw.innerHTML="<button class="subcat-tab" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button><button class="subcat-tab" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button>";sw.classList.add('visible');
+    sw.innerHTML='<button class="subcat-tab" data-sub="resimler">Resimler</button><button class="subcat-tab" data-sub="heykeller">Heykeller</button><button class="subcat-tab" data-sub="dijital">Dijital Tasarımlar</button>';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
     renderGallery(t);
   } else {
