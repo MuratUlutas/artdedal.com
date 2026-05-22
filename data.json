@@ -1478,25 +1478,19 @@
     ]
   },
   "R1001": {
-    "name": "",
-    "desc": {
-      "tr": "",
-      "en": ""
-    },
+    "desc": "",
     "props": {
       "tr": {},
       "en": {}
     },
     "images": [
-      "Pipolar-2_jyyyva",
       "R1001-3_eijyio",
       "R1001-2_j2zvlh",
       "R1001-1_db0pse",
       "R1001-6_lescfd",
       "R1001-5_vgivlu",
       "R1001-4_o1hlrf",
-      "R1001-7_r9vrsg",
-      "Pipolar-1_n40mx0"
+      "R1001-7_r9vrsg"
     ]
   },
   "Aslan": {
