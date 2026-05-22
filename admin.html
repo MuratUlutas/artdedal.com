@@ -1379,7 +1379,6 @@ document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn
     sw.innerHTML='${ssHTML}';sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
     renderGallery('${fc}');
-initLang();
   } else if(catChildren[main]&&catChildren[main].length>0){
     const ch=catChildren[main];
     sw.innerHTML=ch.map((s,i)=>\`<button class="subcat-tab\${i===0?' active':''}" data-sub="\${s}">\${extraLabels[s]||s}</button>\`).join('');
