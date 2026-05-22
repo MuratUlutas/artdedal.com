@@ -363,7 +363,14 @@
   <nav class="detay-nav">
     <button class="detay-back" id="detayBack">Geri Dön</button>
     <a class="nav-logo" href="javascript:void(0)" onclick="closeDetay()"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121529/Artdedal_likon_s_nbk1zz.png" alt="ArtDedal" style="filter:brightness(0.2)"/></a>
-    <button class="search-btn" onclick="openSearch()" style="color:var(--ink);"><span id="searchBtnText">Ara</span></button>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switcher" style="margin-left:0;">
+        <button class="lang-btn" id="detayBtnTR" onclick="setLang('tr')" style="color:rgba(26,22,18,.4);">TR</button>
+        <span class="lang-sep" style="color:rgba(26,22,18,.2);">|</span>
+        <button class="lang-btn" id="detayBtnEN" onclick="setLang('en')" style="color:rgba(26,22,18,.4);">EN</button>
+      </div>
+      <button class="search-btn" onclick="openSearch()" style="color:var(--ink);"><span id="searchBtnText">Ara</span></button>
+    </div>
   </nav>
   <div class="detay-body">
     <div class="detay-grid">
@@ -467,6 +474,10 @@ function setLang(lang) {
   document.getElementById('htmlRoot').lang = lang;
   document.getElementById('btnTR').classList.toggle('active', lang === 'tr');
   document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  var db1=document.getElementById('detayBtnTR');
+  var db2=document.getElementById('detayBtnEN');
+  if(db1){db1.classList.toggle('active',lang==='tr');db1.style.color=lang==='tr'?'var(--ink)':'rgba(26,22,18,.4)';}
+  if(db2){db2.classList.toggle('active',lang==='en');db2.style.color=lang==='en'?'var(--ink)':'rgba(26,22,18,.4)';}
   var T = TRANSLATIONS[lang];
   document.title = T.pageTitle;
   var els = {
@@ -616,6 +627,10 @@ function refreshDetayLang() {
 function initLang() {
   document.getElementById('btnTR').classList.toggle('active', LANG === 'tr');
   document.getElementById('btnEN').classList.toggle('active', LANG !== 'tr');
+  var db1=document.getElementById('detayBtnTR');
+  var db2=document.getElementById('detayBtnEN');
+  if(db1){db1.classList.toggle('active',LANG==='tr');db1.style.color=LANG==='tr'?'var(--ink)':'rgba(26,22,18,.4)';}
+  if(db2){db2.classList.toggle('active',LANG==='en');db2.style.color=LANG==='en'?'var(--ink)':'rgba(26,22,18,.4)';}
   if (LANG !== 'tr') setLang(LANG);
 }
 const C='dhvrm1dcf';
