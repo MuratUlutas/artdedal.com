@@ -396,6 +396,7 @@ var TRANSLATIONS = {
 var LANG = localStorage.getItem('artdedal_lang') || 'tr';
 function setLang(lang){
   LANG=lang;localStorage.setItem('artdedal_lang',lang);
+  var T=TRANSLATIONS[lang];
   document.getElementById('htmlRoot').lang=lang;
   document.getElementById('btnTR').classList.toggle('active',lang==='tr');
   document.getElementById('btnEN').classList.toggle('active',lang!=='tr');
@@ -405,7 +406,6 @@ function setLang(lang){
   if(db2){db2.classList.toggle('active',lang==='en');}
   var dsb=document.getElementById('detaySearchBtn');
   if(dsb){dsb.textContent=T.searchBtnText||'Ara';}
-  var T=TRANSLATIONS[lang];
   document.title=T.pageTitle;
   var ids={heroTag:'heroTag',heroTitle:'heroTitle',heroSub:'heroSub',heroCta:'heroCta',
     aboutLabel:'aboutLabel',worksLabel:'worksLabel',contactLabel:'contactLabel',
