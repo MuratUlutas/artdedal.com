@@ -229,7 +229,7 @@
       <li><a href="#hero" onclick="closeMenu()" id="navHome">Anasayfa</a></li>
       <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
       <li class="has-dropdown">
-        <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
+        <a href="#calismalarbg" id="navWorks" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
         <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo(''+s+'')">'+(_subLabels[s]||s)+'</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
       </li>
       <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
@@ -357,7 +357,7 @@ var TRANSLATIONS = {
     imgAngle: ' farklı açı',
     navHome: 'Anasayfa', navAbout: 'Hakkımızda', navWorks: 'Çalışmalar', navContact: 'İletişim',
     aboutTitle: 'Birlikteçalışalım', aboutP1: 'Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.', aboutP2: 'Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.', aboutP3: 'Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.', aboutQuote: 'Sevgi, sanat ve yaratma aşkıyla…',
-    catTR: {'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','resimler':'Resimler','heykeller':'Heykeller','dijital':'Dijital Tasarımlar','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}
+    catTR: {'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}
   },
   en: {
     pageTitle: 'ArtDedal – ' + 'Art Heals',
