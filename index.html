@@ -230,7 +230,7 @@
       <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
       <li class="has-dropdown">
         <a href="#calismalarbg" id="navWorks" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
-        <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo(''+s+'')">'+(_subLabels[s]||s)+'</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
+        <ul class="dropdown"><li class="has-sub"><a href="#calismalarbg" onclick="navGo('sanatsal')">Sanatsal Çalışmalar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('resimler')">Resimler</a></li><li><a href="#calismalarbg" onclick="navGo('heykeller')">Heykeller</a></li><li><a href="#calismalarbg" onclick="navGo('dijital')">Dijital Tasarımlar</a></li></ul></li><li><a href="#calismalarbg" onclick="navGo('dekorasyon')">Dekorasyon</a></li><li><a href="#calismalarbg" onclick="navGo('peyzaj')">Peyzaj</a></li><li class="has-sub"><a href="#calismalarbg" onclick="navGo('aksesuarlar')">Aksesuarlar</a><ul class="sub-dropdown"><li><a href="#calismalarbg" onclick="navGo('pipolar')">Pipolar</a></li><li><a href="#calismalarbg" onclick="navGo('anahtarlık')">Anahtarlık</a></li></ul></li></ul>
       </li>
       <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
       <li style="display:flex;align-items:center">
@@ -476,7 +476,7 @@ function prettyName(base){
 }
 function catLabel(cat){return getLangCat(cat);}
 const GROUPS={};Object.keys(RAW).forEach(cat=>{GROUPS[cat]=groupImages(RAW[cat]);});
-let currentCat=''+s+'';
+let currentCat='resimler';
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 const SHUFFLED={};
 function getShuffled(cat){if(!SHUFFLED[cat])SHUFFLED[cat]=shuffle(GROUPS[cat]||[]);return SHUFFLED[cat];}
@@ -626,8 +626,8 @@ document.getElementById('searchInput').addEventListener('input',function(){
 });
 const catChildren={'aksesuarlar':['pipolar','anahtarlık']};
 const extraLabels={'pipolar':'Pipolar','anahtarlık':'Anahtarlık'};
-const _subCats=["'+s+'"];
-const _subLabels={"'+s+'":"'+(_subLabels[s]||s)+'"};
+const _subCats=["resimler","heykeller","dijital"];
+const _subLabels={"resimler":"Resimler","heykeller":"Heykeller","dijital":"Dijital Tasarımlar"};
 function makeSubHTML(activeFirst){return _subCats.map((s,i)=>'<button class="subcat-tab'+(activeFirst&&i===0?' active':'')+'" data-sub="'+s+'">'+(_subLabels[s]||s)+'</button>').join('');}
 document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
@@ -635,7 +635,7 @@ document.getElementById('catTabs').querySelectorAll('.cat-tab').forEach(btn=>btn
   if(main==='sanatsal'){
     sw.innerHTML=makeSubHTML(true);sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);}));
-    renderGallery(''+s+'');
+    renderGallery('resimler');
   } else if(catChildren[main]&&catChildren[main].length>0){
     const ch=catChildren[main];
     sw.innerHTML=ch.map((s,i)=>`<button class="subcat-tab${i===0?' active':''}" data-sub="${s}">${extraLabels[s]||s}</button>`).join('');
@@ -651,7 +651,7 @@ window.navGo=function(cat){setTimeout(()=>{
   const sw=document.getElementById('subcatTabs');
   const ss=_subCats;
   if(ss.includes(cat)||cat==='sanatsal'){
-    const t=ss.includes(cat)?cat:''+s+'';
+    const t=ss.includes(cat)?cat:'resimler';
     document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.main==='sanatsal'));
     sw.innerHTML=makeSubHTML(false);sw.classList.add('visible');
     sw.querySelectorAll('.subcat-tab').forEach(b=>{b.classList.toggle('active',b.dataset.sub===t);b.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.sub);});});
@@ -681,7 +681,7 @@ window.closeMenu=function(){
 // subcatTabs'ı runtime'da doldur
 document.getElementById('subcatTabs').innerHTML=makeSubHTML(true);
 document.getElementById('subcatTabs').querySelectorAll('.subcat-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.subcat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGallery(btn.dataset.sub);}));
-renderGallery(''+s+'');
+renderGallery('resimler');
 const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
 let cur=0,timer;
 function goTo(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=i;slides[cur].classList.add('active');dots[cur].classList.add('active');}

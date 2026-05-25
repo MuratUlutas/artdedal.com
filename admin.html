@@ -717,6 +717,12 @@ function loadIndexFile(){
       // heroImages
       const slM=[...html.matchAll(/hero-slide[^>]*><img src="([^"]+)"/g)];
       if(slM.length)state.heroImages=slM.map(m=>m[1]);
+      // State sanitize: bozuk key/value'ları temizle
+      const validKey=k=>k&&!k.includes('$')&&!k.includes('+')&&!k.includes("'")&&!k.includes('"');
+      state.subCats=state.subCats.filter(validKey);
+      state.subCats=[...new Set(state.subCats)];
+      Object.keys(state.subCatLabels).forEach(k=>{if(!validKey(k))delete state.subCatLabels[k];});
+      Object.keys(state.mainCatLabels).forEach(k=>{if(!validKey(k))delete state.mainCatLabels[k];});
       st.style.color='#27ae60';st.textContent='✓ Veriler yüklendi!';
       renderCats();showToast('index.html okundu!');
     }catch(err){st.style.color='#c0392b';st.textContent='Hata: '+err.message;}
@@ -777,10 +783,11 @@ function bExtraLabels(){return JSON.stringify(state.extraSubLabels).replace(/"/g
 
 function downloadHTML(){
   syncFromInputs();
-  const fc=state.subCats[0]||state.mainCats[0];
-  const uniqueSubCats=[...new Set(state.subCats)];
+  const uniqueSubCats=[...new Set(state.subCats.filter(s=>s&&!s.includes('$')&&!s.includes('+')&&!s.includes("'")))];
+  const fc=uniqueSubCats[0]||state.mainCats[0];
   const subCatsJSON=JSON.stringify(uniqueSubCats);
-  const subCatLabelsJSON=JSON.stringify(state.subCatLabels);
+  const cleanSubLabels={};uniqueSubCats.forEach(s=>{cleanSubLabels[s]=state.subCatLabels[s]||s;});
+  const subCatLabelsJSON=JSON.stringify(cleanSubLabels);
 
   const html=`<!DOCTYPE html>
 <html lang="tr" id="htmlRoot">
