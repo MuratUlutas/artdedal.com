@@ -656,10 +656,23 @@ function loadIndexFile(){
       const ctM=[...html.matchAll(/class="cat-tab[^"]*"\s+data-main="([^"]+)">([^<]+)</g)];
       const validCats=ctM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
       if(validCats.length){state.mainCats=validCats.map(m=>m[1]);state.mainCatLabels={};validCats.forEach(m=>state.mainCatLabels[m[1]]=m[2].trim());}
-      // subCats - sadece geçerli ($ içermeyen) olanları al
-      const stM=[...html.matchAll(/class="subcat-tab[^"]*"\s+data-sub="([^"]+)">([^<]+)</g)];
-      const validSubs=stM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
-      if(validSubs.length){state.subCats=validSubs.map(m=>m[1]);state.subCatLabels={};validSubs.forEach(m=>state.subCatLabels[m[1]]=m[2].trim());}
+      // subCats - _subCats JSON array'inden al (daha güvenilir)
+      const scJSON=html.match(/const _subCats\s*=\s*(\[[^\]]+\])/);
+      if(scJSON){
+        try{
+          const arr=JSON.parse(scJSON[1]);
+          // label'ları subcat-tab'lardan al
+          const stM=[...html.matchAll(/class="subcat-tab[^"]*"\s+data-sub="([^"]+)">([^<]+)</g)];
+          const labMap={};stM.forEach(m=>{if(!labMap[m[1]])labMap[m[1]]=m[2].trim();});
+          state.subCats=arr;state.subCatLabels={};arr.forEach(s=>{state.subCatLabels[s]=labMap[s]||s;});
+        }catch(e){}
+      } else {
+        // fallback: eski yöntem - deduplicate et
+        const stM=[...html.matchAll(/class="subcat-tab[^"]*"\s+data-sub="([^"]+)">([^<]+)</g)];
+        const validSubs=stM.filter(m=>!m[1].includes('$')&&!m[2].includes('$'));
+        const seen=new Set();const uniqSubs=validSubs.filter(m=>{if(seen.has(m[1]))return false;seen.add(m[1]);return true;});
+        if(uniqSubs.length){state.subCats=uniqSubs.map(m=>m[1]);state.subCatLabels={};uniqSubs.forEach(m=>state.subCatLabels[m[1]]=m[2].trim());}
+      }
       // catChildren
       const ccM=html.match(/const catChildren\s*=\s*(\{[^;]+\});/);
       if(ccM){try{state.catChildren=eval('('+ccM[1]+')');}catch(e){}}
@@ -763,7 +776,8 @@ function bExtraLabels(){return JSON.stringify(state.extraSubLabels).replace(/"/g
 function downloadHTML(){
   syncFromInputs();
   const fc=state.subCats[0]||state.mainCats[0];
-  const subCatsJSON=JSON.stringify(state.subCats);
+  const uniqueSubCats=[...new Set(state.subCats)];
+  const subCatsJSON=JSON.stringify(uniqueSubCats);
   const subCatLabelsJSON=JSON.stringify(state.subCatLabels);
 
   const html=`<!DOCTYPE html>
@@ -997,7 +1011,7 @@ function downloadHTML(){
       <li><a href="#hero" onclick="closeMenu()" id="navHome">Anasayfa</a></li>
       <li><a href="#hakkimizda" onclick="closeMenu()" id="navAbout">Hakkımızda</a></li>
       <li class="has-dropdown">
-        <a href="#calismalarbg" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
+        <a href="#calismalarbg" id="navWorks" onclick="closeMenu();document.getElementById('calismalarbg').scrollIntoView({behavior:'smooth'})">Çalışmalar</a>
         <ul class="dropdown">${bNavDropdown()}</ul>
       </li>
       <li><a href="#iletisim" onclick="closeMenu()" id="navContact">İletişim</a></li>
