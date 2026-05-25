@@ -525,6 +525,8 @@ function showAllGallery(cat){
   grid.innerHTML=groups.map((g,i)=>{
     const eser=ESER_DATA[g.base]||{};
     const name=getLangName(eser,g.base),count=g.images.length;
+    return `<div class="mosaic-item" data-cat="${cat}" data-base="${g.base}">
+      <img src="${imgUrl(g.images[0])}" alt="${name}" loading="lazy"/>
       <div class="mosaic-overlay">
         <div class="mosaic-title">${name}</div>
         ${count>1?`<div class="mosaic-count">${count} görsel</div>`:''}
