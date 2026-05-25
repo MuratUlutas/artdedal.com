@@ -1071,7 +1071,14 @@ function downloadHTML(){
   <nav class="detay-nav">
     <button class="detay-back" id="detayBack">Geri Dön</button>
     <a class="nav-logo" href="javascript:void(0)" onclick="closeDetay()"><img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121529/Artdedal_likon_s_nbk1zz.png" alt="ArtDedal" style="filter:brightness(0.2)"/></a>
-    <button class="search-btn" onclick="openSearch()" style="color:var(--ink);">Ara</button>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="lang-switcher">
+        <button class="lang-btn" id="detayBtnTR" onclick="setLang('tr')">TR</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="detayBtnEN" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="search-btn" onclick="openSearch()" style="color:var(--ink);"><span id="detaySearchBtn">Ara</span></button>
+    </div>
   </nav>
   <div class="detay-body">
     <div class="detay-grid">
@@ -1152,7 +1159,13 @@ function setLang(lang){
   document.getElementById('htmlRoot').lang=lang;
   document.getElementById('btnTR').classList.toggle('active',lang==='tr');
   document.getElementById('btnEN').classList.toggle('active',lang!=='tr');
+  var db1=document.getElementById('detayBtnTR');
+  var db2=document.getElementById('detayBtnEN');
+  if(db1){db1.classList.toggle('active',lang==='tr');}
+  if(db2){db2.classList.toggle('active',lang==='en');}
   var T=TRANSLATIONS[lang];
+  var dsb=document.getElementById('detaySearchBtn');
+  if(dsb){dsb.textContent=T.searchBtnText||'Ara';}
   document.title=T.pageTitle;
   var ids={heroTag:'heroTag',heroTitle:'heroTitle',heroSub:'heroSub',heroCta:'heroCta',
     aboutLabel:'aboutLabel',worksLabel:'worksLabel',contactLabel:'contactLabel',
@@ -1191,6 +1204,10 @@ function refreshDetayLang(){
 function initLang(){
   document.getElementById('btnTR').classList.toggle('active',LANG==='tr');
   document.getElementById('btnEN').classList.toggle('active',LANG!=='tr');
+  var db1=document.getElementById('detayBtnTR');
+  var db2=document.getElementById('detayBtnEN');
+  if(db1){db1.classList.toggle('active',LANG==='tr');}
+  if(db2){db2.classList.toggle('active',LANG==='en');}
   if(LANG!=='tr')setLang(LANG);
 }
 
