@@ -1794,12 +1794,14 @@
       "tr": {
         "Yapım Yılı": "2026",
         "Tekniği": "Tuval üzerine yağlı boya",
-        "Boyutu": "100 x 120 cm"
+        "Boyutu": "100 x 120 cm",
+        "Açıklama": "\"The Farewell of Icarus\", LeoniArt Drop XIII — Visionary Colours, Uluslararası Vizyoner Sanat Sergisi kapsamında Temmuz–Ağustos 2026'da Meksika, Celaya'daki Galeria Teresa del Conte'de sergilendi."
       },
       "en": {
         "Year": "2026",
         "Technique": "Oil on canvas",
-        "Dimensions": "100 x 120 cm"
+        "Dimensions": "100 x 120 cm",
+        "Description": "\"The Farewell of Icarus\" was exhibited as part of LeoniArt Drop XIII — Visionary Colours, International Exhibition of Visionary Art, at Galeria Teresa del Conte, Celaya, Mexico, July–August 2026."
       }
     }
   },
