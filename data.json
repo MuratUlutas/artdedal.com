@@ -1780,5 +1780,49 @@
       "Hegel_s_Imaginary_fycheo",
       "Portrait-Hegel-40x50_g51an2"
     ]
+  },
+  "The_Farewell_of_Icarus-100x120": {
+    "name": {
+      "tr": "The Farewell Of Icarus",
+      "en": "The Farewell Of Icarus"
+    },
+    "desc": {
+      "tr": "İkaros'un güneşe yükselişi ve düşüşü, insan iradesinin sınırlarını sorgular. Bu tuvalde Elif Kalpak Ulutaş, efsaneyi birebir aktarmak yerine o anın ruhunu yakalar: özgürleşme çabası ile yok oluşun iç içe geçtiği bir an. Kanatlar çözülürken figür hâlâ yükseliyor/düşüyor.",
+      "en": "Icarus's flight toward the sun questions the limits of human will. In this canvas, Elif Kalpak Ulutaş does not retell the myth — she captures its essence: the moment where the longing for freedom and dissolution become one. As the wings unravel, the figure is still rising/falling."
+    },
+    "props": {
+      "tr": {
+        "Yapım Yılı": "2026",
+        "Tekniği": "Tuval üzerine yağlı boya",
+        "Boyutu": "100 x 120 cm"
+      },
+      "en": {
+        "Year": "2026",
+        "Technique": "Oil on canvas",
+        "Dimensions": "100 x 120 cm"
+      }
+    }
+  },
+  "Superconsciousness": {
+    "name": {
+      "tr": "Superconsciousness",
+      "en": "Superconsciousness"
+    },
+    "desc": {
+      "tr": "Platon'un Phaidros diyaloğundaki at arabası metaforu, ruhun kendi içindeki çatışmayı anlatır: bir yanda maddeye ve hazlara bağlı karanlık at, öte yanda bilgeliğe ve ışığa yönelen beyaz at. \"Hiperuranio\" — ideaların var olduğu metafizik uzam — bu çatışmanın ötesinde duran bir eşik.\nElif Kalpak Ulutaş bu dijital çalışmada, ruhun kendi içinde ikiye bölünmüş halini bir figürle somutlaştırıyor: biri karanlığa, biri ışığa açılan iki kanat, bir beyin üzerinde kıvrılmış bir beden ve uzakta görünen kapı. Bilinçüstüne açılan o kapı.",
+      "en": "Plato's chariot allegory in Phaedrus describes the soul's inner conflict: a dark horse drawn toward material pleasures, and a white horse striving toward wisdom and light. \"Hiperuranio\" — the metaphysical realm of ideas — stands as a threshold beyond that struggle.\nIn this digital work, Elif Kalpak Ulutaş gives form to the divided soul: two wings — one dark, one light — a body curled upon a brain, and a distant gate barely visible through the clouds. The gate that opens to superconsciousness."
+    },
+    "props": {
+      "tr": {
+        "Yapım Yılı": "2025",
+        "Tekniği": "Dijital Tasarım",
+        "Açıklama": "\"Superconsciousness\", LeoniArt Drop XII — Hiperuranio, Uluslararası Vizyoner Sanat Sergisi kapsamında 1–20 Ağustos 2025'te Arjantin, Mar del Plata'daki Villa Victoria Ocampo'da sergilendi."
+      },
+      "en": {
+        "Year": "2025",
+        "Technique": "Digital Design",
+        "Description": "\"Superconsciousness\" was exhibited as part of LeoniArt Drop XII — Hiperuranio, International Exhibition of Visionary Art, at Villa Victoria Ocampo, Mar del Plata, Argentina, August 1–20, 2025."
+      }
+    }
   }
 }
