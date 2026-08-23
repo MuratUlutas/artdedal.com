@@ -13,7 +13,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ArtDedal – Sanat İyileştirir</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhvrm1dcf/image/upload/v1775121527/Artdedal_likon_r_jzmfex.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"ArtDedal nedir?","acceptedAnswer":{"@type":"Answer","text":"ArtDedal, Murat Ulutaş ve Elif Kalpak Ulutaş'ın birlikte yürüttüğü bir sanat platformudur. Heykel, resim, dijital tasarım ve dekoratif sanat alanlarında özgün eserler üretir."}},
+      {"@type":"Question","name":"What is ArtDedal?","acceptedAnswer":{"@type":"Answer","text":"ArtDedal is an art platform run by Murat Ulutaş and Elif Kalpak Ulutaş. It produces original works in sculpture, painting, digital design and decorative art."}},
+      {"@type":"Question","name":"Murat Ulutaş kimdir?","acceptedAnswer":{"@type":"Answer","text":"Murat Ulutaş, Mersin Üniversitesi Güzel Sanatlar Fakültesi Heykel Bölümü'nde öğretim görevlisidir. Heykel, peyzaj tasarımı ve dekoratif sanat alanlarında eserler üretmektedir."}},
+      {"@type":"Question","name":"Who is Murat Ulutaş?","acceptedAnswer":{"@type":"Answer","text":"Murat Ulutaş is a lecturer at the Department of Sculpture, Faculty of Fine Arts, Mersin University. He produces works in sculpture, landscape design and decorative art."}},
+      {"@type":"Question","name":"Elif Kalpak Ulutaş kimdir?","acceptedAnswer":{"@type":"Answer","text":"Elif Kalpak Ulutaş, Mersin Üniversitesi Güzel Sanatlar Enstitüsü mezunudur. Resim ve dijital tasarım alanlarında üretim yapmakta; eserleri LeoniArt gibi uluslararası sergilerde yer almaktadır."}},
+      {"@type":"Question","name":"Mersin'de heykel atölyesi var mı?","acceptedAnswer":{"@type":"Answer","text":"Evet, ArtDedal atölyesi Mersin'de bulunmaktadır. Mersin Üniversitesi Güzel Sanatlar Fakültesi bünyesinde de akademik çalışmalar sürdürülmektedir."}},
+      {"@type":"Question","name":"Is there a sculpture studio in Mersin?","acceptedAnswer":{"@type":"Answer","text":"Yes, the ArtDedal studio is located in Mersin, Turkey. Academic work is also carried out within Mersin University Faculty of Fine Arts."}}
+    ]
+  }
+  </script>
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     :root{--cream:#f5f0e8;--ink:#1a1612;--warm:#c8a97e;--muted:#9e9385;--line:rgba(26,22,18,.12);--dark:#111009;}
@@ -66,6 +80,16 @@
     .section-title em{font-style:italic;color:var(--muted);}
     .about-text{font-size:1.05rem;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:16px;}
     .about-sign{margin-top:32px;font-size:1.3rem;font-style:italic;color:var(--ink);opacity:.7;}
+    /* FAQ */
+    #faq{padding:80px 60px;max-width:900px;margin:0 auto;}
+    .faq-item{border-bottom:1px solid var(--line);}
+    .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:22px 0;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--ink);text-align:left;gap:16px;}
+    .faq-q:hover{color:var(--warm);}
+    .faq-icon{font-size:1.4rem;color:var(--warm);flex-shrink:0;transition:transform .3s;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-item.open .faq-a{max-height:400px;}
+    .faq-a p{padding:0 0 20px;color:var(--muted);font-size:1rem;line-height:1.8;}
     .about-image{position:relative;}
     .about-image img{width:100%;display:block;border:1px solid var(--line);}
     .about-image::before{content:'';position:absolute;top:-16px;right:-16px;width:55%;height:55%;border:1px solid var(--warm);opacity:.25;pointer-events:none;}
@@ -156,7 +180,7 @@
     .footer-social a:hover{color:var(--ink);}
     .reveal{opacity:1;transform:none;}
     @media(max-width:900px){
-      nav,#calismalarbg,#hakkimizda,.contact-inner,footer{padding-left:24px;padding-right:24px;}
+      nav,#calismalarbg,#hakkimizda,#faq,.contact-inner,footer{padding-left:24px;padding-right:24px;}
       nav{padding-top:20px;padding-bottom:20px;}
       nav.scrolled{padding-top:12px;padding-bottom:12px;}
       .nav-links{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:var(--cream);flex-direction:column;justify-content:center;align-items:center;z-index:300;overflow-y:auto;gap:0;}
@@ -281,6 +305,57 @@
       <img src="https://res.cloudinary.com/dhvrm1dcf/image/upload/w_800,q_auto,f_auto/IMG_2160_ygxy7r.png" alt="Murat ve Elif"/>
     </div>
   </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding:80px 60px;max-width:900px;margin:0 auto;">
+    <div class="reveal">
+      <div class="section-label" id="faqLabel">Sık Sorulan Sorular</div>
+      <div class="faq-list" style="margin-top:40px;">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq1q">ArtDedal nedir?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq1a">ArtDedal, Murat Ulutaş ve Elif Kalpak Ulutaş'ın birlikte yürüttüğü bir sanat platformudur. Heykel, resim, dijital tasarım ve dekoratif sanat alanlarında özgün eserler üretir; aynı zamanda özel ve kurumsal projelere çözümler sunar.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq2q">Murat Ulutaş kimdir?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq2a">Murat Ulutaş, Mersin Üniversitesi Güzel Sanatlar Fakültesi Heykel Bölümü'nde öğretim görevlisidir. Heykel, peyzaj tasarımı ve dekoratif sanat alanlarında eserler üretmekte; kamusal ve özel komisyon projeleri gerçekleştirmektedir.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq3q">Elif Kalpak Ulutaş kimdir?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq3a">Elif Kalpak Ulutaş, Mersin Üniversitesi Güzel Sanatlar Enstitüsü mezunudur. Resim ve dijital tasarım alanlarında üretim yapmakta; eserleri LeoniArt gibi uluslararası vizyoner sanat sergilerinde yer almaktadır.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq4q">Hangi tür sanat eserleri üretiyorsunuz?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq4a">Heykel, tuval üzerine yağlı boya resim, dijital tasarım, iç mekan dekorasyon projeleri, peyzaj heykeli ve aksesuar tasarımı alanlarında çalışıyoruz.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq5q">Özel çalışma yaptırabilir miyim?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq5a">Evet. Özel sipariş, kurumsal proje ve kişiye özel tasarım talepleriniz için bizimle iletişime geçebilirsiniz.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq6q">Mersin'de heykel atölyesi var mı?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq6a">Evet, atölyemiz Mersin'de bulunmaktadır. Mersin Üniversitesi Güzel Sanatlar Fakültesi bünyesinde de akademik çalışmalar sürdürülmektedir.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq7q">Eserlerinizi nereden görebilirim?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq7a">Tüm eserlerimizi artdedal.com adresinden inceleyebilirsiniz. Ayrıca Instagram'da @art_dedal hesabımızı takip edebilirsiniz.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)"><span id="faq8q">Sergilere katılıyor musunuz?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p id="faq8a">Evet. Elif Kalpak Ulutaş, LeoniArt Drop uluslararası vizyoner sanat sergileri başta olmak üzere çeşitli ulusal ve uluslararası sergilere düzenli olarak katılmaktadır.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section id="calismalarbg">
     <div class="gallery-header reveal"><div class="section-label" id="worksLabel">Çalışmalar</div></div>
     <div class="gallery-tabs-wrap reveal">
@@ -368,6 +443,15 @@ var TRANSLATIONS = {
     imgAngle: ' farklı açı',
     navHome: 'Anasayfa', navAbout: 'Hakkımızda', navWorks: 'Çalışmalar', navContact: 'İletişim',
     aboutTitle: 'Birlikteçalışalım', aboutP1: 'Biz, sanatı hayatının merkezine koyan ve birlikte yaratmanın büyüsüne inanan bir çiftiz. Sanatın farklı disiplinlerini bir araya getirerek, özgün bir estetik sunmayı hedefliyoruz.', aboutP2: 'Heykellerimizde detaylara verdiğimiz önemi, tablolarımızda renklerin gücünü, dekoratif çalışmalarımızda ise işlevsellik ile estetiği bir araya getirme tutkumuzu hissedeceksiniz.', aboutP3: 'Her eserimizde hem kendi hikâyemizi hem de sizin hikâyenizi yansıtan bir anlam gizlidir. Sanat, bizim için sadece bir meslek değil, birlikte paylaştığımız bir yolculuktur.', aboutQuote: 'Sevgi, sanat ve yaratma aşkıyla…',
+    faqLabel: 'Sık Sorulan Sorular',
+    faq1q: 'ArtDedal nedir?', faq1a: 'ArtDedal, Murat Ulutaş ve Elif Kalpak Ulutaş\'ın birlikte yürüttüğü bir sanat platformudur. Heykel, resim, dijital tasarım ve dekoratif sanat alanlarında özgün eserler üretir; aynı zamanda özel ve kurumsal projelere çözümler sunar.',
+    faq2q: 'Murat Ulutaş kimdir?', faq2a: 'Murat Ulutaş, Mersin Üniversitesi Güzel Sanatlar Fakültesi Heykel Bölümü\'nde öğretim görevlisidir. Heykel, peyzaj tasarımı ve dekoratif sanat alanlarında eserler üretmekte; kamusal ve özel komisyon projeleri gerçekleştirmektedir.',
+    faq3q: 'Elif Kalpak Ulutaş kimdir?', faq3a: 'Elif Kalpak Ulutaş, Mersin Üniversitesi Güzel Sanatlar Enstitüsü mezunudur. Resim ve dijital tasarım alanlarında üretim yapmakta; eserleri LeoniArt gibi uluslararası vizyoner sanat sergilerinde yer almaktadır.',
+    faq4q: 'Hangi tür sanat eserleri üretiyorsunuz?', faq4a: 'Heykel, tuval üzerine yağlı boya resim, dijital tasarım, iç mekan dekorasyon projeleri, peyzaj heykeli ve aksesuar tasarımı alanlarında çalışıyoruz.',
+    faq5q: 'Özel çalışma yaptırabilir miyim?', faq5a: 'Evet. Özel sipariş, kurumsal proje ve kişiye özel tasarım talepleriniz için bizimle iletişime geçebilirsiniz.',
+    faq6q: 'Mersin\'de heykel atölyesi var mı?', faq6a: 'Evet, atölyemiz Mersin\'de bulunmaktadır. Mersin Üniversitesi Güzel Sanatlar Fakültesi bünyesinde de akademik çalışmalar sürdürülmektedir.',
+    faq7q: 'Eserlerinizi nereden görebilirim?', faq7a: 'Tüm eserlerimizi artdedal.com adresinden inceleyebilirsiniz. Ayrıca Instagram\'da @art_dedal hesabımızı takip edebilirsiniz.',
+    faq8q: 'Sergilere katılıyor musunuz?', faq8a: 'Evet. Elif Kalpak Ulutaş, LeoniArt Drop uluslararası vizyoner sanat sergileri başta olmak üzere çeşitli ulusal ve uluslararası sergilere düzenli olarak katılmaktadır.',
     catTR: {'sanatsal':'Sanatsal Çalışmalar','dekorasyon':'Dekorasyon','peyzaj':'Peyzaj','aksesuarlar':'Aksesuarlar','resimler':'resimler','heykeller':'heykeller','dijital':'dijital','pipolar':'Pipolar','anahtarlık':'Anahtarlık'}
   },
   en: {
@@ -393,6 +477,15 @@ var TRANSLATIONS = {
     imgAngle: ' views',
     navHome: 'Home', navAbout: 'About', navWorks: 'Works', navContact: 'Contact',
     aboutTitle: 'Murat & Elif — believers in the magic of creating together', aboutP1: 'We are a couple who place art at the center of life and believe in the magic of creating together. We bring different disciplines of art together to offer a unique aesthetic.', aboutP2: 'In our sculptures you will feel the importance we give to detail, in our paintings the power of color, and in our decorative works our passion for combining functionality with aesthetics.', aboutP3: 'In each of our works lies a meaning that reflects both our own story and yours. For us, art is not just a profession — it is a journey we share together.', aboutQuote: 'With love, art and the passion of creation…',
+    faqLabel: 'Frequently Asked Questions',
+    faq1q: 'What is ArtDedal?', faq1a: 'ArtDedal is an art platform run by Murat Ulutaş and Elif Kalpak Ulutaş. It produces original works in sculpture, painting, digital design and decorative art, and offers solutions for private and corporate projects.',
+    faq2q: 'Who is Murat Ulutaş?', faq2a: 'Murat Ulutaş is a lecturer at the Department of Sculpture, Faculty of Fine Arts, Mersin University. He produces works in sculpture, landscape design and decorative art, and carries out public and private commission projects.',
+    faq3q: 'Who is Elif Kalpak Ulutaş?', faq3a: 'Elif Kalpak Ulutaş is a graduate of the Institute of Fine Arts, Mersin University. She works in painting and digital design; her works have been featured in international visionary art exhibitions such as LeoniArt.',
+    faq4q: 'What types of artworks do you produce?', faq4a: 'We work in sculpture, oil painting on canvas, digital design, interior decoration projects, landscape sculpture and accessory design.',
+    faq5q: 'Can I commission a custom work?', faq5a: 'Yes. You can contact us for custom orders, corporate projects and personalized design requests.',
+    faq6q: 'Is there a sculpture studio in Mersin?', faq6a: 'Yes, our studio is located in Mersin. Academic work is also carried out within Mersin University Faculty of Fine Arts.',
+    faq7q: 'Where can I see your works?', faq7a: 'You can browse all our works at artdedal.com. You can also follow us on Instagram at @art_dedal.',
+    faq8q: 'Do you participate in exhibitions?', faq8a: 'Yes. Elif Kalpak Ulutaş regularly participates in various national and international exhibitions, most notably the LeoniArt Drop international visionary art series.',
     catTR: {'sanatsal':'Artistic Works','dekorasyon':'Decoration','peyzaj':'Landscape','aksesuarlar':'Accessories','resimler':'Paintings','heykeller':'Sculptures','dijital':'Digital Designs','pipolar':'Pipes','anahtarlık':'Keychains'}
   }
 };
@@ -421,6 +514,12 @@ function setLang(lang){
   var si=document.getElementById('searchInput');if(si)si.placeholder=T.searchPlaceholder;
   document.querySelectorAll('.cat-tab').forEach(function(b){var lbl=T.catTR[b.dataset.main];if(lbl)b.textContent=lbl;});
   document.querySelectorAll('.subcat-tab').forEach(function(b){var lbl=T.catTR[b.dataset.sub];if(lbl)b.textContent=lbl;});
+  // FAQ
+  var faqEl=document.getElementById('faqLabel');if(faqEl&&T.faqLabel)faqEl.textContent=T.faqLabel;
+  for(var fi=1;fi<=8;fi++){
+    var fq=document.getElementById('faq'+fi+'q');if(fq&&T['faq'+fi+'q'])fq.textContent=T['faq'+fi+'q'];
+    var fa=document.getElementById('faq'+fi+'a');if(fa&&T['faq'+fi+'a'])fa.textContent=T['faq'+fi+'a'];
+  }
   if(typeof renderGallery==='function'&&typeof currentCat!=='undefined')renderGallery(currentCat);
   var dp=document.getElementById('detayPage');
   if(dp&&dp.classList.contains('open')&&typeof _detayCat!=='undefined'&&_detayCat!==null)refreshDetayLang();
@@ -444,6 +543,12 @@ function refreshDetayLang(){
   var descEl=document.getElementById('detayDesc');if(descEl)descEl.textContent=getLangDesc(eser);
   var propsEl=document.getElementById('detayProps');
   if(propsEl){var props=getLangProps(eser,g.base);propsEl.innerHTML=Object.keys(props).map(function(k){return '<div class="detay-prop"><div class="detay-prop-key">'+k+'</div><div class="detay-prop-val">'+props[k]+'</div></div>';}).join('');}
+}
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
 }
 function initLang(){
   document.getElementById('btnTR').classList.toggle('active',LANG==='tr');
